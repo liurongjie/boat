@@ -67,3 +67,19 @@ top: -10rpx;
 left: 40rpx;
 top: 50rpx;
 }
+.input1{
+  position: absolute;
+height: 100%;
+ left:140rpx;
+ width: 250rpx;
+  background-color: white;
+}
+
+.input11{
+  position: absolute;
+  height: 100%;
+  line-height: 100rpx;
+  left: 60rpx;
+  opacity: 0.4;
+  font-size: 32rpx;
+}
