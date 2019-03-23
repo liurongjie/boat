@@ -45,12 +45,14 @@
     </view>
 
 
-    <view class='pro_price shengsuo  '>
-        <image  class='img_chuanfan' src='../../../static/pic/chuanfan.svg'>
-           
-        </image>
-    </view>
+   
 
 
   </view>
 </view> 
+
+<view class='shake1   '>
+        <image  class='img_chuanfan shengsuo' src='../../../static/pic/chuanfan.svg'>
+           
+        </image>
+</view>
