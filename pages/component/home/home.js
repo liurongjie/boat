@@ -33,7 +33,7 @@ Component({
       var D = date.getDate() < 10 ? '0' + date.getDate() :date.getDate();
       var chn_mon_arr = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']; 
     var current_month = M;
-    var en_mon_arr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Spt", "Oct", "Nov", "Dec"];
+    var en_mon_arr = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SPT", "OCT", "NOV", "DEC"];
     for (var i = 0; i < chn_mon_arr.length; i++) {      //循环匹配       
          if(current_month == chn_mon_arr[i]){       
            M = en_mon_arr[i];         
