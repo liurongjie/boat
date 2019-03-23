@@ -1,3 +1,4 @@
+  
   <title></title>
   <home wx:if="{{index==1}}"></home>
   <boat wx:if="{{index==3}}"></boat>

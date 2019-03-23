@@ -1,1 +1,4 @@
 /* pages/component/setting/setting.wxss */
+.container{
+  position: absolute;
+}

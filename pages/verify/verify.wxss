@@ -1,0 +1,8 @@
+/* pages/verify/verify.wxss */
+
+.top{
+  position: relative;
+  width: 300rpx;
+  height:300rpx;
+  background-color: black;
+}

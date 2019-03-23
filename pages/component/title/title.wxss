@@ -3,10 +3,11 @@
   position: fixed;
   margin-top: 70rpx;
   width: 100%;
-  height: 200rpx;
+  height: 80rpx;
   background-color:white;
   display: flex;
   flex-direction: row;
+  z-index: 100;
 }
 .title text{
   position: relative;
@@ -29,8 +30,54 @@
   flex-direction: column;
 }
 .title .arrow{
-  position: relative;
+  position: fixed;
   width: 25rpx;
   height: 25rpx;
-  margin-left: -10rpx;
+  left: 500rpx;
+  margin-left: 20rpx;
+}
+
+.phone_personal{
+  left: 360rpx;
+  position: fixed;
+    width: 30%;
+    color:black;
+    height:100rpx;
+    line-height:100rpx;
+    text-align: left;
+    font-size: 28rpx;
+    font-weight: 100;
+}
+.phone_one{
+    display: flex; 
+    position: fixed;
+    justify-content: space-between;
+    width:100%;
+    height:100rpx;
+    top:50rpx;
+    border-radius: 10rpx;
+    border-bottom:2rpx solid rgb(255, 255, 255);
+}
+.person_box{
+    position: fixed;
+    left:300rpx;
+    top: 140rpx;
+    z-index: 99;
+}
+.phone_select{
+    margin-top:0;
+    z-index: 100;
+    position: fixed; 
+    font-size: 30rpx;
+}
+.select_one{
+    text-align: center;
+    font-weight: 100;
+   
+    width:200rpx;   
+    height:100rpx;
+    line-height:100rpx;
+    font-size: 28rpx;
+    margin:0 5%;
+    border-bottom:2rpx solid rgb(255, 255, 255);
 }
