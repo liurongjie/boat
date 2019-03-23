@@ -23,7 +23,6 @@
         </block>  
     </view>  
     <view class='ta1'>
-
     <text class='boat'>BOAT</text>
     <view class='circle'></view>
     <view class='circle'></view>
@@ -47,10 +46,10 @@
      <text style='position:absolute;left:50rpx;top:115rpx;color:white;font-size:30rpx;font-weight:300;'>开学季购买校园必需品
 各类好物直降最多50</text>
 <text style='position:absolute;left:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>日用百货 应有尽有</text>
-<image src='/static/icon/icon1.png' style='position:absolute;width:150rpx;height:150rpx;left:420rpx;top:56rpx;'></image>
+<image src='/static/icon/Icon1.png' style='position:absolute;width:150rpx;height:150rpx;left:420rpx;top:56rpx;'></image>
     </view>
      <view class='ta3'>
-<image src='/static/icon/icon2.png' style='position:absolute;width:150rpx;height:150rpx;left:50rpx;top:56rpx;'></image>
+<image src='/static/icon/Icon2.png' style='position:absolute;width:150rpx;height:150rpx;left:50rpx;top:56rpx;'></image>
 <text style='position:absolute;right:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>会员社群</text>
      <text style='position:absolute;right:50rpx;top:75rpx;color:white;font-size:30rpx;font-weight:300;'>
 跟着大珈一起去采购

@@ -53,7 +53,6 @@ top:560rpx;
 left: 10%;
 background-color: white;
 box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
-
 z-index: -1;
 overflow: hidden;
 }

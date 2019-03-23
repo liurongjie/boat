@@ -11,7 +11,7 @@
   position: absolute;
   width: 130rpx;
   height: 130rpx;
-  margin-top: 10rpx;
+  margin-top: 15rpx;
   margin-left: 90rpx;
   display: flex;
   flex-direction: column;
@@ -20,14 +20,14 @@
   position: absolute;
   width: 220rpx;
   height: 220rpx;
-  margin-top: -90rpx;
-  margin-left: 265rpx;
+  margin-top: -60rpx;
+  margin-left: 275rpx;
 }
 .bottom .content3{
   position: absolute;
   width: 130rpx;
   height: 130rpx;
-  margin-top: 5rpx;
+  margin-top: 15rpx;
   margin-left: 560rpx;
   display: flex;
   flex-direction: column;
