@@ -27,7 +27,7 @@
   position: absolute;
   width: 130rpx;
   height: 130rpx;
-  margin-top: 15rpx;
+  margin-top: 5rpx;
   margin-left: 560rpx;
   display: flex;
   flex-direction: column;
@@ -60,8 +60,8 @@
    position: absolute;
    width: 800rpx;
    height: 800rpx;
-   margin-left: 200rpx;
-   margin-top: -600rpx;
+   margin-left: 235rpx;
+   margin-top: -640rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;
 	}

@@ -1,1 +1,261 @@
-/* pages/component/boat/boat.wxss */
+/* pages/secondP/secondP.wxss */
+
+
+
+
+
+.btn_1{
+  width:100%;
+  height:auto;
+  display:flex;
+  margin-top: 160rpx;
+}
+
+
+.btn_left{
+
+position:relative;
+display:block;
+margin-left:auto;
+margin-right:10rpx;
+padding-left:14px;
+padding-right:14px;
+box-sizing:border-box;
+font-size:13px;
+text-align:center;
+text-decoration:none;
+line-height:2.55555556;
+border-radius:30px;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#ffffff;
+background-color:rgba(212, 82, 82, 0.61);
+
+}
+
+.btn_right{
+
+position:relative;
+display:block;
+margin-left:10rpx;
+margin-right:auto;
+padding-left:14px;
+padding-right:14px;
+box-sizing:border-box;
+font-size:13px;
+text-align:center;
+text-decoration:none;
+line-height:2.55555556;
+border-radius:30px;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#ffffff;
+background-color:rgba(95, 83, 83, 0.493);
+
+}
+
+.context{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-right:auto;
+  margin-left:auto;
+
+  width: 80%;
+  height: 950rpx;
+  background-color: rgba(0, 0, 0, 0.48);
+  border-radius:10px;
+}
+
+.pro_name{
+  color: white;
+  font-size: 50rpx;
+  margin-left:60rpx;
+  margin-top: 30rpx;
+}
+
+.pro_disc{
+   color: rgba(109, 109, 109, 0.856);
+  font-size: 28rpx;
+  margin-left:60rpx;
+  margin-right:150rpx;
+  margin-top: 30rpx;
+  font-weight: 400;
+}
+
+.pro_data{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  margin-top: 60rpx;
+  margin-left:60rpx;
+  width: 40%;
+  height:60%;
+  text-align:center;
+
+}
+
+.pro_data_block{
+   position:relative;
+  display:flex;
+  flex-direction: column;
+
+  
+  
+}
+
+
+.inform{
+  position:relative;
+  display:flex;
+  flex-direction: row;
+  height:100%;
+}
+
+
+.as_btn1{
+  height:55rpx;
+  width:200rpx; 
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:13px;
+  text-align:center;
+  text-decoration:none;
+  line-height: 50rpx;
+  border-radius:30px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  color:#a33535a2;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+    
+    
+.as_btn2{
+
+    height:55rpx;
+  width:200rpx; 
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:13px;
+  text-align:center;
+  text-decoration:none;
+  line-height: 50rpx;
+  border-radius:30px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  color:#a33535a2;
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+
+.as_btn3{
+
+    height:55rpx;
+  width:200rpx; 
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:13px;
+  text-align:center;
+  text-decoration:none;
+  line-height: 50rpx;
+  border-radius:30px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  color:#a33535a2;
+  background-color: rgba(255, 255, 255, 0.2)
+}
+  
+.num_disc1{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 50rpx;
+  font-weight: 600;
+  text-align:center;
+}
+
+.num_disc2{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50rpx;
+  font-weight: 600;
+  text-align:center;
+  width: fit-content;
+}
+
+.num_disc3{
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 50rpx;
+  font-weight: 600;
+  text-align:center;
+}
+
+.pro_price{
+  width:60%;
+}
+
+.img_chuanfan{
+   width: 100%;
+   height: 400rpx;
+   position: relative;
+   
+   
+}
+
+
+@keyframes shake {
+	 from,
+  60%,
+  75%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(400rpx, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes suo1 {
+	 from,
+  60%,
+  75%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(400rpx, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.suo{
+  animation: suo1 0.5s 3s  ;
+	 animation-timing-function: ease;
+}
+
+.shengsuo {
+	 animation: shake 3s 0s  suo 0.5s 3s;
+	 animation-timing-function: ease;
+}
+  

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135.46" height="56.788" viewBox="0 0 135.46 56.788">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.055" y1="0.081" x2="1" y2="0.89" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fdb38f"/>
+      <stop offset="1" stop-color="#f7907e"/>
+    </linearGradient>
+    <filter id="减去_11" x="0" y="0" width="135.46" height="56.788" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#减去_11)">
+    <path id="减去_11-2" data-name="减去 11" d="M117.46,38.787H0l.015-.033C.575,37.718,5.653,28.386,11.7,19.393A104.848,104.848,0,0,1,22,6.061C25.817,2.039,28.99,0,31.432,0H117.46V38.786Z" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
