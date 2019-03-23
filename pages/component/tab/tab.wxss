@@ -60,8 +60,8 @@
    position: absolute;
    width: 800rpx;
    height: 800rpx;
-   margin-left: 200rpx;
-   margin-top: -600rpx;
+   margin-left: 235rpx;
+   margin-top: -650rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;
 	}
