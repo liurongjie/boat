@@ -22,4 +22,21 @@
   border-radius: 100rpx;
   margin-left: 275rpx;
 }
+.judge{
+  position: relative;
+  width: 40rpx;
+  height: 90rpx;
+  background-color: grey;
+   text-align:center;
+  margin-left: 430rpx;
+  margin-top: -100rpx;
+  font-size: 22rpx;
+  color: white;
+}
+
+.list1{
+  position: relative;
+  width: 100%;
+  
+}
 
