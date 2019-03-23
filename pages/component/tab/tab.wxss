@@ -18,10 +18,10 @@
 }
 .bottom .content2{
   position: absolute;
-  width: 220rpx;
-  height: 220rpx;
-  margin-top: -90rpx;
-  margin-left: 265rpx;
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: -75rpx;
+  margin-left: 275rpx;
 }
 .bottom .content3{
   position: absolute;
