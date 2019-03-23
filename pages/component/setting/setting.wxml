@@ -1,2 +1,9 @@
 <!--pages/component/setting/setting.wxml-->
-<text>pages/component/setting/setting.wxml</text>
+<view class='container'>
+  <image src='../../../static/pic/new.png' style='position:reative;width:100%;height:30%;'></image>
+  <view class='boat'>
+    <text style='font-weight:600;font-size:50rpx;font-style: italic;color:white;'>BOAT</text>
+  </view>
+  <image src='../../../static/pic/1.jpg' class='cicle'></image>
+  
+</view>
