@@ -23,7 +23,24 @@
         </block>  
     </view>  
     <view class='ta'>
+
     <text class='boat'>BOAT</text>
+    <view class='circle'></view>
+    <view class='circle'></view>
+    <view class='circle'></view>
+    <view class='text'>武汉大学BOAT用户达到3W</view>
+  <view class='text'>BOAT武汉大学毕业季活动启动</view>
+  <view class='text'>第一批体验用户开始报名，尽享专属福利</view>
+  <view class='line'></view>
+    <view class='line'></view>
+      <view class='line'></view>
+      <view class='date'>
+<text class='day'>{{day}}</text>
+<text class='month'>{{month}}</text>
+<text class='year'>{{year}}</text>
+<text style='position:absolute;left:140rpx;'>|</text>
+      <text style='position:absolute;left:150rpx;font-weight:600;font-size:50rpx;font-style: italic;top:-3rpx;'>BOAT</text>
+      </view>
     </view>
      <view class='ta'>
     </view>

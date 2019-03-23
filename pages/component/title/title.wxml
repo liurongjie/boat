@@ -1,6 +1,5 @@
 <!--pages/component/title/title.wxml-->
 <view class='title'>
-    <text>BOAT校园</text>
     <image src='../../../static/icon/icon1.svg'></image>
    <view class="phone_one" bindtap="clickPerson">
   <view class="phone_personal">{{firstPerson}}</view>

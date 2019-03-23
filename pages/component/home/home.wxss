@@ -54,6 +54,7 @@ background-color: white;
 box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
 border-radius: 10rpx;
 z-index: -1;
+overflow: hidden;
 }
 .bai{
 width: 80%;
@@ -68,12 +69,69 @@ z-index: -1;
 }
 .boat{
   position: relative;
-  letter-spacing: 10rpx;
-  color: rgba(231, 226, 226, 0.4);
-  top:100rpx;
-  right:-180rpx;
-  font-size: 120rpx;
+  letter-spacing: 0rpx;
+  color: #85A1C5;
+  top:70rpx;
+  right:-80rpx;
+  font-size: 180rpx;
   font-style: italic;
-  font-weight: 800;
- 
+  font-weight: 900;
+  -webkit-text-stroke: 2px #0020FF;
+  opacity: 0.08;
+}
+.circle{
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 100%;
+  position: relative;
+  top: -140rpx;
+  left: 50rpx;
+  margin-bottom: 46rpx;
+  background-color: #FEB25E;
+}
+.text{
+  width: 500rpx;
+  height: 20rpx;
+  border-radius: 100%;
+  position: relative;
+  top: -330rpx;
+  left: 90rpx;
+  margin-bottom: 40rpx;
+  font-size: 25rpx;
+}
+.line{
+width: 480rpx;
+height: 2rpx;
+background-color: rgba(85, 85, 85, 0.10);
+position: relative;
+top: -470rpx;
+left: 50rpx;
+margin-bottom: 55rpx;
+}
+.date{
+  position: relative;
+  width: 300rpx;
+  height: 70rpx;
+  
+  top: -750rpx;
+  left:280rpx;
+}
+.year{
+  position: absolute;
+  left:70rpx;
+  top:28rpx;
+  font-size: 18rpx;
+  font-weight: 600;
+}
+.month{
+  position: absolute;
+  left:70rpx;
+  top:5rpx;
+  font-size: 18rpx;
+  font-weight: 600;
+}
+.day{
+  position: relative;
+  left: 10rpx;
+  margin-left: 10rpx;
 }

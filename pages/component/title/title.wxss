@@ -30,17 +30,17 @@
   flex-direction: column;
 }
 .title .arrow{
-  position: fixed;
+  position: relative;
   width: 25rpx;
   height: 25rpx;
-  left: 500rpx;
+
   margin-left: 20rpx;
 }
 
 .phone_personal{
-  left: 360rpx;
-  position: fixed;
-    width: 30%;
+  left: 100rpx;
+  position: relative;
+    width: 100%;
     color:black;
     height:100rpx;
     line-height:100rpx;
@@ -50,18 +50,18 @@
 }
 .phone_one{
     display: flex; 
-    position: fixed;
+    position: relative;
     justify-content: space-between;
-    width:100%;
-    height:100rpx;
-    top:50rpx;
-    
+    width:auto;
+    height:50rpx;
+    top:-20rpx;
+    left: -80rpx;
     border-radius: 10rpx;
     border-bottom:2rpx solid rgb(255, 255, 255);
 }
 .person_box{
     position: fixed;
-    left:300rpx;
+    left:50rpx;
     top: 140rpx;
     z-index: 99;
 }
