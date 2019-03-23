@@ -26,7 +26,7 @@
 
     <view class='ta1'>
     <text class='boat'>BOAT</text>
-<view style='position:absolute'>
+<view style='position:absolute;left:20rpx;top:240rpx;'>
     <view class='circle'></view>
     <view class='circle'></view>
     <view class='circle'></view>
@@ -41,8 +41,8 @@
 <text class='day'>{{day}}</text>
 <text class='month'>{{month}}</text>
 <text class='year'>{{year}}</text>
-<text style='position:absolute;left:135rpx;'>|</text>
-      <text style='position:absolute;left:150rpx;font-weight:600;font-size:50rpx;font-style: italic;top:-3rpx;'>BOAT</text>
+<text style='position:absolute;left:135rpx;top:1rpx;'>|</text>
+      <text style='position:absolute;left:150rpx;font-weight:600;font-size:50rpx;font-style: italic;top:-5rpx;'>BOAT</text>
       </view>
 
     </view>

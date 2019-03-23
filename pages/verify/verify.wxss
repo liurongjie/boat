@@ -6,3 +6,80 @@
   height:300rpx;
   background-color: black;
 }
+
+.phone_personal{
+  left: 100rpx;
+  position: absolute;
+    width:auto;
+    color:black;
+    height:100rpx;
+    line-height:100rpx;
+    text-align: left;
+    font-size: 32rpx;
+    font-weight: 100;
+}
+.phone_one{
+    display: flex; 
+    position: relative;
+    justify-content: space-between;
+    width:auto;
+    height:50rpx;
+    top:75rpx;
+    margin-left: 20rpx;
+    border-radius: 10rpx;
+    
+}
+.person_box{
+    position: fixed;
+    left:50rpx;
+    top: 140rpx;
+    z-index: 99;
+}
+.phone_select{
+    margin-top:0;
+    z-index: 100;
+    position: fixed; 
+    font-size: 30rpx;
+}
+.select_one{
+    text-align: center;
+    font-weight: 100;
+   
+    width:200rpx;   
+    height:100rpx;
+    line-height:100rpx;
+    font-size: 28rpx;
+    margin:0 5%;
+    border-bottom:2rpx solid rgb(255, 255, 255);
+}
+ .arrow{
+  position: relative;
+  width: 30rpx;
+  height: 30rpx;
+left: 250rpx;
+top: -10rpx;
+  margin:auto 0;
+}
+ .arrow1{
+  position: relative;
+  width: 65rpx;
+  height: 65rpx;
+left: 40rpx;
+top: 50rpx;
+}
+.input1{
+  position: absolute;
+height: 100%;
+ left:140rpx;
+ width: 250rpx;
+  background-color: white;
+}
+
+.input11{
+  position: absolute;
+  height: 100%;
+  line-height: 100rpx;
+  left: 60rpx;
+  opacity: 0.4;
+  font-size: 32rpx;
+}
