@@ -1,2 +1,34 @@
 <!--pages/component/home/home.wxml-->
-<text>pages/component/home/home.wxml</text>
+
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  current="{{currentSwiper}}"
+  class='swiper'
+  bindchange='onslidechangeend'
+  indicator-active-color='red'
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" bindtap='rec' />
+    </swiper-item>
+  </block>
+</swiper>
+
+  <view class="dots">  
+        <block wx:for="{{imgUrls}}">  
+            <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
+        </block>  
+    </view>  
+    <view class='ta'>
+    <text class='boat'>BOAT</text>
+    </view>
+     <view class='ta'>
+    </view>
+     <view class='ta'>
+    </view>
+
+      <view class='bai'>
+    </view>

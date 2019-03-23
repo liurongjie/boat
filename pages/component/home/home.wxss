@@ -1,1 +1,79 @@
-/* pages/component/home/home.wxss */
+.k{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 150rpx;
+  background-color: white;
+}
+
+
+.swiper{
+position: fixed;
+top: 140rpx;
+
+width: 100%;
+height: 800rpx;
+}
+
+.dots{  
+  width: 156rpx;
+  height: 36rpx; 
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 320rpx;
+  top: 500rpx;
+}  
+/*未选中时的小圆点样式 */
+.dot{  
+  width: 10rpx;  
+  height: 10rpx;   
+  border-radius: 100%;
+  margin-right: 10rpx;
+  background-color: white;
+}  
+/*选中以后的小圆点样式  */
+.active{  
+  width: 50rpx;   
+  height: 10rpx;
+  border-radius: 20%;
+  background :white;
+}  
+.slide-image{
+  width: 100%;
+  height: 400rpx;
+}
+.ta{
+width: 80%;
+height: 250rpx;
+position: relative;
+margin-top: 30rpx;
+top:560rpx;
+left: 10%;
+background-color: white;
+box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
+border-radius: 10rpx;
+z-index: -1;
+}
+.bai{
+width: 80%;
+height: 180rpx;
+position: relative;
+margin-top: 30rpx;
+top:560rpx;
+left: 10%;
+background-color: white;
+border-radius: 10rpx;
+z-index: -1;
+}
+.boat{
+  position: relative;
+  letter-spacing: 10rpx;
+  color: rgba(231, 226, 226, 0.4);
+  top:100rpx;
+  right:-180rpx;
+  font-size: 120rpx;
+  font-style: italic;
+  font-weight: 800;
+ 
+}
