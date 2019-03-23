@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/verify/verify"
+    
      
   ],
   "window": {

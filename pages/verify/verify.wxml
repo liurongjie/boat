@@ -1,5 +1,9 @@
 <!--pages/verify/verify.wxml-->
+<title></title>
+  <image src='/static/pic/background.png' style='position:absolute;width:100%;height:100%;filter: blur(40rpx);'></image>
+  <image src='/static/icon/Icon3.png' style='position:absolute;left:365rpx;top:160rpx;width:27rpx;height:32rpx;'></image>
+ <text style='position:absolute;left:280rpx;top:200rpx;font-size:50rpx;font-weight:100'>校园认证</text>
 
-  <image src='../../static/pic/background.png' style='position:absolute;width:100%;height:100%;'></image>
-  <view class='top'></view>
+ <text style='position:absolute;left:264rpx;top:280rpx;font-size:28rpx;font-weight:100;opacity:0.5'>本校同舟  共享优惠</text>
+
 

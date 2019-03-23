@@ -5,7 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
+    selectPerson: true,
+    firstPerson: '武汉大学',
+    selectArea: false,
 
+  },
+  clickPerson: function () {
+    var selectPerson = this.data.selectPerson;
+    if (selectPerson == true) {
+      this.setData({
+        selectArea: true,
+        selectPerson: false,
+      })
+    } else {
+      this.setData({
+        selectArea: false,
+        selectPerson: true,
+      })
+    }
+  },
+  mySelect: function (e) {
+
+    this.setData({
+      firstPerson: e.target.dataset.me,
+      selectPerson: true,
+      selectArea: false,
+    })
   },
 
   /**
