@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5ee4fe"/>
+      <stop offset="1" stop-color="#57abfe"/>
+    </linearGradient>
+  </defs>
+  <g id="navbar_mobile_dark" data-name="navbar mobile dark" transform="translate(-16 -40)">
+    <rect id="rectangle" width="24" height="24" transform="translate(16 40)" fill="none"/>
+    <path id="navbar_mobile" d="M3,18H21V16H3v2Zm0-5H21V11H3v2ZM3,6V8H21V6Z" transform="translate(16 37)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

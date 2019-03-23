@@ -1,0 +1,12 @@
+<!--pages/component/title/title.wxml-->
+<view class='title'>
+    <text>BOAT校园</text>
+    <image src='../../../static/icon/icon1.svg'></image>
+
+    <view class='choice' >
+      <view>武汉大学</view>
+    </view>
+    <view class='arrow'>
+      <image style='width:100%;height:100%;' src='../../../static/icon/icon2.svg'></image>
+    </view>
+</view>

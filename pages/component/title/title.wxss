@@ -1,0 +1,36 @@
+/* pages/component/title/title.wxss */
+.title{
+  position: fixed;
+  margin-top: 70rpx;
+  width: 100%;
+  height: 200rpx;
+  background-color:white;
+  display: flex;
+  flex-direction: row;
+}
+.title text{
+  position: relative;
+  width: 200rpx;
+  font-size: 40rpx;
+  margin-left: 30rpx;
+}
+.title image{
+  position: relative;
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+}
+.title .choice{
+  position: relative;
+  line-height: 50rpx;
+  width: 120rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.title .arrow{
+  position: relative;
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: -10rpx;
+}
