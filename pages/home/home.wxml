@@ -1,2 +1,7 @@
 
- <tab></tab>
+  <home wx:if="{{index==1}}"></home>
+  <boat wx:if="{{index==3}}"></boat>
+  <setting wx:if="{{index==2}}"></setting>
+  <tab bindtap='changestatus'></tab>
+
+
