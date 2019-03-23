@@ -27,7 +27,7 @@
   position: absolute;
   width: 130rpx;
   height: 130rpx;
-  margin-top: 15rpx;
+  margin-top: 5rpx;
   margin-left: 560rpx;
   display: flex;
   flex-direction: column;
