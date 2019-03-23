@@ -1,0 +1,71 @@
+.bottom{
+  position: fixed;
+  width: 100%;
+  height: 150rpx;
+  bottom: 0rpx;
+  background-color:white;
+  display: flex;
+  flex-direction: row;
+}
+.bottom .content1{
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+  margin-left: 120rpx;
+  display: flex;
+  flex-direction: column;
+}
+.bottom .content2{
+  position: absolute;
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: -50rpx;
+  margin-left: 275rpx;
+}
+.bottom .content3{
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+  margin-left: 560rpx;
+  display: flex;
+  flex-direction: column;
+}
+.bottom .content4{
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+  margin-left: 300rpx;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes shake {
+	 from,
+  60%,
+  75%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(400rpx, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.shake1 {
+   position: absolute;
+   width: 800rpx;
+   height: 800rpx;
+   margin-left: 200rpx;
+   margin-top: -600rpx;
+	 animation: shake 3s 0s ;
+	 animation-timing-function: ease;
+	}
+  
+
+
+
