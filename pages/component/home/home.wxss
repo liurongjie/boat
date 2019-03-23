@@ -137,11 +137,10 @@ left: 50rpx;
 margin-bottom: 48rpx;
 }
 .date{
-  position: relative;
+  position: absolute;
   width: 300rpx;
   height: 70rpx;
-  
-  top: -660rpx;
+  top: 20rpx;
   left:270rpx;
 }
 .year{
@@ -159,7 +158,7 @@ margin-bottom: 48rpx;
   font-weight: 600;
 }
 .day{
-  position: relative;
+  position: absolute;
   left: 20rpx;
   margin-left: 10rpx;
   top: 5rpx;

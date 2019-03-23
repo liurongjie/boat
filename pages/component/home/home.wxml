@@ -22,8 +22,11 @@
             <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
         </block>  
     </view>  
+
+
     <view class='ta1'>
     <text class='boat'>BOAT</text>
+<view style='position:absolute'>
     <view class='circle'></view>
     <view class='circle'></view>
     <view class='circle'></view>
@@ -33,6 +36,7 @@
   <view class='line'></view>
     <view class='line'></view>
       <view class='line'></view>
+</view>
       <view class='date'>
 <text class='day'>{{day}}</text>
 <text class='month'>{{month}}</text>
@@ -40,7 +44,10 @@
 <text style='position:absolute;left:135rpx;'>|</text>
       <text style='position:absolute;left:150rpx;font-weight:600;font-size:50rpx;font-style: italic;top:-3rpx;'>BOAT</text>
       </view>
+
     </view>
+
+
      <view class='ta2'>
      <text style='position:absolute;left:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>毕业季</text>
      <text style='position:absolute;left:50rpx;top:115rpx;color:white;font-size:30rpx;font-weight:300;'>开学季购买校园必需品
