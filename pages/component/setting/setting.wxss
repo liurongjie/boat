@@ -36,7 +36,28 @@
 
 .list1{
   position: relative;
-  width: 100%;
-  
+  margin-top: 150rpx;
+  width: 80%;
+  height: 100rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  box-shadow: darkgrey 0rpx 0rpx 0rpx 10rpx;
 }
+.list1 image{
+  position: relative;
+  margin-left: 70rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.list1 text{
+  position: relative;
+  font-size: 35rpx;
+  margin-left: 100rpx;
+  color:rgba(0,0,0,0.6)
+
+}
+
 
