@@ -21,7 +21,7 @@ height: 800rpx;
   display: flex;
   flex-direction: row;
   position: fixed;
-  left: 320rpx;
+  left: 325rpx;
   top: 500rpx;
 }  
 /*未选中时的小圆点样式 */
@@ -43,7 +43,8 @@ height: 800rpx;
   width: 100%;
   height: 400rpx;
 }
-.ta{
+
+.ta1{
 width: 80%;
 height: 250rpx;
 position: relative;
@@ -52,9 +53,37 @@ top:560rpx;
 left: 10%;
 background-color: white;
 box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
-border-radius: 10rpx;
+
 z-index: -1;
 overflow: hidden;
+}
+.ta2{
+width: 80%;
+height: 250rpx;
+position: relative;
+margin-top: 30rpx;
+top:560rpx;
+left: 10%;
+border-radius: 10rpx;
+background-color: white;
+box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
+background: linear-gradient(to bottom right,#FEB25E,#FE8F57);
+z-index: -1;
+overflow: hidden;
+}
+.ta3{
+width: 80%;
+height: 250rpx;
+position: relative;
+margin-top: 30rpx;
+top:560rpx;
+left: 10%;
+background-color: white;
+box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
+background: linear-gradient(to bottom right,#FF060D,#FF64A7);
+z-index: -1;
+overflow: hidden;
+border-radius: 10rpx;
 }
 .bai{
 width: 80%;
@@ -84,9 +113,9 @@ z-index: -1;
   height: 15rpx;
   border-radius: 100%;
   position: relative;
-  top: -140rpx;
+  top: -120rpx;
   left: 50rpx;
-  margin-bottom: 46rpx;
+  margin-bottom: 36rpx;
   background-color: #FEB25E;
 }
 .text{
@@ -94,9 +123,9 @@ z-index: -1;
   height: 20rpx;
   border-radius: 100%;
   position: relative;
-  top: -330rpx;
+  top: -280rpx;
   left: 90rpx;
-  margin-bottom: 40rpx;
+  margin-bottom: 30rpx;
   font-size: 25rpx;
 }
 .line{
@@ -104,34 +133,35 @@ width: 480rpx;
 height: 2rpx;
 background-color: rgba(85, 85, 85, 0.10);
 position: relative;
-top: -470rpx;
+top: -395rpx;
 left: 50rpx;
-margin-bottom: 55rpx;
+margin-bottom: 48rpx;
 }
 .date{
   position: relative;
   width: 300rpx;
   height: 70rpx;
   
-  top: -750rpx;
-  left:280rpx;
+  top: -660rpx;
+  left:270rpx;
 }
 .year{
   position: absolute;
-  left:70rpx;
+  left:80rpx;
   top:28rpx;
   font-size: 18rpx;
   font-weight: 600;
 }
 .month{
   position: absolute;
-  left:70rpx;
+  left:80rpx;
   top:5rpx;
   font-size: 18rpx;
   font-weight: 600;
 }
 .day{
   position: relative;
-  left: 10rpx;
+  left: 20rpx;
   margin-left: 10rpx;
+  top: 5rpx;
 }
