@@ -233,7 +233,7 @@ background-color:rgba(95, 83, 83, 0.493);
 }
 
 
-@keyframes suo {
+@keyframes suo1 {
 	 from,
   60%,
   75%,
@@ -250,12 +250,12 @@ background-color:rgba(95, 83, 83, 0.493);
 }
 
 .suo{
-  animation: suo 0.5s 3s  ;
+  animation: suo1 0.5s 3s  ;
 	 animation-timing-function: ease;
 }
 
 .shengsuo {
-	 animation: shake 3s 0s  ;
+	 animation: shake 3s 0s  suo 0.5s 3s;
 	 animation-timing-function: ease;
 }
   

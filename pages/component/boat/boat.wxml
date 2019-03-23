@@ -45,7 +45,7 @@
     </view>
 
 
-    <view class='pro_price shengsuo  suo'>
+    <view class='pro_price shengsuo  '>
         <image  class='img_chuanfan' src='../../../static/pic/chuanfan.svg'>
            
         </image>
