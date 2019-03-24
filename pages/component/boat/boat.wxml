@@ -6,8 +6,6 @@
   <button class='btn_right'> 校园日常</button>
 </view>
 
-
-
 <view  bindtouchmove='swiper' class='context'>
 
         <text class='pro_name'>驾校C1普通班</text>  

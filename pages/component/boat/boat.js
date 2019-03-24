@@ -30,7 +30,7 @@ Component({
       })
       console.log("gotoboat");
     },
-
+    
     swiper:function(e){
       // console.log(e)
       let currentX = e.changedTouches[0].pageX
@@ -98,4 +98,5 @@ Component({
 
 
   
+
 })
