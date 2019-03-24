@@ -15,7 +15,11 @@
     <text>问题反馈&联系我们</text>
     <image src='../../../static/icon/setting/icon3.svg'  ></image>
   </view> -->
- <!-- <view class='rightcicle'></view> -->
+  <image src='../../../static/icon/setting/right.svg' class='rightcicle'></image>
+  <image src='../../../static/icon/setting/left.svg' class='leftcicle'></image>
+  <view class='point1'></view>
+  <view class='point2'></view>
+  <view class='point3'></view>
   <view class='name'>
       <text style='font-size:55rpx;font-weight: 100;color: rgba(100,100,100,0.8);'>李艮基</text>
       <text>武汉大学2016级学生</text>
