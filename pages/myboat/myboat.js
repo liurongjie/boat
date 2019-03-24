@@ -1,27 +1,18 @@
-// pages/home/home.js
-var app=getApp();
-var that=this;
-var Data=require('../../common/index.js');
+// pages/myboat/myboat.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    index:app.index,
+
   },
-  changestatus:function(){
-    var status=app.index;
-    this.setData({
-      index: status,
-    })
-    console.log("index change to",app.index);
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(Data.index)
+
   },
 
   /**

@@ -1,10 +1,54 @@
 <!--pages/component/setting/setting.wxml-->
 <view class='container'>
-  <image src='../../../static/pic/new.png' style='position:reative;width:100%;height:30%;'></image>
+  <image src='../../../static/pic/new.png' style='position:reative;width:100%;height:40%;'></image>
   <view class='boat'>
-    <text style='font-weight:600;font-size:50rpx;font-style: italic;color:white;'>BOAT</text>
+    <text style='font-weight:600;font-size:50rpx;font-style: italic;'>BOAT</text>
   </view>
   <image src='../../../static/pic/1.jpg' class='cicle'></image>
-  <view class='judge'>未认证</view>
-  <image src='../../../static/pic/setting2.svg' class=''></image>
+  <!-- <view class='judge'>未认证</view>
+  <view class='list1'>
+    <image src='../../../static/icon/setting/icon1.svg' ></image>
+    <text>校园认证</text>
+    <image src='../../../static/icon/setting/icon2.svg' style='margin-left:150rpx;' ></image>
+  </view>
+  <view class='list2'>
+    <text>问题反馈&联系我们</text>
+    <image src='../../../static/icon/setting/icon3.svg'  ></image>
+  </view> -->
+  <image src='../../../static/icon/setting/right.svg' class='rightcicle'></image>
+  <image src='../../../static/icon/setting/left.svg' class='leftcicle'></image>
+  <view class='point1'></view>
+  <view class='point2'></view>
+  <view class='point3'></view>
+  <view class='name'>
+      <text style='font-size:55rpx;font-weight: 100;color: rgba(100,100,100,0.8);'>李艮基</text>
+      <text>武汉大学2016级学生</text>
+  </view>
+  <view class='middle'>
+    <view class='l0'>
+        <image src='../../../static/icon/setting/1.svg' style='  margin-left: 90rpx;'></image>
+        <text> 提交需求</text>
+        <image src='../../../static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+    </view>
+    <view class='l1'>
+        <image src='../../../static/icon/setting/2.svg' style='  margin-left: 90rpx;'></image>
+        <text>查看订单</text>
+        <image src='../../../static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+    </view>
+    <view class='l1'>
+        <image src='../../../static/icon/setting/3.svg' style='  margin-left: 90rpx;'></image>
+        <text> 优惠特权</text>
+        <image src='../../../static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+    </view>
+    <view class='l1'>
+        <image src='../../../static/icon/setting/4.svg' style='  margin-left: 90rpx;'></image>
+        <text> 联系我们&加入我们</text>
+        <image src='../../../static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;'></image>
+    </view>
+    <view class='l1'>
+        <image src='../../../static/icon/setting/5.svg' style='  margin-left: 90rpx;'></image>
+        <text> 校园合伙人</text>
+        <image src='../../../static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx; width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+    </view>
+  </view>
 </view>

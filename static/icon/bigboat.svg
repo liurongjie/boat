@@ -1,59 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="423.199" height="360.851" viewBox="0 0 423.199 360.851">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="423.199" height="383.606" viewBox="0 0 423.199 383.606">
   <defs>
-    <filter id="路径_1431" x="166.235" y="121.009" width="256.963" height="239.842" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="交叉_11" x="195.396" y="0" width="145" height="136" filterUnits="userSpaceOnUse">
+      <feOffset dy="-3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="路径_1433" x="0" y="248.071" width="184.713" height="112.78" filterUnits="userSpaceOnUse">
+    <filter id="路径_1431" x="166.235" y="143.765" width="256.963" height="239.841" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-2"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="路径_1434" x="101.883" y="131.823" width="103.609" height="99.315" filterUnits="userSpaceOnUse">
+    <filter id="路径_1433" x="0" y="270.827" width="184.713" height="112.78" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-3"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter id="路径_1434" x="101.883" y="154.578" width="103.609" height="99.315" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
-  <g id="_17.船-01" data-name="17.船-01" transform="translate(-126.621 -188.3)">
-    <path id="路径_1430" data-name="路径 1430" d="M886.245,469.99l-16.645,10.5V459.6Z" transform="translate(-345.425 -127.487)" fill="#7c5442"/>
-    <g transform="matrix(1, 0, 0, 1, 126.62, 188.3)" filter="url(#路径_1431)">
-      <path id="路径_1431-2" data-name="路径 1431" d="M450.2,558.3v91.44l238.963-141.9V455.094l-16.645,10.5V427.9Z" transform="translate(-274.96 -300.89)" fill="#456162"/>
+  <g id="组_453" data-name="组 453" transform="translate(-792.104 -3691.5)">
+    <g transform="matrix(1, 0, 0, 1, 792.1, 3691.5)" filter="url(#交叉_11)">
+      <path id="交叉_11-2" data-name="交叉 11" d="M301.5,152.564v-76h85v76Z" transform="translate(-76.1 -43.56)" fill="#77c7d7"/>
     </g>
-    <path id="路径_1432" data-name="路径 1432" d="M400.8,299.4l124.571,68.116-222.531,130.4L136.6,494.578l40.446-68.169Z" transform="translate(-0.979 -52.207)" fill="#c8ddcd"/>
-    <g transform="matrix(1, 0, 0, 1, 126.62, 188.3)" filter="url(#路径_1433)">
-      <path id="路径_1433-2" data-name="路径 1433" d="M136.6,686.365V667.6l166.712,3.34v91.44Z" transform="translate(-127.6 -413.53)" fill="#80afad"/>
+    <g id="_17.船-01" data-name="17.船-01" transform="translate(665.483 3525.956)">
+      <path id="路径_1430" data-name="路径 1430" d="M886.245,469.99l-16.645,10.5V459.6Z" transform="translate(-345.425 -127.487)" fill="#7c5442"/>
+      <g transform="matrix(1, 0, 0, 1, 126.62, 165.54)" filter="url(#路径_1431)">
+        <path id="路径_1431-2" data-name="路径 1431" d="M450.2,558.3v91.44l238.963-141.9V455.094l-16.645,10.5V427.9Z" transform="translate(-274.96 -278.14)" fill="#456162"/>
+      </g>
+      <path id="路径_1432" data-name="路径 1432" d="M400.8,299.4l124.571,68.116-222.531,130.4L136.6,494.578l40.446-68.169Z" transform="translate(-0.979 -52.207)" fill="#c8ddcd"/>
+      <g transform="matrix(1, 0, 0, 1, 126.62, 165.54)" filter="url(#路径_1433)">
+        <path id="路径_1433-2" data-name="路径 1433" d="M136.6,686.365V667.6l166.712,3.34v91.44Z" transform="translate(-127.6 -390.77)" fill="#80afad"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 126.62, 165.54)" filter="url(#路径_1434)">
+        <path id="路径_1434-2" data-name="路径 1434" d="M414.409,495.8v33.82L328.8,482.067V448.3Z" transform="translate(-217.92 -287.72)" fill="#dc603e"/>
+      </g>
+      <path id="路径_1435" data-name="路径 1435" d="M446.638,326.6,328.8,391.112l85.609,47.5,115.877-67.321Z" transform="translate(-91.296 -64.989)" fill="#f5d48f"/>
+      <path id="路径_1436" data-name="路径 1436" d="M606.177,446.151V410.9L490.3,478.221v33.82Z" transform="translate(-167.187 -104.603)" fill="#493a3d"/>
+      <path id="路径_1437" data-name="路径 1437" d="M595.777,645.262v21.1L590.9,663.5V642.4Z" transform="translate(-214.46 -213.387)" fill="#edb733"/>
+      <path id="路径_1438" data-name="路径 1438" d="M667.657,562.6,590.9,604.9l4.877,2.862,75.537-42.884Z" transform="translate(-214.46 -175.888)" fill="#c8ddcd"/>
+      <path id="路径_1439" data-name="路径 1439" d="M675.637,587.679V566.9L600.1,609.784v21.1Z" transform="translate(-218.783 -177.909)" fill="#7c5442"/>
+      <path id="路径_1440" data-name="路径 1440" d="M302.7,565.9l-163.691-2.173,20.991-27.512v13.994a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V533.728a1.413,1.413,0,0,0-.371-.954l15-19.666v11.98a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V509.132l5.672-7.474a1.511,1.511,0,1,0-2.385-1.855l-49.033,64.406a1.47,1.47,0,0,0-.159,1.537,1.451,1.451,0,0,0,1.325.848l7.9.106v16.38a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V566.752l73.576,1.007a1.726,1.726,0,0,0-.212.742v16.486a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V568.555a1.467,1.467,0,0,0-.159-.689l71.4.954a1.547,1.547,0,0,0-.106.477v16.486a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V569.3c0-.159-.053-.318-.053-.477l5.3.053a1.482,1.482,0,0,0,1.484-1.484A1.3,1.3,0,0,0,302.7,565.9Z" transform="translate(0 -146.115)" fill="#fff"/>
+      <path id="路径_1441" data-name="路径 1441" d="M773.4,314.563v38.643l5.831-2.7V333.646l15.532-9.065V302Z" transform="translate(-300.219 -53.429)" fill="#7c5442"/>
+      <path id="路径_1442" data-name="路径 1442" d="M738.345,305.776,698.8,283.3v38.643l39.545,22.476Z" transform="translate(-265.164 -44.642)" fill="#80afad"/>
+      <path id="路径_1443" data-name="路径 1443" d="M738.345,295.109,698.8,272.633,719.9,260.6l39.81,21.946Z" transform="translate(-265.164 -33.975)" fill="#fad256"/>
+      <path id="路径_1444" data-name="路径 1444" d="M763.524,427.888l22.741-13.411V405.2L763.1,411.031Z" transform="translate(-295.379 -101.924)" fill="#fdffe6"/>
+      <path id="路径_1445" data-name="路径 1445" d="M763.571,427.888l22.741-13.411V405.2L763.2,411.031Z" transform="translate(-295.426 -101.924)" fill="#6d473c"/>
+      <path id="路径_1446" data-name="路径 1446" d="M626.2,332.84v12.775l11.026-6.944V324.2Z" transform="translate(-231.048 -63.861)" fill="#e67883"/>
+      <path id="路径_1447" data-name="路径 1447" d="M715.275,365.335l-4.93,9.913L647,338.671V324.2Z" transform="translate(-240.822 -63.861)" fill="#bcc3cb"/>
+      <path id="路径_1448" data-name="路径 1448" d="M617.46,352.288,607.6,346.4v-8l9.86,5.566ZM690.453,396.5l-9.648-5.566V381.6l9.648,5.513Z" transform="translate(-222.308 -70.534)" fill="#d96641"/>
+      <path id="路径_1449" data-name="路径 1449" d="M690.453,376.589l22.741-13.411L629.016,316,607.6,327.927l9.807,5.566,10.973-6.255L692.52,364.4l-11.715,6.732,9.648,5.46Z" transform="translate(-222.308 -60.008)" fill="#fad256"/>
+      <path id="路径_1450" data-name="路径 1450" d="M461.588,403.71v33.82L406.3,406.52V372.7Z" transform="translate(-127.714 -86.652)" fill="#f9ca49"/>
+      <path id="路径_1451" data-name="路径 1451" d="M470.6,304l-64.3,36.417,55.288,31.01,61.914-35.94Z" transform="translate(-127.714 -54.369)" fill="#fff48a"/>
+      <path id="路径_1452" data-name="路径 1452" d="M572.514,398.651V363.4L510.6,399.34v33.82Z" transform="translate(-176.726 -82.282)" fill="#825f51"/>
+      <path id="路径_1453" data-name="路径 1453" d="M513.088,218.425v81.05L494.8,289.3v-81Z" transform="translate(-169.302 -9.398)" fill="#fad256"/>
+      <path id="路径_1454" data-name="路径 1454" d="M513.088,188.3,494.8,198.9l18.288,10.125,18.129-10.761Z" transform="translate(-169.302)" fill="#fff48a"/>
+      <path id="路径_1455" data-name="路径 1455" d="M547.429,288.415V207.1L529.3,217.861v81.05Z" transform="translate(-185.514 -8.834)" fill="#e79764"/>
     </g>
-    <g transform="matrix(1, 0, 0, 1, 126.62, 188.3)" filter="url(#路径_1434)">
-      <path id="路径_1434-2" data-name="路径 1434" d="M414.409,495.8v33.82L328.8,482.067V448.3Z" transform="translate(-217.92 -310.48)" fill="#dc603e"/>
-    </g>
-    <path id="路径_1435" data-name="路径 1435" d="M446.638,326.6,328.8,391.112l85.609,47.5,115.877-67.321Z" transform="translate(-91.296 -64.989)" fill="#f5d48f"/>
-    <path id="路径_1436" data-name="路径 1436" d="M606.177,446.151V410.9L490.3,478.221v33.82Z" transform="translate(-167.187 -104.603)" fill="#493a3d"/>
-    <path id="路径_1437" data-name="路径 1437" d="M595.777,645.262v21.1L590.9,663.5V642.4Z" transform="translate(-214.46 -213.387)" fill="#edb733"/>
-    <path id="路径_1438" data-name="路径 1438" d="M667.657,562.6,590.9,604.9l4.877,2.862,75.537-42.884Z" transform="translate(-214.46 -175.888)" fill="#c8ddcd"/>
-    <path id="路径_1439" data-name="路径 1439" d="M675.637,587.679V566.9L600.1,609.784v21.1Z" transform="translate(-218.783 -177.909)" fill="#7c5442"/>
-    <path id="路径_1440" data-name="路径 1440" d="M302.7,565.9l-163.691-2.173,20.991-27.512v13.994a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V533.728a1.413,1.413,0,0,0-.371-.954l15-19.666v11.98a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V509.132l5.672-7.474a1.511,1.511,0,1,0-2.385-1.855l-49.033,64.406a1.47,1.47,0,0,0-.159,1.537,1.451,1.451,0,0,0,1.325.848l7.9.106v16.38a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V566.752l73.576,1.007a1.726,1.726,0,0,0-.212.742v16.486a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V568.555a1.467,1.467,0,0,0-.159-.689l71.4.954a1.547,1.547,0,0,0-.106.477v16.486a1.482,1.482,0,0,0,1.484,1.484,1.517,1.517,0,0,0,1.484-1.484V569.3c0-.159-.053-.318-.053-.477l5.3.053a1.482,1.482,0,0,0,1.484-1.484A1.3,1.3,0,0,0,302.7,565.9Z" transform="translate(0 -146.115)" fill="#fff"/>
-    <path id="路径_1441" data-name="路径 1441" d="M773.4,314.563v38.643l5.831-2.7V333.646l15.532-9.065V302Z" transform="translate(-300.219 -53.429)" fill="#7c5442"/>
-    <path id="路径_1442" data-name="路径 1442" d="M738.345,305.776,698.8,283.3v38.643l39.545,22.476Z" transform="translate(-265.164 -44.642)" fill="#80afad"/>
-    <path id="路径_1443" data-name="路径 1443" d="M738.345,295.109,698.8,272.633,719.9,260.6l39.81,21.946Z" transform="translate(-265.164 -33.975)" fill="#fad256"/>
-    <path id="路径_1444" data-name="路径 1444" d="M763.524,427.888l22.741-13.411V405.2L763.1,411.031Z" transform="translate(-295.379 -101.924)" fill="#fdffe6"/>
-    <path id="路径_1445" data-name="路径 1445" d="M763.571,427.888l22.741-13.411V405.2L763.2,411.031Z" transform="translate(-295.426 -101.924)" fill="#6d473c"/>
-    <path id="路径_1446" data-name="路径 1446" d="M626.2,332.84v12.775l11.026-6.944V324.2Z" transform="translate(-231.048 -63.861)" fill="#e67883"/>
-    <path id="路径_1447" data-name="路径 1447" d="M715.275,365.335l-4.93,9.913L647,338.671V324.2Z" transform="translate(-240.822 -63.861)" fill="#bcc3cb"/>
-    <path id="路径_1448" data-name="路径 1448" d="M617.46,352.288,607.6,346.4v-8l9.86,5.566ZM690.453,396.5l-9.648-5.566V381.6l9.648,5.513Z" transform="translate(-222.308 -70.534)" fill="#d96641"/>
-    <path id="路径_1449" data-name="路径 1449" d="M690.453,376.589l22.741-13.411L629.016,316,607.6,327.927l9.807,5.566,10.973-6.255L692.52,364.4l-11.715,6.732,9.648,5.46Z" transform="translate(-222.308 -60.008)" fill="#fad256"/>
-    <path id="路径_1450" data-name="路径 1450" d="M461.588,403.71v33.82L406.3,406.52V372.7Z" transform="translate(-127.714 -86.652)" fill="#f9ca49"/>
-    <path id="路径_1451" data-name="路径 1451" d="M470.6,304l-64.3,36.417,55.288,31.01,61.914-35.94Z" transform="translate(-127.714 -54.369)" fill="#fff48a"/>
-    <path id="路径_1452" data-name="路径 1452" d="M572.514,398.651V363.4L510.6,399.34v33.82Z" transform="translate(-176.726 -82.282)" fill="#825f51"/>
-    <path id="路径_1453" data-name="路径 1453" d="M513.088,218.425v81.05L494.8,289.3v-81Z" transform="translate(-169.302 -9.398)" fill="#fad256"/>
-    <path id="路径_1454" data-name="路径 1454" d="M513.088,188.3,494.8,198.9l18.288,10.125,18.129-10.761Z" transform="translate(-169.302)" fill="#fff48a"/>
-    <path id="路径_1455" data-name="路径 1455" d="M547.429,288.415V207.1L529.3,217.861v81.05Z" transform="translate(-185.514 -8.834)" fill="#e79764"/>
   </g>
 </svg>
