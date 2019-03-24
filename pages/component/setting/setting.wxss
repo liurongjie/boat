@@ -8,12 +8,14 @@
 .boat{
   position: relative;
   width: 300rpx;
-  height: 80rpx;
+  height: 60rpx;
   border-radius: 40rpx;
-  background-color: orange;
+  background-color: #FDB38F;
   margin-left: 225rpx;
-  margin-top: -175rpx;
+  margin-top: -250rpx;
   text-align:center;
+  line-height: 60rpx;
+  color:rgba(255,255,255,0.8);
 }
 .cicle{
   position: relative;
@@ -21,6 +23,7 @@
   height: 200rpx;
   border-radius: 100rpx;
   margin-left: 275rpx;
+  margin-top: 30rpx;
 }
 .judge{
   position: relative;
@@ -49,14 +52,45 @@
 .list1 image{
   position: relative;
   margin-left: 70rpx;
+  margin-top: 25rpx;
   width: 40rpx;
   height: 40rpx;
 }
 .list1 text{
   position: relative;
   font-size: 35rpx;
+  margin-top: 25rpx;
   margin-left: 100rpx;
   color:rgba(0,0,0,0.6)
 }
+.list2{
+  position: relative;
+  margin-top:70rpx;
+  width: 80%;
+  height: 100rpx;
+  margin-left: 150rpx;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 5px 5px 5px #EEEEEE;
+}
+.list2 image{
+  position: relative;
+  margin-left: 100rpx;
+  margin-top: 25rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.list2 text{
+  position: relative;
+  font-size: 35rpx;
+  margin-top: 25rpx;
+  margin-left: 100rpx;
+  color:rgba(0,0,0,0.6)
+}
+
+
 
 
