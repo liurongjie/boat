@@ -1,2 +1,5 @@
 <!--pages/toboat/toboat.wxml-->
-<text>pages/toboat/toboat.wxml</text>
+<view style='margin-top: 50%;margin-left:50%'>
+	我要上船
+</view> 
+<bottom></bottom>
