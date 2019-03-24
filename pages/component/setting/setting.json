@@ -1,4 +1,13 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "list": "../asset/list/list",
+    "list1": "../asset/list1/list1",
+    "list2": "../asset/list2/list2",
+    "list3": "../asset/list3/list3",
+    "list4": "../asset/list4/list4",
+    "list5": "../asset/list5/list5",
+    "notverify": "../asset/notverify/notverify"
+
+    }
 }

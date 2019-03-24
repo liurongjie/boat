@@ -1,1 +1,14 @@
 /* pages/toboat/toboat.wxss */
+.row-row{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+}
+
+.row-column{
+  display: flex;
+  flex-direction: column;
+ /* flex:1 1 auto;*/
+  /* border: 5rpx solid grey; */
+  align-items: stretch;
+}

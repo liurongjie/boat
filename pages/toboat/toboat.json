@@ -1,6 +1,5 @@
 {
-"usingComponents": {
+  "usingComponents": {
   	"bottom":"../component/bottom/bottom"
   }
 } 
-

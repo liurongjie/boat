@@ -4,46 +4,73 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+     //根据页面决定按钮执行的任务
+      taskfunc:{
+        type: String,
+        value: ""
+    },//任务调用的函数名
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    //index: 1,
-    status:1//右下角按钮状态变量
-    //1表示 我要上船
-    //2表示 进我的团
-    //3表示 预付一元
-    //4表示 预付一半
-  },
+     
+   },
 
   /**
    * 组件的方法列表
    */
 
   methods: {
-    change1: function () {
-      const app = getApp();
-      app.index = 1;
-      this.setData({
-        index: 1,
+    // change1: function () {
+    //   const app = getApp();
+    //   app.index = 1;
+    //   this.setData({
+    //     index: 1,
+    //   })
+    // },
+    // change2: function () {
+    //   const app = getApp();
+    //   app.index = 2;
+    //   this.setData({
+    //     index: 2,
+    //   })
+    // },
+    // change3: function () {
+    //   const app = getApp();
+    //   app.index = 3;
+    //   this.setData({
+    //     index: 3,
+    //   })
+    // },
+    goback:function(){
+
+      wx.navigateBack({
+        delta:1,
       })
+      //console.log(this.data.taskfunc);
     },
-    change2: function () {
-      const app = getApp();
-      app.index = 2;
-      this.setData({
-        index: 2,
-      })
+
+    goboat:function() {
+      // body...
+      console.log("go on boat");
     },
-    change3: function () {
-      const app = getApp();
-      app.index = 3;
-      this.setData({
-        index: 3,
-      })
+
+    myboat: function () {
+      // body...
+      console.log("see my boat");
     },
+
+    prepay1: function () {
+      // body...
+      console.log("pre-pay 1 yuan");
+    },
+
+    prepay2: function () {
+      // body...
+      console.log("pre-pay half price");
+    },
+
   }
 })
