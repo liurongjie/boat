@@ -61,11 +61,17 @@ background-color:rgba(95, 83, 83, 0.493);
   margin-top: 20rpx;
   margin-right:auto;
   margin-left:auto;
-  
   width: 80%;
   height: 950rpx;
   background-color: rgba(0, 0, 0, 0.48);
   border-radius:10px;
+}
+
+
+
+.scroll-x{
+  width: 600rpx;
+  height: 950rpx;
 }
 
 .pro_name{
@@ -101,9 +107,10 @@ background-color:rgba(95, 83, 83, 0.493);
   display:flex;
   flex-direction: column;
 
-  
-  
 }
+
+
+
 
 
 .inform{
@@ -320,17 +327,41 @@ background-color:rgba(95, 83, 83, 0.493);
     transform: translate3d(0, 0, 0);
   }
 }
-.shake112 {
-   position: absolute;
-   width: 300rpx;
-   height: 150rpx;
-   margin-left: 330rpx;
-   margin-top: 300rpx;
-	 animation: shake 3s 0s ;
-	 animation-timing-function: ease;
-  
-	}
-  
+
+
+@keyframes shaketext{
+	 from,
+  60%,
+  75%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(200rpx, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+}
+
+
+@keyframes miss{
+ from,
+  60%,
+  75%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 .shengsuo {
   
@@ -338,9 +369,40 @@ background-color:rgba(95, 83, 83, 0.493);
 	 animation-timing-function: ease;
 }
   
+.shaketoo{
+   position: absolute;
+   width: 300rpx;
+   height: 200rpx;
+   left: 350rpx;
+   top: 530rpx;
+	 animation: shake 3s 0s ;
+	 animation-timing-function: ease;
 
-.container{
-  position: relative;
-  
+}
 
+.shake_text1{
+   position: absolute;
+   width: 300rpx;
+   height: 200rpx;
+   left: 480rpx;
+   top: 690rpx;
+	 animation: miss 1s 0s ,shaketext 2s 1s ;
+	 animation-timing-function: ease;
+}
+
+.shake_text2{
+   position: absolute;
+   width: 300rpx;
+   height: 200rpx;
+   left: 420rpx;
+   top: 720rpx;
+	 animation: miss 1s 0s ,shaketext 2s 1s ;
+	 animation-timing-function: ease;
+}
+
+
+.text_2{
+  color:#ffffff86;
+  font-size:18rpx;
+  font-weight: 600;
 }
