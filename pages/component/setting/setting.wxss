@@ -10,7 +10,7 @@
   width: 300rpx;
   height: 70rpx;
   border-radius: 40rpx;
-  background-color: #FDB38F;
+  background:linear-gradient(to bottom,#FDB38F,#F7907E);
   margin-left: 225rpx;
   margin-top: -240rpx;
   text-align:center;
@@ -25,137 +25,51 @@
   margin-left: 280rpx;
   margin-top: 20rpx;
 }
-.judge{
-  position: relative;
-  width: 40rpx;
-  height: 90rpx;
-  background-color: rgba(65, 56, 56, 0.8);
-  text-align:center;
-  margin-left: 435rpx;
-  margin-top: -100rpx;
-  font-size: 22rpx;
-  color:rgba(255,255,255,0.8);
-}
 
-.list1{
-  position: relative;
-  margin-top: 130rpx;
-  width: 80%;
-  height: 100rpx;
-  border-top-right-radius: 50rpx;
-  border-bottom-right-radius: 50rpx;
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  box-shadow: 5rpx 5rpx 5rpx 3rpx #EEEEEE;
-}
-.list1 image{
-  position: relative;
-  margin-left: 70rpx;
-  margin-top: 25rpx;
-  width: 40rpx;
-  height: 40rpx;
-}
-.list1 text{
-  position: relative;
-  font-size: 35rpx;
-  margin-top: 25rpx;
-  margin-left: 100rpx;
-  color:rgba(0,0,0,0.6)
-}
-.list2{
-  position: relative;
-  margin-top:70rpx;
-  width: 80%;
-  height: 100rpx;
-  margin-left: 150rpx;
-  border-top-left-radius: 50rpx;
-  border-bottom-left-radius: 50rpx;
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  box-shadow: -5rpx 5rpx 5rpx 3rpx #EEEEEE;
-}
-.list2 image{
-  position: relative;
-  margin-left: 100rpx;
-  margin-top: 25rpx;
-  width: 40rpx;
-  height: 40rpx;
-}
-.list2 text{
-  position: relative;
-  font-size: 35rpx;
-  margin-top: 25rpx;
-  margin-left: 100rpx;
-  color:rgba(0,0,0,0.6)
-}
 .rightcicle{
   position: absolute;
-  width: 150rpx;
-  height: 300rpx;
-  top: 400rpx;
-  left: 600rpx;
-  border-top-left-radius: 150rpx;
-  border-bottom-left-radius: 150rpx;
-  background-color: rgba(236, 242,254, 0.27);
-}
-
-
-.name{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  margin-left: 275rpx;
-  margin-top: 20rpx;
   width:200rpx;
-  height: 100rpx;
-  font-size: 17rpx;
-  font-weight: 50;
-  color: rgba(100,100,100,0.6);
-  text-align: center;
+  height: 300rpx;
+  top: 380rpx;
+  right: 0rpx;
 }
-.middle{
+.leftcicle{
   position: absolute;
-  top: 700rpx;
-  width: 100%;
-  height: 400rpx;
-  margin-top: 40rpx;
- 
+  width: 200rpx;
+  height: 300rpx;
+  top: 950rpx;
+  left: 0rpx;
 }
-.middle .l0{
-  position: relative;
-  width: 100%;
-  height: 70rpx;
-  display: flex;
-  flex-direction: row;
-  line-height: 70rpx;
-  border-bottom:2rpx solid rgb(255, 255, 255);
+.point1{
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 6rpx;
+  top: 500rpx;
+  right: 50rpx;
+  background-color:rgba(55,150,244,0.5);
+}
+.point2{
+  position: absolute;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 6rpx;
+  top: 650rpx;
+  left: 130rpx;
+  background-color: rgba(55,150,244,0.5);
+}
+
+.point3{
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 6rpx;
+  top: 1100rpx;
+  right: 50rpx;
+  background-color: rgba(55,150,244,0.5);
 }
 
 
-.middle .l1{
-  position: relative;
-  width: 100%;
-  height: 70rpx;
-  display: flex;
-  flex-direction: row;
-  line-height: 70rpx;
-  border-bottom:2rpx solid rgb(255, 255, 255);
-}
-
-.middle image{
-  position: relative;
-  width: 40rpx;
-  height: 40rpx;
-  margin-top: 20rpx;
-}
-.middle text{
-  position: relative;
-  font-size: 30rpx;
-  margin-left: 100rpx;
-  color:rgba(0,0,0,0.7);
-}
 
 
 
