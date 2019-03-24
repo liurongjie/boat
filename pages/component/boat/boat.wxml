@@ -8,7 +8,9 @@
 
 <view class='container'>
     <view class='context'>
-      <text class='pro_name'>驾校C1普通班</text>  
+
+      <text class='pro_name' bindtap='gotoboat'>驾校C1普通班</text>  
+
       
       <view class='pro_disc'>
         <text>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</text>

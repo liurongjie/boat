@@ -5,25 +5,43 @@ Component({
    */
   properties: {
 
+     //根据页面决定按钮执行的任务
+      taskfunc:{
+        type: String,
+        value: ""
+    },//任务调用的函数名
+=======
+
+
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    //index: 1,
-    status:1//右下角按钮状态变量
-    //1表示 我要上船
-    //2表示 进我的团
-    //3表示 预付一元
-    //4表示 预付一半
+
   },
+
 
   /**
    * 组件的方法列表
    */
 
   methods: {
+
+    goback:function(){
+       wx.navigateBack({
+       delta:1,
+       })
+      //console.log(this.data.taskfunc);
+    },
+
+    goboat:function() {
+      // body...
+      console.log("go to boat");
+    }
+
+
     change1: function () {
       const app = getApp();
       app.index = 1;
@@ -45,5 +63,6 @@ Component({
         index: 3,
       })
     },
+
   }
 })
