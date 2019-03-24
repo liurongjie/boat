@@ -44,7 +44,7 @@
   background-color: white;
   display: flex;
   flex-direction: row;
-  box-shadow: darkgrey 0rpx 0rpx 0rpx 10rpx;
+  box-shadow: 5px 5px 5px #EEEEEE;
 }
 .list1 image{
   position: relative;
@@ -57,7 +57,6 @@
   font-size: 35rpx;
   margin-left: 100rpx;
   color:rgba(0,0,0,0.6)
-
 }
 
 
