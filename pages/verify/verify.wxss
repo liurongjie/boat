@@ -70,16 +70,56 @@ top: 50rpx;
 .input1{
   position: absolute;
 height: 100%;
- left:140rpx;
- width: 250rpx;
+ left:160rpx;
+ width: 500rpx;
   background-color: white;
 }
-
+.input{
+  position: absolute;
+height: 100%;
+ left:80rpx;
+ width: 500rpx;
+  background-color: white;
+}
 .input11{
   position: absolute;
   height: 100%;
   line-height: 100rpx;
-  left: 60rpx;
+  left: 80rpx;
   opacity: 0.4;
   font-size: 32rpx;
+}
+.placeholderStyle{
+opacity: 0.5;
+  font-size: 32rpx;
+}
+.codeBtn{
+  position: absolute;
+  right: 0rpx;
+  top: 0;
+  color: black;
+  width: 40%;
+  font-size: 32rpx;
+  height: 100%;
+  line-height: 100rpx;
+  font-weight: 500;
+  background: white;
+  z-index: 5;
+}
+button::after{
+border: none;
+}
+.sub{
+width: 80%;
+height: 120rpx;
+position: absolute;
+left: 10%;
+top:1080rpx;
+background: linear-gradient(to bottom right,#5EE4FE,#57ABFE);
+border-radius: 100rpx;
+text-align: center;
+line-height: 120rpx;
+font-size: 45rpx;
+font-weight: 100;
+color: white;
 }
