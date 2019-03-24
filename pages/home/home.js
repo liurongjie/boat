@@ -15,6 +15,7 @@ Page({
     this.setData({
       index: status,
     })
+    console.log("index change to",app.index);
   },
   /**
    * 生命周期函数--监听页面加载
