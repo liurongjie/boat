@@ -15,13 +15,15 @@
         
 
         
-          <button id='consult' class="row-column column-hcenter row-one_button"  style='' bindtap=''>
+
+          <button id='consult' class="row-column column-hcenter row-one_button"  style='' open-type='contact'>
             <image style='width:26rpx;height:26rpx;' src='../../../static/icon/zixun.svg' mode='aspectFit'></image>
             <view style='height: 1.2vh'>咨询</view>
         </button>
        
 
-        <button id='share' class="row-column column-hcenter row-one_button"  style='' bindtap=''>
+
+        <button id='share' class="row-column column-hcenter row-one_button"  style='' open-type='share'>
             <image style='width:26rpx;height:26rpx;' src='../../../static/icon/share.svg' mode='aspectFit'></image>
             <view style='height: 1.2vh'>分享</view>
         </button>

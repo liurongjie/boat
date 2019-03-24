@@ -45,16 +45,32 @@ Component({
     //   })
     // },
     goback:function(){
-      // wx.navigateBack({
-      //   delta:1,
-      // })
-      console.log(this.data.taskfunc);
+
+      wx.navigateBack({
+        delta:1,
+      })
+      //console.log(this.data.taskfunc);
     },
 
     goboat:function() {
       // body...
-      console.log("go to boat");
-    }
+      console.log("go on boat");
+    },
+
+    myboat: function () {
+      // body...
+      console.log("see my boat");
+    },
+
+    prepay1: function () {
+      // body...
+      console.log("pre-pay 1 yuan");
+    },
+
+    prepay2: function () {
+      // body...
+      console.log("pre-pay half price");
+    },
 
   }
 })
