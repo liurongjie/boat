@@ -61,7 +61,7 @@ background-color:rgba(95, 83, 83, 0.493);
   margin-top: 20rpx;
   margin-right:auto;
   margin-left:auto;
-
+  
   width: 80%;
   height: 950rpx;
   background-color: rgba(0, 0, 0, 0.48);
@@ -208,8 +208,9 @@ background-color:rgba(95, 83, 83, 0.493);
 .img_chuanfan{
    width: 100%;
    height: 400rpx;
-   position: relative;
+   position: absolute;
    
+
    
 }
 
@@ -230,12 +231,6 @@ background-color:rgba(95, 83, 83, 0.493);
   }
 }
 
-
-.shengsuo {
-	 animation: shake 3s 0s  ;
-	 animation-timing-function: ease;
-}
-  
 
 @-webkit-keyframes fadeInRight {
   from {
@@ -307,6 +302,9 @@ background-color:rgba(95, 83, 83, 0.493);
 }
 
 
+
+
+
 @keyframes shake {
 	 from,
   60%,
@@ -322,15 +320,27 @@ background-color:rgba(95, 83, 83, 0.493);
     transform: translate3d(0, 0, 0);
   }
 }
-.shake1 {
+.shake112 {
    position: absolute;
    width: 300rpx;
    height: 150rpx;
-   margin-left: 350rpx;
-   margin-top: -670rpx;
+   margin-left: 330rpx;
+   margin-top: 300rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;
+  
 	}
   
 
+.shengsuo {
+  
+	 animation: shake 3s 0s  ;
+	 animation-timing-function: ease;
+}
+  
 
+.container{
+  position: relative;
+  
+
+}
