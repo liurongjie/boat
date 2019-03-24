@@ -9,3 +9,22 @@
 <input class="input1" name="name"  bindinput='name'></input>
 <text class='input11'>姓名</text>
 </view>
+<view style='position:absolute;width:100%;top:560rpx;height:100rpx;background-color:white;'>
+<input class="input1" name="yuanxi"  bindinput='yuanxi'></input>
+<text class='input11'>院系</text>
+</view>
+<view style='position:absolute;width:100%;top:670rpx;height:100rpx;background-color:white;'>
+<input class="input1" name="number"  bindinput='number'></input>
+<text class='input11'>学号</text>
+</view>
+<view style='position:absolute;width:100%;top:780rpx;height:100rpx;background-color:white;'>
+<input placeholder='请输入手机号' placeholder-class="placeholderStyle" bindinput='bindPhoneInput' class='input'/> 
+</view>
+
+<view style='position:absolute;width:100%;top:890rpx;height:100rpx;background-color:white;'>
+<input class='input' placeholder='请输入验证码' bindinput='bindCodeInput' style='width:70%;' placeholder-class="placeholderStyle" /> 
+     <button class='codeBtn' bindtap='getCode' disabled='{{btnDisabled}}'>{{btnValue}}</button>
+</view>
+
+<view class='sub' bindtap='save'>提交审核</view>
+
