@@ -1,6 +1,7 @@
 <!--pages/toboat/toboat.wxml-->
-<view style='margin-top: 50%;margin-left:50%'>
-	我要上船
-</view> 
-<bottom></bottom>
+
+    <view class='row-row' style='height:2.34vh;margin-top:1.25vh;font-size: 1.72vh;color:rgba(104,104,104,0.7);'>
+      <view style='width:15.7%;height:100%;text-align:center'>详情</view><view style='width:15.7%;height:100%;text-align:center'>车接车送</view><view style='width:15.7%;height:100%;text-align:center'>官方保证</view><view style='width:15.7%;height:100%;text-align:center'>极速退款</view>
+    </view>
+<bottom taskfunc='goboat'></bottom>
  

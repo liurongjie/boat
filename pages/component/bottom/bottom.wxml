@@ -1,37 +1,49 @@
 <!--pages/component/bottom/bottom.wxml-->
 <view class="bottom">
-  <!-- <view wx:if="{{index==1}}" class='content1' >
-    <image src='../../../static/icon/home1.svg' style='width:50%;height:50%;margin-left:10rpx;'></image>
-    <text style='font-size:25rpx;margin-top:10rpx;color:blue;'>活动清单</text>
-  </view>
-  <view wx:if="{{index!=1}}" class='content1' bindtap='change1'>
-    <image src='../../../static/icon/home.svg' style='width:50%;height:50%;margin-left:10rpx;'></image>
-    <text style='font-size:25rpx;margin-top:10rpx;color:black;'>活动清单</text>
-  </view>
-  <view  wx:if="{{index!=3}}" class='content2'   bindtap='change3'>
-    <image src='../../../static/icon/boat.svg' style='width:100%;height:100%;'></image>
-  </view>
-  <view wx:if="{{index==3}}">
-    <view class='shake1'>
-      <image src='../../../static/icon/bigboat.svg' style='width:100%;height:100%;'></image>
-    </view>
-  </view>
-  <view wx:if="{{index==1}}" class='content3'bindtap='change2'>
-    <image src='../../../static/icon/account.svg' style='width:50%;height:50%;margin-left:10rpx;'></image>
-    <text style='font-size:25rpx;margin-top:10rpx;color:black;'>个人中心</text>
-  </view>
-  <view wx:if="{{index==2}}" class='content3'>
-    <image src='../../../static/icon/account1.svg' style='width:50%;height:50%;margin-left:10rpx;'></image>
-    <text style='font-size:25rpx;margin-top:10rpx;color:blue;'>个人中心</text>
-  </view>
-  <view wx:if="{{index==3}}" class='content4' bindtap='change2'>
-    <image src='../../../static/icon/account.svg' style='width:50%;height:50%;margin-left:10rpx;'></image>
-    <text style='font-size:25rpx;margin-top:10rpx;color:black;'>个人中心</text>
-  </view> -->
   <view style='width: 100%;height: 13vh'>
-    <view class='row-row' style='height:2.34vh;margin-top:1.25vh;font-size: 1.72vh;color:rgba(104,104,104,0.7);'>
+    <!-- <view class='row-row' style='height:2.34vh;margin-top:1.25vh;font-size: 1.72vh;color:rgba(104,104,104,0.7);'>
       <view style='width:15.7%;height:100%;text-align:center'>详情</view><view style='width:15.7%;height:100%;text-align:center'>车接车送</view><view style='width:15.7%;height:100%;text-align:center'>官方保证</view><view style='width:15.7%;height:100%;text-align:center'>极速退款</view>
+    </view> -->
+    <view class="bottom" style='height:5.15vh;background: white;box-shadow:0rpx -10rpx 20rpx #DDD;'>
+      <view id='row-one' class="row-row" style='margin-left:112.5rpx;width:200rpx;margin-top: 0.625vh;margin-bottom: 0.625vh;background: transparent;'>
+
+        
+          <button bindtap='goback' id='goback' class="row-column column-hcenter row-one_button"  style=''>
+            <image style='width:26rpx;height:26rpx;' src='../../../static/icon/goback.svg' mode='aspectFit'></image>
+            <view style='height: 1.2vh'>返回</view>
+        </button>
+        
+
+        
+          <button id='consult' class="row-column column-hcenter row-one_button"  style='' bindtap=''>
+            <image style='width:26rpx;height:26rpx;' src='../../../static/icon/zixun.svg' mode='aspectFit'></image>
+            <view style='height: 1.2vh'>咨询</view>
+        </button>
+       
+
+        <button id='share' class="row-column column-hcenter row-one_button"  style='' bindtap=''>
+            <image style='width:26rpx;height:26rpx;' src='../../../static/icon/share.svg' mode='aspectFit'></image>
+            <view style='height: 1.2vh'>分享</view>
+        </button>
+
+      </view>
     </view>
-    <view></view>
+    
+    <button id='row-two' bindtap="{{taskfunc}}" class="bottom" style='height:5.8vh;width:320rpx;background: linear-gradient(to bottom right, #F7907E, #FDB38F);left:414.7rpx;bottom:2.25vh;display: flex;align-items: center;justify-content: center;border-radius: 46rpx;color:white;font-size: 44rpx;box-shadow:0rpx 20rpx 30rpx #BBB;'>
+      <view wx:if="{{taskfunc=='goboat'}}"  >
+        我要上船
+    </view>
+    <view wx:if="{{taskfunc=='myboat'}}" >
+        看我的船
+    </view>
+    <view wx:if="{{taskfunc=='prepay1'}}" >
+        预付一元
+    </view>
+    <view wx:if="{{taskfunc=='prepay2'}}" >
+        预付一半
+    </view>
+    </button>
+
+
   </view>
 </view>
