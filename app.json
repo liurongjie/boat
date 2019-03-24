@@ -1,11 +1,9 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/verify/verify"
-    
-   
-    
-     
+    "pages/verify/verify",
+    "pages/myboat/myboat",
+    "pages/toboat/toboat"
   ],
   "window": {
     "backgroundTextStyle": "light",
