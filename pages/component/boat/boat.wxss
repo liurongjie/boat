@@ -56,39 +56,85 @@ background-color:rgba(95, 83, 83, 0.493);
 
 .context{
   position:relative;
-  display:flex;
-  flex-direction: column;
-  margin-top: 20rpx;
-  margin-right:auto;
-  margin-left:auto;
-  width: 80%;
-  height: 950rpx;
+  display: inline-block;
   background-color: rgba(0, 0, 0, 0.48);
   border-radius:10px;
+  height: 100%;
+  width: 80%;
+  margin-left:60rpx;
+  margin-right:60rpx;
+}
+
+.context1{
+  position:relative;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.48);
+  border-radius:10px;
+  height: 100%;
+  width: 80%;
+  margin-left:0rpx;
+  margin-right:120rpx;
+}
+
+.context4{
+ position:relative;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.48);
+  border-radius:10px;
+  height: 100%;
+  width: 80%;
+  margin-left:60rpx;
+  margin-right:150rpx;
 }
 
 
-
-.scroll-x{
-  width: 600rpx;
+.context_{
+  position:relative;
+  
   height: 950rpx;
+  width:100%;
+  margin-top: 20rpx;
+  margin-right:30rpx;
+  margin-left:80rpx;
+}
+
+.scroll-xx{
+   white-space: nowrap; 
+   display: flex;
+   height:100%;
+   width:100%;
+
+   
 }
 
 .pro_name{
   color: white;
   font-size: 50rpx;
-  margin-left:60rpx;
+  
+  
+}
+
+.pro_name_view{
   margin-top: 30rpx;
+  margin-left:60rpx;
 }
 
 .pro_disc{
-   color: rgba(109, 109, 109, 0.856);
-  font-size: 28rpx;
+  height:20%;
+  width: 60%;
   margin-left:60rpx;
   margin-right:150rpx;
   margin-top: 30rpx;
-  font-weight: 400;
 }
+
+.pro_disc_text{
+
+  color: rgba(109, 109, 109, 0.856);
+  font-weight: 400;
+  font-size: 28rpx;
+  white-space: pre-wrap;
+}
+
 
 .pro_data{
   position:relative;
@@ -118,6 +164,7 @@ background-color:rgba(95, 83, 83, 0.493);
   display:flex;
   flex-direction: row;
   height:100%;
+ 
 }
 
 
@@ -373,7 +420,7 @@ background-color:rgba(95, 83, 83, 0.493);
    position: absolute;
    width: 300rpx;
    height: 200rpx;
-   left: 350rpx;
+   left: 360rpx;
    top: 530rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;

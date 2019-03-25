@@ -1,5 +1,8 @@
 // pages/component/boat/boat.js
 var app=getApp();
+
+var offsetLeft_;
+var deltaX;
 Component({
   /**
    * 组件的属性列表
@@ -14,8 +17,15 @@ Component({
    
     lastX: 0,
     lastY: 0,
-
-
+    touchDotX : 0,//X按下时坐标
+    touchDotY :0,//y按下时坐标
+    interval:0,//计时器
+    time : 0,//从按下到松开共多少时间*100
+    list: [ "list1", "list2", "list3", "list4"],
+ 
+    // scroll_index:1,
+    // scroll_array: ['i1', 'i2', 'i3', 'i4'],
+    scroll_page:"",
   },
 
   
@@ -31,65 +41,65 @@ Component({
       console.log("gotoboat");
     },
 
-    swiper:function(e){
-      // console.log(e)
-      let currentX = e.changedTouches[0].pageX
-      let currentY = e.changedTouches[0].pageY
+  
 
-      let tx =currentX -this.data.lastX
-      let ty = currentY - this.data.lastY
+    jumpTo: function (e) {
 
-      let text =""
-
-      if (Math.abs(tx) > Math.abs(ty)) {
-
-        //左右方向滑动
-
-        if (tx < 0)
-
-          text = "向左滑动"
-
-        else if (tx > 0)
-
-          text = "向右滑动"
-
-      }
-
-      else {
-
-        //上下方向滑动
-
-        if (ty < 0)
-
-          text = "向上滑动"
-
-        else if (ty > 0)
-
-          text = "向下滑动"
-
-      }
-
-
-
-      //将当前坐标进行保存以进行下一次计算
-
-      this.data.lastX = currentX
-
-      this.data.lastY = currentY
+      // 获取标签元素上自定义的 data-opt 属性的值
+      let target = e.currentTarget.dataset.opt;
 
       this.setData({
-
-        text: text,
-
+        toView: target
       })
-
-      console.log(text)
-      wx.showToast({
-        title: this.data.text,
-      })
-
- 
     },
+
+    scroll_move:function(e){
+      console.log(e)
+      offsetLeft_=e.detail.scrollLeft
+      deltaX=e.detail.deltaX
+      console.log(offsetLeft_, '移动', deltaX)
+      
+      if (deltaX<0)
+      {
+        if (offsetLeft_ > 0 && offsetLeft_ < 430) {
+          this.setData({
+            scroll_page: 'i2'
+          })
+          console.log("turn to i2")
+        }
+        else if (offsetLeft_ > 430 && offsetLeft_ < 827) {
+          this.setData({
+            scroll_page: 'i3'
+          })
+        }
+        else if (offsetLeft_ > 827 && offsetLeft_ < 1224) {
+          this.setData({
+            scroll_page: 'i4'
+          })
+        }
+      }
+      else if (deltaX > 0)
+      {
+        if (offsetLeft_ > 0 && offsetLeft_ < 430) {
+          this.setData({
+            scroll_page: 'i1'
+          })
+        }
+        else if (offsetLeft_ > 430 && offsetLeft_ < 827) {
+          this.setData({
+            scroll_page: 'i2'
+          })
+        }
+        else if (offsetLeft_ > 827 && offsetLeft_ < 1224) {
+          this.setData({
+            scroll_page: 'i3'
+          })
+        }
+      }
+
+      
+    }
+  
     
   },
 
