@@ -1,2 +1,17 @@
-<!--pages/component/asset/list1/list1.wxml-->
-<text>pages/component/asset/list1/list1.wxml</text>
+<view class='boat'>
+    <text style='font-weight:600;font-size:40rpx;'>提交需求</text>
+  </view>
+  <image src='/static/pic/1.jpg' class='cicle'></image>
+  <view class='name'>
+      <text style='font-size:55rpx;font-weight: 100;color: rgba(100,100,100,0.8);'>李艮基</text>
+      <text>武汉大学2016级学生</text>
+  </view>
+  <view class='l0'>
+        <image src='/static/icon/setting/1.svg' style='  margin-left: 90rpx;'></image>
+        <text> 请在百字内描述你的需求</text>
+  </view>
+  <textarea  placeholder='感谢您提出的宝贵需求 （若被采用有机会获激励金)' placeholder-class='style' class='box'></textarea>
+  <view class='demand'>
+    <text style='font-weight:100;font-size:37rpx;'>提交需求</text>
+  </view>
+  

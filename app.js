@@ -1,6 +1,6 @@
 //app.js
 App({
-  list:0,
+  list:5,
   index:2,
   onLaunch: function () {
     // 展示本地存储能力

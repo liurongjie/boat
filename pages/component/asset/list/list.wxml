@@ -1,3 +1,7 @@
+<view class='boat'>
+    <text style='font-weight:600;font-size:50rpx;font-style: italic;'>BOAT</text>
+  </view>
+  <image src='/static/pic/1.jpg' class='cicle'></image>
 <view class='name'>
       <text style='font-size:55rpx;font-weight: 100;color: rgba(100,100,100,0.8);'>李艮基</text>
       <text>武汉大学2016级学生</text>
