@@ -1,5 +1,5 @@
 // pages/component/setting/setting.js
-var app = getApp();
+var app=getApp();
 Component({
   /**
    * 组件的属性列表
@@ -12,13 +12,18 @@ Component({
    * 组件的初始数据
    */
   data: {
-    list:app.list,
+    list:1,
   },
-
+  
   /**
    * 组件的方法列表
    */
   methods: {
-
+    changelist:function(){
+      var status=app.list;
+      this.setData({
+        list:status,
+      })
+    }
   }
 })

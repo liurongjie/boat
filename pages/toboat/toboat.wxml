@@ -4,4 +4,3 @@
       <view style='width:15.7%;height:100%;text-align:center'>详情</view><view style='width:15.7%;height:100%;text-align:center'>车接车送</view><view style='width:15.7%;height:100%;text-align:center'>官方保证</view><view style='width:15.7%;height:100%;text-align:center'>极速退款</view>
     </view>
 <bottom taskfunc='goboat'></bottom>
- 

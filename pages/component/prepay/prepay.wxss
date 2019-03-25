@@ -1,0 +1,175 @@
+/* pages/component/prepay/prepay.wxss */
+.hui{
+  position:absolute;
+  top:150rpx;
+  height:80rpx;
+  width: 100%;
+  background: gray;
+  opacity:0.1;
+}
+.b1{
+  position: absolute;
+  top: 230rpx;
+  height: 160rpx;
+  width: 100%;
+
+}
+.hui1{
+  position:absolute;
+  top:380rpx;
+  height:80rpx;
+  width: 100%;
+  background: gray;
+  opacity:0.1;
+}
+.wen{
+position: absolute;
+width: 35rpx;
+height: 35rpx;
+top:403rpx;
+left:200rpx;
+
+}
+.wen1{
+position: absolute;
+width: 35rpx;
+height: 35rpx;
+top:720rpx;
+left:200rpx;
+
+}
+.wen2{
+position: absolute;
+width: 35rpx;
+height: 35rpx;
+top:920rpx;
+left:280rpx;
+
+}
+.circle{
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 100%;
+background: white;
+box-shadow: darkgrey 0rpx 5rpx 15rpx 1rpx ;
+}
+.jingdu{
+position: absolute;
+width: 100%;
+height: 240rpx;
+
+top: 460rpx;
+
+}
+.hui2{
+  position:absolute;
+  top:700rpx;
+  height:80rpx;
+  width: 100%;
+  background: gray;
+  opacity:0.1;
+}
+.hui3{
+  position:absolute;
+  top:900rpx;
+  height:80rpx;
+  width: 100%;
+  background: gray;
+  opacity:0.1;
+}
+.youhui1{
+position:relative;
+top:1010rpx;
+width:90%;
+left:5%;
+height: 120rpx;
+z-index: -1;
+margin-bottom: 30rpx;
+background: linear-gradient(to bottom right,#FEB25E,#F3B467);
+}
+.youhui2{
+position:relative;
+top:1010rpx;
+width:90%;
+left:5%;
+height: 120rpx;
+z-index: -1;
+margin-bottom: 30rpx;
+background: linear-gradient(to bottom right,#44E1FF,#248CDD);
+}
+.youhui4{
+position:relative;
+top:1010rpx;
+width:90%;
+left:5%;
+height: 120rpx;
+z-index: -1;
+margin-bottom: 30rpx;
+background: linear-gradient(to bottom right,#067655,#033B2B);
+}
+.youhui3{
+position:relative;
+top:1010rpx;
+width:90%;
+left:5%;
+height: 120rpx;
+z-index: -1;
+margin-bottom: 30rpx;
+background: linear-gradient(to bottom right,#FF060D,#FF64A7);
+}
+.bai{
+position:relative;
+top:1010rpx;
+width:90%;
+left:5%;
+height: 100rpx;
+z-index: -1;
+}
+.boat{
+position: absolute;
+left: -30rpx;
+top: -40rpx;
+font-size: 120rpx;
+font-style: italic;
+font-weight: 900;
+color: #FFFFFF;
+opacity: 0.1;
+}
+.zuoxia{
+  position: absolute;
+left: 20rpx;
+top: 90rpx;
+font-size: 20rpx;
+
+font-weight: 900;
+color: #FFFFFF;
+
+}
+.p{
+position: absolute;
+left: 400rpx;
+top: 0rpx;
+font-size: 80rpx;
+font-weight: 900;
+color: #FFFFFF;
+font-style: italic;
+}
+.p1{
+position: absolute;
+left: 510rpx;
+top: 50rpx;
+font-size: 28rpx;
+font-weight: 900;
+color: #FFFFFF;
+font-style: italic;
+}
+.p11{
+position: absolute;
+left: 555rpx;
+top: 50rpx;
+font-size: 28rpx;
+font-weight: 900;
+color: #FFFFFF;
+font-style: italic;
+}

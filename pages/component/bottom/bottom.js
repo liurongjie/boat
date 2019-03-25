@@ -23,6 +23,7 @@ Component({
    */
 
   methods: {
+
     // change1: function () {
     //   const app = getApp();
     //   app.index = 1;
