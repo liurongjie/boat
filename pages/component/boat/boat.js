@@ -1,8 +1,11 @@
 // pages/component/boat/boat.js
 var app=getApp();
 
-var offsetLeft_;
-var deltaX;
+var touchDotX;
+var touchDotY;
+var touchDotnewX;
+var touchDotnewY;
+
 Component({
   /**
    * 组件的属性列表
@@ -14,18 +17,10 @@ Component({
   /**
    */
   data: {
-   
-    lastX: 0,
-    lastY: 0,
-    touchDotX : 0,//X按下时坐标
-    touchDotY :0,//y按下时坐标
-    interval:0,//计时器
-    time : 0,//从按下到松开共多少时间*100
-    list: [ "list1", "list2", "list3", "list4"],
  
-    // scroll_index:1,
-    // scroll_array: ['i1', 'i2', 'i3', 'i4'],
-    scroll_page:"",
+    scroll_array: ['i1', 'i2', 'i3', 'i4'],
+    scroll_page:'i1',
+    scroll_index:0,
   },
 
   
@@ -41,65 +36,63 @@ Component({
       console.log("gotoboat");
     },
 
-  
 
-    jumpTo: function (e) {
 
-      // 获取标签元素上自定义的 data-opt 属性的值
-      let target = e.currentTarget.dataset.opt;
+    touchStart: function (e) {
 
-      this.setData({
-        toView: target
-      })
-    },
-
-    scroll_move:function(e){
+     console.log(e)
+      touchDotX = e.touches[0].pageX; // 获取触摸时的原点
+      touchDotY = e.touches[0].pageY;
+      console.log(touchDotX, touchDotY,'start')
+    },  // 触摸移动事件 
+      
+     
+ 
+              
+      
+    touchEnd: function (e) {
       console.log(e)
-      offsetLeft_=e.detail.scrollLeft
-      deltaX=e.detail.deltaX
-      console.log(offsetLeft_, '移动', deltaX)
-      
-      if (deltaX<0)
+      touchDotnewX = e.changedTouches[0].pageX;
+      touchDotnewY = e.changedTouches[0].pageY;
+      console.log(touchDotnewX, touchDotnewY, 'end')
+
+      if (((touchDotnewX - touchDotX) < 20) && this.data.scroll_index<3)
       {
-        if (offsetLeft_ > 0 && offsetLeft_ < 430) {
-          this.setData({
-            scroll_page: 'i2'
-          })
-          console.log("turn to i2")
-        }
-        else if (offsetLeft_ > 430 && offsetLeft_ < 827) {
-          this.setData({
-            scroll_page: 'i3'
-          })
-        }
-        else if (offsetLeft_ > 827 && offsetLeft_ < 1224) {
-          this.setData({
-            scroll_page: 'i4'
-          })
-        }
-      }
-      else if (deltaX > 0)
-      {
-        if (offsetLeft_ > 0 && offsetLeft_ < 430) {
-          this.setData({
-            scroll_page: 'i1'
-          })
-        }
-        else if (offsetLeft_ > 430 && offsetLeft_ < 827) {
-          this.setData({
-            scroll_page: 'i2'
-          })
-        }
-        else if (offsetLeft_ > 827 && offsetLeft_ < 1224) {
-          this.setData({
-            scroll_page: 'i3'
-          })
-        }
+        this.setData({
+          scroll_index: this.data.scroll_index + 1,
+         
+        })
+
+        this.setData({
+          scroll_page: this.data.scroll_array[this.data.scroll_index]
+        })
+
+        console.log("向右滑动，now is ", this.data.scroll_page,this.data.scroll_index)
+
       }
 
-      
-    }
-  
+      else if (((touchDotnewX - touchDotX) > 20) && this.data.scroll_index>0)
+      {
+        this.setData({
+          scroll_index: this.data.scroll_index-1,
+         
+        })
+
+        this.setData({
+          scroll_page: this.data.scroll_array[this.data.scroll_index] 
+        })
+
+        console.log("向左滑动，now is ", this.data.scroll_page, this.data.scroll_index)
+
+      }
+      else{
+        console.log("未触发滑动监听")
+      }
+    },
+     
+
+
+    
     
   },
 
