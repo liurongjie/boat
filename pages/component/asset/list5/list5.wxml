@@ -1,2 +1,21 @@
-<!--pages/component/asset/list5/list5.wxml-->
-<text>pages/component/asset/list5/list5.wxml</text>
+<view class='boat'>
+    <text style='font-weight:600;font-size:35rpx;'>高校合伙人</text>
+</view>
+<view class='box'>
+  <view class='list1'>-高校合伙-</view>
+  <view class='list2'>BOAT校园即将对全国高校开放</view>
+  <view class='list2'>当前我们仅在武汉部分高校进行推广</view>
+  <view class='list2'>感谢您对平台的支持</view>
+  <view class='list2'>我们团队也会马不停蹄草拟高校联动手册</view>
+  <view class='list2'>也希望您能保持对平台的耐心</view>
+  <view class='list2'>BOAT3.0将全线开放线上合伙人制度</view>
+  <view class='list2'>敬请期待</view>
+  <view class='list2'>现为人工受理高校窗口</view>
+
+
+  <view class='connect'>
+    <text style='font-weight:600;font-size:40rpx;'>欢迎来戳</text>
+  </view>
+  
+</view>
+<image src='/static/icon/setting/back.svg' class='back' ></image>

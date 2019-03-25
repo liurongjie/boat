@@ -8,7 +8,7 @@
   <view class='point2'></view>
   <view class='point3'></view>
   <notverify wx:if="{{list==0}}"></notverify>
-  <list wx:if="{{list==1}}"></list>
+  <list wx:if="{{list==1}}" bindtap='changelist' ></list>
   <list1 wx:if="{{list==2}}"></list1>
   <list2 wx:if="{{list==3}}"></list2>
   <list3 wx:if="{{list==4}}"></list3>
