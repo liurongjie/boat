@@ -5,7 +5,9 @@ var touchDotX;
 var touchDotY;
 var touchDotnewX;
 var touchDotnewY;
+var timeStamp_;
 
+var timestamp_now = Date.parse(new Date());
 Component({
   /**
    * 组件的属性列表
@@ -36,60 +38,22 @@ Component({
       console.log("gotoboat");
     },
 
+    scroll_move:function(e){
+      console.log(e)
+      //判断一次滑动组结束后的位置，将此时页面设为里该位置最近页
+      timeStamp_=e.timeStamp;
+      console.log(timeStamp_, timestamp_now/1000)
+      if((timeStamp_-e.timeStamp)>100)
+      {
+        console.log("暂停")
+      }
+    }
 
-
-    touchStart: function (e) {
-
-     console.log(e)
-      touchDotX = e.touches[0].pageX; // 获取触摸时的原点
-      touchDotY = e.touches[0].pageY;
-      console.log(touchDotX, touchDotY,'start')
-    },  // 触摸移动事件 
-      
      
  
               
       
-    touchEnd: function (e) {
-      console.log(e)
-      touchDotnewX = e.changedTouches[0].pageX;
-      touchDotnewY = e.changedTouches[0].pageY;
-      console.log(touchDotnewX, touchDotnewY, 'end')
-
-      if (((touchDotnewX - touchDotX) < 20) && this.data.scroll_index<3)
-      {
-        this.setData({
-          scroll_index: this.data.scroll_index + 1,
-         
-        })
-
-        this.setData({
-          scroll_page: this.data.scroll_array[this.data.scroll_index]
-        })
-
-        console.log("向右滑动，now is ", this.data.scroll_page,this.data.scroll_index)
-
-      }
-
-      else if (((touchDotnewX - touchDotX) > 20) && this.data.scroll_index>0)
-      {
-        this.setData({
-          scroll_index: this.data.scroll_index-1,
-         
-        })
-
-        this.setData({
-          scroll_page: this.data.scroll_array[this.data.scroll_index] 
-        })
-
-        console.log("向左滑动，now is ", this.data.scroll_page, this.data.scroll_index)
-
-      }
-      else{
-        console.log("未触发滑动监听")
-      }
-    },
-     
+  
 
 
     

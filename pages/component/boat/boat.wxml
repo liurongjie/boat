@@ -25,9 +25,8 @@
 
 
 <view class='context_'>
- <!-- <scroll-view  scroll-x="true"  class='scroll-xx' bindscroll="scroll_move" scroll-into-view="{{scroll_page}}" scroll-left="{{scrollLeftSys}}"> -->
+ <scroll-view  scroll-x="true"  class='scroll-xx' bindscroll="scroll_move" scroll-into-view="{{scroll_page}}" scroll-left="{{scrollLeftSys}}">
 
-  <scroll-view  scroll-x="true"  class='scroll-xx'  bindtouchstart="touchStart"  bindtouchend="touchEnd"  scroll-into-view="{{scroll_page}}"scroll-with-animation="true" scroll-left="{{scrollLeftSys}}">
 
 
     <view class='context1' id = 'i1'>
