@@ -15,7 +15,7 @@
 }
 .leftcicle{
   position: absolute;
-  width: 200rpx;
+  width: 180rpx;
   height: 300rpx;
   top: 950rpx;
   left: 0rpx;
