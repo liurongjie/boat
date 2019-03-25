@@ -84,3 +84,27 @@
   line-height: 60rpx;
   color:rgba(255,255,255,1);
 }
+.upload{
+  position: absolute;
+  width:300rpx;
+  height: 150rpx;
+  margin-top: -200rpx;
+  margin-left: 225rpx;
+  border:1px dashed rgb(219, 201, 201);
+}
+.upload .vertical{
+  position: absolute;
+  width: 50rpx;
+  height: 3rpx;
+  margin-left: 125rpx;
+  margin-top: 73rpx;
+  background-color: rgba(100,100,100,0.5);
+}
+.upload .horizontal{
+  position: absolute;
+  width: 4rpx;
+  height: 50rpx;
+  margin-left: 148rpx;
+  margin-top: 50rpx;
+  background-color: rgba(100,100,100,0.5);
+}

@@ -6,46 +6,217 @@
   <button class='btn_right'> 校园日常</button>
 </view>
 
-<view  bindtouchmove='swiper' class='context'>
 
-        <text class='pro_name'>驾校C1普通班</text>  
-        
-        <view class='pro_disc'>
-          <text>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</text>
-        </view>
 
-        <view class='inform'>
-          
-          
 
-          <view class='pro_data'>
-            <view class='pro_data_block'>
-              <view class='as_btn1'>
-                  本期登船  
-                  <text style='font-size:18rpx;'>/人 </text>
-              </view>
-              <text class='num_disc1'>{{18}}</text>
-            </view>
 
-            <view>
-              <view class='as_btn2'>
-                  累计节省
-                  <text style='font-size:18rpx;'>/元 </text>
-              </view>
-              <text class='num_disc2'>{{12318.88}}</text>
-            </view>
+<!-- <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
 
-            <view>
-              <view class='as_btn3'>
-                  砍价次数
-                  <text style='font-size:18rpx;'>/次 </text>
-              </view>
-              <text class='num_disc3'>{{12148}}</text>
-            </view>
 
+  <view style="background: red; width: 200px; height: 100px; display: inline-block" ></view>
+
+  <view style="background: green; width: 200px; height: 100px; display: inline-block"></view>
+
+  <view style="background: blue; width: 200px; height: 100px; display: inline-block"></view>
+
+  <view style="background: yellow; width: 200px; height: 100px; display: inline-block"></view>
+
+</scroll-view> -->
+
+
+<view class='context_'>
+ <scroll-view  scroll-x="true"  class='scroll-xx' bindscroll="scroll_move" scroll-into-view="{{scroll_page}}" scroll-left="{{scrollLeftSys}}">
+
+
+
+    <view class='context1' id = 'i1'>
+
+          <view class='pro_name_view'>
+          <text class='pro_name'>驾校C1普通班</text>  
           </view>
-        </view>
+          
+          
+          <view class='pro_disc'>
+            <text class='pro_disc_text'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</text>
+            
+          </view>
 
+          <view class='inform'>
+            
+            
+
+            <view class='pro_data'>
+              <view class='pro_data_block'>
+                <view class='as_btn1'>
+                    本期登船  
+                    <text style='font-size:18rpx;'>/人 </text>
+                </view>
+                <text class='num_disc1'>{{18}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn2'>
+                    累计节省
+                    <text style='font-size:18rpx;'>/元 </text>
+                </view>
+                <text class='num_disc2'>{{12318.88}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn3'>
+                    砍价次数
+                    <text style='font-size:18rpx;'>/次 </text>
+                </view>
+                <text class='num_disc3'>{{12148}}</text>
+              </view>
+
+            </view>
+          </view>
+
+    </view>
+
+    
+    <view class='context' id = 'i2'>
+
+          <view class='pro_name_view'>
+          <text class='pro_name'>驾校C2普通班</text>  
+          </view>
+          
+          
+          <view class='pro_disc'>
+            <text class='pro_disc_text'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</text>
+            
+          </view>
+
+          <view class='inform'>
+            
+            
+
+            <view class='pro_data'>
+              <view class='pro_data_block'>
+                <view class='as_btn1'>
+                    本期登船  
+                    <text style='font-size:18rpx;'>/人 </text>
+                </view>
+                <text class='num_disc1'>{{18}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn2'>
+                    累计节省
+                    <text style='font-size:18rpx;'>/元 </text>
+                </view>
+                <text class='num_disc2'>{{12318.88}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn3'>
+                    砍价次数
+                    <text style='font-size:18rpx;'>/次 </text>
+                </view>
+                <text class='num_disc3'>{{12148}}</text>
+              </view>
+
+            </view>
+          </view>
+
+    </view>
+
+    
+    <view class='context'id = 'i3'>
+
+          <view class='pro_name_view'>
+          <text class='pro_name'>驾校C3普通班</text>  
+          </view>
+          
+          
+          <view class='pro_disc'>
+            <text class='pro_disc_text'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</text>
+            
+          </view>
+
+          <view class='inform'>
+            
+            
+
+            <view class='pro_data'>
+              <view class='pro_data_block'>
+                <view class='as_btn1'>
+                    本期登船  
+                    <text style='font-size:18rpx;'>/人 </text>
+                </view>
+                <text class='num_disc1'>{{18}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn2'>
+                    累计节省
+                    <text style='font-size:18rpx;'>/元 </text>
+                </view>
+                <text class='num_disc2'>{{12318.88}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn3'>
+                    砍价次数
+                    <text style='font-size:18rpx;'>/次 </text>
+                </view>
+                <text class='num_disc3'>{{12148}}</text>
+              </view>
+
+            </view>
+          </view>
+
+    </view>
+
+    
+    <view class='context4' id = 'i4'>
+
+          <view class='pro_name_view'>
+          <text class='pro_name'>驾校C4普通班</text>  
+          </view>
+          
+          
+          <view class='pro_disc'>
+            <text class='pro_disc_text'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</text>
+            
+          </view>
+
+          <view class='inform'>
+            
+            
+
+            <view class='pro_data'>
+              <view class='pro_data_block'>
+                <view class='as_btn1'>
+                    本期登船  
+                    <text style='font-size:18rpx;'>/人 </text>
+                </view>
+                <text class='num_disc1'>{{18}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn2'>
+                    累计节省
+                    <text style='font-size:18rpx;'>/元 </text>
+                </view>
+                <text class='num_disc2'>{{12318.88}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn3'>
+                    砍价次数
+                    <text style='font-size:18rpx;'>/次 </text>
+                </view>
+                <text class='num_disc3'>{{12148}}</text>
+              </view>
+
+            </view>
+          </view>
+
+    </view>
+    
+  </scroll-view> 
 </view>
 
 

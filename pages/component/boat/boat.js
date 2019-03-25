@@ -1,5 +1,13 @@
 // pages/component/boat/boat.js
 var app=getApp();
+
+var touchDotX;
+var touchDotY;
+var touchDotnewX;
+var touchDotnewY;
+var timeStamp_;
+
+var timestamp_now = Date.parse(new Date());
 Component({
   /**
    * 组件的属性列表
@@ -11,11 +19,10 @@ Component({
   /**
    */
   data: {
-   
-    lastX: 0,
-    lastY: 0,
-
-
+ 
+    scroll_array: ['i1', 'i2', 'i3', 'i4'],
+    scroll_page:'i1',
+    scroll_index:0,
   },
 
   
@@ -30,66 +37,26 @@ Component({
       })
       console.log("gotoboat");
     },
-    
-    swiper:function(e){
-      // console.log(e)
-      let currentX = e.changedTouches[0].pageX
-      let currentY = e.changedTouches[0].pageY
 
-      let tx =currentX -this.data.lastX
-      let ty = currentY - this.data.lastY
-
-      let text =""
-
-      if (Math.abs(tx) > Math.abs(ty)) {
-
-        //左右方向滑动
-
-        if (tx < 0)
-
-          text = "向左滑动"
-
-        else if (tx > 0)
-
-          text = "向右滑动"
-
+    scroll_move:function(e){
+      console.log(e)
+      //判断一次滑动组结束后的位置，将此时页面设为里该位置最近页
+      timeStamp_=e.timeStamp;
+      console.log(timeStamp_, timestamp_now/1000)
+      if((timeStamp_-e.timeStamp)>100)
+      {
+        console.log("暂停")
       }
+    }
 
-      else {
-
-        //上下方向滑动
-
-        if (ty < 0)
-
-          text = "向上滑动"
-
-        else if (ty > 0)
-
-          text = "向下滑动"
-
-      }
-
-
-
-      //将当前坐标进行保存以进行下一次计算
-
-      this.data.lastX = currentX
-
-      this.data.lastY = currentY
-
-      this.setData({
-
-        text: text,
-
-      })
-
-      console.log(text)
-      wx.showToast({
-        title: this.data.text,
-      })
-
+     
  
-    },
+              
+      
+  
+
+
+    
     
   },
 
@@ -98,5 +65,4 @@ Component({
 
 
   
-
 })
