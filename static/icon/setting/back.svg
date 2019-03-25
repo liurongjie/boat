@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.168" height="60.168" viewBox="0 0 60.168 60.168">
+  <defs>
+    <filter id="路径_1413" x="0" y="0" width="60.168" height="60.168" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="组_327" data-name="组 327" transform="translate(-259.5 -225.5)">
+    <g id="组_321" data-name="组 321" transform="translate(268.5 231.5)">
+      <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#路径_1413)">
+        <path id="路径_1413-2" data-name="路径 1413" d="M21.084,0A21.084,21.084,0,1,1,0,21.084,21.084,21.084,0,0,1,21.084,0Z" transform="translate(9 6)" fill="#fff"/>
+      </g>
+    </g>
+    <line id="直线_23" data-name="直线 23" x2="14.963" y2="14.963" transform="translate(282.103 245.103)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+    <line id="直线_24" data-name="直线 24" y1="14.963" x2="14.963" transform="translate(282.103 245.103)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

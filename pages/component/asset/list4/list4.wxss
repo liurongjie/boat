@@ -1,1 +1,72 @@
-/* pages/component/asset/list4/list4.wxss */
+.boat{
+  position: relative;
+  width: 300rpx;
+  height: 70rpx;
+  border-radius: 40rpx;
+  background:linear-gradient(to bottom,#FDB38F,#F7907E);
+  margin-left: 225rpx;
+  margin-top: -240rpx;
+  text-align:center;
+  line-height: 70rpx;
+  color:rgba(255,255,255,0.8);
+}
+.back{
+  position: absolute;
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 610rpx;
+  top: 390rpx;
+}
+.box{
+  position: relative;
+  width: 80%;
+  height: 670rpx;
+  margin-left: 75rpx;
+  margin-top: 80rpx;
+  box-shadow: 0rpx -5rpx 5rpx 5rpx #EEEEEE,
+              0rpx 1rpx 1rpx 1rpx #EEEEEE;
+
+}
+.box .list1{
+  position: relative;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 500;
+  top: 20rpx;
+}
+.box .list2{
+  position: relative;
+  text-align: center;
+  font-size: 25rpx;
+  font-weight: 100;
+  margin-top: 40rpx;
+  color: rgba(100,100,100,1);
+}
+.box .list3{
+  position: relative;
+  text-align: center;
+  font-size: 25rpx;
+  font-weight: 100;
+  margin-top: 40rpx;
+  color: rgba(100,100,100,0.8);
+}
+.box image{
+  position: relative;
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 225rpx;
+  border-radius: 75rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+.connect{
+  position: relative;
+  width: 300rpx;
+  height: 70rpx;
+  border-radius: 40rpx;
+  background:linear-gradient(to bottom,#FDB38F,#F7907E);
+  margin-left: 150rpx;
+  text-align:center;
+  line-height: 70rpx;
+  color:rgba(255,255,255,0.8);
+}

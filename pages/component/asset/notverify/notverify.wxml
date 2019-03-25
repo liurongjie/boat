@@ -1,3 +1,7 @@
+<view class='boat'>
+    <text style='font-weight:600;font-size:50rpx;font-style: italic;'>BOAT</text>
+  </view>
+  <image src='/static/pic/1.jpg' class='cicle'></image>
 <view class='judge'>未认证</view>
   <view class='list1'>
     <image src='/static/icon/setting/icon1.svg' ></image>
