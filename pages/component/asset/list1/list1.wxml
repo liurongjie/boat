@@ -10,8 +10,13 @@
         <image src='/static/icon/setting/1.svg' style='  margin-left: 90rpx;'></image>
         <text> 请在百字内描述你的需求</text>
   </view>
-  <textarea  placeholder='感谢您提出的宝贵需求 （若被采用有机会获激励金)' placeholder-class='style' class='box'></textarea>
+  <textarea  placeholder='感谢您提出的宝贵需求 （若被采用有机会获激励金)' placeholder-class='style' class='box' bindblur='bind'></textarea>
+  <view class='upload' bindtap='choosepic'>
+      <view class='vertical'></view>
+      <view class='horizontal'></view>
+  </view>
   <view class='demand'>
     <text style='font-weight:100;font-size:37rpx;'>提交需求</text>
   </view>
+  
   
