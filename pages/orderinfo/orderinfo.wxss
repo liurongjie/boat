@@ -1,0 +1,119 @@
+/* compoment/dingdan/dingdan.wxss */
+.top{
+position: absolute;
+top:50rpx;
+width: 100%;
+height: 200rpx;
+display: flex;
+justify-content: center;
+line-height: 80rpx;
+font-size: 30rpx;
+}
+.back{
+position: absolute;
+width:50rpx;
+height:50rpx;
+left:50rpx;
+top:70rpx;
+}
+
+.image{
+position: absolute;
+width: 150rpx;
+height: 150rpx;
+left:100rpx;
+top: 370rpx;
+}
+.tab{
+  position: absolute;
+width: 100%;
+height: 120rpx;
+bottom: 0rpx;
+box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10);
+}
+.boat{
+  position: relative;
+  letter-spacing: 10rpx;
+  color: rgba(231, 226, 226, 0.12);
+  top:-8rpx;
+  right:-180rpx;
+  font-size: 120rpx;
+  font-style: italic;
+  font-weight: 800;
+}
+.circle{
+position: absolute;
+border-radius: 100rpx;
+width: 20rpx;
+height: 20rpx;
+background-color: #FEB25E;
+top:695rpx;
+left:80rpx;
+}
+.ding{
+position: absolute;
+width: 100rpx;
+height: 100rpx;
+font-size: 20rpx;
+top:690rpx;
+left:110rpx;
+
+}
+.tiao{
+position:absolute;
+bottom: 120rpx;
+width: 100%;
+height: 160rpx;
+
+}
+.da{
+position: absolute;
+bottom: 100rpx;
+left: 10%;
+width: 80%;
+height: 30rpx;
+background-color: #FFEAEA;
+border-radius: 20rpx;
+}
+button::after { border: none; }
+.line{
+  top:790rpx;
+  left:80rpx;
+  position: absolute;
+  width: 75%;
+  height: 2rpx;
+  background:rgba(85, 85, 85, 0.10);
+}
+.line1{
+  top:860rpx;
+  left:80rpx;
+  position: absolute;
+  width: 75%;
+  height: 2rpx;
+  background: rgba(85, 85, 85, 0.10);
+}
+.line2{
+  top:930rpx;
+  left:80rpx;
+  position: absolute;
+  width: 75%;
+  height: 2rpx;
+  background: rgba(85, 85, 85, 0.10);
+}
+
+.line3{
+  top:1000rpx;
+  left:80rpx;
+  position: absolute;
+  width: 75%;
+  height: 2rpx;
+  background: rgba(85, 85, 85, 0.10);
+}
+.line4{
+  top:1070rpx;
+  left:80rpx;
+  position: absolute;
+  width: 75%;
+  height: 2rpx;
+  background: rgba(85, 85, 85, 0.10);
+}

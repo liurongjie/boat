@@ -8,7 +8,7 @@
 
 
 .swiper{
-position: fixed;
+position: absolute;
 top: 140rpx;
 
 width: 100%;
@@ -20,7 +20,7 @@ height: 800rpx;
   height: 36rpx; 
   display: flex;
   flex-direction: row;
-  position: fixed;
+  position: absolute;
   left: 325rpx;
   top: 500rpx;
 }  

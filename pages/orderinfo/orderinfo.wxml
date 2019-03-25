@@ -1,0 +1,78 @@
+<!--compoment/dingdan/dingdan.wxml-->
+<view class='top'>
+订单详情</view>
+<button bindtap='back' class='back'>
+</button>
+<view style='position:absolute;top:150rpx;height:150rpx;width:100%;background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );color:white'>
+<text style='position:relative;top:20rpx;margin-left:50rpx;font-weight:200;'>{{state}}</text>
+</view>
+<text style='position:absolute;top:250rpx;left:50rpx;font-weight:200;font-size:25rpx;z-index:99;color:white'>{{state1}}</text>
+<view style='position: absolute;top:330rpx;width: 90%;left: 5%;height:{{height}};box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10);'>
+</view>
+ <image src='{{url}}' class='image'></image>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 370rpx;font-size:30rpx;'>{{name}}</text>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:330rpx;top: 420rpx;font-size:30rpx;'>[{{prodesc}}]</text>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 470rpx;font-size:20rpx;color:#FE8F57'>初始价格为{{preprice}}元</text>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 510rpx;font-size:20rpx;color:grey'>目前已经超过{{percent}}%用户</text>
+
+<view style='position: absolute;left: 10%;width: 80%;top:550rpx;height:120rpx;background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );'>
+<text class='boat'>BOAT</text>
+<text style='color:white;position:relative;top:-54rpx;left:-320rpx;font-size:60rpx;'>{{presentprice}}</text>
+</view>
+<text style='color:white;position:absolute;top:640rpx;left:90rpx;font-size:20rpx;width:100rpx;z-index:99'>{{price1}}</text>
+
+<view class='circle'></view>
+<text class='ding'>订单日志</text>
+<text style='position: absolute;left: 100rpx;top: {{top}};font-size: 20rpx;color: gray;'>{{quxiao}}</text>
+
+<view wx:if="{{tiao}}" class='tiao'>
+<view class='da'></view>
+<view style='position: absolute;bottom: 100rpx;left: 10%;width: {{process}}%;height: 30rpx;background-color: #FEB25E;border-radius: 20rpx;'></view>
+<text style='position:absolute;bottom:40rpx;left:150rpx;color:#FEB25E;font-size:24rpx;'>还剩</text>
+<view style='position:absolute;bottom:40rpx;left:210rpx;color:#FEB25E;font-size:24rpx;'>{{day}}天{{hour}}:{{minute}}:{{second}}</view>
+<text style='position:absolute;bottom:40rpx;left:350rpx;color:#FEB25E;font-size:24rpx;'>本轮结束，快去抱团吧~</text>
+</view>
+
+
+
+
+
+<view class='tab'>
+  <text style='position:absolute;bottom:38rpx;margin-left:20rpx;font-weight:100;'>{{price}}:</text>
+  <text style='position:absolute;bottom:38rpx;left:160rpx;color:red;font-weight:100;'>{{presentprice}}元</text>
+  <button bindtap='zuo' style='background-color:rgba(100,100,100,0.5);height:120rpx;position:absolute;right:180rpx;bottom:0rpx;width:180rpx;border-radius: 0rpx;color:white;font-size:30rpx;line-height:120rpx;'>{{zuo}}</button>
+  <button bindtap='you'style='background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );height:120rpx;position:absolute;right:0rpx;bottom:0rpx;width:180rpx;border-radius: 0rpx;color:white;font-size:30rpx;line-height:120rpx;'>{{you}}</button>
+</view>
+
+
+
+
+<text style='position:absolute;top:740rpx;left:80rpx;font-size: 24rpx;'>拼团完成 : {{ytime}}</text>
+<view class='line'></view>
+<text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{ytime}}</text>
+<view class='line1'></view>
+
+<view wx:if='{{stat1==3}}'>
+      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime}}</text>
+      <view class='line2'></view>
+</view>
+
+<view wx:if='{{stat1==4}}'>
+      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime}}</text>
+      <view class='line2'></view>
+
+      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime}}</text>
+      <view class='line3'></view>
+
+</view>
+
+<view wx:if='{{stat1==5}}'>
+      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime}}</text>
+      <view class='line2'></view>
+      
+      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime}}</text>
+      <view class='line3'></view>
+
+     <text style='position:absolute;top:1020rpx;left:80rpx;font-size: 24rpx;'>评价时间 : {{ytime}}</text>
+      <view class='line4'></view>
+</view>
