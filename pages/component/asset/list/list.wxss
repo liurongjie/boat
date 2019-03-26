@@ -21,7 +21,7 @@
 
 
 .name{
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-left: 275rpx;
@@ -35,10 +35,9 @@
 }
 .middle{
   position: absolute;
-  top: 700rpx;
   width: 100%;
   height: 400rpx;
-  margin-top: 40rpx;
+  margin-top: 20rpx;
  
 }
 .middle .l0{

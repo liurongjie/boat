@@ -1,6 +1,6 @@
 <!--pages/component/setting/setting.wxml-->
 <view class='container'>
-  <image src='../../../static/pic/new.png' style='position:reative;width:100%;height:40%;'></image>
+  <image src='../../../static/pic/new.png' style='position:reative;width:100%;height:550rpx;;'></image>
   
   <image src='../../../static/icon/setting/right.svg' class='rightcicle'></image>
   <image src='../../../static/icon/setting/left.svg' class='leftcicle'></image>
