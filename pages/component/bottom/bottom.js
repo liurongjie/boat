@@ -1,4 +1,6 @@
 // pages/component/bottom/bottom.js
+
+var app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -55,7 +57,10 @@ Component({
 
     goboat:function() {
       // body...
-      console.log("go on boat");
+
+      
+      app.buy_index = 2,
+      console.log("go on boat,here is bottom.js",app.buy_index);
     },
 
     myboat: function () {
@@ -73,5 +78,6 @@ Component({
       console.log("pre-pay half price");
     },
 
+   
   }
 })

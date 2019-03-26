@@ -1,5 +1,4 @@
-// pages/component/setting/setting.js
-var app=getApp();
+// pages/component/tobuy/tobuy.js
 Component({
   /**
    * 组件的属性列表
@@ -12,18 +11,16 @@ Component({
    * 组件的初始数据
    */
   data: {
-    list:1,
+    picture_production: [
+      '/static/pic/1.jpg', '/static/pic/2.jpg', '/static/pic/3.jpg'
+    ],
+    icon62: '/static/pic/1211.png'
   },
-  
+
   /**
    * 组件的方法列表
    */
   methods: {
-    changelist:function(){
-      var status=app.list;
-      this.setData({
-        list:status,
-      })
-    }
+
   }
 })
