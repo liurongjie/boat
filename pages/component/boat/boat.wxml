@@ -6,9 +6,10 @@
   <button class='btn_right'> 校园日常</button>
 </view>
 
-<view class='swiper_view'>
+<view class='swiper_view' bindtap='gotoboat'>
   <swiper class='swiper_content'>
     <block>
+
       <swiper-item>
         <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>健身『年卡』</view>
         <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-left:30rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
@@ -41,6 +42,7 @@
           </view>
         </view>
       </swiper-item>
+
        <swiper-item>
         <view style='font-size:50rpx;color:white;font-weight:600;'>健身『年卡』</view>
         <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
@@ -73,6 +75,7 @@
           </view>
         </view>
       </swiper-item>
+
        <swiper-item>
         <view style='font-size:50rpx;color:white;font-weight:600;'>健身『年卡』</view>
         <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
@@ -105,6 +108,7 @@
           </view>
         </view>
       </swiper-item>
+
       <swiper-item>
         <view style='font-size:50rpx;color:white;font-weight:600;'>健身『年卡』</view>
         <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
@@ -137,6 +141,7 @@
           </view>
         </view>
       </swiper-item>
+
     </block>
   </swiper>
 </view>
@@ -354,7 +359,7 @@
 
 
 
-<view class='shaketoo'>
+<view class='shaketoo' >
       <image  class='img_chuanfan shengsuo' src='../../../static/pic/chuanfan.svg'></image>
 </view>
 

@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
- 
+    picture_production: [
+      '../../static/pic/1.jpg', '../../static/pic/2.jpg', '../../static/pic/3.jpg'
+    ],
+    icon62: '../../static/pic/1211.png'
   },
 
   /**

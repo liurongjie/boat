@@ -1,9 +1,11 @@
 {
   "pages": [
+    
     "pages/home/home",
+    "pages/toboat/toboat",
     "pages/verify/verify",
     "pages/myboat/myboat",
-    "pages/toboat/toboat",
+  
     "pages/orderinfo/orderinfo"
   ],
   "window": {

@@ -2,7 +2,7 @@
 .bottom{
   position: fixed;
   width: 100%;
-  height: auto;
+  height: 110rpx;
   bottom: 0rpx;
   background-color:white;
   display: flex;

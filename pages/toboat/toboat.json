@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-  	"bottom":"../component/bottom/bottom"
+    "bottom": "../component/bottom/bottom",
+    "title": "../component/title/title"
   }
-} 
+}
