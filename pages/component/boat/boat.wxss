@@ -1,8 +1,24 @@
 /* pages/secondP/secondP.wxss */
 
+.swiper_view{
+  position: relative;
+  width: 100%;
+  height: 900rpx;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30rpx;
+  box-sizing:border-box;
+  padding:0 50rpx;
+}
 
-
-
+.swiper_content{
+  position: relative;
+  width: 100%;
+  height: 900rpx;
+  background-color: rgba(36, 112, 20, 0.521);
+  box-sizing:border-box;
+  padding:50rpx 30rpx;
+  border-radius:30px;
+}
 
 .btn_1{
   width:100%;
@@ -10,6 +26,7 @@
   display:flex;
   margin-top: 160rpx;
 }
+
 
 
 .btn_left{
@@ -420,7 +437,7 @@ background-color:rgba(95, 83, 83, 0.493);
    position: absolute;
    width: 300rpx;
    height: 200rpx;
-   left: 360rpx;
+   left: 380rpx;
    top: 530rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;
@@ -431,7 +448,7 @@ background-color:rgba(95, 83, 83, 0.493);
    position: absolute;
    width: 300rpx;
    height: 200rpx;
-   left: 480rpx;
+   left: 510rpx;
    top: 690rpx;
 	 animation: miss 1s 0s ,shaketext 2s 1s ;
 	 animation-timing-function: ease;
@@ -441,7 +458,7 @@ background-color:rgba(95, 83, 83, 0.493);
    position: absolute;
    width: 300rpx;
    height: 200rpx;
-   left: 420rpx;
+   left: 450rpx;
    top: 720rpx;
 	 animation: miss 1s 0s ,shaketext 2s 1s ;
 	 animation-timing-function: ease;

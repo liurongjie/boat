@@ -26,6 +26,16 @@ Component({
   },
 
   
+  lifetimes: {
+    attached() {
+      // 在组件实例进入页面节点树时执行
+      console.log("begin")
+    },
+    
+  },
+
+
+
   /**
    * 组件的方法列表
    */
