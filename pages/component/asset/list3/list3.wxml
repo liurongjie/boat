@@ -1,3 +1,25 @@
 <view class='boat'>
     <text style='font-weight:600;font-size:40rpx;'>优惠特权</text>
 </view>
+<view class='youhui'>
+  <view class='l1'> 
+    <text style='font-size: 50rpx;font-weight: 700;'>已使用</text>
+    <text style='font-size: 20rpx;font-weight: 500; color: rgba(255,255,255,0.8);margin-top:20rpx;'>校园大件</text> 
+  </view>
+    <view class='l2'> 
+    <text style='font-size: 80rpx;font-weight: 700; color: rgba(255,255,255,0.5);'>50</text>
+    <text style='font-size: 20rpx;font-weight: 500; color: rgba(255,255,255,0.8);font-style: italic;margin-top:20rpx;'>YUAN</text> 
+</view>
+</view>
+<view class='youhui'>
+  <view class='l1'> 
+    <text style='font-size: 50rpx;font-weight: 700;font-style: italic;'>BOAT</text>
+    <text style='font-size: 20rpx;font-weight: 500; color: rgba(255,255,255,0.8);margin-top:20rpx;'>校园大件</text> 
+  </view>
+    <view class='l2'> 
+    <text style='font-size: 80rpx;font-weight: 700; color: rgba(255,255,255,0.5);'>50</text>
+    <text style='font-size: 20rpx;font-weight: 500; color: rgba(255,255,255,0.8);font-style: italic;margin-top:20rpx;'>YUAN</text> 
+</view>
+</view>
+
+
