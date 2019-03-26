@@ -163,3 +163,10 @@ margin-bottom: 48rpx;
   margin-left: 10rpx;
   top: 5rpx;
 }
+
+
+.scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}

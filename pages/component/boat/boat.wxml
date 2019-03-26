@@ -105,6 +105,38 @@
           </view>
         </view>
       </swiper-item>
+      <swiper-item>
+        <view style='font-size:50rpx;color:white;font-weight:600;'>健身『年卡』</view>
+        <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
+        <view class='inform'>
+            <view class='pro_data'>
+              <view class='pro_data_block'>
+                <view class='as_btn1'>
+                    本期登船  
+                    <text style='font-size:18rpx;'>/人 </text>
+                </view>
+                <text class='num_disc1'>{{18}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn2'>
+                    累计节省
+                    <text style='font-size:18rpx;'>/元 </text>
+                </view>
+                <text class='num_disc2'>{{12318.88}}</text>
+              </view>
+
+              <view>
+                <view class='as_btn3'>
+                    砍价次数
+                    <text style='font-size:18rpx;'>/次 </text>
+                </view>
+                <text class='num_disc3'>{{12148}}</text>
+              </view>
+
+          </view>
+        </view>
+      </swiper-item>
     </block>
   </swiper>
 </view>
