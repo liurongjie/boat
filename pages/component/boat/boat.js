@@ -24,7 +24,8 @@ Component({
       wx.navigateTo({
         url: '../toboat/toboat',
       })
-      console.log("gotoboat");
+      app.buy_index=1,
+      console.log("gotoboat", app.buy_index);
     },
 
    

@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    index:app.index,
+    index:1,
   },
   changestatus:function(){
     var status=app.index;

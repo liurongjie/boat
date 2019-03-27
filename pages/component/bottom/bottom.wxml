@@ -19,7 +19,7 @@
           <button id='consult' class="row-column column-hcenter row-one_button"  style='' open-type='contact'>
             <image style='width:26rpx;height:26rpx;' src='../../../static/icon/zixun.svg' mode='aspectFit'></image>
             <view style='height: 1.2vh'>咨询</view>
-        </button>
+          </button>
        
 
 
@@ -33,17 +33,17 @@
     
     <button id='row-two' bindtap="{{taskfunc}}" class="bottom" style='height:5.8vh;width:320rpx;background: linear-gradient(to bottom right, #F7907E, #FDB38F);left:414.7rpx;bottom:2.25vh;display: flex;align-items: center;justify-content: center;border-radius: 46rpx;color:white;font-size: 44rpx;box-shadow:0rpx 20rpx 30rpx #BBB;'>
       <view wx:if="{{taskfunc=='goboat'}}"  >
-        我要上船
-    </view>
-    <view wx:if="{{taskfunc=='myboat'}}" >
-        看我的船
-    </view>
-    <view wx:if="{{taskfunc=='prepay1'}}" >
-        预付一元
-    </view>
-    <view wx:if="{{taskfunc=='prepay2'}}" >
-        预付一半
-    </view>
+          我要上船
+      </view>
+      <view wx:if="{{taskfunc=='myboat'}}" >
+          看我的船
+      </view>
+      <view wx:if="{{taskfunc=='prepay1'}}" >
+          预付一元
+      </view>
+      <view wx:if="{{taskfunc=='prepay2'}}" >
+          预付一半
+      </view>
     </button>
 
   </view>

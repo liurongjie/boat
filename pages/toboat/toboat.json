@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "bottom": "../component/bottom/bottom",
-    "title": "../component/title/title"
+    "title": "../component/title/title",
+    "tobuy":"../component/tobuy/tobuy",
+    "prepay":"../component/prepay/prepay"
   }
 }
