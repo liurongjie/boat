@@ -198,11 +198,11 @@ height: 160rpx;
 
 }
 .scroll{
-  height:400rpx;
-  left: 10%;
+  height:360rpx;
+  left: 15%;
   width: 80%;
   position: absolute;
-  top: 800rpx;
+  top: 950rpx;
  
   } 
   .m{
