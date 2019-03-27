@@ -358,15 +358,16 @@
 </view> -->
 
 
+<view  style="position:absolute;width:200rpx;height:200rpx;top:510rpx;margin-left:30rpx;margin-top:-230rpx;">
+  <view class='shaketoo' >
+        <image  class='img_chuanfan shengsuo' src='../../../static/pic/chuanfan.svg'></image>
+  </view>
 
-<view class='shaketoo' >
-      <image  class='img_chuanfan shengsuo' src='../../../static/pic/chuanfan.svg'></image>
-</view>
+  <view class='shake_text1'>
+        <text style='color:white;font-weight:500;font-size:18rpx;'>￥</text><text style='color:white;font-weight:700;font-size:36rpx;'>2893</text>
+  </view>
 
-<view class='shake_text1'>
-      <text style='color:white;font-weight:500;font-size:18rpx;'>￥</text><text style='color:white;font-weight:700;font-size:36rpx;'>2893</text>
-</view>
-
-<view class='shake_text2'>
-      <text class='text_2'>初始价{{3400}}</text>
+  <view class='shake_text2'>
+        <text class='text_2'>初始价{{3400}}</text>
+  </view>
 </view>
