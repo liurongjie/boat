@@ -1,5 +1,5 @@
 .boat{
-    position: relative;
+    position: fixed;
   width: 300rpx;
   height: 70rpx;
   border-radius: 40rpx;
@@ -12,8 +12,7 @@
 }
 
 
- 
-.scroll{height:auto;left: 5%;position: absolute;top: 450rpx;margin-bottom: 150rpx;}  
+.scroll{height:700rpx;left: 5%;position: absolute;top: 450rpx;margin-bottom: 150rpx;}  
 
 .img{
   position: absolute;

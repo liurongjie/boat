@@ -198,12 +198,12 @@ height: 160rpx;
 
 }
 .scroll{
-  height:auto;
+  height:400rpx;
   left: 10%;
   width: 80%;
   position: absolute;
   top: 800rpx;
-  margin-bottom: 10rpx;
+ 
   } 
   .m{
     position: relative;
@@ -240,4 +240,4 @@ height: 160rpx;
 
     font-size: 28rpx;
   }
-  html { overflow-x: hidden; overflow-y: auto; }
+  

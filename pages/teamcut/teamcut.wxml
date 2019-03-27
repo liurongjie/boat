@@ -1,3 +1,4 @@
+
 <view style='position:fixed;width:100%;height:100%;z-index:100;'>
 <view class='hong'></view>
 <view class='title'>
@@ -54,7 +55,7 @@
 <text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有53位朋友帮忙砍价746元-</text>
 </view>
 
-<scroll-view scroll-y class='scroll'>
+<scroll-view scroll-y class="scroll">
  <block wx:for="{{lists}}" wx:key="*this">  
   <view style=' margin-bottom: 40rpx; height: 100rpx;width: 90%;margin-left:5%;' data-index="{{index}}" bindtap='selectindex'>
      <view class='m'>
