@@ -1,0 +1,57 @@
+<view class='hong'></view>
+<view class='title'>
+    <image src='/static/icon/icon1.svg'></image>
+   <view class="phone_one" bindtap="clickPerson">
+  <view class="phone_personal">{{firstPerson}}</view>
+  </view>
+
+<view class="person_box">
+   <view class="phone_select" hidden="{{selectPerson}}">
+    <view class="select_one" bindtap="mySelect" data-me="武汉大学">武汉大学</view>
+    <view class="select_one" bindtap="mySelect" data-me="华中师范大学">华中师范大学</view>
+  </view>
+ </view>
+    <view class='arrow'>
+      <image style='width:100%;height:100%;' src='/static/icon/icon2.svg'></image>
+    </view>
+</view>
+
+<view class='back' bindtap='back'>
+<image src='/static/icon/888.svg' style='height:40rpx;width:40rpx;'></image></view>
+<view class='regulate'>活动规则</view>
+
+
+<view class='content'>
+<image src='/static/pic/1.jpg' class='circle'></image>
+<text style='position:absolute;font-size:24rpx;top:60rpx;color:grey;'>珞珈山李坤</text>
+<text style='position:absolute;font-size:28rpx;top:120rpx;'>快和我一起组团报名，享受同等价格吧</text>
+<view class='cont1'>
+<image src='/static/pic/1.jpg'style='position:absolute;width:125rpx;height:125rpx;left:25rpx;top:25rpx;'></image>
+<text class='name'>武汉大学boat推荐驾校C1普通班</text>
+<text style='position:absolute;font-size:18rpx;top:100rpx;color:grey;left:180rpx;'>累计参团997次</text>
+<text style='position:absolute;font-size:18rpx;top:130rpx;color:grey;left:180rpx;'>好评率91.5%</text>
+<text style='position:absolute;font-size:60rpx;top:15rpx;color:#CB2C29;left:450rpx;'>2054</text>
+<text style='position:absolute;font-size:30rpx;top:60rpx;color:#CB2C29;left:420rpx;'>¥</text>
+<text style='position:absolute;font-size:16rpx;top:100rpx;color:grey;left:450rpx;'>初始价格为2800元</text>
+<text style='position:absolute;font-size:16rpx;top:130rpx;color:grey;left:430rpx;'>目前砍价领先94%用户</text>
+</view>
+
+<view class='tab'>
+<view class='fenxiang'>分享好友砍价</view>
+<view class='chakan'>查看拼团成员</view>
+</view>
+</view>
+
+<view class='tiao'>
+<view class='da'></view>
+<view style='position: absolute;bottom: 100rpx;left: 5%;width: {{process}}%;height: 30rpx;background-color: #FEB25E;border-radius: 20rpx;'></view>
+<text style='position:absolute;bottom:40rpx;left:150rpx;color:white;font-size:24rpx;'>还剩</text>
+<view style='position:absolute;bottom:40rpx;left:210rpx;color:white;font-size:24rpx;'>{{day}}天{{hour}}:{{minute}}:{{second}}</view>
+<text style='position:absolute;bottom:40rpx;left:350rpx;color:white;font-size:24rpx;'>本轮结束，快去抱团吧~</text>
+</view>
+
+<text style='position:absolute;top:900rpx;left:180rpx;font-size:30rpx;color:grey;'>-已有53位朋友帮忙砍价746元-</text>
+
+
+
+
