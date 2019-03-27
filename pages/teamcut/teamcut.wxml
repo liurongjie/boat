@@ -55,8 +55,8 @@
 <text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有53位朋友帮忙砍价746元-</text>
 
 
-<scroll-view scroll-y class="scroll">
- <block wx:for="{{lists}}" wx:key="*this">  
+<scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
+ <block wx:for="{{res}}" wx:key="*this">  
   <view style=' margin-bottom: 40rpx; height: 100rpx;width: 90%;margin-left:5%;' data-index="{{index}}" bindtap='selectindex'>
      <view class='m'>
      <image src='{{item.pic}}' class='img'></image>
