@@ -1,4 +1,9 @@
 // pages/teamcut/teamcut.js
+var app = getApp();
+var jsonData = require('../../data/teamcut.js');
+let loadingMore = false
+let lastScollTop = 0;
+let lastRequestTime = 0;
 Page({
 
   /**
@@ -13,6 +18,12 @@ Page({
     hour: '20',
     minute: '43',
     second: '10',
+
+    list: [],
+    hasMore: true,//列表是否有数据未加载
+    page: 1,
+    size: 8,//每页8条数据
+    
   },
   clickPerson: function () {
     var selectPerson = this.data.selectPerson;
@@ -45,6 +56,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+
+    wx.request({
+      url: '',
+      data: {
+
+      },
+      method: 'get',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        //将获取到的json数据，存在名字叫zhihu的这个数组中
+        that.setData({ lists: res.data })
+      },
+      fail: function () {
+        //将获取到的json数据，存在名字叫zhihu的这个数组中
+        that.setData({ lists: jsonData.dataList })
+
+      }
+    });
 
   },
 
