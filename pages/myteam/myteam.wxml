@@ -1,0 +1,28 @@
+<view class="title">
+    <text>大珈</text>
+</view>
+<view class='middle'>
+  <view class='top'>
+  <image src='/static/back.svg' ></image>
+  <view class='rule'>活动规则</view>
+  </view>
+   
+   <image src='/static/pic/1.jpg' class='master'></image>
+   <view class='box1'>
+      <view class='name'>珞珈山李坤</view>
+       <view class='name2'>组长</view>
+       <view class='right'></view>
+   </view>
+   <view class='box2'>
+      <view wx:for="{{array}}" class='box3'>
+        <image src="{{item.url}}" class='photo'></image>
+        <view class='name'>{{item.name}}</view>
+      </view>
+      <view class='member'>组员</view>
+      <view class='right'></view>
+  </view>
+  <progress percent="80" activeColor='yellow' stroke-width='10' border-radius='5'></progress>
+  <view class='lasttime'>还剩14：20：43.10本轮结束</view>
+        
+</view>
+ 
