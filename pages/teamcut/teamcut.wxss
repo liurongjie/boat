@@ -1,0 +1,243 @@
+/* pages/teamcut/teamcut.wxss */
+.hong{
+  width: 100%;
+  height: 65%;
+  top: 0rpx;
+  position: absolute;
+  background: red;
+}
+/* pages/component/title/title.wxss */
+.title{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 80rpx;
+  padding-top: 70rpx;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  background-color: rgba(80, 80, 80, 0.3);
+
+}
+.title text{
+  position: relative;
+  width: 200rpx;
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  color: white;
+}
+.title image{
+  position: relative;
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+}
+.title .choice{
+  position: relative;
+  line-height: 50rpx;
+  width: 120rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.title .arrow{
+  position: relative;
+  width: 25rpx;
+  height: 25rpx;
+
+  margin-left: 20rpx;
+}
+
+.phone_personal{
+  left: 100rpx;
+  position: relative;
+    width: 100%;
+    color:white;
+    height:100rpx;
+    line-height:100rpx;
+    text-align: left;
+    font-size: 28rpx;
+    font-weight: 100;
+}
+.phone_one{
+    display: flex; 
+    position: relative;
+    justify-content: space-between;
+    width:auto;
+    height:50rpx;
+    top:-20rpx;
+    left: -80rpx;
+    border-radius: 10rpx;
+    
+}
+.person_box{
+    position: fixed;
+    left:50rpx;
+    top: 140rpx;
+    z-index: 99;
+}
+.phone_select{
+    margin-top:0;
+    z-index: 100;
+    position: fixed; 
+    font-size: 30rpx;
+}
+.select_one{
+    text-align: center;
+    font-weight: 100;
+    width:200rpx;   
+    height:100rpx;
+    line-height:100rpx;
+    font-size: 28rpx;
+    margin:0 5%;
+    border-bottom:2rpx solid rgb(255, 255, 255);
+}
+.back{
+  position: absolute;
+  width:100rpx;
+  height: 100rpx;
+  left: 20rpx;
+  top: 180rpx;
+}
+.content{
+  background: white;
+  width: 90%;
+  height: 420rpx;
+  left: 5%;
+  top:260rpx;
+  position: absolute;
+  display: flex;
+ justify-content: center; /**内容居中*/
+}
+.regulate{
+  position: absolute;
+  right: 40rpx;
+  top: 180rpx;
+  height: 20rpx;
+  width: 100rpx;
+  font-size: 18rpx;
+  background: rgba(80, 80, 80, 0.3);
+  color: white;
+  text-align: center;
+  line-height: 18rpx;
+  border-radius: 40rpx;
+
+}
+.circle{
+position: absolute;
+top: -50rpx;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+}
+.cont1{
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  height: 170rpx;
+  background-color: rgba(80, 80, 120, 0.1);
+  top: 180rpx;
+}
+.name{
+  position: absolute;
+  font-size: 24rpx;
+  left: 180rpx;
+  top: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.tab{
+  position: absolute;
+  top: 380rpx;
+  width: 90%;
+  height: 80rpx;
+ 
+}
+.fenxiang{
+  position: absolute;
+  left: 0rpx;
+  height: 80%;
+  width: 45%;
+  top: 10%;
+  background: #FEB25E;
+  border-radius: 50rpx;
+  box-shadow: 0 4rpx 30rpx -3rpx grey;
+  font-size: 28rpx;
+  color: red;
+  text-align: center;
+  line-height: 70rpx;
+}
+.chakan{
+  position: absolute;
+  left: 55%;
+   top: 10%;
+  height: 80%;
+  width: 45%;
+  background: red;
+  border-radius: 50rpx;
+ box-shadow: 0 4rpx 30rpx -3rpx grey;
+  font-size: 28rpx;
+  color: white;
+  text-align: center;
+  line-height: 70rpx;
+}
+.da{
+position: absolute;
+bottom: 100rpx;
+left: 5%;
+width: 90%;
+height: 30rpx;
+background-color: #FFEAEA;
+border-radius: 20rpx;
+}
+.tiao{
+position:absolute;
+top:720rpx;
+width: 100%;
+height: 160rpx;
+
+}
+.scroll{
+  height:auto;
+  left: 10%;
+  width: 80%;
+  position: absolute;
+  top: 800rpx;
+  margin-bottom: 10rpx;
+  } 
+  .m{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .tn{
+    position: absolute;
+    font-size: 28rpx;
+    left:100rpx;
+    top:36rpx;
+
+  }
+  .img{
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    left: 0rpx;
+    top: 10rpx;
+    border-radius: 100%;
+  }
+  .te{
+    position: absolute;
+    right: 140rpx;
+    top: 40rpx;
+    color: red;
+    font-size: 28rpx;
+  }
+   .te1{
+    position: absolute;
+    right: 100rpx;
+    top: 40rpx;
+
+    font-size: 28rpx;
+  }
+  html { overflow-x: hidden; overflow-y: auto; }

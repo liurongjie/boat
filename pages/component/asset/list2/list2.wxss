@@ -16,82 +16,87 @@
 .scroll{height:auto;left: 5%;position: absolute;top: 450rpx;margin-bottom: 150rpx;}  
 
 .img{
-  position: relative;
+  position: absolute;
   width: 100rpx;
   height: 100rpx;
-  margin-top:30rpx;
-  margin-left: 40rpx;
+  top:30rpx;
+  left: 40rpx;
 }
 .nm{
-  position: relative;
+  position: absolute;
   width: 250rpx;
   height: 50rpx;
   font-size: 22rpx;
-  top: -120rpx;
-
+  top: 20rpx;
   left: 180rpx;
-  text-align:justify;
-  text-align-last:justify;
-  display:block;
+
 
 }
 .dist{
-  position: relative;
+  position: absolute;
   width: 300rpx;
   font-size: 18rpx;
-  top:-160rpx;
-  left: 170rpx;
+  top:55rpx;
+  left: 180rpx;
   opacity: 0.6;
-  margin-left: 10rpx;
+  
 }
 .fen{
-  position: relative;
+  position: absolute;
   width: 300rpx;
   font-size: 18rpx;
-  top:-135rpx;
-  left: 20rpx;
+  top:75rpx;
+  left: 180rpx;
   opacity: 0.6;
- margin-left: -10rpx;
+ 
 }
 .ren{
-  position: relative;
+  position: absolute;
   width: 300rpx;
   font-size: 18rpx;
-  top:-110rpx;
-  left: -125rpx;
+  top:95rpx;
+  left: 180rpx;
   opacity: 0.6;
 }
 .shen{
-  position: relative;
+  position: absolute;
   width: 300rpx;
   font-size: 20rpx;
-  top:-80rpx;
-  left: -235rpx;
+  top:120rpx;
+  left: 180rpx;
   color: #CB2C29;
 
 }
 .fu{
-   position: relative;
+   position: absolute;
   width: 300rpx;
   font-size: 30rpx;
-  top:-200rpx;
-  left: 430rpx;
+  top:70rpx;
+  left: 400rpx;
   color: #CB2C29;
 }
 .p{
-   position: relative;
+   position: absolute;
   width: 300rpx;
   font-size: 50rpx;
-  top:-210rpx;
-  left: 440rpx;
+  top:40rpx;
+  left: 430rpx;
   color: #CB2C29;
 }
 .p1{
-   position: relative;
+   position: absolute;
   width: 300rpx;
   font-size: 14rpx;
-  top:-178rpx;
-  left: 330rpx;
+  top:100rpx;
+  left: 430rpx;
   color: black;
   opacity: 0.5;
+}
+.m{
+  position: relative;
+  top:0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 100%;
+ 
 }
