@@ -1,11 +1,11 @@
 {
   "pages": [
-    
-    "pages/home/home",
+      "pages/home/home",
+    "pages/myteam/myteam",
+  
     "pages/toboat/toboat",
     "pages/verify/verify",
     "pages/myboat/myboat",
-  
     "pages/orderinfo/orderinfo"
   ],
   "window": {
