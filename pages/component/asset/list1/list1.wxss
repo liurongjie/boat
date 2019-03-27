@@ -19,7 +19,7 @@
   margin-top: 20rpx;
 }
 .name{
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-left: 275rpx;
@@ -34,7 +34,7 @@
 
 .l0{
   position: relative;
-  margin-top: 130rpx;
+  margin-top: 20rpx;
   width: 95%;
   height: 80rpx;
   display: flex;
