@@ -132,6 +132,7 @@
 .pro_disc_index_photo{
   height: 100%;
   width: 100%;
+  padding-bottom: 0rpx;
 }
 
 .pro_disc_content{
@@ -306,7 +307,7 @@ width: 80%;
   position: relative;
   flex-direction: column;
   box-sizing:border-box;
-  padding:5rpx 30rpx;
+  padding:25rpx 30rpx;
 }
 
 .user_inform{
@@ -331,6 +332,18 @@ width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 10rpx;
+}
+
+.pro_paiming{
+  position: absolute;
+  left: 45rpx;
+  top:50rpx;
+  z-index: 99;
+  color: rgb(255, 255, 255);
+  font-size: 40rpx;
+   font-weight: 550;
+
 }
 
 .user_evaluation_text{

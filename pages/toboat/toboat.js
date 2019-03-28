@@ -15,6 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     this.setData({
       buy_index: app.buy_index
     })
@@ -24,7 +25,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    app.index=4;
+    console.log(app.index)
   },
 
   /**

@@ -5,8 +5,11 @@
 
 <view class='pro_disc'>
 
+  <!-- <image bindtap='back' style='width:50rpx;height:50rpx;margin-right:10rpx;' src='/static/icon/left.svg'></image> -->
   <view class='pro_disc_index'>
+    
     <image src="/static/icon1.svg" class='pro_disc_index_photo'></image>
+    <view class='pro_paiming'>{{1}}</view>
   </view>
 
   <view class='pro_disc_content'> 

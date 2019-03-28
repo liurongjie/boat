@@ -26,32 +26,26 @@ Component({
 
   methods: {
 
-    // change1: function () {
-    //   const app = getApp();
-    //   app.index = 1;
-    //   this.setData({
-    //     index: 1,
-    //   })
-    // },
-    // change2: function () {
-    //   const app = getApp();
-    //   app.index = 2;
-    //   this.setData({
-    //     index: 2,
-    //   })
-    // },
-    // change3: function () {
-    //   const app = getApp();
-    //   app.index = 3;
-    //   this.setData({
-    //     index: 3,
-    //   })
-    // },
     goback:function(){
-
+<<<<<<< HEAD
+      if ((app.buy_index == 4) || (app.buy_index == 3))
+      {
+        app.buy_index =1
+      }
+      else{
+        wx.navigateBack({
+          delta: 1,
+        })
+      }
+      
+=======
+      if (app.buy_index == 2){app.buy_index=1;}
+      else {
       wx.navigateBack({
         delta:1,
       })
+      }
+>>>>>>> e8ee36b673985d6c94ebe7987444e291f4d6f0de
       //console.log(this.data.taskfunc);
     },
 
