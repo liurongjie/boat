@@ -10,30 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      }, {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      }, {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-    ],
+    
     res: [{
         "id": 31,
         "tname": "云顶工坊",
@@ -107,14 +84,15 @@ Page({
   },
   lower: function() {
     var result = this.data.res;
+    var result2=[];
     var resArr = jsonData.dataList;
-    for (let i = 0; i < 10; i++) {
-      result.push(resArr[i]);
+    for (let i = result.length; i < result.length+10; i++) {
+      result2.push(resArr[i]);
     };
     
-    var cont = result.concat(resArr);
+    var cont = result.concat(result2);
     console.log(resArr.length);
-    if (cont.length >= 100) {
+    if (cont.length >= resArr.length) {
       wx.showToast({ //如果全部加载完成了也弹一个框
         title: '我也是有底线的',
         icon: 'success',
@@ -122,9 +100,6 @@ Page({
       });
       return false;
     } else {
-      this.setData({
-        res: result,
-      })
       wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”  
         title: '加载中',
         icon: 'loading',
