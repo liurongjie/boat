@@ -1,18 +1,12 @@
 {
   "pages": [
     "pages/home/home",
-<<<<<<< HEAD
     "pages/component/prepay/prepay",
-    
-    "pages/toboat/toboat",
-=======
     "pages/myteam/myteam",
->>>>>>> 62afcfd49012acdbb18e98be24910b677ba6a5a2
     "pages/teamcut/teamcut",
     "pages/orderinfo/orderinfo",
     "pages/myboat/myboat",
     "pages/toboat/toboat",
-    "pages/component/prepay/prepay",
     "pages/verify/verify"
   ],
   "window": {

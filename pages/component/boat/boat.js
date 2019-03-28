@@ -12,9 +12,15 @@ Component({
   /**
    */
   data: {
- 
+    index: 1,
   },
-
+  ready:function(){
+    this.setData({
+      index: app.index,
+    })
+  }
+,
+ 
   /**
    * 组件的方法列表
    */
