@@ -27,7 +27,7 @@ Component({
   methods: {
 
     goback:function(){
-<<<<<<< HEAD
+
       if ((app.buy_index == 4) || (app.buy_index == 3))
       {
         app.buy_index =1
@@ -38,14 +38,7 @@ Component({
         })
       }
       
-=======
-      if (app.buy_index == 2){app.buy_index=1;}
-      else {
-      wx.navigateBack({
-        delta:1,
-      })
-      }
->>>>>>> e8ee36b673985d6c94ebe7987444e291f4d6f0de
+
       //console.log(this.data.taskfunc);
     },
 
