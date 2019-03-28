@@ -110,7 +110,7 @@ Page({
           res: cont
         });
         wx.hideLoading();
-      }, 1500)
+      }, 500)
     }
   },
   

@@ -56,6 +56,7 @@
 
 
 <scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
+  
  <block wx:for="{{res}}" wx:key="*this">  
   <view style=' margin-bottom: 40rpx; height: 100rpx;width: 90%;margin-left:5%;' data-index="{{index}}" bindtap='selectindex'>
      <view class='m'>
