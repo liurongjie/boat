@@ -2,7 +2,19 @@
 App({
   list:1,
   index:2,
+  buy_index:1,
   onLaunch: function () {
+
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res.windowWidth);
+        console.log(res.windowHeight);
+        
+        that.globalData.h=res.windowHeight;
+        that.globalData.w = res.windowWidth;
+      },
+    });
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -38,5 +50,8 @@ App({
   },
   globalData: {
     userInfo: null,
+    h:'',
+    w:'',
+
   }
 })

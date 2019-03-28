@@ -1,23 +1,18 @@
-// pages/toboat/toboat.js
-var app=getApp()
+// pages/component/prepay.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    buy_index:"",
-    latitude:30.41,
-    longitude:114.29,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      buy_index: app.buy_index
-    })
+
   },
 
   /**
@@ -67,29 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  changestatus_buy:function(){
-    this.setData({
-      buy_index: app.buy_index
-    })
-    console.log("changed to ", this.data.buy_index)
-  },
-
-
-  change_evaluation:function(){
-    this.setData({
-      buy_index: app.buy_index
-    })
-    console.log("changed to ", this.data.buy_index)
-  },
-
-
-  backto_boat:function(){
-
-    this.setData({
-      buy_index: app.buy_index
-    })
-    console.log("changed to ", this.data.buy_index)
   }
 })
