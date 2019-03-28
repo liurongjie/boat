@@ -26,32 +26,13 @@ Component({
 
   methods: {
 
-    // change1: function () {
-    //   const app = getApp();
-    //   app.index = 1;
-    //   this.setData({
-    //     index: 1,
-    //   })
-    // },
-    // change2: function () {
-    //   const app = getApp();
-    //   app.index = 2;
-    //   this.setData({
-    //     index: 2,
-    //   })
-    // },
-    // change3: function () {
-    //   const app = getApp();
-    //   app.index = 3;
-    //   this.setData({
-    //     index: 3,
-    //   })
-    // },
     goback:function(){
-
+      if (app.buy_index == 2){app.buy_index=1;}
+      else {
       wx.navigateBack({
         delta:1,
       })
+      }
       //console.log(this.data.taskfunc);
     },
 

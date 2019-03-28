@@ -18,8 +18,7 @@ Component({
     this.setData({
       index: app.index,
     })
-  }
-,
+  },
  
   /**
    * 组件的方法列表

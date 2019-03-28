@@ -6,7 +6,7 @@
     </view> -->
     <view class="bottom" style='height:5.15vh;background: white;box-shadow:0rpx -10rpx 20rpx #DDD;'>
       <view id='row-one' class="row-row" style='margin-left:112.5rpx;width:200rpx;margin-top: 0.625vh;margin-bottom: 0.625vh;background: transparent;'>
-
+        
         
           <button bindtap='goback' id='goback' class="row-column column-hcenter row-one_button"  style=''>
             <image style='width:26rpx;height:26rpx;' src='../../../static/icon/goback.svg' mode='aspectFit'></image>
