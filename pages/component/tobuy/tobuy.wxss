@@ -125,6 +125,7 @@
 .pro_disc_index_photo{
   height: 100%;
   width: 100%;
+
 }
 
 .pro_disc_content{
@@ -149,6 +150,16 @@
   justify-content: center;
 }
 
+.pro_paiming{
+  position: absolute;
+  left: 45rpx;
+  top:50rpx;
+  z-index: 99;
+  color: rgb(255, 255, 255);
+  font-size: 40rpx;
+   font-weight: 550;
+
+}
 
 .pro_disc_content2{
 
