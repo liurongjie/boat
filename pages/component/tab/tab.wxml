@@ -10,11 +10,11 @@
   <view  wx:if="{{index!=3}}" class='content2'   bindtap='change3' >
     <image src='../../../static/icon/boat.svg' style='width:80%;height:80%;'></image>
   </view>
-  <!-- <view wx:if="{{index==3}}">
+  <view wx:if="{{index==3}}">
     <view class='shake1'>
       <image src='../../../static/icon/bigboat.svg' style='width:100%;height:100%;'></image>
     </view>
-  </view> -->
+  </view>
   <view wx:if="{{index==1}}" class='content3'bindtap='change2'>
     <image src='../../../static/icon/account.svg' style='width:60%;height:60%;margin-left:10rpx;'></image>
     <text style='font-size:22rpx;margin-top:0rpx;color:black;'>个人中心</text>
