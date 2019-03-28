@@ -68,7 +68,8 @@
     margin-top: -630rpx;
     animation: shake 3s 0s ;
     animation-timing-function: ease;
-   
+    pointer-events: none;
+  
 	}
 
 
