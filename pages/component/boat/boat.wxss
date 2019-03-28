@@ -161,6 +161,18 @@ background-color:rgba(95, 83, 83, 0.493);
   margin-left:60rpx;
 }
 
+
+.pro_inform_text{
+  font-size:30rpx;
+  color:grey;
+  font-weight:300;
+  margin-right:60rpx;
+  margin-left:30rpx;
+  margin-top:30rpx;
+ 
+}
+
+
 .pro_disc{
   height:20%;
   width: 60%;

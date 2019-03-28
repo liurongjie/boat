@@ -79,6 +79,13 @@
   position: relative;
 }
 
+.line_1{
+  background-color:#EBEFF2;
+  width:100%;
+  height:2rpx;
+  position: relative;
+}
+
 .progress_text{
  line-height:1;
  overflow:hidden;
@@ -125,7 +132,6 @@
 .pro_disc_index_photo{
   height: 100%;
   width: 100%;
-
 }
 
 .pro_disc_content{
@@ -150,16 +156,6 @@
   justify-content: center;
 }
 
-.pro_paiming{
-  position: absolute;
-  left: 45rpx;
-  top:50rpx;
-  z-index: 99;
-  color: rgb(255, 255, 255);
-  font-size: 40rpx;
-   font-weight: 550;
-
-}
 
 .pro_disc_content2{
 
@@ -305,12 +301,12 @@ width: 80%;
 
 .user_evaluation_first{
   width: 100%;
-  height: 220rpx;
+  height: auto;
   display: flex;
   position: relative;
   flex-direction: column;
   box-sizing:border-box;
-  padding:5rpx 30rpx;
+  padding:25rpx 30rpx;
 }
 
 .user_inform{
@@ -335,22 +331,28 @@ width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 10rpx;
+}
+
+.pro_paiming{
+  position: absolute;
+  left: 45rpx;
+  top:50rpx;
+  z-index: 99;
+  color: rgb(255, 255, 255);
+  font-size: 40rpx;
+   font-weight: 550;
+
 }
 
 .user_evaluation_text{
     width: 100%;
-    height: 120rpx;
+    height: auto;
     font-size: 20rpx;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.815);
     align-items: center;
-    margin-bottom: 20rpx;
     justify-content: center;
-    overflow : hidden; 
-    line-height: 30rpx; 
-    max-height: 90rpx;
-    display:-webkit-box;    
-    -webkit-line-clamp:3; 
     -webkit-box-orient:vertical;
 
 }
@@ -686,7 +688,13 @@ text-align:left;
     -webkit-line-clamp:2; /*设置显示的行数*/
   }
 
+.scroll{
+  height:1100rpx;
+  width: 100%;
+  position: relative;
 
+ 
+  } 
   
 
 .to_end_progress{

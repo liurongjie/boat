@@ -4,6 +4,7 @@
     "title": "../component/title/title",
     "tobuy":"../component/tobuy/tobuy",
     "prepay":"../component/prepay/prepay",
-    "mymap":"../component/pro_map/mapview"
+    "mymap":"../component/pro_map/mapview",
+    "evaluation":"../component/evaluation/evaluation"
   }
 }

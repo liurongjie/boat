@@ -1,12 +1,13 @@
 {
   "pages": [
-   
     "pages/home/home",
-    "pages/toboat/toboat",
+    "pages/component/prepay/prepay",
+    "pages/myteam/myteam",
     "pages/teamcut/teamcut",
-    "pages/verify/verify",
+    "pages/orderinfo/orderinfo",
     "pages/myboat/myboat",
-    "pages/orderinfo/orderinfo"
+    "pages/toboat/toboat",
+    "pages/verify/verify"
   ],
   "window": {
     "backgroundTextStyle": "light",
