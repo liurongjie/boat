@@ -12,7 +12,7 @@ Page({
   },
   changestatus:function(){
     var status=app.index;
-    if(status>3)status=3;
+   
     this.setData({
       index: status,
     })

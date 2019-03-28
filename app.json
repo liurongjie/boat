@@ -1,12 +1,11 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/component/prepay/prepay",
+    "pages/toboat/toboat",
     "pages/myteam/myteam",
     "pages/teamcut/teamcut",
     "pages/orderinfo/orderinfo",
     "pages/myboat/myboat",
-    "pages/toboat/toboat",
     "pages/verify/verify"
   ],
   "window": {
