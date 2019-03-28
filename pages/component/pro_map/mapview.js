@@ -28,7 +28,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    back: function () {
+      var app = getApp();
+      app.buy_index = 1;
+      console.log("从地图返回商品详情页", app.buy_index)
+    },
   },
 
 

@@ -82,5 +82,14 @@ Page({
       buy_index: app.buy_index
     })
     console.log("changed to ", this.data.buy_index)
+  },
+
+
+  backto_boat:function(){
+
+    this.setData({
+      buy_index: app.buy_index
+    })
+    console.log("changed to ", this.data.buy_index)
   }
 })
