@@ -1,5 +1,5 @@
 <!--pages/component/home/home.wxml-->
-
+<scroll-view scroll-y style="height: {{h}}px;width:100%;top:0rpx;">
 <swiper
   indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}"
@@ -63,5 +63,6 @@
 感动人心的好产品吧</text>
 <text style='position:absolute;right:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>价格厚道 感动人心</text>
     </view>
-      <view class='bai'>
-    </view>
+    
+
+    </scroll-view>
