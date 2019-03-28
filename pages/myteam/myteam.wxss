@@ -155,3 +155,44 @@ progress{
   color: white;
   margin-top: 20rpx;
 }
+.scroll{
+  position: relative;
+  height:150rpx;
+  left: 10%;
+  width: 80%;
+} 
+.scroll .line{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.line image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-top: 10rpx;
+
+ 
+}
+.line  .text1{
+  position: relative;
+  font-size: 28rpx;
+  margin-left: 50rpx;
+  line-height: 100rpx;
+}
+
+.line .text2{
+  position: relative;
+  color: red;
+  font-size: 28rpx;
+  margin-left: 200rpx;
+  line-height: 100rpx;
+}
+.line .text3{
+  position: relative;
+  font-size: 35rpx;
+  line-height: 100rpx;
+}
+  
