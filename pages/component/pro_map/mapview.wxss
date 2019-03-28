@@ -1,0 +1,12 @@
+/* pages/component/pro_map/mapview.wxss */
+
+.title_view{
+  height: 400rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-color: red;
+  align-items: bottom;
+  justify-content: left;
+
+}

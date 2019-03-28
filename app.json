@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/teamcut/teamcut",
     "pages/home/home",
     "pages/toboat/toboat",
+    "pages/teamcut/teamcut",
     "pages/verify/verify",
     "pages/myboat/myboat",
     "pages/orderinfo/orderinfo"

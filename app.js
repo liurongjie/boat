@@ -2,6 +2,7 @@
 App({
   list:1,
   index:2,
+  buy_index:1,
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

@@ -2,8 +2,8 @@
 
 <title></title>
 
-<tobuy wx:if="{{buy_index==1}}"></tobuy>
+<tobuy wx:if="{{buy_index==1}}" bindtap="change_evaluation"></tobuy>
 
 <prepay wx:if="{{buy_index==2}}" ></prepay>
+<mymap wx:if="{{buy_index==3}}" location_latitude="{{latitude}}" location_longitude="{{longitude}}" > </mymap>
 <bottom taskfunc='goboat' bindtap='changestatus_buy'></bottom>
- 

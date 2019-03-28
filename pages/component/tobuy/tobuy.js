@@ -21,6 +21,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    pro_map:function(){
+      var app =getApp();
+      app.buy_index=3;
+      console.log("查看地图", app.buy_index)
 
+      
+    }
   }
 })

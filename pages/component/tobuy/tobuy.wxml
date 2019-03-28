@@ -56,7 +56,7 @@
 <view class='pro_location'>
   <view class='pro_location_index'>位置</view>
   <view class='pro_location_text'>beside the WHU ~~ you can't find it hhhhhh</view>
-  <view class='pro_location_map'>地图➤</view>
+  <view class='pro_location_map' bindtap='pro_map'>地图➤</view>
 </view>
 
 
@@ -67,7 +67,7 @@
 <view class='pro_evaluation'>
   <view class='pro_evaluation_index'>评价</view>
   <view class='pro_evaluation_text'>往期好评率（16）91.5%</view>
-  <view class='pro_evaluation_all'>全部➤</view>
+  <view class='pro_evaluation_all' bindtap='pro_evaluation'>全部➤</view>
 </view>
 
 

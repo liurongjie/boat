@@ -56,17 +56,19 @@ Component({
     },
 
     goboat:function() {
-      // body...
+      
       this.setData({
         taskfunc : 'prepay1'
       })
       app.buy_index = 2,
-        console.log("go on boat,here is bottom.js", app.buy_index, this.taskfunc);
+      console.log("go on boat,here is bottom.js", app.buy_index);
     },
 
     myboat: function () {
       // body...
-
+      wx.navigateTo({
+        url: '../teamcut/teamcut',
+      })
       console.log("see my boat");
     },
 

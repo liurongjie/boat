@@ -7,6 +7,8 @@ Page({
    */
   data: {
     buy_index:"",
+    latitude:30.41,
+    longitude:114.29,
   },
 
   /**
@@ -68,6 +70,14 @@ Page({
   },
 
   changestatus_buy:function(){
+    this.setData({
+      buy_index: app.buy_index
+    })
+    console.log("changed to ", this.data.buy_index)
+  },
+
+
+  change_evaluation:function(){
     this.setData({
       buy_index: app.buy_index
     })
