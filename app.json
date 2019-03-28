@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/component/prepay/prepay",
     "pages/home/home",
+    "pages/component/prepay/prepay",
+    
     "pages/toboat/toboat",
     "pages/teamcut/teamcut",
     "pages/verify/verify",

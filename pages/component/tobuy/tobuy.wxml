@@ -34,7 +34,7 @@
 <view class='pro_disc'>
 
   <view class='pro_disc_index'>
-    <image src="/static/icon1.jpg" class='pro_disc_index_photo'></image>
+    <image src="/static/icon1.svg" class='pro_disc_index_photo'></image>
   </view>
 
   <view class='pro_disc_content'> 

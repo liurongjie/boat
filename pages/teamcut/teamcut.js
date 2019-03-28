@@ -82,6 +82,7 @@ Page({
     size: 8, //每页8条数据
 
   },
+
   lower: function() {
     var result = this.data.res;
     var result2=[];
@@ -112,6 +113,7 @@ Page({
       }, 1500)
     }
   },
+  
   clickPerson: function() {
     var selectPerson = this.data.selectPerson;
     if (selectPerson == true) {

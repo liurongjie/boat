@@ -1,7 +1,7 @@
 //app.js
 App({
   list:1,
-  index:2,
+  index:1,
   buy_index:1,
   onLaunch: function () {
 

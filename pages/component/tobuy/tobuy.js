@@ -27,6 +27,12 @@ Component({
       console.log("查看地图", app.buy_index)
 
       
+    },
+
+    pro_evaluation:function(){
+      var app = getApp();
+      app.buy_index =4;
+      console.log("查看地图", app.buy_index)
     }
   }
 })
