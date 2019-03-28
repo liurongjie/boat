@@ -48,10 +48,16 @@ Component({
     //   })
     // },
     goback:function(){
-
-      wx.navigateBack({
-        delta:1,
-      })
+      if ((app.buy_index == 4) || (app.buy_index == 3))
+      {
+        app.buy_index =1
+      }
+      else{
+        wx.navigateBack({
+          delta: 1,
+        })
+      }
+      
       //console.log(this.data.taskfunc);
     },
 

@@ -402,10 +402,18 @@ width: 80%;
 }
 
 .pro_inform_content{
-
+ display: flex;
+  position: relative;
+  flex-direction: row;
+  text-align: center;
   width: 100%;
   height: 300rpx;
-  background-color: red;
+  font-size: 24rpx;
+  font-weight: 300;
+  color: rgba(102, 105, 102, 0.596);
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(62, 172, 144, 0.281);
 
 }
 

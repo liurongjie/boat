@@ -175,7 +175,7 @@ font-style: italic;
 }
 .scroll{
   position: absolute;
-  height: 300rpx;
+  height: 180rpx;
   top: 1000rpx;
   z-index: 200;
 }
