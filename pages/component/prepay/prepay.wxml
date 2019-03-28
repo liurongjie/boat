@@ -1,5 +1,5 @@
 <!--pages/component/prepay/prepay.wxml-->
-<view style='position:fixed;width:100%;height:73.5%;top:0rpx;z-index:1;background:white;'>
+<view style='position:absolute;width:100%;height:73.5%;top:0rpx;z-index:1;background:white;'>
 <view class='hui'></view>
 <text style='position:absolute;top:170rpx;left:50rpx;font-size:32rpx;'>订单内容</text>
 <view class='b1'>
@@ -62,6 +62,7 @@
 </view>
 </view>
 
+<scroll-view scroll-y class='scroll'>
 <view class='youhui1'>
 <text class='boat'>BOAT</text>
 <text class='zuoxia'>校园大件</text>
@@ -87,6 +88,7 @@
 <text class='p11'>YUAN</text>
 </view>
 <view class='bai'></view>
+</scroll-view>
 
 
 
