@@ -30,7 +30,6 @@ Component({
   },
   ready: function () {
     var that=this;
- 
     var h = (640 /736) * app.globalData.h;
     that.setData({ h: h });
     console.log(h);

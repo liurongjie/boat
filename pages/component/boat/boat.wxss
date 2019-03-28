@@ -35,14 +35,14 @@
     margin-top: -630rpx;
     animation: shake 3s 0s ;
     animation-timing-function: ease;
-    z-index:1;
+  
 	}
 
 .swiper_content{
   position: relative;
   width: 100%;
   height: 900rpx;
-  z-index: 2;
+
 }
 
 .btn_1{
@@ -51,8 +51,6 @@
   display:flex;
   margin-top: 160rpx;
 }
-
-
 
 .btn_left{
 
