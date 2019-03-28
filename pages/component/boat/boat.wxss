@@ -386,7 +386,6 @@ background-color:rgba(95, 83, 83, 0.493);
     transform: translate3d(0, 0, 0);
   }
 }
-
 @keyframes fadeInLeft {
   from {
     opacity: 0;
