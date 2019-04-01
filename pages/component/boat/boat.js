@@ -65,7 +65,7 @@ Component({
     gotoboat: function () {
       app.index = 4;//4代表参团页
       wx.navigateTo({
-        url: '../toboat/toboat',
+        url: '../toboat/toboat?producation_id=1',
       })
       app.buy_index=1,
       console.log("gotoboat", app.buy_index);

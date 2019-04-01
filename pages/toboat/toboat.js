@@ -14,8 +14,8 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function (options,e) {
+    console.log("上一个界面传值-产品id：",options.producation_id)
     this.setData({
       buy_index: app.buy_index
     })

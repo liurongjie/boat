@@ -1,5 +1,6 @@
 var json=[
   {
+    
     type:"驾校",
     production_name: ['C1包过班', 'C1保底班'],
     onboat_people_number:[99,76],
@@ -31,7 +32,7 @@ var json=[
     longitude: 114.2494,
     latitude: 30.4891,
     location: '武汉市八一路31号',
-    pinglun_ID: 1,
+    pinglun_ID: 2,
     shoutiao_pinglun: 'BOAT推荐的健身太棒了',
     pinglun_num: 12,
     pinglun_good: 98.5
@@ -51,7 +52,7 @@ var json=[
     longitude: 114.2494,
     latitude: 30.4891,
     location: '武汉市八一路31号',
-    pinglun_ID: 1,
+    pinglun_ID: 3,
     shoutiao_pinglun: 'BOAT推荐的考研太棒了',
     pinglun_num: 12,
     pinglun_good: 98.5
@@ -71,7 +72,7 @@ var json=[
     longitude: 114.2494,
     latitude: 30.4891,
     location: '武汉市八一路31号',
-    pinglun_ID: 1,
+    pinglun_ID: 4,
     shoutiao_pinglun: 'BOAT推荐的小语种太棒了',
     pinglun_num: 12,
     pinglun_good: 98.5
