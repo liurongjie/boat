@@ -23,6 +23,8 @@ Page({
     expire: 300,//有效时间
     time: 0,
     setInter: '',
+    text: '恭喜您 \n 提交成功',
+    isShow: false
   },
   name: function (e) {
     this.setData({
@@ -50,7 +52,7 @@ Page({
       if (checkedNum) {
         this.setData({
           btnDisabled: false,
-          btnValue: '发送验证码'
+          
         })
       }
     } else {
@@ -120,22 +122,22 @@ Page({
     var that = this;
     that.createCode();
     console.log('code' + this.data.code);
-     zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
-    zhenzisms.client.send(function (res) {
-    if (res.data.code == 0) {
+    //  zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
+    // zhenzisms.client.send(function (res) {
+    // if (res.data.code == 0) {
     that.timer();
     that.timer1();
-    this.setData({
+   that.setData({
       time: 0,
     })
     return;
-    }
+    // }
     wx.showToast({
     title: res.data.data,
     icon: 'none',
     duration: 2000
     })
-    }, this.data.phone, '您的验证码为:' + this.data.code,1,1000,5);
+    // }, this.data.phone, '您的验证码为:' + this.data.code,1,1000,5);
   },
   timer1: function () {
     let promise = new Promise((resolve, reject) => {
@@ -145,7 +147,7 @@ Page({
           this.setData({
             time: time
           })
-          console.log(this.data.time)
+         
           if (this.data.time >= 300) {
             this.setData({
               time: 301,
@@ -219,6 +221,10 @@ Page({
       return
     }
     console.log(result);
+    if(result==3)this.setData({
+      text: "恭喜你 提交验证成功",
+      isShow: true
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -268,7 +274,12 @@ Page({
   onReachBottom: function () {
 
   },
+cg:function(){
+    wx.navigateTo({
+      url: '../home/home',
+    })
 
+},
   /**
    * 用户点击右上角分享
    */

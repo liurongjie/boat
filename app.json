@@ -1,9 +1,9 @@
 {
   "pages": [
-    
+  
     "pages/home/home",
     "pages/toboat/toboat",
-    "pages/verify/verify",
+    "pages/verify/verify", 
     "pages/myboat/myboat",
     "pages/orderinfo/orderinfo"
   ],

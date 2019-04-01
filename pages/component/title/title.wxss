@@ -1,4 +1,3 @@
-/* pages/component/title/title.wxss */
 .title{
   position: fixed;
   top: 0rpx;
@@ -8,78 +7,14 @@
   display: flex;
   flex-direction: row;
   z-index: 100;
-  background-color: white;
+  background-color:white
+
 }
 .title text{
   position: relative;
-  width: 200rpx;
+  width: 250rpx;
   font-size: 40rpx;
-  margin-left: 30rpx;
-}
-.title image{
-  position: relative;
-  width: 70rpx;
-  height: 70rpx;
-  margin-left: 20rpx;
-}
-.title .choice{
-  position: relative;
-  line-height: 50rpx;
-  width: 120rpx;
-  font-size: 30rpx;
-  display: flex;
-  flex-direction: column;
-}
-.title .arrow{
-  position: relative;
-  width: 25rpx;
-  height: 25rpx;
-
-  margin-left: 20rpx;
-}
-
-.phone_personal{
-  left: 100rpx;
-  position: relative;
-    width: 100%;
-    color:black;
-    height:100rpx;
-    line-height:100rpx;
-    text-align: left;
-    font-size: 28rpx;
-    font-weight: 100;
-}
-.phone_one{
-    display: flex; 
-    position: relative;
-    justify-content: space-between;
-    width:auto;
-    height:50rpx;
-    top:-20rpx;
-    left: -80rpx;
-    border-radius: 10rpx;
-    
-}
-.person_box{
-    position: fixed;
-    left:50rpx;
-    top: 140rpx;
-    z-index: 99;
-}
-.phone_select{
-    margin-top:0;
-    z-index: 100;
-    position: fixed; 
-    font-size: 30rpx;
-}
-.select_one{
-    text-align: center;
-    font-weight: 100;
-   
-    width:200rpx;   
-    height:100rpx;
-    line-height:100rpx;
-    font-size: 28rpx;
-    margin:0 5%;
-    border-bottom:2rpx solid rgb(255, 255, 255);
+  margin-left: 50rpx;
+  color: black;
+  font-weight: 200
 }

@@ -28,3 +28,12 @@
 
 <view class='sub' bindtap='save'>提交审核</view>
 
+<view class="showModule" wx:if="{{isShow}}" >
+
+  <!-- 这部分内容可以灵活修改，例如改成一个模态框 -->
+  <text class="text ">{{text}}</text>
+  <view class='circle' bindtap='cg'>
+  <view class='fanhui'></view>
+  </view>
+</view>
+

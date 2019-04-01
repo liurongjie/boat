@@ -21,84 +21,24 @@
 }
 .title text{
   position: relative;
-  width: 200rpx;
+  width: 250rpx;
   font-size: 40rpx;
-  margin-left: 30rpx;
+  margin-left: 20rpx;
   color: white;
+  font-weight: 200
 }
-.title image{
-  position: relative;
-  width: 70rpx;
-  height: 70rpx;
-  margin-left: 20rpx;
-}
-.title .choice{
-  position: relative;
-  line-height: 50rpx;
-  width: 120rpx;
-  font-size: 30rpx;
-  display: flex;
-  flex-direction: column;
-}
-.title .arrow{
-  position: relative;
-  width: 25rpx;
-  height: 25rpx;
+.fh{
+     width: 25rpx;
+    height: 25rpx;
+    border-top: 4rpx solid #ffffff;
+    border-right: 4rpx solid #ffffff;
+    transform: rotate(225deg);
+    margin-left: 40rpx;
+    margin-top: 15rpx;
 
-  margin-left: 20rpx;
+
 }
 
-.phone_personal{
-  left: 100rpx;
-  position: relative;
-    width: 100%;
-    color:white;
-    height:100rpx;
-    line-height:100rpx;
-    text-align: left;
-    font-size: 28rpx;
-    font-weight: 100;
-}
-.phone_one{
-    display: flex; 
-    position: relative;
-    justify-content: space-between;
-    width:auto;
-    height:50rpx;
-    top:-20rpx;
-    left: -80rpx;
-    border-radius: 10rpx;
-    
-}
-.person_box{
-    position: fixed;
-    left:50rpx;
-    top: 140rpx;
-    z-index: 99;
-}
-.phone_select{
-    margin-top:0;
-    z-index: 100;
-    position: fixed; 
-    font-size: 30rpx;
-}
-.select_one{
-    text-align: center;
-    font-weight: 100;
-    width:200rpx;   
-    height:100rpx;
-    line-height:100rpx;
-    font-size: 28rpx;
-    margin:0 5%;
-    border-bottom:2rpx solid rgb(255, 255, 255);
-}
-.back{
-  position: absolute;
-  width:100rpx;
-  height: 100rpx;
-  left: 20rpx;
-  top: 180rpx;
-}
 .content{
   background: white;
   width: 90%;
@@ -113,13 +53,13 @@
   position: absolute;
   right: 40rpx;
   top: 180rpx;
-  height: 20rpx;
-  width: 100rpx;
-  font-size: 18rpx;
+  height: 40rpx;
+  width: 120rpx;
+  font-size: 24rpx;
   background: rgba(80, 80, 80, 0.3);
   color: white;
   text-align: center;
-  line-height: 18rpx;
+  line-height: 36rpx;
   border-radius: 40rpx;
 
 }

@@ -10,30 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      }, {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      }, {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-    ],
+ 
     res: [{
         "id": 31,
         "tname": "云顶工坊",

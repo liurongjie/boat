@@ -123,3 +123,73 @@ font-size: 45rpx;
 font-weight: 100;
 color: white;
 }
+.showModule {
+  /* 用样式控制隐藏  visibility: hidden;*//* flex 布局 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 生成绝对定位的元素，相对于浏览器窗口进行定位 */
+  position: fixed;
+  /* 如果 height,width 不变的情况下，left,top 不用修改 */
+
+  height: 100%;
+  width: 100%;
+  /* 不透明 */
+  
+  background-color: rgba(80, 80, 80, 0.5);
+  /* 圆角 */
+
+  z-index: 100;
+}
+.showModule .text {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 40%;
+  background: white;
+  color: red;
+  font-size: 80rpx;
+  font-family: "微软雅黑";
+  top: 30%;
+  border-radius: 50rpx;
+  font-weight: 100;
+  text-align: center;
+  
+}
+.circle{
+  position: absolute;
+  right: 15%;
+  
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 28%;
+  box-shadow: 0 5rpx 30rpx -10rpx;
+}
+.fanhui{
+  display: inline-block;
+   width: 60rpx;
+   height:2rpx; 
+   background: black;
+   line-height: 0;
+   font-size:0;
+   vertical-align: middle;
+   transform: rotate(45deg);
+
+}
+.fanhui::after{
+  content:'/';
+  display:block;
+  width: 60rpx;
+  height:2rpx;
+   background: black;
+   transform: rotate(-90deg);
+}
+
