@@ -39,12 +39,7 @@ Component({
       }
       
 
-      if (app.buy_index == 2){app.buy_index=1;}
-      else {
-      wx.navigateBack({
-        delta:1,
-      })
-      }
+    
 
       //console.log(this.data.taskfunc);
     },

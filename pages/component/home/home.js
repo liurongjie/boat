@@ -32,7 +32,7 @@ Component({
     var that=this;
     var h = (640 /736) * app.globalData.h;
     that.setData({ h: h });
-    console.log(h);
+    // console.log(h);
     
     var timestamp = Date.parse(new Date());
      var date = new Date(timestamp);//获取年份  

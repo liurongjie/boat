@@ -8,8 +8,8 @@ App({
     var that = this;
     wx.getSystemInfo({
       success: function (res) {
-        console.log(res.windowWidth);
-        console.log(res.windowHeight);
+        // console.log(res.windowWidth);
+        // console.log(res.windowHeight);
         
         that.globalData.h=res.windowHeight;
         that.globalData.w = res.windowWidth;

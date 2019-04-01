@@ -18,10 +18,10 @@
   <view class="to_end_progress" >
     <view class='progress_text_view'>
       <view class='progress_text'>
-        距本轮结束{{12}}:{{10}}:{{54}}:{{40}}
+        距本轮结束{{date_day}}:{{date_hour}}:{{date_minute}}:{{date_second}}
       </view>
       <view class='progress_yes'>  
-        <progress percent='{{20}}' show-info  stroke-width="11" activeColor='#FAF75A' backgroundColor='#EDC11C'/>
+        <progress percent='{{percent}}' show-info  stroke-width="11" activeColor='#FAF75A' backgroundColor='#EDC11C'/>
       </view>
     </view>
   </view>          
