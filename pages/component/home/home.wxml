@@ -10,7 +10,7 @@
   bindchange='onslidechangeend'
   indicator-active-color='red'
 >
-  <block wx:key="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" bindtap='rec' />
     </swiper-item>
@@ -18,7 +18,7 @@
 </swiper>
 
   <view class="dots">  
-        <block wx:key="{{imgUrls}}">  
+        <block wx:for="{{imgUrls}}">  
             <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
         </block>  
     </view>  

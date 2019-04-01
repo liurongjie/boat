@@ -9,6 +9,13 @@ var json=[
     real_time_price:[2654,2393],
     start_time: 1554037169,
     end_time: 1554047169,
+    longitude:114.2494,
+    latitude:30.4891,
+    location:'武汉市八一路31号',
+    pinglun_ID:1,
+    shoutiao_pinglun:'BOAT推荐的驾校太棒了',
+    pinglun_num:12,
+    pinglun_good:98.5
   },
 
   {
@@ -21,6 +28,13 @@ var json=[
     real_time_price: [354, 393,890,310],
     start_time: 1554033392559,
     end_time: 1554038392559,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    pinglun_ID: 1,
+    shoutiao_pinglun: 'BOAT推荐的健身太棒了',
+    pinglun_num: 12,
+    pinglun_good: 98.5
   },
 
 
@@ -34,7 +48,13 @@ var json=[
     real_time_price: [2654, 2393,2980],
     start_time: 1554033392559,
     end_time: 1554038392559,
-
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    pinglun_ID: 1,
+    shoutiao_pinglun: 'BOAT推荐的考研太棒了',
+    pinglun_num: 12,
+    pinglun_good: 98.5
   },
 
 
@@ -48,6 +68,13 @@ var json=[
     real_time_price: [1654, 1393,1754,1889],
     start_time: 1554033392559,
     end_time: 1554038392559,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    pinglun_ID: 1,
+    shoutiao_pinglun: 'BOAT推荐的小语种太棒了',
+    pinglun_num: 12,
+    pinglun_good: 98.5
   },
 ]
 module.exports = { dataList: json }
