@@ -1,0 +1,14 @@
+<!--pages/component/pro_map/mapview.wxml-->
+<view class='title_view'></view>
+
+<view class='pro_name'><image bindtap='back' style='width:50rpx;height:50rpx;margin-right:10rpx;' src='/static/icon/left.svg'></image>武汉大学BOAT推荐驾校（普通全包班）</view>
+
+  <map
+      style="width: 100%; height: 800rpx"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      show-location></map>
+
+<view class='pro_location'>
+<image style='width:30rpx;height:30rpx' src='/static/icon/dingwei.svg'></image>
+湖北省红山区学府路1号</view>

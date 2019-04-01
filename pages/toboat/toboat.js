@@ -7,13 +7,15 @@ Page({
    */
   data: {
     buy_index:"",
-    
+    latitude:30.41,
+    longitude:114.29,
   },
- 
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (options,e) {
+    console.log("上一个界面传值-产品id：",options.producation_id)
     this.setData({
       buy_index: app.buy_index
     })
@@ -23,7 +25,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -69,6 +71,23 @@ Page({
   },
 
   changestatus_buy:function(){
+    this.setData({
+      buy_index: app.buy_index
+    })
+    console.log("changed to ", this.data.buy_index)
+  },
+
+
+  change_evaluation:function(){
+    this.setData({
+      buy_index: app.buy_index
+    })
+    console.log("changed to ", this.data.buy_index)
+  },
+
+
+  backto_boat:function(){
+
     this.setData({
       buy_index: app.buy_index
     })

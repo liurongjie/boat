@@ -1,0 +1,31 @@
+/* pages/component/pro_map/mapview.wxss */
+
+.title_view{
+  height:150rpx;
+  position: relative;
+}
+
+.pro_name{
+  position: relative;
+   color:rgb(0, 0, 0);
+  font-size:18px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  justify-content: center;
+  font-weight: 700;
+}
+
+
+.pro_location{
+  position: relative;
+  color:rgba(97, 85, 85, 0.623);
+  font-size:12px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  justify-content: center;
+  font-weight: 400;
+}

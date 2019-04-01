@@ -18,10 +18,10 @@
   <view class="to_end_progress" >
     <view class='progress_text_view'>
       <view class='progress_text'>
-        距本轮结束{{12}}:{{10}}:{{54}}:{{40}}
+        距本轮结束{{date_day}}:{{date_hour}}:{{date_minute}}:{{date_second}}
       </view>
       <view class='progress_yes'>  
-        <progress percent='{{20}}' show-info  stroke-width="11" activeColor='#FAF75A' backgroundColor='#EDC11C'/>
+        <progress percent='{{percent}}' show-info  stroke-width="11" activeColor='#FAF75A' backgroundColor='#EDC11C'/>
       </view>
     </view>
   </view>          
@@ -34,7 +34,8 @@
 <view class='pro_disc'>
 
   <view class='pro_disc_index'>
-    <image src="/static/icon1.jpg" class='pro_disc_index_photo'></image>
+    <image src="/static/icon1.svg" class='pro_disc_index_photo'></image>
+    <view class='pro_paiming'>{{1}}</view>
   </view>
 
   <view class='pro_disc_content'> 
@@ -56,7 +57,7 @@
 <view class='pro_location'>
   <view class='pro_location_index'>位置</view>
   <view class='pro_location_text'>beside the WHU ~~ you can't find it hhhhhh</view>
-  <view class='pro_location_map'>地图➤</view>
+  <view class='pro_location_map' bindtap='pro_map'>地图➤</view>
 </view>
 
 
@@ -67,7 +68,7 @@
 <view class='pro_evaluation'>
   <view class='pro_evaluation_index'>评价</view>
   <view class='pro_evaluation_text'>往期好评率（16）91.5%</view>
-  <view class='pro_evaluation_all'>全部➤</view>
+  <view class='pro_evaluation_all' bindtap='pro_evaluation'>全部➤</view>
 </view>
 
 
@@ -83,7 +84,7 @@
   </view>
 
   <view class='user_evaluation_text'>
-      BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊
+      BOAT驾校真的不错，我特别开心
   </view>
 </view>
 
@@ -103,5 +104,5 @@
 
 
 <view class='pro_inform_content'>
-    商品的详细情况
+    商品的详细情况...
 </view>

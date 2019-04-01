@@ -2,32 +2,69 @@
 
 .swiper_view{
   position: relative;
-  width: 100%;
+  width: 80%;
+  left: 10%;
   height: 900rpx;
-  background-color: rgb(255, 255, 255);
-  margin-top: 30rpx;
+  background-color: rgba(36, 112, 20, 0.4);
+ 
   box-sizing:border-box;
-  padding:0 50rpx;
+  padding:50rpx 30rpx;
+  border-radius:30px;
+
 }
+@keyframes shake {
+	 from,
+  60%,
+  75%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(400rpx, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.shake1 {
+    position: absolute;
+    width: 800rpx;
+    height: 800rpx;
+    margin-left: 270rpx;
+    margin-top: -630rpx;
+    animation: shake 3s 0s ;
+    animation-timing-function: ease;
+    z-index:1;
+	}
 
 .swiper_content{
   position: relative;
   width: 100%;
   height: 900rpx;
-  background-color: rgba(36, 112, 20, 0.521);
-  box-sizing:border-box;
-  padding:50rpx 30rpx;
-  border-radius:30px;
+  z-index: 2;
 }
 
 .btn_1{
   width:100%;
-  height:auto;
+  height:80rpx;
   display:flex;
-  margin-top: 160rpx;
+  margin-top: 170rpx;
+   justify-content: center;
+   position: relative;
+   
 }
 
-
+.btn_2{
+  width:100%;
+  height:fit-content;
+  display:flex; 
+  margin-top: 10rpx;
+  flex-direction: row;
+   justify-content: center;
+  padding-right: auto;
+  padding-left: auto;
+}
 
 .btn_left{
 
@@ -54,8 +91,8 @@ background-color:rgba(212, 82, 82, 0.61);
 
 position:relative;
 display:block;
-margin-left:10rpx;
 margin-right:auto;
+margin-left:10rpx;
 padding-left:14px;
 padding-right:14px;
 box-sizing:border-box;
@@ -69,6 +106,101 @@ overflow:hidden;
 color:#ffffff;
 background-color:rgba(95, 83, 83, 0.493);
 
+}
+
+.btn_sec1{
+width:120rpx;
+position:relative;
+display:block;
+margin-left:9rpx;
+margin-right:9rpx;
+padding-left:1px;
+padding-right:1px;
+box-sizing:border-box;
+font-size:10px;
+text-align:center;
+text-decoration:none;
+line-height:2.55555556;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#ffffff;
+background-color:rgba(151, 16, 16, 0.705);
+}
+
+.btn_sec2{
+width:120rpx;
+position:relative;
+display:block;
+margin-left:9rpx;
+margin-right:9rpx;
+padding-left:1px;
+padding-right:1px;
+box-sizing:border-box;
+font-size:10px;
+text-align:center;
+text-decoration:none;
+line-height:2.55555556;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#ffffff;
+background-color:rgba(16, 124, 151, 0.548);
+}
+
+
+.btn_sec3{
+width:120rpx;
+position:relative;
+display:block;
+margin-left:9rpx;
+margin-right:9rpx;
+padding-left:1px;
+padding-right:1px;
+box-sizing:border-box;
+font-size:10px;
+text-align:center;
+text-decoration:none;
+line-height:2.55555556;
+
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#ffffff;
+background-color:rgba(126, 151, 16, 0.596);
+}
+
+.btn_sec4{
+width:120rpx;
+position:relative;
+display:block;
+margin-left:9rpx;
+margin-right:9rpx;
+padding-left:1px;
+padding-right:1px;
+box-sizing:border-box;
+font-size:10px;
+text-align:center;
+text-decoration:none;
+line-height:2.55555556;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#ffffff;
+background-color:rgba(151, 16, 99, 0.541);
 }
 
 .context{
@@ -135,6 +267,18 @@ background-color:rgba(95, 83, 83, 0.493);
   margin-top: 30rpx;
   margin-left:60rpx;
 }
+
+
+.pro_inform_text{
+  font-size:30rpx;
+  color:grey;
+  font-weight:300;
+  margin-right:60rpx;
+  margin-left:30rpx;
+  margin-top:30rpx;
+ 
+}
+
 
 .pro_disc{
   height:20%;
@@ -431,6 +575,7 @@ background-color:rgba(95, 83, 83, 0.493);
   
 	 animation: shake 3s 0s  ;
 	 animation-timing-function: ease;
+   z-index: 3;
 }
   
 .shaketoo{
@@ -441,6 +586,7 @@ background-color:rgba(95, 83, 83, 0.493);
    top: 530rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;
+   z-index: 3;
 
 }
 
@@ -452,6 +598,7 @@ background-color:rgba(95, 83, 83, 0.493);
    top: 690rpx;
 	 animation: miss 1s 0s ,shaketext 2s 1s ;
 	 animation-timing-function: ease;
+     z-index:4;
 }
 
 .shake_text2{
@@ -462,6 +609,7 @@ background-color:rgba(95, 83, 83, 0.493);
    top: 720rpx;
 	 animation: miss 1s 0s ,shaketext 2s 1s ;
 	 animation-timing-function: ease;
+   z-index: 4;
 }
 
 

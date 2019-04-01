@@ -1,4 +1,5 @@
 // pages/component/home/home.js
+var app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -25,20 +26,14 @@ Component({
     month:'APRIL',
     year:'2019',
     h:'',
-    h1:'1150',
+    
   },
   ready: function () {
     var that=this;
-    wx.getSystemInfo({
-      success: function (res) {
-        console.log(res.windowWidth);
-        console.log(res.windowHeight);
-        that.setData({h1:res.windowHeight});
-      },
-    });
-    var h = (640 /736) * this.data.h1;
+    var h = (640 /736) * app.globalData.h;
     that.setData({ h: h });
-    console.log(h);
+    // console.log(h);
+    
     var timestamp = Date.parse(new Date());
      var date = new Date(timestamp);//获取年份  
      var Y =date.getFullYear();//获取月份 

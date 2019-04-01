@@ -1,0 +1,67 @@
+<!-- 商品排名，参团人次等 -->
+
+
+<view style='height:150rpx;'></view>
+
+<view class='pro_disc'>
+
+  <!-- <image bindtap='back' style='width:50rpx;height:50rpx;margin-right:10rpx;' src='/static/icon/left.svg'></image> -->
+  <view class='pro_disc_index'>
+    
+    <image src="/static/icon1.svg" class='pro_disc_index_photo'></image>
+    <view class='pro_paiming'>{{1}}</view>
+  </view>
+
+  <view class='pro_disc_content'> 
+    <view class='pro_disc_content1' >武大BOAT推荐驾校</view>
+    <view class='pro_disc_content2'>
+      <view class='leijicantuan'>累计参团{{241}}人次</view>
+      <view class='haopinglv'>好评率{{99}}%</view>
+      <view class='zonghepaiming'>综合排名第{{1}}</view>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+<!-- 分割线 -->
+<view class='line'></view>
+
+<!-- 评价-->
+<view class='pro_evaluation'>
+  <view class='pro_evaluation_index'>评价</view>
+  <view class='pro_evaluation_text'>往期好评率（16）91.5%</view>
+  <view class='pro_evaluation_all'></view>
+</view>
+
+
+<view class='line_1'></view>
+
+
+
+
+<scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
+ <block wx:for="{{res}}" wx:key="*this">  
+    <view class='user_evaluation_first' data-index="{{index}}" bindtap='selectindex'>
+      <view class='user_inform'>
+
+        <view>
+          <image class='userpic' src='{{item.pic}}'></image>
+        </view>
+
+        <view class='user_pickname'>{{item.name}}</view>
+
+      </view>
+
+      <view class='user_evaluation_text'>
+          {{item.text}}
+      </view>
+
+    </view>
+    <view class='line_1'></view>
+  </block>
+</scroll-view>
+
+<!-- 评价例子 -->

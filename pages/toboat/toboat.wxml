@@ -1,9 +1,12 @@
 <!--pages/toboat/toboat.wxml-->
-
+<scroll-view scroll-y style='position:absolute;width:100%;height:100%'>
 <title></title>
 
-<tobuy wx:if="{{buy_index==1}}"></tobuy>
+<tobuy wx:if="{{buy_index==1}}" bindtap="change_evaluation"></tobuy>
 
 <prepay wx:if="{{buy_index==2}}" ></prepay>
+<mymap wx:if="{{buy_index==3}}" location_latitude="{{latitude}}" location_longitude="{{longitude}}" bindtap="backto_boat"> </mymap>
+<evaluation wx:if="{{buy_index==4}}" bindtap="backto_boat"></evaluation>
+
 <bottom taskfunc='goboat' bindtap='changestatus_buy'></bottom>
- 
+</scroll-view>

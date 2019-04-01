@@ -1,4 +1,5 @@
 // pages/myteam/myteam.js
+var jsonData = require('../../data/teamcut.js');
 Page({
 
   /**
@@ -28,8 +29,94 @@ Page({
         url: '/static/pic/1.jpg',
         name: '珞珈李坤'
       },
-    ]
+    ],
+    res: [{
+      "id": 31,
+      "tname": "云顶工坊",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    {
+      "id": 3,
+      "tname": "Jess MLR",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    {
+      "id": 2,
+      "tname": "洛洛",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
 
+    {
+      "id": 4,
+      "tname": "武大吴彦祖",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    {
+      "id": 5,
+      "tname": "武大小猪",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    {
+      "id": 6,
+      "tname": "武大小猪",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    {
+      "id": 7,
+      "tname": "武大小猪",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    {
+      "id": 8,
+      "tname": "武大小猪",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    {
+      "id": 9,
+      "tname": "武大小猪",
+      "pic": "/static/icon3.jpg",
+      "cutprice": "124"
+    },
+    ],
+
+  },
+  lower: function () {
+    var result = this.data.res;
+    var result2 = [];
+    var resArr = jsonData.dataList;
+    for (let i = result.length; i < result.length + 10; i++) {
+      result2.push(resArr[i]);
+    };
+
+    var cont = result.concat(result2);
+    console.log(resArr.length);
+    if (cont.length >= resArr.length) {
+      wx.showToast({ //如果全部加载完成了也弹一个框
+        title: '我也是有底线的',
+        icon: 'success',
+        duration: 300
+      });
+      return false;
+    } else {
+      wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”  
+        title: '加载中',
+        icon: 'loading',
+      });
+      setTimeout(() => {
+        this.setData({
+          res: cont
+        });
+        wx.hideLoading();
+      }, 500)
+    }
   },
 
   /**

@@ -80,7 +80,7 @@ top: 460rpx;
 }
 .youhui1{
 position:relative;
-top:910rpx;
+
 width:90%;
 left:5%;
 height: 150rpx;
@@ -90,7 +90,7 @@ background: linear-gradient(to bottom right,#FEB25E,#F3B467);
 }
 .youhui2{
 position:relative;
-top:1010rpx;
+
 width:90%;
 left:5%;
 height: 120rpx;
@@ -100,7 +100,7 @@ background: linear-gradient(to bottom right,#44E1FF,#248CDD);
 }
 .youhui4{
 position:relative;
-top:1010rpx;
+
 width:90%;
 left:5%;
 height: 120rpx;
@@ -110,7 +110,7 @@ background: linear-gradient(to bottom right,#067655,#033B2B);
 }
 .youhui3{
 position:relative;
-top:1010rpx;
+
 width:90%;
 left:5%;
 height: 120rpx;
@@ -120,7 +120,7 @@ background: linear-gradient(to bottom right,#FF060D,#FF64A7);
 }
 .bai{
 position:relative;
-top:1010rpx;
+
 width:90%;
 left:5%;
 height: 100rpx;
@@ -172,4 +172,13 @@ font-size: 28rpx;
 font-weight: 900;
 color: #FFFFFF;
 font-style: italic;
+}
+.scroll{
+  position: absolute;
+
+  height: 330rpx;
+
+
+
+  top: 1000rpx;
 }

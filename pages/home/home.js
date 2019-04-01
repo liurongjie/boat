@@ -12,9 +12,11 @@ Page({
   },
   changestatus:function(){
     var status=app.index;
+   
     this.setData({
       index: status,
     })
+    
     console.log("index change to",app.index);
   },
   /**
