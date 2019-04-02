@@ -112,7 +112,6 @@
                 </view>
                 <text class='num_disc3'>{{text_3}}</text>
               </view>
-
           </view>
         </view>
       </swiper-item>
