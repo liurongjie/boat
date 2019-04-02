@@ -67,6 +67,11 @@ day:D,
 
     },
 
+    getuser_login:function(){
+      
+      
+    }
+
 
   }
 })

@@ -30,6 +30,7 @@ Component({
     real_time_price:'',
     start_price:"",
     screen_height:"",
+    
   },
 
 

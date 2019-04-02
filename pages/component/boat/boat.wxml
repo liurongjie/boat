@@ -2,8 +2,8 @@
 
 
 <view class="btn_1">
-  <button class='btn_left'> 校园大件</button>
-  <button class='btn_right'> 校园日常</button>
+  <!-- <button class='btn_left'> 校园大件</button>
+  <button class='btn_right'> 校园日常</button> -->
 </view>
 
 <view class="btn_2">
@@ -14,11 +14,9 @@
 </view>
 
 <view class='swiper_view' bindtap='gotoboat'>
-  <swiper class='swiper_content' bindchange='swiper'>
+  <swiper class='swiper_content' bindchange='swiper' >
     <block>
-
-      <swiper-item >
-      
+      <swiper-item >      
         <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>『驾校』{{title1}}</view>
         <view class='pro_inform_text'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
         <view class='inform'>

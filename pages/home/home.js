@@ -9,6 +9,10 @@ Page({
    */
   data: {
     index:1,
+    show_flag: 'false',
+    animationData:{},
+    checkCodeBtnOpacity:1,
+    checkCodeOpacity:0,
   },
   changestatus:function(){
     var status=app.index;
@@ -24,6 +28,9 @@ Page({
    */
   onLoad: function (options) {
     console.log(Data.index)
+    console.log(this.data.show_flag)
+   
+
   },
 
   /**
@@ -73,5 +80,47 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  onGotUserInfo: function (e) {
+    console.log(e)
+    app.globalData.nickName = e.detail.userInfo.nickName
+    app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
+    console.log(app.globalData.nickName, app.globalData.avatarUrl)
+
+    var animation =wx.createAnimation({
+      transformOrigin:"100% 20%",
+      duration:1000,
+      opacity:"1 0",
+      timingFunction:"ease-in",
+      delay:0
+    });
+
+    animation.opacity(1).translateY(-1200).step();
+
+    
+
+    this.setData({
+      checkCodeBtnOpacity:0,
+      animationData:animation.export(),
+      
+    })
+
+
+
+
+    var that =this;
+    setTimeout(function () {
+      console.log("等待动画运行结束")
+
+      that.setData({
+        show_flag: 'true'
+      })
+
+    }, 500) //延迟时间 
+
+
+    
+
+  },
 })

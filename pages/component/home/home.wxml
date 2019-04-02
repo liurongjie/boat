@@ -1,5 +1,6 @@
 <!--pages/component/home/home.wxml-->
 <scroll-view scroll-y style="height: {{h}}px;width:100%;top:0rpx;">
+
 <swiper
   indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}"

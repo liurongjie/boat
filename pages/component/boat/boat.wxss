@@ -49,7 +49,7 @@
   width:100%;
   height:80rpx;
   display:flex;
-  margin-top: 170rpx;
+  margin-top: 100rpx;
    justify-content: center;
    position: relative;
    
@@ -422,7 +422,7 @@ background-color:rgba(151, 16, 99, 0.541);
 
 .img_chuanfan{
    width: 100%;
-   height: 400rpx;
+   height:200rpx;
    position: absolute;
    
 
@@ -575,7 +575,7 @@ background-color:rgba(151, 16, 99, 0.541);
   
 	 animation: shake 3s 0s  ;
 	 animation-timing-function: ease;
-   z-index: 3;
+   z-index: 2;
 }
   
 .shaketoo{
@@ -583,10 +583,10 @@ background-color:rgba(151, 16, 99, 0.541);
    width: 300rpx;
    height: 200rpx;
    left: 380rpx;
-   top: 530rpx;
+   top: 640rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;
-   z-index: 3;
+   z-index: 2;
 
 }
 

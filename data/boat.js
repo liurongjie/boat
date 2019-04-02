@@ -14,9 +14,6 @@ var json=[
     latitude:30.4891,
     location:'武汉市八一路31号',
     pinglun_ID:1,
-    shoutiao_pinglun:'BOAT推荐的驾校太棒了',
-    pinglun_num:12,
-    pinglun_good:98.5
   },
 
   {

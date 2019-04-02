@@ -6,6 +6,11 @@
   background-color: white;
 }
 
+.test_login{
+  position: relative;
+  width: 200rpx;
+  height: 100rpx;
+}
 
 .swiper{
 position: absolute;
