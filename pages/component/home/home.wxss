@@ -17,7 +17,7 @@ position: absolute;
 top: 140rpx;
 
 width: 100%;
-height: 800rpx;
+height: 400rpx;
 }
 
 .dots{  
@@ -101,11 +101,11 @@ border-radius: 10rpx;
 z-index: -1;
 }
 .boat{
-  position: relative;
+  position:absolute;
   letter-spacing: 0rpx;
   color: #85A1C5;
   top:70rpx;
-  right:-80rpx;
+  right:-10rpx;
   font-size: 180rpx;
   font-style: italic;
   font-weight: 900;
@@ -147,6 +147,7 @@ margin-bottom: 48rpx;
   height: 70rpx;
   top: 20rpx;
   left:270rpx;
+  font-weight:bold;
 }
 .year{
   position: absolute;
@@ -160,12 +161,14 @@ margin-bottom: 48rpx;
   left:80rpx;
   top:5rpx;
   font-size: 18rpx;
-  font-weight: 600;
+  
+  font-weight:bold;
 }
 .day{
   position: absolute;
   left: 20rpx;
   margin-left: 10rpx;
   top: 5rpx;
+  font-weight:bold;
 }
 
