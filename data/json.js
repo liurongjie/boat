@@ -8,5 +8,5 @@ var json = [
   { "id": 5, "time0": "1552908169", "time": "1553008169", "state": "5", "url": "/static/icon3.jpg", "name": "武汉大学宇动健身", "preprice": "2300", "prodesc": "一月试学  车接车送", "presentprice": "2000", "dist": "2.1"}
     ] // 定义数据出口
     module.exports = { dataList: json}
-//time0 起始时间
+//time0 起始时间 
 //time  结束时间 

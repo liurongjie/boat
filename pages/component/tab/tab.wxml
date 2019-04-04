@@ -1,30 +1,30 @@
-<view class="bottom">
-  <view wx:if="{{index==1}}" class='content1' >
-    <image src='../../../static/icon/home1.svg' style='width:50%;height:50%;margin-left:10rpx;'></image>
-    <text style='font-size:22rpx;margin-top:10rpx;color:blue;'>活动清单</text>
+<view class="bottom" style='height:{{h}}px'>
+  <view wx:if="{{index==1}}" class='content1' style='width: {{h1}}px;height: {{h1}}px;' >
+    <image src='../../../static/icon/home.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
+   
   </view>
-  <view wx:if="{{index!=1}}" class='content1' bindtap='change1'>
-    <image src='../../../static/icon/home.svg' style='width:50%;height:50%;margin-left:10rpx;'></image>
-    <text style='font-size:22rpx;margin-top:10rpx;color:black;'>活动清单</text>
+  <view wx:if="{{index!=1}}" class='content1' bindtap='change1' style='width: {{h1}}px;height: {{h1}}px;'>
+    <image src='../../../static/icon/home.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
+    
   </view>
-  <view  wx:if="{{index!=3}}" class='content2'   bindtap='change3' >
-    <image src='../../../static/icon/boat.svg' style='width:80%;height:80%;'></image>
+  <view  wx:if="{{index!=3}}" class='content2'   bindtap='change3' style='width: {{h1}}px;height: {{h1}}px;'>
+    <image src='../../../static/icon/boat1.svg' style='width:150%;height:150%;margin-top:-70rpx;margin-left:-45rpx;'></image>
+    
   </view>
-  <view wx:if="{{index==3}}">
-    <view class='shake1'>
-      <image src='../../../static/icon/bigboat.svg' style='width:100%;height:100%;'></image>
-    </view>
+   <view  wx:if="{{index==3}}" class='content2'   bindtap='change3'style='width: {{h1}}px;height: {{h1}}px;' >
+    <image src='../../../static/icon/boat.svg' style='width:70%;height:70%;'></image>
+
   </view>
-  <view wx:if="{{index==1}}" class='content3'bindtap='change2'>
-    <image src='../../../static/icon/account.svg' style='width:60%;height:60%;margin-left:10rpx;'></image>
-    <text style='font-size:22rpx;margin-top:0rpx;color:black;'>个人中心</text>
+  <view wx:if="{{index==1}}" class='content3'bindtap='change2'style='width: {{h1}}px;height: {{h1}}px;'>
+    <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
+    
   </view>
-  <view wx:if="{{index==2}}" class='content3'>
-    <image src='../../../static/icon/account1.svg' style='width:60%;height:60%;margin-left:10rpx;'></image>
-    <text style='font-size:22rpx;margin-top:0rpx;color:blue;'>个人中心</text>
+  <view wx:if="{{index==2}}" class='content3'style='width: {{h1}}px;height: {{h1}}px;'>
+    <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
+   
   </view>
-  <view wx:if="{{index==3}}" class='content4' bindtap='change2'>
-    <image src='../../../static/icon/account.svg' style='width:60%;height:60%;margin-left:10rpx;'></image>
-    <text style='font-size:22rpx;margin-top:0rpx;color:black;'>个人中心</text>
+<view wx:if="{{index==3}}" class='content3'bindtap='change2'style='width: {{h1}}px;height: {{h1}}px;'>
+    <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
+    
   </view>
 </view>

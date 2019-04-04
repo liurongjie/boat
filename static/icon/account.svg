@@ -1,7 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24.999" height="25" viewBox="0 0 24.999 25">
-  <g id="组_7" data-name="组 7" transform="translate(-249 -625)">
-    <circle id="椭圆_2" data-name="椭圆 2" cx="5" cy="5" r="5" transform="translate(256.5 630.5)" fill="none" stroke="#95989a" stroke-width="1"/>
-    <path id="交叉_3" data-name="交叉 3" d="M11.352,18.907a20.528,20.528,0,0,1,20.025.409,12,12,0,0,1-20.025-.409Z" transform="translate(240 625)" fill="none" stroke="#95989a" stroke-width="1"/>
-    <path id="减去_3" data-name="减去 3" d="M31.376,19.316a20.528,20.528,0,0,0-20.024-.409,12,12,0,1,1,20.026.408Z" transform="translate(240 625)" fill="none" stroke="#95989a" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #95989a;
+      }
+
+      .cls-2 {
+        fill: #95989a;
+        font-size: 9px;
+        font-family: YuGothicUI-Regular, Yu Gothic UI;
+      }
+    </style>
+  </defs>
+  <g id="组_498" data-name="组 498" transform="translate(-254 -597)">
+    <g id="组_496" data-name="组 496">
+      <g id="我" transform="translate(11 -26)">
+        <g id="组_7" data-name="组 7" transform="translate(0 -2)">
+          <circle id="椭圆_2" data-name="椭圆 2" class="cls-1" cx="5" cy="5" r="5" transform="translate(256.5 630.5)"/>
+          <path id="交叉_3" data-name="交叉 3" class="cls-1" d="M11.352,18.907a20.528,20.528,0,0,1,20.025.409,12,12,0,0,1-20.025-.409Z" transform="translate(240 625)"/>
+          <path id="减去_3" data-name="减去 3" class="cls-1" d="M31.376,19.316a20.528,20.528,0,0,0-20.024-.409,12,12,0,1,1,20.026.408Z" transform="translate(240 625)"/>
+        </g>
+        <text id="Search" class="cls-2" transform="translate(243 658)"><tspan x="0" y="0">个人中心</tspan></text>
+      </g>
+    </g>
   </g>
 </svg>
