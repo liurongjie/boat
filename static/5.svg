@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="48.803" viewBox="0 0 32 48.803">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.58;
+      }
+
+      .cls-2, .cls-3 {
+        opacity: 0.8;
+      }
+
+      .cls-3 {
+        fill: #333;
+        font-size: 8px;
+        font-family: MicrosoftYaHei, Microsoft YaHei;
+      }
+    </style>
+  </defs>
+  <g id="组_511" data-name="组 511" transform="translate(-249.404 -40.212)">
+    <g id="组_500" data-name="组 500" class="cls-1" transform="translate(8.041 39.608)">
+      <path id="基本信息" class="cls-2" d="M109.34,79.471H97.315a1.2,1.2,0,0,1-1.2-1.2V65.043a1.2,1.2,0,0,1,1.2-1.2H109.34a1.2,1.2,0,0,1,1.2,1.2V78.269A1.2,1.2,0,0,1,109.34,79.471Zm0-13.827a.6.6,0,0,0-.6-.6H97.917a.6.6,0,0,0-.6.6V77.668a.6.6,0,0,0,.6.6h10.822a.6.6,0,0,0,.6-.6V65.644Zm-1.8,10.221H99.119a.6.6,0,0,1,0-1.2h8.417a.6.6,0,0,1,0,1.2Zm0-3.608H99.119a.6.6,0,1,1,0-1.2h8.417a.6.6,0,1,1,0,1.2Zm-3.607-3.607h-4.81a.6.6,0,1,1,0-1.2h4.81a.6.6,0,0,1,0,1.2Zm4.209,13.227H94.91a1.2,1.2,0,0,1-1.2-1.2V67.447a1.2,1.2,0,0,1,1.2-1.2V80.673H109.34A1.2,1.2,0,0,1,108.137,81.876Z" transform="translate(155.896 -63.236)"/>
+    </g>
+    <text id="订单完成_" data-name="订单完成
+" class="cls-3" transform="translate(265.404 77.015)"><tspan x="-16" y="0">订单完成</tspan><tspan x="0" y="10"></tspan></text>
+  </g>
+</svg>

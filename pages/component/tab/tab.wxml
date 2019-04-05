@@ -8,7 +8,7 @@
     
   </view>
   <view  wx:if="{{index!=3}}" class='content2'   bindtap='change3' style='width: {{h1}}px;height: {{h1}}px;'>
-    <image src='../../../static/icon/boat1.svg' style='width:150%;height:150%;margin-top:-70rpx;margin-left:-45rpx;'></image>
+    <image src='../../../static/icon/boat1.svg' style='width:150%;height:150%;margin-top:-70rpx;margin-left:-38rpx;'></image>
     
   </view>
    <view  wx:if="{{index==3}}" class='content2'   bindtap='change3'style='width: {{h1}}px;height: {{h1}}px;' >

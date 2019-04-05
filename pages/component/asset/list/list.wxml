@@ -1,35 +1,65 @@
 <view class='boat'>
-    <text style='font-weight:600;font-size:50rpx;font-style: italic;'>BOAT</text>
+    <text style='font-weight:500;font-size:40rpx;'>个人中心</text>
   </view>
   <image src='/static/pic/1.jpg' class='cicle'></image>
 <view class='name'>
-      <text style='font-size:55rpx;font-weight: 100;color: rgba(100,100,100,0.8);'>李艮基</text>
-      <text>武汉大学2016级学生</text>
+      <text style='font-size:40rpx;font-weight: 400;color: white;'>Gen.jl</text>
+      <text>认证信息：武汉大学2016级本科生</text>
+  </view>
+  <view class='beike'>
+  <text class='bo'>BOAT</text>
+  <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:100rpx;top:36rpx;'></image>
+  <text class='w'>我的贝壳：79 </text>
+  <text class='w1'>仅限校园大件可用>></text>
+  <view class='b'>贝壳明细</view>
+  </view>
+  <image src='/static/h.png' style='width:106%;height:30%;position:absolute;top:24%;left:-3%'></image>
+  <scroll-view scroll-y style='position:absolute;width:100%;height:64%;top:28%;'>
+  <view class='ord'>
+  <text style='position:absolute; left:36rpx;top:10rpx;font-size:24rpx;'>我的订单</text>
+  <text style='position:absolute;right:20rpx;top:10rpx;text-align: right;width:200rpx;height:20rpx;font-size:20rpx;color:grey'>查看全部订单 ></text>
+  <view style='position:absolute; width:100%;height:2rpx;background:black;top:40rpx;opacity:0.1;'></view>
+  
+<view class='c1'>
+<view class='c2' >
+<image src='/static/1.svg' style='width:90%;height:90%'></image>
+</view>
+<view class='c2'><image src='/static/2.svg' style='width:90%;height:90%'></image></view>
+<view class='c2'><image src='/static/3.svg' style='width:90%;height:90%'></image></view>
+<view class='c2'><image src='/static/4.svg' style='width:90%;height:90%'></image></view>
+<view class='c2'><image src='/static/5.svg' style='width:90%;height:90%'></image></view>
+</view>
+
   </view>
   <view class='middle'>
     <view class='l0'  bindtap='changelist2'>
         <image src='/static/icon/setting/1.svg' style='  margin-left: 90rpx;'></image>
         <text> 提交需求</text>
-        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:620rpx;width: 30rpx; height: 30rpx;margin-top: 20rpx;' ></image>
     </view>
     <view class='l1' bindtap='changelist3'>
         <image src='/static/icon/setting/2.svg' style='  margin-left: 90rpx;'></image>
         <text>查看订单</text>
-        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:620rpx;width: 30rpx; height: 30rpx;margin-top: 20rpx;' ></image>
     </view>
     <view class='l1' bindtap='changelist4'>
         <image src='/static/icon/setting/3.svg' style='  margin-left: 90rpx;'></image>
         <text> 优惠特权</text>
-        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:620rpx;width: 30rpx; height: 30rpx;margin-top: 20rpx;' ></image>
     </view>
     <view class='l1' bindtap='changelist5'>
         <image src='/static/icon/setting/4.svg' style='  margin-left: 90rpx;'></image>
         <text> 联系我们&加入我们</text>
-        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx;width: 30rpx; height: 30rpx;margin-top: 25rpx;'></image>
+        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:620rpx;width: 30rpx; height: 30rpx;margin-top: 20rpx;'></image>
     </view>
     <view class='l1' bindtap='changelist6'>
         <image src='/static/icon/setting/5.svg' style='  margin-left: 90rpx;'></image>
         <text> 校园合伙人</text>
-        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:650rpx; width: 30rpx; height: 30rpx;margin-top: 25rpx;' ></image>
+        <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:620rpx; width: 30rpx; height: 30rpx;margin-top: 20rpx;' ></image>
+    </view>
+    <view style='position:relative;width:100%;height:70%;margin-top:30rpx;background:white;border-radius:25rpx;overflow:hidden;'>
+    
+    <image src='/static/m.svg' style='position:absolute;width:100%;height:100%;left:0rpx;top:0rpx;'></image>
     </view>
   </view>
+    </scroll-view>

@@ -1,7 +1,9 @@
 <!--pages/component/setting/setting.wxml-->
 <view class='container'>
-  <image src='../../../static/pic/new.png' style='position:reative;width:100%;height:550rpx;;'></image>
+  <image wx:if="{{list!=1}}" src='../../../static/pic/new.png' style='position:reative;width:100%;height:550rpx;;'></image>
   
+<view wx:if="{{list==1}}"  style='position:reative;background:linear-gradient(to bottom right, #5EE4FE ,#57ABFE );width:100%;height:25%;'></view>
+
   <image src='../../../static/icon/setting/right.svg' class='rightcicle'></image>
   <image src='../../../static/icon/setting/left.svg' class='leftcicle'></image>
   <view class='point1'></view>

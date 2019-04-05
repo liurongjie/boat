@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    index:1,
-    show_flag: 'false',
+    index:2,
+    show_flag: 'true',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,

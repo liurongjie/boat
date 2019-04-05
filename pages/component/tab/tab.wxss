@@ -1,7 +1,7 @@
 .bottom{
   position: fixed;
   width: 100%;
-
+background: white;
   bottom: 0rpx;
 
   display: flex;
