@@ -7,18 +7,18 @@
 </view>
 
 <view class="btn_2">
-  <button class='btn_sec1'   bindtap='btn_1' wx:if="{{button_num >0}}" > {{btn_1_text}}</button>
-  <button class='btn_sec2'   bindtap='btn_2' wx:if="{{button_num >1}}" > {{btn_2_text}}</button> 
-  <button class='btn_sec3'   bindtap='btn_3' wx:if="{{button_num >2}}" > {{btn_3_text}}</button>
-  <button class='btn_sec4'   bindtap='btn_4' wx:if="{{button_num >3}}" > {{btn_4_text}}</button>
+  <button class='btn_sec1'   bindtap='btn_1' > {{btn_1_text}}</button>
+  <button class='btn_sec2'   bindtap='btn_2' > {{btn_2_text}}</button> 
+  <button class='btn_sec3'   bindtap='btn_3' > {{btn_3_text}}</button>
+  <button class='btn_sec4'   bindtap='btn_4' > {{btn_4_text}}</button>
 </view>
 
 <view class='swiper_view' bindtap='gotoboat'>
   <swiper class='swiper_content' bindchange='swiper' >
     <block>
       <swiper-item >      
-        <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>『驾校』{{title1}}</view>
-        <view class='pro_inform_text'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
+        <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>{{title}}</view>
+        <view class='pro_inform_text'>{{discription}}</view>
         <view class='inform'>
             <view class='pro_data'>
               <view class='pro_data_block'>
@@ -49,103 +49,7 @@
         </view>
       </swiper-item >
 
-      <swiper-item>
-        <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>『健身』</view>
-        <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
-        <view class='inform'>
-            <view class='pro_data'>
-              <view class='pro_data_block'>
-                <view class='as_btn1'>
-                    本期登船  
-                    <text style='font-size:18rpx;'>/人 </text>
-                </view>
-                <text class='num_disc1'>{{text_1}}</text>
-              </view>
-
-              <view>
-                <view class='as_btn2'>
-                    累计节省
-                    <text style='font-size:18rpx;'>/元 </text>
-                </view>
-                <text class='num_disc2'>{{text_2}}</text>
-              </view>
-
-              <view>
-                <view class='as_btn3'>
-                    砍价次数
-                    <text style='font-size:18rpx;'>/次 </text>
-                </view>
-                <text class='num_disc3'>{{text_3}}</text>
-              </view>
-
-          </view>
-        </view>
-      </swiper-item>
-
-      <swiper-item>
-        <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>『考研』{{title3}}</view>
-        <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
-         <view class='inform'>
-            <view class='pro_data'>
-              <view class='pro_data_block'>
-                <view class='as_btn1'>
-                    本期登船  
-                    <text style='font-size:18rpx;'>/人 </text>
-                </view>
-                <text class='num_disc1'>{{text_1}}</text>
-              </view>
-
-              <view>
-                <view class='as_btn2'>
-                    累计节省
-                    <text style='font-size:18rpx;'>/元 </text>
-                </view>
-                <text class='num_disc2'>{{text_2}}</text>
-              </view>
-
-              <view>
-                <view class='as_btn3'>
-                    砍价次数
-                    <text style='font-size:18rpx;'>/次 </text>
-                </view>
-                <text class='num_disc3'>{{text_3}}</text>
-              </view>
-          </view>
-        </view>
-      </swiper-item>
-
-      <swiper-item>
-        <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>『小语种』</view>
-        <view style='font-size:30rpx;color:grey;font-weight:300;margin-right:60rpx;margin-top:30rpx;'>BOAT精选推荐精品服务，为本校学生提供价格厚道，感动人心的线上拼单服务，比团购，更优惠</view>
-       <view class='inform'>
-            <view class='pro_data'>
-              <view class='pro_data_block'>
-                <view class='as_btn1'>
-                    本期登船  
-                    <text style='font-size:18rpx;'>/人 </text>
-                </view>
-                <text class='num_disc1'>{{text_1}}</text>
-              </view>
-
-              <view>
-                <view class='as_btn2'>
-                    累计节省
-                    <text style='font-size:18rpx;'>/元 </text>
-                </view>
-                <text class='num_disc2'>{{text_2}}</text>
-              </view>
-
-              <view>
-                <view class='as_btn3'>
-                    砍价次数
-                    <text style='font-size:18rpx;'>/次 </text>
-                </view>
-                <text class='num_disc3'>{{text_3}}</text>
-              </view>
-
-          </view>
-        </view>
-      </swiper-item>
+     
 
     </block>
   </swiper>

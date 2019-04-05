@@ -1,3 +1,6 @@
+
+
+
 var json=[
   {
     
@@ -14,6 +17,7 @@ var json=[
     latitude:30.4891,
     location:'武汉市八一路31号',
     pinglun_ID:1,
+    instroduction:''
   },
 
   {

@@ -2,7 +2,6 @@
 
 
 <view style='height:1200rpx;width:100%;' wx:if="{{ show_flag=='false'}}" animation="{{animationData}}">
-
 <!-- <view style='height:1200rpx;width:100%;' animation='zoomOutUp'> -->
   <image src='/static/login.jpg' mode='scaleToFill' class='guide_view'></image>
   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='btn_view'>我要上船</button>
