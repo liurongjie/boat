@@ -60,7 +60,7 @@
 <view wx:if='{{stat1==4}}'>
       <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime}}</text>
       <view class='line2'></view>
-
+      
       <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime}}</text>
       <view class='line3'></view>
 
@@ -72,7 +72,7 @@
       
       <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime}}</text>
       <view class='line3'></view>
-
-     <text style='position:absolute;top:1020rpx;left:80rpx;font-size: 24rpx;'>评价时间 : {{ytime}}</text>
+      
+      <text style='position:absolute;top:1020rpx;left:80rpx;font-size: 24rpx;'>评价时间 : {{ytime}}</text>
       <view class='line4'></view>
 </view>

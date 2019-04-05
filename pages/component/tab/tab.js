@@ -1,4 +1,5 @@
 // pages/component/tab/tab.js
+var app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -12,8 +13,19 @@ Component({
    */
   data: {
     index: 1,
+    h:'',
+    h1:'',
+    h2:'',
   },
 
+  ready: function () {
+    var that = this;
+    var h =  (44/640)*app.globalData.h;
+    var h1=(13/12)*h;
+    var h2=(10/12)*h;
+    that.setData({ h: h ,h1:h1,h2:h2});
+    
+    },
   /**
    * 组件的方法列表
    */
