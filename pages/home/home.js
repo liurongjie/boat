@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    index:2,
-    show_flag: 'true',
+    index:1,
+    show_flag: 'false',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,
@@ -22,6 +22,11 @@ Page({
     })
     
     console.log("index change to",app.index);
+
+    //获取子组件，调用组件方法以正确显示
+    app.list=1;
+    var setting=this.selectComponent('#setting');
+    setting.changelist();
   },
   /**
    * 生命周期函数--监听页面加载

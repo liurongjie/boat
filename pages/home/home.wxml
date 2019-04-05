@@ -11,7 +11,7 @@
  
   <home wx:if="{{index==1&& show_flag=='true'}}"></home>
   <boat wx:if="{{index==3&& show_flag=='true'}}"></boat>
-  <setting wx:if="{{index==2&& show_flag=='true'}}"></setting>
+  <setting id='setting' wx:if="{{index==2&& show_flag=='true'}}"></setting>
   <tab bindtap='changestatus' wx:if="{{show_flag=='true'}}"></tab>
   
 
