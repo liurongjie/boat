@@ -1,78 +1,287 @@
+
+
+
 var json=[
   {
-    
-    type:"驾校",
-    production_name: ['C1包过班', 'C1保底班'],
-    onboat_people_number:[99,76],
-    leiji_save_memory: [31231.81, 21359.81],
-    cut_times: [12148, 6532],
-    start_price:[2880,2499],
-    real_time_price:[2654,2393],
+    type:"1",
+    production_name: 'C1包过班',
+    onboat_people_number:99,
+    leiji_save_memory: 31231.81, 
+    cut_times: 12148,
+    start_price:2880,
+    real_time_price:2654,
     start_time: 1554037169,
     end_time: 1554047169,
     longitude:114.2494,
     latitude:30.4891,
     location:'武汉市八一路31号',
     pinglun_ID:1,
+    instroduction:'BOAT专为大学生服务'
   },
 
   {
-    type: "健身",
-    production_name: ["宇动健身", "威斯特健身", "白棋健身", "三字符健身"] ,
-    onboat_people_number: [33,331,314,191],
-    leiji_save_memory: [21889.81,32913.21,654.32,886.5],
-    cut_times: [132,13,23,76],
-    start_price: [480, 499,1000,500],
-    real_time_price: [354, 393,890,310],
-    start_time: 1554033392559,
-    end_time: 1554038392559,
+
+    type: "1",
+    production_name: 'C1VIP班',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
     longitude: 114.2494,
     latitude: 30.4891,
     location: '武汉市八一路31号',
-    pinglun_ID: 2,
-    shoutiao_pinglun: 'BOAT推荐的健身太棒了',
-    pinglun_num: 12,
-    pinglun_good: 98.5
+    instroduction: 'BOAT专为大学生服务'
   },
 
-
   {
-    type: "考研",
-    production_name: ["英语","数学","政治"],
-    onboat_people_number: [63, 131, 314],
-    leiji_save_memory: [91359.81, 32133.21, 32132],
-    cut_times: [32, 33, 47],
-    start_price: [2880, 2499,3990],
-    real_time_price: [2654, 2393,2980],
-    start_time: 1554033392559,
-    end_time: 1554038392559,
+
+    type: "1",
+    production_name: 'C1傻瓜班',
+    onboat_people_number: 9,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
     longitude: 114.2494,
     latitude: 30.4891,
     location: '武汉市八一路31号',
-    pinglun_ID: 3,
-    shoutiao_pinglun: 'BOAT推荐的考研太棒了',
-    pinglun_num: 12,
-    pinglun_good: 98.5
+    instroduction: 'BOAT专为大学生服务',
   },
 
 
   {
-    type: "小语种",
-    production_name: ["德语", "日语", "法语","西班牙语"],
-    onboat_people_number: [963, 131, 314, 981],
-    leiji_save_memory: [219359.81, 32313.21, 65214.32, 832186.5],
-    cut_times: [321, 333, 913, 736],
-    start_price: [1880, 1499,1988,2102],
-    real_time_price: [1654, 1393,1754,1889],
-    start_time: 1554033392559,
-    end_time: 1554038392559,
+
+    type: "1",
+    production_name: 'C2自动挡',
+    onboat_people_number: 9,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
     longitude: 114.2494,
     latitude: 30.4891,
     location: '武汉市八一路31号',
-    pinglun_ID: 4,
-    shoutiao_pinglun: 'BOAT推荐的小语种太棒了',
-    pinglun_num: 12,
-    pinglun_good: 98.5
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "2",
+    production_name: '健身私教',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+  {
+
+    type: "2",
+    production_name: '壮士健身',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+  {
+
+    type: "2",
+    production_name: '于东健身',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+  {
+
+    type: "3",
+    production_name: '德语B1',
+    onboat_people_number: 129,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "3",
+    production_name: '法语',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "3",
+    production_name: '蒙古语',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 72980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "4",
+    production_name: '数学',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 62980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "4",
+    production_name: '英语',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 52980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "4",
+    production_name: '政治',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 42980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "4",
+    production_name: '数学基础班',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 2980,
+    real_time_price: 32354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "4",
+    production_name: '数学冲刺班',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 22980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
+  },
+
+
+  {
+
+    type: "4",
+    production_name: '英语语法班',
+    onboat_people_number: 29,
+    leiji_save_memory: 39231.81,
+    cut_times: 2148,
+    start_price: 12980,
+    real_time_price: 2354,
+    start_time: 1554037169,
+    end_time: 1554047169,
+    longitude: 114.2494,
+    latitude: 30.4891,
+    location: '武汉市八一路31号',
+    instroduction: 'BOAT专为大学生服务',
   },
 ]
 module.exports = { dataList: json }
