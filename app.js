@@ -19,7 +19,7 @@ App({
       that.globalData.time=information.number;
       that.globalData.teamname = information.team_name;
     }
-
+    
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/orderlist',
       data:{

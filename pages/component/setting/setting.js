@@ -13,6 +13,7 @@ Component({
    */
   data: {
     list:1,
+    status: app.globalData.status,
   },
   
   /**
