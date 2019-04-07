@@ -1,7 +1,7 @@
 // pages/component/boat/boat.js
 var app=getApp();
 
-var jsonData = require('../../../data/boat.js');
+var jsonData = require('../../../common/index.js');
 
 Component({
   /**
@@ -45,12 +45,21 @@ Component({
 
 
   ready:function(){
+    // console.log("总体:", jsonData)
+
+    console.log("homelist:", jsonData.homelist.length)
+ 
+
+
     this.setData({
       index: app.index,
-      production: jsonData.dataList,
+      production: jsonData.homelist,
       screen_height: app.globalData.h,
     })
+  
     console.log("获取产品list:",this.data.production)
+
+
     this.setData({
       btn_type:1,
     })
@@ -71,19 +80,19 @@ Component({
 
 
       wx.navigateTo({
-        url: '../toboat/toboat?production_id=' + pro_data.bean.production_id +
-          "&production_name=" + pro_data.bean.production_name +
-          "&onboat_people_number=" + pro_data.bean.onboat_people_number +
-          "&leiji_save_memory=" + pro_data.bean.leiji_save_memory +
-          "&cut_times=" + pro_data.bean.cut_times +
-          "&start_price=" + pro_data.bean.start_price +
-          "&real_time_price=" + pro_data.bean.real_time_price +
-          "&start_time=" + pro_data.bean.start_time +
-          "&end_time=" + pro_data.bean.end_time +
-          "&longitude=" + pro_data.bean.longitude +
-          "&latitude=" + pro_data.bean.latitude +
+        url: '../toboat/toboat?production_id=' + pro_data.bean.production +
+          "&production_name=" + pro_data.bean.production__name +
+          "&onboat_people_number=" + pro_data.bean.cutnumber +
+          // "&leiji_save_memory=" + pro_data.bean.leiji_save_memory +
+          "&cut_times=" + pro_data.bean.cutnumber +
+          "&start_price=" + pro_data.bean.startprice +
+          "&real_time_price=" + pro_data.bean.saveprice +
+          "&start_time=" + pro_data.bean.starttime +
+          "&end_time=" + pro_data.bean.endtime +
+          "&longitude=" + pro_data.bean.production__merchant__longitude +
+          "&latitude=" + pro_data.bean.production__merchant__latitude +
           "&type=" + pro_data.bean.type +
-          "&location=" + pro_data.bean.location
+          "&location=" + pro_data.bean.production__merchant__location
       })
 
 

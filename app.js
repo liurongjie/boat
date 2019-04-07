@@ -26,8 +26,9 @@ App({
         'teamid':"0000000",
       },
       success: (res) => {
-      
+        common.homelist = res.data;
         console.log(res.data)
+        console.log(res)
       }
     })
     

@@ -38,6 +38,20 @@ Page({
       buy_index: app.buy_index,
       pro_data:options
     })
+
+    console.log('已获得的：',this.data.pro_data)
+
+    // wx.request({
+    //   url: 'https://xiaoyibang.top:8001/dajia/firstcomment',
+    //   data: {
+    //     'productionid':this.pro_data.production_id
+    //   },
+    //   success: (res) => {
+       
+    //     console.log(res)
+    //   }
+    // })
+
   },
 
   /**
