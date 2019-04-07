@@ -10,10 +10,10 @@
 
 <!-- swiper组件下的商品详细价格、参团人数等信息 -->
 <view class='flex-wrp'>  
-  <text class='desc_price_symbol'>￥</text><text class=".desc_price_num">{{2112}}</text>
+  <text class='desc_price_symbol'>￥</text><text class=".desc_price_num">{{real_time_price}}</text>
   <view class=" desc_oldprice_people_num">                    
-    <view class=".desc_startprice">初始价格为{{2890}}</view>
-    <view class=".desc_cut_num">{{2}}人正在拼</view>
+    <view class=".desc_startprice">初始价格为{{start_price}}</view>
+    <view class=".desc_cut_num">{{onboat_people_number}}人正在拼</view>
   </view>
   <view class="to_end_progress" >
     <view class='progress_text_view'>
@@ -39,9 +39,9 @@
   </view>
 
   <view class='pro_disc_content'> 
-    <view class='pro_disc_content1' >武大BOAT推荐驾校</view>
+    <view class='pro_disc_content1' >{{production_name}}</view>
     <view class='pro_disc_content2'>
-      <view class='leijicantuan'>累计参团{{241}}人次</view>
+      <view class='leijicantuan'>累计参团{{cut_times}}人次</view>
       <view class='haopinglv'>好评率{{99}}%</view>
       <view class='zonghepaiming'>综合排名第{{1}}</view>
     </view>
@@ -56,7 +56,7 @@
 <!-- 位置 -->
 <view class='pro_location'>
   <view class='pro_location_index'>位置</view>
-  <view class='pro_location_text'>beside the WHU ~~ you can't find it hhhhhh</view>
+  <view class='pro_location_text'>{{location}}</view>
   <view class='pro_location_map' bindtap='pro_map'>地图➤</view>
 </view>
 
@@ -77,14 +77,14 @@
   <view class='user_inform'>
     <view>
     <!-- 用户头像 -->
-      <image class='userpic' src='/static/userpic.jpg'></image>
+      <image class='userpic' src='{{evaluation.pic}}'></image>
     </view>
 
-    <view class='user_pickname'>李庚姬</view>
+    <view class='user_pickname'>{{evaluation.name}}</view>
   </view>
 
   <view class='user_evaluation_text'>
-      BOAT驾校真的不错，我特别开心
+      {{evaluation.text}}
   </view>
 </view>
 

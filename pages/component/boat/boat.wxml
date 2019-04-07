@@ -13,10 +13,11 @@
   <button class='btn_sec4'   bindtap='btn_4' > {{btn_4_text}}</button>
 </view>
 
-<view class='swiper_view' bindtap='gotoboat'>
-  <swiper class='swiper_content' bindchange='swiper' >
+<view class='swiper_view' >
+  <swiper class='swiper_content' bindchange='swiper' current='{{current_index}}'>
     <block>
-      <swiper-item wx:for="{{production}}" wx:for-index="index" wx:for-item="item"  wx:if="{{item.type==btn_type}}" wx:key="production_name">      
+      <swiper-item wx:for="{{production}}" wx:for-index="index" wx:for-item="item"  wx:if="{{item.type==btn_type}}" wx:key="production_name"
+        data-bean='{{item}}' bindtap='gotoboat'>      
         
         <block >
           <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>

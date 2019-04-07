@@ -37,7 +37,9 @@ Component({
     real_time_price:'',
     start_price:"",
     screen_height:"",
-    
+
+    current_index:0,//不同种类查看都返回该类第一个产品
+
   },
 
 
@@ -60,13 +62,37 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    gotoboat: function () {
+    gotoboat: function (e) {
+
+      // var $data =e.currentTatget;
+      var pro_data = e.currentTarget.dataset
+      console.log(pro_data.bean)
       app.index = 4;//4代表参团页
+
+
       wx.navigateTo({
-        url: '../toboat/toboat?producation_id=1',
+        url: '../toboat/toboat?production_id=' + pro_data.bean.production_id +
+          "&production_name=" + pro_data.bean.production_name +
+          "&onboat_people_number=" + pro_data.bean.onboat_people_number +
+          "&leiji_save_memory=" + pro_data.bean.leiji_save_memory +
+          "&cut_times=" + pro_data.bean.cut_times +
+          "&start_price=" + pro_data.bean.start_price +
+          "&real_time_price=" + pro_data.bean.real_time_price +
+          "&start_time=" + pro_data.bean.start_time +
+          "&end_time=" + pro_data.bean.end_time +
+          "&longitude=" + pro_data.bean.longitude +
+          "&latitude=" + pro_data.bean.latitude +
+          "&type=" + pro_data.bean.type +
+          "&location=" + pro_data.bean.location
       })
+
+
       app.buy_index=1,
       console.log("gotoboat", app.buy_index);
+
+
+
+
 
     },
 
@@ -76,6 +102,7 @@ Component({
       console.log("触发按钮1")
       this.setData({
         btn_type: 1,
+        current_index:0
       })
     },
 
@@ -83,6 +110,7 @@ Component({
       console.log("触发按钮2")
       this.setData({
         btn_type:2,
+        current_index: 0
       })
     },
 
@@ -90,6 +118,7 @@ Component({
       console.log("触发按钮3")
       this.setData({
         btn_type: 3,
+        current_index: 0
       })
     },
 
@@ -97,17 +126,18 @@ Component({
       console.log("触发按钮4")
       this.setData({
         btn_type: 4,
+        current_index: 0
       })
     },
 
     swiper:function(e){
       
       this.setData({
-        swiper_index:e.detail.current+1,
-
+        swiper_index:e.detail.current,
       })
 
-      console.log("当前页面：", this.data.swiper_index)
+
+      console.log("当前页面：", this.data.swiper_index+1)
 
 
      
