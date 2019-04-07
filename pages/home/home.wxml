@@ -1,14 +1,17 @@
+  
 <view style='height:1200rpx;width:100%;' wx:if="{{ show_flag=='false'}}" animation="{{animationData}}">
 
 <!-- <view style='height:1200rpx;width:100%;' animation='zoomOutUp'> -->
-  <image src='/static/login.jpg' mode='scaleToFill' class='guide_view'></image>
-  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='btn_view'></button>
+ <image src='/static/login.jpg' mode='scaleToFill' class='guide_view'></image>
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='btn_view'>我要上船</button>
 </view> 
-
-
-  <title wx:if="{{ index!=2 && show_flag=='false'}}"></title>
- 
+  <title wx:if="{{ index!=2 && show_flag=='true'}}"></title>
   <home wx:if="{{index==1&& show_flag=='true'}}"></home>
   <boat wx:if="{{index==3&& show_flag=='true'}}"></boat>
-  <setting wx:if="{{index==2&& show_flag=='true'}}"></setting>
+  <setting id='setting' wx:if="{{index==2&& show_flag=='true'}}"></setting>
   <tab bindtap='changestatus' wx:if="{{show_flag=='true'}}"></tab>
+  
+
+
+
+

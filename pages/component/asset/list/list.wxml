@@ -4,7 +4,7 @@
   <image src='/static/pic/1.jpg' class='cicle'></image>
 <view class='name'>
       <text style='font-size:40rpx;font-weight: 400;color: white;'>Gen.jl</text>
-      <text>认证信息：武汉大学2016级本科生</text>
+      <text>认证信息：武汉大学2016级</text>
   </view>
   <view class='beike'>
   <text class='bo'>BOAT</text>
