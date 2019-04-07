@@ -1,7 +1,7 @@
 //app.js
 var common=require("/common/index.js")
 App({
-  list:0,
+  list:1,
   index:1,
   buy_index:1,
   order_state:0,

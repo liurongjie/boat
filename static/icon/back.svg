@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.414" height="13.414" viewBox="0 0 7.414 13.414">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #707070;
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <g id="组_343" data-name="组 343" transform="translate(-12.793 -11.793)">
+    <line id="直线_29" data-name="直线 29" class="cls-1" x1="6" y2="6" transform="translate(13.5 12.5)"/>
+    <line id="直线_30" data-name="直线 30" class="cls-1" x1="6" y1="6" transform="translate(13.5 18.5)"/>
+  </g>
+</svg>

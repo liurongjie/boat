@@ -61,7 +61,7 @@
   position: relative;
   margin-top: 40rpx;
   width: 80%;
-  height: 280rpx;
+  height: 24%;
   box-shadow: 0rpx 0rpx 20rpx 20rpx #EEEEEE;
   margin-left: 75rpx;
   

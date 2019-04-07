@@ -19,10 +19,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    back:function(){
-      app.list=1;
-    console.log(app.list)
-    }
+  
 
   }
 })
