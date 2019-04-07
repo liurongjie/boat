@@ -1,4 +1,5 @@
 // pages/component/asset/list4/list4.js
+var app=getApp()
 Component({
   /**
    * 组件的属性列表
@@ -18,6 +19,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
+
 
   }
 })

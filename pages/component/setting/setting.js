@@ -15,11 +15,18 @@ Component({
     list:1,
     status: app.globalData.status,
   },
-  
+ ready:function(){
+   app.list=1;
+   this.setData({list:1})
+ },
   /**
    * 组件的方法列表
    */
   methods: {
+    back: function () {
+   this.setData({list:1});
+   app.list=1;
+    },
     changelist:function(){
       var status=app.list;
       this.setData({

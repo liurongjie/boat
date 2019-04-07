@@ -5,7 +5,13 @@
   height: 100%;
   background-color:#F5F5F5;
 }
-
+.back{
+  position: absolute;
+  top: 100rpx;
+  left:50rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
 .rightcicle{
   position: fixed;
   width:200rpx;

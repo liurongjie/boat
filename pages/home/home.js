@@ -10,7 +10,7 @@ Page({
   data: {
     teamid:'0000000',
     index:1,
-    show_flag: 'true',
+    show_flag: 'false',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,
@@ -41,7 +41,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.setData({index:app.index});
   },
 
   /**

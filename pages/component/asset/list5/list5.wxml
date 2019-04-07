@@ -18,4 +18,3 @@
   </view>
   
 </view>
-<image src='/static/icon/setting/back.svg' class='back' bindtap='back' ></image>
