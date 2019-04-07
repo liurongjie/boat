@@ -49,30 +49,11 @@ Component({
     //     // console.log('teamid保存到全局变量中\n', app.globalData.teamid)
     //   }
     // })
+    
 
 
-
-    wx.request({
-      url: '',
-      data: {
-
-      },
-      method: 'get',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        //将获取到的json数据，存在名字叫zhihu的这个数组中
-        that.setData({ lists: res.data })
-      },
-      fail: function () {
-     
-        //将获取到的json数据，存在名字叫zhihu的这个数组中
-        that.setData({ lists: jsonData.dataList })
-        
-      }
-    });
-
+   
+    that.setData({ lists: jsonData.dataList })
 
   },
   /**

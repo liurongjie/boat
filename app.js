@@ -1,4 +1,5 @@
 //app.js
+var common=require("/common/index.js")
 App({
   list:0,
   index:1,
@@ -18,6 +19,25 @@ App({
       that.globalData.time=information.number;
       that.globalData.teamname = information.team_name;
     }
+
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/orderlist',
+      data:{
+        'openid':that.globalData.openid,
+      },
+      success:(res)=>{
+        if(res.data.response){
+          common.orderlist=res.data.period;
+        }
+        console.log(res.data)
+      }
+    })
+
+
+
+
+
+
     console.log(information)
     wx.getSystemInfo({
       success: function (res) {

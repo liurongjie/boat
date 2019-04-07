@@ -10,7 +10,7 @@ Page({
   data: {
     teamid:'0000000',
     index:1,
-    show_flag: 'true',
+    show_flag: 'false',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,
@@ -24,15 +24,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  //  wx.request({
-  //    url: 'https://xiaoyibang.top:8001/dajia/home',
-  //    data:{
-  //      'teamid':this.data.teamid,
-  //    },
-  //    success:(res)=>{
+   wx.request({
+     url: 'https://xiaoyibang.top:8001/dajia/home',
+     data:{
+       'teamid':this.data.teamid,
+     },
+     success:(res)=>{
 
-  //    },
-  //  })
+     },
+   })
    
 
   },
