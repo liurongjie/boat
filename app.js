@@ -1,6 +1,6 @@
 //app.js
 App({
-  list:1,
+  list:0,
   index:1,
   buy_index:1,
   order_state:0,

@@ -66,6 +66,7 @@ Component({
         that.setData({ lists: res.data })
       },
       fail: function () {
+     
         //将获取到的json数据，存在名字叫zhihu的这个数组中
         that.setData({ lists: jsonData.dataList })
         
