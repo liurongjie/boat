@@ -8,6 +8,7 @@ App({
   onLaunch: function () {
     var that = this;
     var information= wx.getStorageSync('information')
+    console.log(information)
     if(information.status==0){
       that.globalData.status=information.status;
       that.globalData.openid=information.openid;
@@ -19,7 +20,7 @@ App({
       that.globalData.time=information.number;
       that.globalData.teamname = information.team_name;
     }
-
+    
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/orderlist',
       data:{

@@ -3,7 +3,7 @@
   </view>
   <image src='/static/pic/1.jpg' class='cicle'></image>
 <view class='judge'>未认证</view>
-  <view class='list1'>
+  <view class='list1' bindtap='goto'>
     <image src='/static/icon/setting/icon1.svg' ></image>
     <text>校园认证</text>
     <image src='/static/icon/setting/icon2.svg' style='margin-left:150rpx;' ></image>

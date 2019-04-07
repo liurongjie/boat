@@ -13,7 +13,7 @@ Page({
     selectArea: false,
     btnValue: '发送验证码',
     btnDisabled: true,
-    teamid:'',
+    teamid:'0000000',
     name:'',
     yuanxi:'',
     number:'',
@@ -118,27 +118,29 @@ Page({
     })
   },
   getCode(e) {
+    this.setData({ btnDisabled: true})
+    
     clearInterval(this.data.setInter)
     console.log('获取验证码');
     var that = this;
     that.createCode();
     console.log('code' + this.data.code);
-    //  zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
-    // zhenzisms.client.send(function (res) {
-    // if (res.data.code == 0) {
+      zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
+     zhenzisms.client.send(function (res) {
+     if (res.data.code == 0) {
     that.timer();
     that.timer1();
    that.setData({
       time: 0,
     })
     return;
-    // }
+     }
     wx.showToast({
     title: res.data.data,
     icon: 'none',
     duration: 2000
     })
-    // }, this.data.phone, '您的验证码为:' + this.data.code,1,1000,5);
+     }, this.data.phone, '您的验证码为:' + this.data.code,1,1000,5);
   },
   timer1: function () {
     let promise = new Promise((resolve, reject) => {
@@ -188,6 +190,7 @@ Page({
   },
   //保存
   save(e) {
+    var that=this;
     console.log('姓名: ' + this.data.name);
     console.log('院系: ' + this.data.yuanxi);
     console.log('学号: ' + this.data.number);
@@ -226,15 +229,18 @@ Page({
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/verify',
       data:{
-        'openid':'',
+        'openid': app.globalData.openid,
         'teamid':this.data.teamid,
-        'name':this.data.name,
-        'number':this.data.number,
-        'department':this.data.yuanxi,
-        'telephone':this.data.telephone,
+        'name': this.data.name,
+        'number': this.data.number,
+        'department': this.data.yuanxi,
+        'telephone': this.data.phone,
       },
       success:(res)=>{
-        console.log(res)
+        wx.setStorage({
+          key: 'information',
+          data: res.data,
+        })
       }
       
     })
