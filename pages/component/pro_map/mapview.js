@@ -12,7 +12,20 @@ Component({
     location_longitude:{
       type: String,
       value:'',
-    }
+    },
+
+
+    location:{
+      type:String,
+      value:'',
+    },
+
+
+    production_name: {
+      type: String,
+      value: '',
+    },
+
   },
 
 
@@ -20,8 +33,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    latitude:'30',
-    longitude:'114',
+
   },
 
   /**
@@ -38,11 +50,11 @@ Component({
 
   lifetimes: {
     attached() {
-      // 在组件实例进入页面节点树时执行
-      this.setData({
-        latitude: this.properties.location_latitude,
-        longitude: this.properties.location_longitude,
-      })
+      // // 在组件实例进入页面节点树时执行
+      // this.setData({
+      //   latitude: this.properties.location_latitude,
+      //   longitude: this.properties.location_longitude,
+      // })
 
     },
   }

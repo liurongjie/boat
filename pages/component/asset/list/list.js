@@ -12,12 +12,22 @@ Component({
    * 组件的初始数据
    */
   data: {
+    name:'',
+    pic:'',
+    teamname:'',
+    time:'',
     list:1,
     h:'',
     h1:'',
     h2:''
   },
 ready:function(){
+  this.setData({ 
+    name: app.globalData.name,
+    pic: app.globalData.avatarUrl, 
+    teamname: app.globalData.teamname, 
+    time: app.globalData.time,  
+    })
   var h = app.globalData.h;
   var h1 =h;
   h=(12/640)*h;

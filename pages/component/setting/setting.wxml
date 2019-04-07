@@ -1,21 +1,19 @@
 <!--pages/component/setting/setting.wxml-->
 <view class='container'>
-  <image wx:if="{{list!=1}}" src='../../../static/pic/new.png' style='position:reative;width:100%;height:550rpx;;'></image>
+  <image wx:if="{{list!=1||status==0}}" src='../../../static/pic/new.png' style='position:reative;width:100%;height:550rpx;;'></image>
   
-<view wx:if="{{list==1}}"  style='position:reative;background:linear-gradient(to bottom right, #5EE4FE ,#57ABFE );width:100%;height:25%;'></view>
-<view wx:if="{{list!=1&&list!=0}}" class='back' bindtap='back'>
-<image src='/static/icon/back.svg' style='width:100%;height:100%'></image>
-</view>
+<view wx:if="{{list==1&&status==1}}"  style='position:reative;background:linear-gradient(to bottom right, #5EE4FE ,#57ABFE );width:100%;height:25%;'></view>
+
   <image src='../../../static/icon/setting/right.svg' class='rightcicle'></image>
   <image src='../../../static/icon/setting/left.svg' class='leftcicle'></image>
   <view class='point1'></view>
   <view class='point2'></view>
   <view class='point3'></view>
-  <notverify wx:if="{{list==0}}"></notverify>
-  <list wx:if="{{list==1}}" bindtap='changelist' ></list>
-  <list1 wx:if="{{list==2}}"></list1>
-  <list2 wx:if="{{list==3}}"></list2>
-  <list3 wx:if="{{list==4}}"></list3>
-  <list4 wx:if="{{list==5}}"></list4>
-  <list5 wx:if="{{list==6}}"></list5>
+  <notverify wx:if="{{status==0}}"></notverify>
+  <list wx:if="{{list==1&&status==1}}" bindtap='changelist' ></list>
+  <list1 wx:if="{{list==2&&status==1}}"></list1>
+  <list2 wx:if="{{list==3&&status==1}}"></list2>
+  <list3 wx:if="{{list==4&&status==1}}"></list3>
+  <list4 wx:if="{{list==5&&status==1}}"></list4>
+  <list5 wx:if="{{list==6&&status==1}}"></list5>
 </view>

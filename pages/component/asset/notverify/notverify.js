@@ -18,6 +18,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    goto:function(){
+      wx.navigateTo({
+        url: '/pages/verify/verify'
+      })
+    }
   }
 })

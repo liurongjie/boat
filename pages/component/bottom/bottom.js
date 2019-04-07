@@ -63,7 +63,6 @@ Component({
 
     prepay1: function () {
       // body...
-
       console.log("pre-pay 1 yuan");
       // 支付成功
       if( this.data.pay)
@@ -74,7 +73,9 @@ Component({
         this.setData({
           taskfunc: 'myboat'
         })
-
+        // wx.request({
+        //   url: 'https://xiaoyibang.top:8001/dajia/buyalone',
+        // })
       }
       else{
         console.log("未支付成功")
