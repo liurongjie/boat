@@ -9,7 +9,7 @@ Page({
    */
   data: {
     index:1,
-    show_flag: 'false',
+    show_flag: 'true',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,
