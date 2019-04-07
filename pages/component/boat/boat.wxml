@@ -52,7 +52,9 @@
 
                    </view>
            </view>
-
+<view class='shake1'>
+<image src='/static/icon/bigboat.svg'style="width:100%;height:100%"></image>
+</view>
            
           <view  style="position:absolute;width:200rpx;height:200rpx;top:{{screen_height*0.35}}rpx;margin-left:30rpx;margin-top:-230rpx;">
             <view class='shaketoo' >

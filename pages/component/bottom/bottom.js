@@ -28,7 +28,7 @@ Component({
 
     goback:function(){
 
-      if ((app.buy_index == 4) || (app.buy_index == 3))
+      if ((app.buy_index == 4) || (app.buy_index == 3) || (app.buy_index == 2))
       {
         app.buy_index =1
       }
