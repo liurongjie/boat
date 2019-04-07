@@ -3,6 +3,7 @@ App({
   list:1,
   index:1,
   buy_index:1,
+  order_state:0,
   onLaunch: function () {
     var that = this;
     var information= wx.getStorageSync('information')
