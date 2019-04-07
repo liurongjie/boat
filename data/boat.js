@@ -4,24 +4,25 @@
 var json=[
   {
     type:"1",
+    production_id:'1',
     production_name: 'C1包过班',
     onboat_people_number:99,
     leiji_save_memory: 31231.81, 
-    cut_times: 12148,
+    cut_times: 2148,
     start_price:2880,
     real_time_price:2654,
-    start_time: 1554037169,
-    end_time: 1554047169,
+    start_time: 1554617423,
+    end_time: 1554688423,
     longitude:114.2494,
     latitude:30.4891,
     location:'武汉市八一路31号',
-    pinglun_ID:1,
     instroduction:'BOAT专为大学生服务'
   },
 
   {
 
     type: "1",
+    production_id: '12',
     production_name: 'C1VIP班',
     onboat_people_number: 29,
     leiji_save_memory: 39231.81,
@@ -75,6 +76,7 @@ var json=[
   {
 
     type: "2",
+    production_id: '16',
     production_name: '健身私教',
     onboat_people_number: 29,
     leiji_save_memory: 39231.81,

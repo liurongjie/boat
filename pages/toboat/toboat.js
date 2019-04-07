@@ -1,5 +1,6 @@
 // pages/toboat/toboat.js
 var app=getApp()
+
 Page({
 
   /**
@@ -9,15 +10,33 @@ Page({
     buy_index:"",
     latitude:30.41,
     longitude:114.29,
+    pro_data:{},
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options,e) {
-    console.log("上一个界面传值-产品id：",options.producation_id)
+    console.log("上一个界面传值-产品信息：",options)
+    
+
+    // url: '../toboat/toboat?production_id=' + pro_data.bean.production_id +
+    //   "&production_name=" + pro_data.bean.production_name +
+    //   "&onboat_people_number=" + pro_data.bean.onboat_people_number +
+    //   "&leiji_save_memory=" + pro_data.bean.leiji_save_memory +
+    //   "&cut_times=" + pro_data.bean.cut_times +
+    //   "&start_price=" + pro_data.bean.start_price +
+    //   "&real_time_price=" + pro_data.bean.real_time_price +
+    //   "&start_time=" + pro_data.bean.start_time +
+    //   "&end_time=" + pro_data.bean.end_time +
+    //   "&longitude=" + pro_data.bean.longitude +
+    //   "&latitude=" + pro_data.bean.latitude +
+    //   "&location=" + pro_data.bean.location
+
     this.setData({
-      buy_index: app.buy_index
+      buy_index: app.buy_index,
+      pro_data:options
     })
   },
 
