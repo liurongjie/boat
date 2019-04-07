@@ -1,7 +1,7 @@
 // pages/home/home.js
 var app=getApp();
 var that=this;
-var Data=require('../../common/index.js');
+var common=require('../../common/index.js');
 Page({
 
   /**
@@ -15,24 +15,15 @@ Page({
     checkCodeOpacity:0,
   },
   changestatus:function(){
-    var status=app.index;
-   
     this.setData({
-      index: status,
+      index: common.data.index,
     })
-    
-    console.log("index change to",app.index);
-
-    //获取子组件，调用组件方法以正确显示
-    app.list=1;
-    var setting=this.selectComponent('#setting');
-    setting.changelist();
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(Data.index)
+   
     console.log(this.data.show_flag)
    
 
@@ -88,10 +79,39 @@ Page({
   },
 
   onGotUserInfo: function (e) {
-    console.log(e)
+    var code;
     app.globalData.nickName = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
-    console.log(app.globalData.nickName, app.globalData.avatarUrl)
+    app.globalData.gender = e.detail.userInfo.gender
+    wx.login({
+      success: res => {
+        code=res.code;
+        wx.request({
+          url: 'https://xiaoyibang.top:8001/dajia/login',
+          data: {
+            'nickname': app.globalData.nickName,
+            'gender': app.globalData.gender,
+            'code': res.code,
+            'pic': app.globalData.avatarUrl
+          },
+          success:(res)=>{
+            console.log(res.data)
+            
+          },
+        })
+      }
+    })
+   
+
+
+
+
+
+
+
+
+
+
 
     var animation =wx.createAnimation({
       transformOrigin:"100% 20%",

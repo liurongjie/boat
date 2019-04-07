@@ -1,5 +1,6 @@
 // pages/component/tab/tab.js
 var app = getApp();
+var common=require('../../../common/index.js');
 Component({
   /**
    * 组件的属性列表
@@ -31,26 +32,11 @@ Component({
    */
   
   methods: {
-    change1: function () {
-      const app = getApp();
-      app.index=1;
+    changelist: function (e) {
+      common.changelist(e.currentTarget.dataset.index);
       this.setData({
-        index:1,
-      })
-    },
-    change2: function () {
-      const app = getApp();
-      app.index = 2;
-      this.setData({
-        index: 2,
-      })
-    },
-    change3: function () {
-      const app = getApp();
-      app.index = 3;
-      this.setData({
-        index: 3,
-      })
+        index: common.data.index,
+      }) 
     },
   }
 })

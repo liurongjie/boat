@@ -3,19 +3,19 @@
     <image src='../../../static/icon/home.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
    
   </view>
-  <view wx:if="{{index!=1}}" class='content1' bindtap='change1' style='width: {{h1}}px;height: {{h1}}px;'>
+  <view wx:if="{{index!=1}}" class='content1' bindtap='changelist'  data-index='1'    style='width: {{h1}}px;height: {{h1}}px;'>
     <image src='../../../static/icon/home.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
     
   </view>
-  <view  wx:if="{{index!=3}}" class='content2'   bindtap='change3' style='width: {{h1}}px;height: {{h1}}px;'>
+  <view  wx:if="{{index!=3}}" class='content2'   bindtap='changelist'  data-index='3' style='width: {{h1}}px;height: {{h1}}px;'>
     <image src='../../../static/icon/boat1.svg' style='width:150%;height:150%;margin-top:-70rpx;margin-left:-38rpx;'></image>
     
   </view>
-   <view  wx:if="{{index==3}}" class='content2'   bindtap='change3'style='width: {{h1}}px;height: {{h1}}px;' >
+   <view  wx:if="{{index==3}}" class='content2'   bindtap='changelist'  data-index='3'style='width: {{h1}}px;height: {{h1}}px;' >
     <image src='../../../static/icon/boat.svg' style='width:70%;height:70%;'></image>
 
   </view>
-  <view wx:if="{{index==1}}" class='content3'bindtap='change2'style='width: {{h1}}px;height: {{h1}}px;'>
+  <view wx:if="{{index!=2}}" class='content3' bindtap='changelist'  data-index='2'style='width: {{h1}}px;height: {{h1}}px;'>
     <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
     
   </view>
@@ -23,8 +23,5 @@
     <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
    
   </view>
-<view wx:if="{{index==3}}" class='content3'bindtap='change2'style='width: {{h1}}px;height: {{h1}}px;'>
-    <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
-    
-  </view>
+
 </view>
