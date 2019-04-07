@@ -1,6 +1,9 @@
 var data={
   index:1,
 }
+var homelist={
+
+}
 var orderlist={
 
 }
@@ -15,4 +18,5 @@ module.exports={
   changelist:changelist,
   orderlist:orderlist,
   orderdetail:orderdetail,
+  homelist:homelist,
 }

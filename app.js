@@ -20,6 +20,16 @@ App({
       that.globalData.time=information.number;
       that.globalData.teamname = information.team_name;
     }
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/home',
+      data: {
+        'teamid':"0000000",
+      },
+      success: (res) => {
+      
+        console.log(res.data)
+      }
+    })
     
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/orderlist',
@@ -30,7 +40,7 @@ App({
         if(res.data.response){
           common.orderlist=res.data.period;
         }
-        console.log(res.data)
+       
       }
     })
 
@@ -39,7 +49,6 @@ App({
 
 
 
-    console.log(information)
     wx.getSystemInfo({
       success: function (res) {
         that.globalData.h=res.windowHeight;
