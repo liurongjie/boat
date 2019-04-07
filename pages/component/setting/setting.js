@@ -12,7 +12,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    list:0,
+    list:1,
   },
   
   /**
