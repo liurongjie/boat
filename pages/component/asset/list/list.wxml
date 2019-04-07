@@ -1,10 +1,10 @@
 <view class='boat'>
     <text style='font-weight:500;font-size:40rpx;'>个人中心</text>
   </view>
-  <image src='/static/pic/1.jpg' class='cicle'></image>
+  <image src='{{pic}}' class='cicle'></image>
 <view class='name'>
-      <text style='font-size:40rpx;font-weight: 400;color: white;'>Gen.jl</text>
-      <text>认证信息：武汉大学2016级</text>
+      <text style='font-size:40rpx;font-weight: 400;color: white;'>{{name}}</text>
+      <text>认证信息：{{teamname}}{{time}}级</text>
   </view>
   <view class='beike'>
   <text class='bo'>BOAT</text>

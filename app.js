@@ -7,6 +7,7 @@ App({
   order_state:0,
   onLaunch: function () {
     var that = this;
+    //身份信息获取
     var information= wx.getStorageSync('information')
     console.log(information)
     if(information.status==0){
@@ -20,6 +21,7 @@ App({
       that.globalData.time=information.number;
       that.globalData.teamname = information.team_name;
     }
+    //首页商品信息
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/home',
       data: {
@@ -30,7 +32,7 @@ App({
         console.log(res.data)
       }
     })
-    
+    //订单信息
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/orderlist',
       data:{
@@ -48,7 +50,7 @@ App({
 
 
 
-
+    //获取屏幕尺寸
     wx.getSystemInfo({
       success: function (res) {
         that.globalData.h=res.windowHeight;
@@ -63,7 +65,7 @@ App({
   },
 
 
-
+  //全局变量
   globalData: {
     status:0,
     openid: '',
@@ -71,12 +73,16 @@ App({
     teamname:'',
     time:'',
 
+
+    nickName: '',
+    avatarUrl: '',
+    gender: 0,
+
+    
     userInfo: null,
     h:'',
     w:'',
-    nickName:'',
-    avatarUrl:'',
-    gender:0,
+   
     
   }
 })
