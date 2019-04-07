@@ -16,7 +16,7 @@
 <view class='swiper_view' bindtap='gotoboat'>
   <swiper class='swiper_content' bindchange='swiper' >
     <block>
-      <swiper-item wx:for="{{production}}" wx:for-index="index" wx:for-item="item"  wx:if="{{item.type==btn_type}}">      
+      <swiper-item wx:for="{{production}}" wx:for-index="index" wx:for-item="item"  wx:if="{{item.type==btn_type}}" wx:key="production_name">      
         
         <block >
           <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>
