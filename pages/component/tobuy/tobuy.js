@@ -11,7 +11,7 @@ Component({
       value: '',
     },
 
-
+  
     production_name: {
       type: String,
       value: '',

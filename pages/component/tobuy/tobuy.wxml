@@ -1,7 +1,7 @@
 
 <!-- 商家轮播图 -->
 <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
-    <block wx:for="{{picture_production}}" wx:for-item="item">  
+    <block wx:for="{{picture_production}}" wx:for-item="item" wx:key="picture_production">  
       <swiper-item>  
         <image src="{{item}}" class="slide-image" mode="aspectFill"/>  
       </swiper-item>  
