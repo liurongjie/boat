@@ -13,6 +13,7 @@ Page({
     selectArea: false,
     btnValue: '发送验证码',
     btnDisabled: true,
+    teamid:'',
     name:'',
     yuanxi:'',
     number:'',
@@ -221,7 +222,24 @@ Page({
       return
     }
     console.log(result);
-    if(result==3)this.setData({
+    if(result==3)
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/verify',
+      data:{
+        'openid':'',
+        'teamid':this.data.teamid,
+        'name':this.data.name,
+        'number':this.data.number,
+        'department':this.data.yuanxi,
+        'telephone':this.data.telephone,
+      },
+      success:(res)=>{
+        console.log(res)
+      }
+      
+    })
+    
+    this.setData({
       text: "恭喜你 提交验证成功",
       isShow: true
     })
