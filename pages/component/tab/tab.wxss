@@ -3,7 +3,7 @@
   width: 100%;
 background: white;
   bottom: 0rpx;
-
+z-index: 1000;
   display: flex;
   flex-direction: row;
 }

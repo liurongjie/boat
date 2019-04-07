@@ -37,7 +37,7 @@
   position: absolute;
   width: 90%;
   left: 5%;
-  height: 400rpx;
+  height: 420rpx;
   margin-top: 20rpx;
   border-radius: 25rpx;
   background: white;
@@ -90,7 +90,7 @@ overflow: hidden;
 position: relative;
 width: 90%;
 left: 5%;
-height: 15%;
+height: 20%;
 background: white;
 border-radius: 25rpx;
 
@@ -137,7 +137,7 @@ font-size: 20rpx;
   flex-direction: row;
   line-height: 70rpx;
   margin-top:10rpx;
-  border-bottom:2rpx solid rgb(255, 255, 255);
+ 
 }
 
 .middle image{

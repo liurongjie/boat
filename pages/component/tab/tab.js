@@ -41,6 +41,7 @@ Component({
     change2: function () {
       const app = getApp();
       app.index = 2;
+      app.list=1;
       this.setData({
         index: 2,
       })
@@ -48,6 +49,7 @@ Component({
     change3: function () {
       const app = getApp();
       app.index = 3;
+      
       this.setData({
         index: 3,
       })

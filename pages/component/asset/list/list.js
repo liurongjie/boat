@@ -13,8 +13,18 @@ Component({
    */
   data: {
     list:1,
+    h:'',
+    h1:'',
+    h2:''
   },
-
+ready:function(){
+  var h = app.globalData.h;
+  var h1 =h;
+  h=(12/640)*h;
+  h1=(250/800)*h1;
+  var h2=h+15;
+  this.setData({h:h,h1:h1,h2:h2});
+},
   /**
    * 组件的方法列表
    */
@@ -23,9 +33,25 @@ Component({
       app.list=2;
 
     },
-    changelist3: function () {
+    changelist31: function () {
       app.list = 3;
-      
+      app.order_state=1;
+    },
+    changelist32: function () {
+      app.list = 3;
+      app.order_state = 2;
+    },
+    changelist33: function () {
+      app.list = 3;
+      app.order_state = 3;
+    },
+    changelist34: function () {
+      app.list = 3;
+      app.order_state = 4;
+    },
+    changelist35: function () {
+      app.list = 3;
+      app.order_state = 5;
     },
     changelist4: function () {
       app.list = 4;
