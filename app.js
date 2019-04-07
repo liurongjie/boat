@@ -8,6 +8,7 @@ App({
   onLaunch: function () {
     var that = this;
     var information= wx.getStorageSync('information')
+    console.log(information)
     if(information.status==0){
       that.globalData.status=information.status;
       that.globalData.openid=information.openid;

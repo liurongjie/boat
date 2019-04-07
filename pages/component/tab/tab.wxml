@@ -19,7 +19,7 @@
     <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
     
   </view>
-  <view wx:if="{{index==2}}" class='content3'bindtap='change2' style='width: {{h1}}px;height: {{h1}}px;'>
+  <view wx:if="{{index==2}}" class='content3' style='width: {{h1}}px;height: {{h1}}px;'>
     <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
    
   </view>
