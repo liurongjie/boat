@@ -1,32 +1,10 @@
 // pages/component/pro_map/mapview.js
+
+var common = require("../../../common/index.js");
 Component({
   /**
    * 组件的属性列表
    */
-  properties: {
-    location_latitude:{
-      type:String,
-      value:'',
-    },
-
-    location_longitude:{
-      type: String,
-      value:'',
-    },
-
-
-    location:{
-      type:String,
-      value:'',
-    },
-
-
-    production_name: {
-      type: String,
-      value: '',
-    },
-
-  },
 
 
   /**
@@ -34,6 +12,14 @@ Component({
    */
   data: {
 
+  },
+
+  ready: function () {
+
+    this.setData({
+      data_list: common.currentData,
+    })
+    console.log("地图页信息：",this.data.data_list)
   },
 
   /**

@@ -21,9 +21,9 @@
         
         <block >
           <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>
-           {{item.production_name}}
+           {{item.production__name}}
            </view>
-           <view class='pro_inform_text'>{{item.instroduction}}</view>
+           <view class='pro_inform_text'>{{item.production__introduction}}</view>
            <view class='inform'>
                   <view class='pro_data'>
                     
@@ -32,7 +32,7 @@
                           本期登船  
                           <text style='font-size:18rpx;'>/人 </text>
                       </view>
-                      <text class='num_disc1'>{{item.onboat_people_number}}</text>
+                      <text class='num_disc1'>{{item.number}}</text>
                     </view>
 
                     <view>
@@ -40,7 +40,7 @@
                           累计节省
                           <text style='font-size:18rpx;'>/元 </text>
                       </view>
-                      <text class='num_disc2'>{{item.leiji_save_memory}}</text>
+                      <text class='num_disc2'>{{item.saveprice}}</text>
                     </view>
 
                     <view>
@@ -48,7 +48,7 @@
                           砍价次数
                           <text style='font-size:18rpx;'>/次 </text>
                       </view>
-                      <text class='num_disc3'>{{item.cut_times}}</text>
+                      <text class='num_disc3'>{{item.cutnumber}}</text>
                     </view>
 
                    </view>
@@ -63,11 +63,11 @@
             </view>
 
             <view class='shake_text1'>
-                  <text style='color:white;font-weight:500;font-size:18rpx;'>￥</text><text style='color:white;font-weight:700;font-size:36rpx;'>{{item.real_time_price}}</text>
+                  <text style='color:white;font-weight:500;font-size:18rpx;'>￥</text><text style='color:white;font-weight:700;font-size:36rpx;'>{{item.startprice-item.saveprice}}</text>
             </view>
 
             <view class='shake_text2'>
-                  <text class='text_2'>初始价{{item.start_price}}</text>
+                  <text class='text_2'>初始价{{item.startprice}}</text>
             </view>
           </view>
 
