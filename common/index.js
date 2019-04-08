@@ -10,6 +10,18 @@ var orderlist={
 var orderdetail={
 
 }
+
+
+
+var currentData={
+
+}
+
+//当前用户查看的评论
+var currentEvaluation={
+
+}
+
 function changelist(provider){
   data.index=provider;
 }
@@ -19,4 +31,5 @@ module.exports={
   orderlist:orderlist,
   orderdetail:orderdetail,
   homelist:homelist,
+  currentData: currentData,
 }

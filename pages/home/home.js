@@ -10,7 +10,7 @@ Page({
   data: {
     teamid:'0000000',
     index:1,
-    show_flag: 'false',
+    show_flag: 'true',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,
@@ -24,16 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   wx.request({
-     url: 'https://xiaoyibang.top:8001/dajia/home',
-     data:{
-       'teamid':this.data.teamid,
-     },
-     success:(res)=>{
 
-     },
-   })
-   
 
   },
 
@@ -115,17 +106,6 @@ Page({
       })
     }
     
-   
-
-
-
-
-
-
-
-
-
-
 
     var animation =wx.createAnimation({
       transformOrigin:"100% 20%",
