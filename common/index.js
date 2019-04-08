@@ -36,9 +36,7 @@ module.exports={
   orderlist:orderlist,
   orderdetail:orderdetail,
   homelist:homelist,
-<<<<<<< HEAD
   chooseorderstatus:chooseorderstatus,
-=======
   currentData: currentData,
->>>>>>> df6d9fa3b4f8acf281348ed5ab2fac30d1da8cb9
+
 }
