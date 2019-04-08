@@ -1,5 +1,5 @@
 <view class='boat'>
-    <text style='font-weight:600;font-size:35rpx;'>当前订单</text>
+    <text style='font-weight:600;font-size:35rpx;'>{{title}}</text>
 </view>
 
 
@@ -7,15 +7,18 @@
   <block wx:for="{{lists}}" wx:key="*this">  
     <view style=' background: {{color}}; margin-bottom: 40rpx; height: 160rpx;width: 80%;margin-left:5%;margin-top:2%;border-radius:40rpx;box-shadow: grey 0rpx -2rpx 20rpx -6rpx ;' data-index="{{index}}" bindtap='selectindex'>
     <view class='m'>
-     <image src='{{item.url}}' class='img'></image>
+     <image src='{{url}}{{item.production__merchant__logo}}' class='img'></image>
      <text class='nm'>{{item.name}}</text>
-     <text class='dist'>距离武汉大学{{item.dist}}km</text>
-     <text class='fen'>往期大珈评分99分</text>
-     <text class='ren'>参与人数70人</text>
-     <text class='shen'>{{state}}</text>
+     <text class='dist'>距离{{item.production__team__teamname}}{{item.production__distance
+}}km</text>
+     <text class='fen'>往期大珈评分{{item.production__reputation}}分</text>
+     <text class='ren'>参与人数{{item.period__number}}人</text>
+     <text wx:if="{{ orderstatus}}" class='shen'>距离结束还有{{item.period__endtime}}天</text>
      <text class='fu'>¥</text>
-     <text class='p'>{{price}}</text>
-     <text class='p1'>初始价格为{{preprice}}</text>
+     <text class='p1'>初始价格为¥{{item.period__startprice}}</text>
+     <text class='p'>{{item.period__startprice-item.steam__cutprice
+-item.period__cutprice}}</text>
+     <text class='p1'>初始价格为{{item.period__startprice}}</text>
      </view>
     </view>  
   </block>

@@ -14,6 +14,9 @@ Component({
    * 组件的初始数据
    */
   data: {
+    orderstatus:false,
+    title:'',
+    url:"https://xiaoyibang.top:8001/uploads/",
     order:[],
     duration: 2000,
     indicatorDots: true,
@@ -25,27 +28,25 @@ Component({
     hiddenName: true,
     color: 'white',
     selected: false,
-    url: '',
-    day:'13',
-    state:'距离结束还有30天',
-    price:'2054',
-    preprice:'2500'
-
   },
   ready:function(){
-    var that = this//不要漏了这句，很重要
     var order=[];
+    if (common.data.orderstatus=='1'){
+      this.setData({ orderstatus: true });
+    }
+    this.setData({ title: common.data.ordertitle });
     console.log(common.orderlist);
-    console.log(common.orderlist.length)
-    for(var i=0;i<common.orderlist.length;i++){
-      console.log(common.orderlist[i].status);
+    for(var i=0;i<common.orderlist.length;i++){  
       if (common.orderlist[i].status==common.data.orderstatus){
+        var timestamp = Math.round(new Date().getTime() / 1000);
+        console.log('时间啊' + timestamp)
+        common.orderlist[i].period__endtime = Math.round((common.orderlist[i].period__endtime - timestamp)/(3600*24));
+        console.log('时间'+common.orderlist[i].period__endtime)
         order.push(common.orderlist[i]);
-        
       }
     }
     
-    that.setData({ lists: order })
+    this.setData({ lists: order });
 
   },
   /**
