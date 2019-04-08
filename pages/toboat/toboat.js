@@ -78,7 +78,7 @@ Page({
     this.setData({
       buy_index: app.buy_index
     })
-    console.log("changed to ", this.data.buy_index)
+   
   },
 
 
