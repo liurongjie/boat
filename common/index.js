@@ -1,5 +1,10 @@
 var data={
   index:1,
+  orderstatus:1,
+  ordertitle:"我的订单",
+}
+function chooseorderstatus(provider){
+  data.orderstatus=provider;
 }
 var homelist={
 
@@ -19,4 +24,5 @@ module.exports={
   orderlist:orderlist,
   orderdetail:orderdetail,
   homelist:homelist,
+  chooseorderstatus:chooseorderstatus,
 }

@@ -1,5 +1,6 @@
 // pages/component/asset/list/list.js
 var app=getApp();
+var common=require("../../../../common/index.js");
 Component({
   /**
    * 组件的属性列表
@@ -39,29 +40,13 @@ ready:function(){
    * 组件的方法列表
    */
   methods: {
+    chooseorderstatus:function(e){
+      common.chooseorderstatus(e.currentTarget.dataset.status);
+      app.list = 3;
+    },
     changelist2:function(){
       app.list=2;
 
-    },
-    changelist31: function () {
-      app.list = 3;
-      app.order_state=1;
-    },
-    changelist32: function () {
-      app.list = 3;
-      app.order_state = 2;
-    },
-    changelist33: function () {
-      app.list = 3;
-      app.order_state = 3;
-    },
-    changelist34: function () {
-      app.list = 3;
-      app.order_state = 4;
-    },
-    changelist35: function () {
-      app.list = 3;
-      app.order_state = 5;
     },
     changelist4: function () {
       app.list = 4;

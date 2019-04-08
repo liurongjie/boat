@@ -1,18 +1,20 @@
 // pages/component/asset/list2/list2.js
 var app = getApp();
+var common=require('../../../../common/index.js');
 var jsonData = require('../../../../data/json.js');
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    
+   
   },
 
   /**
    * 组件的初始数据
    */
   data: {
+    order:[],
     duration: 2000,
     indicatorDots: true,
     autoplay: true,
@@ -32,28 +34,18 @@ Component({
   },
   ready:function(){
     var that = this//不要漏了这句，很重要
-
-
-    // wx.request({
-    //   url: 'https://xiaoyibang.top:8001/production/orderinformation',
-    //   data: {
-    //     openid: app.globalData.openid
-    //   },
-
-    //   success(res) {
-    //     console.log('用户登录成功，得到openid\n', res.data);
-    //     console.log('openid'+app.globalData.openid)
-    //     // app.globalData.openid = res.data.openid
-    //     // app.globalData.teamid = res.data.teamid
-    //     // console.log('openid保存到全局变量中\n', app.globalData.openid)
-    //     // console.log('teamid保存到全局变量中\n', app.globalData.teamid)
-    //   }
-    // })
+    var order=[];
+    console.log(common.orderlist);
+    console.log(common.orderlist.length)
+    for(var i=0;i<common.orderlist.length;i++){
+      console.log(common.orderlist[i].status);
+      if (common.orderlist[i].status==common.data.orderstatus){
+        order.push(common.orderlist[i]);
+        
+      }
+    }
     
-
-
-   
-    that.setData({ lists: jsonData.dataList })
+    that.setData({ lists: order })
 
   },
   /**
