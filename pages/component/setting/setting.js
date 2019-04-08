@@ -13,11 +13,12 @@ Component({
    */
   data: {
     list:1,
-    status: app.globalData.status,
+    status: 1,
   },
  ready:function(){
    app.list=1;
-   this.setData({list:1})
+   this.setData({list:1});
+   
  },
   /**
    * 组件的方法列表
