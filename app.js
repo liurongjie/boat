@@ -19,6 +19,7 @@ App({
       that.globalData.name=information.name;
       that.globalData.time=information.number;
       that.globalData.teamname = information.team_name;
+      
     }
     //首页商品信息
     wx.request({

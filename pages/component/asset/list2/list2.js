@@ -54,9 +54,9 @@ Component({
    */
   methods: {
     selectindex: function (e) {
-      var index = e.currentTarget.dataset.index;//获取data-index
+      var index = e.currentTarget.dataset.item;//获取data-index
       wx.navigateTo({
-        url: '../orderinfo/orderinfo?id=' + index,
+        url: '../orderinfo/orderinfo?item=' + item,
       })
       console.log(index)
     }

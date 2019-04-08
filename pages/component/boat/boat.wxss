@@ -2,14 +2,14 @@
 
 .swiper_view{
   position: relative;
-  width: 80%;
+  width: 100%;
   left: 10%;
   height: 900rpx;
-  background-color: rgba(36, 112, 20, 0.4);
+ 
  
   box-sizing:border-box;
-  padding:50rpx 30rpx;
-  border-radius:30px;
+
+
 
 }
 @keyframes shake {
@@ -40,9 +40,11 @@
 
 .swiper_content{
   position: relative;
-  width: 100%;
-  height: 900rpx;
+  width: 80%;
+  height: 100%;
   z-index: 2;
+    border-radius:30px;
+     background-color: rgba(36, 112, 20, 0.4);
 }
 
 .btn_1{

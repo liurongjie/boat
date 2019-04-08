@@ -13,7 +13,7 @@ Component({
    */
   data: {
     list:1,
-    status: 1,
+    status: app.globalData.status,
   },
  ready:function(){
    app.list=1;

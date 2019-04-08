@@ -1,9 +1,7 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/verify/verify",
-    "pages/orderinfo/orderinfo"
-  
+    "pages/verify/verify"
   ],
   "window": {
     "backgroundTextStyle": "light",
