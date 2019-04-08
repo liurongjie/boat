@@ -17,7 +17,8 @@ Component({
   },
  ready:function(){
    app.list=1;
-   this.setData({list:1})
+   this.setData({list:1});
+   
  },
   /**
    * 组件的方法列表

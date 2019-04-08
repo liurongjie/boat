@@ -24,7 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
 
   },
 
@@ -82,7 +82,7 @@ Page({
     app.globalData.nickName = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
-    if(!app.globalData.openid){
+    if(app.globalData.openid){
       wx.login({
         success: res => {
           code = res.code;

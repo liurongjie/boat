@@ -4,22 +4,30 @@ Page({
   data: {
     state: '',
     color1: '',
+    ytime: '',
     color2: '',
     state1: '',
-    url: '',
-    name: '',
-    preprice: '',
-    prodesc: '',
+
+    url: '',//图片
+    name: '',//名字
+    preprice: '',//之前的价格
+    prodesc: '',//产品描述
+    presentprice: '',//当前价格
+    begintime: '',//开始时间
+    endtime: '',//结束时间
+    stat1: 1,//订单state
+    ytime1:'',//支付时间
+    ytime2:'',//完成时间
+    ytime3:'', //评价时间
+
+
+    process: 0,//40比80作为进度条0-80
     percent: '90',
-    presentprice: '',
     zuo: '',
     you: '',
     price: '',
     price1: '',
     tiao: false,
-    process: 0,//40比80作为进度条0-80
-    begintime: '',
-    endtime: '',
     quxiao: '关于取消：组团过程中因个人意愿取消订单，定金将不予退还',
     height: '64%',
     top: '1140rpx',
@@ -28,8 +36,6 @@ Page({
     hour: '',
     minute: '',
     second: '',
-    ytime: '',
-    stat1: 1,
     id: '',
   },
 
@@ -37,37 +43,40 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var postid = options.id
-    this.setData({
-      index: postid
-    })
-    var that = this//不要漏了这句，很重要
-    wx.request({
-      url: '',
-      data: {},
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        //将获取到的json数据，存在名字叫zhihu的这个数组中
-        that.setData({ lists: res.data[postid] })
-      },
-      fail: function () {
-        console.log('fail');
-        that.setData({ lists: jsonData.dataList[postid] });
-      },
-    });
+  
+   
 
 
 
     this.data.setInter = setInterval(
       () => {
         var end = this.data.endtime;
-
+       
         end = this.getLocalTime(end);
         this.setData({
           ytime: end
         })
+        var end1 = this.data.ytime1;
+
+        end1 = this.getLocalTime(end1);
+        this.setData({
+          ytime1: end1
+        })
+
+        var end2 = this.data.ytime2;
+
+        end2 = this.getLocalTime(end2);
+        this.setData({
+          ytime2: end2
+        })
+
+        var end3 = this.data.ytime3;
+
+        end3 = this.getLocalTime(end3);
+        this.setData({
+          ytime3: end3
+        })
+
         var timestamp = Date.parse(new Date());
 
         timestamp = timestamp / 1000;
@@ -119,14 +128,18 @@ Page({
   },
 
   onReady: function () {
-    var lists  = this.data;
-    console.log(lists.state);
-    if (lists.state == 1) this.setData({ state: '预付完成  待完成拼团', color1: '#FEB25E ', color2: '#FE8F57 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '实时价', price1: '当前实时价', tiao: true, height: '55%', top: '1025rpx' });
-    if (lists.state == 2) this.setData({ state: '拼单完成  待完成支付', color1: '#FF060D ', color2: '#FF64A7 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '最终价', price1: '最终交易价' });
-    if (lists.state == 3) this.setData({ state: '支付完成  待确认结束', color1: '#2EA0B6 ', color2: '#00ADCD ', state1: '预付费用1元 已退还', zuo: '联系我们', you: '我已完成', price: '已支付', price1: '最终支付价', quxiao: '' });
-    if (lists.state == 4) this.setData({ state: '订单完成  待评价完成', color1: '#5EE4FE ', color2: '#57ABFE ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '我要评价', price: '最终价', price1: '最终交易价', quxiao: '' });
-    if (lists.state == 5) this.setData({ state: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '查看评价', price: '最终价', price1: '订单实付价', quxiao: '' });
+
+    var state=5;
+
+    console.log(state);
+    if (state == 1) this.setData({ state: '预付完成  待完成拼团', color1: '#FEB25E ', color2: '#FE8F57 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '实时价', price1: '当前实时价', tiao: true, height: '55%', top: '1025rpx' });
+    if (state == 2) this.setData({ state: '拼单完成  待完成支付', color1: '#FF060D ', color2: '#FF64A7 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '最终价', price1: '最终交易价' });
+    if (state == 3) this.setData({ state: '支付完成  待确认结束', color1: '#2EA0B6 ', color2: '#00ADCD ', state1: '预付费用1元 已退还', zuo: '联系我们', you: '我已完成', price: '已支付', price1: '最终支付价', quxiao: '' });
+    if (state == 4) this.setData({ state: '订单完成  待评价完成', color1: '#5EE4FE ', color2: '#57ABFE ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '我要评价', price: '最终价', price1: '最终交易价', quxiao: '' });
+    if (state == 5) this.setData({ state: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '查看评价', price: '最终价', price1: '订单实付价', quxiao: '' });
+
     this.setData({
+      //赋值
       url: lists.url,
       name: lists.name,
       preprice: lists.preprice,
@@ -134,8 +147,10 @@ Page({
       presentprice: lists.presentprice,
       endtime: lists.time,
       begintime: lists.time0,
-      stat1: lists.state,
-      id: lists.id,
+      ytime1:1,
+      ytime2:2,
+      ytime3:3,
+      stat1: 5,
     });
   },
   back: function () {

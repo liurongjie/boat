@@ -5,7 +5,7 @@
 
 <scroll-view scroll-y class="scroll">
   <block wx:for="{{lists}}" wx:key="*this">  
-    <view style=' background: {{color}}; margin-bottom: 40rpx; height: 160rpx;width: 80%;margin-left:5%;margin-top:2%;border-radius:40rpx;box-shadow: grey 0rpx -2rpx 20rpx -6rpx ;' data-index="{{index}}" bindtap='selectindex'>
+    <view style=' background: {{color}}; margin-bottom: 40rpx; height: 160rpx;width: 80%;margin-left:5%;margin-top:2%;border-radius:40rpx;box-shadow: grey 0rpx -2rpx 20rpx -6rpx ;' data-item="{{item}}" bindtap='selectindex'>
     <view class='m'>
      <image src='{{url}}{{item.production__merchant__logo}}' class='img'></image>
      <text class='nm'>{{item.name}}</text>

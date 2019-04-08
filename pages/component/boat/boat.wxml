@@ -1,6 +1,4 @@
 
-
-
 <view class="btn_1">
   <!-- <button class='btn_left'> 校园大件</button>
   <button class='btn_right'> 校园日常</button> -->
@@ -14,11 +12,13 @@
 </view>
 
 <view class='swiper_view' >
-  <swiper class='swiper_content' bindchange='swiper' current='{{current_index}}'>
+  <swiper class='swiper_content' bindchange='swiper' current='{{current_index}}' >
     <block>
       <swiper-item wx:for="{{production}}" wx:for-index="index" wx:for-item="item"  wx:if="{{item.type==btn_type}}" wx:key="production_name"
         data-bean='{{item}}' bindtap='gotoboat'>      
-        
+        <view class='shake1'>
+<image src='/static/icon/bigboat.svg'style="width:100%;height:100%"></image>
+</view>
         <block >
           <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>
            {{item.production__name}}
@@ -53,9 +53,7 @@
 
                    </view>
            </view>
-<view class='shake1'>
-<image src='/static/icon/bigboat.svg'style="width:100%;height:100%"></image>
-</view>
+
            
           <view  style="position:absolute;width:200rpx;height:200rpx;top:{{screen_height*0.35}}rpx;margin-left:30rpx;margin-top:-230rpx;">
             <view class='shaketoo' >
