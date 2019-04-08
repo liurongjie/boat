@@ -2,6 +2,7 @@
 var zhenzisms = require('../../utils/zhenzisms.js');
 //获取应用实例
 const app = getApp();
+var arrayHeight = 0;
 Page({
 
   /**
@@ -25,23 +26,106 @@ Page({
     time: 0,
     setInter: '',
     text: '恭喜您 \n 提交成功',
-    isShow: false
+    isShow: false,
+    t1:'white',
+    t2:'white',
+    t3: 'white',
+    t4: 'white',
+    school:'',
+    inputValue1:'武汉大学',
+    inputValue2: '',
+    adapterSource: ['哲学学院国学院', '文学院', '外国语言文学学院', '新闻与传播学院 ', '艺术学院(艺术教育中心)', '历史学院', '经济与管理学院法学院', '马克思主义学院社会学系', '政治与公共管理学院', '教育科学研究院', '信息管理学院',
+      '数学与统计学院', '物理科学与技术学院', '化学与分子科学学院', '生命科学学院', '资源与环境科学学院', '高等研究院',
+      '动力与机械学院', '电气与自动化学院', '城市设计学院', '土木建筑工程学院', '水利水电学院', '工业科学研究院',
+      '电子信息学院', '计算机学院', '测绘学院', '遥感信息工程学院', ' 印刷与包装系', ' 网络安全学院',
+      '医学部机关', '医学研究院', '基础医学院', '健康学院', '药学院', '第一临床学院', '第二临床学院', '口腔医学院', '医学职业技术学院',
+      '弘毅学堂'],
+    bindSource: [], 
+     hideScroll: true,
+
   },
   name: function (e) {
+    let reg = /^[\u4e00-\u9fa5]+|[a-zA-Z]+$/;
+    var x = e.detail.value;
+    if (!reg.test(x)){
     this.setData({
-      name: e.detail.value
+      t1: 'red'
+    })}
+    else this.setData({
+      
+        name: x, t1: 'white'
+    })
+    
+  },
+  school: function (e) {
+    var x = e.detail.value;
+    if(x=='WHU')
+    this.setData({
+      school: 武汉大学,
+      inputValue1:'武汉大学'
     })
   },
   number: function (e) {
+    var x = e.detail.value;
+    let str = /\d{13}$/;
+    if(!str.test(x)){
     this.setData({
-      number: e.detail.value
+      t4: 'red'
     })
+    }
+    else{
+      this.setData({
+        number: x,
+        t4: 'white'
+      })
+    }
   },
   yuanxi: function (e) {
-    this.setData({
-      yuanxi: e.detail.value
+    var newSource = []
+    let reg = /^[\u4e00-\u9fa5]+$/;
+    var x = e.detail.value;
+    if (!reg.test(x)) {
+      this.setData({
+        t3: 'red'
+      })
+    }
+    else {
+      this.setData({
+      yuanxi: x, t3: 'white'
+    });
+    this.data.adapterSource.forEach(function(e){
+      if (e.indexOf(x)!=-1){
+       
+        newSource.push(e)
+      }
     })
+    };
+    if (newSource.length != 0) {
+      this.setData({ 
+        hideScroll: false, 
+        bindSource: newSource, 
+        arrayHeight: newSource.length * 71     
+         })   
+          } else 
+          {    
+              this.setData({      
+                 hideScroll: true,    
+                     bindSource: []    
+                       })    
+                       }
+     
+
   },
+  itemtap: function (e) {
+    this.setData({
+       inputValue2: e.target.id, 
+       yuanxi:e.target.id,
+       hideScroll: true,  
+       bindSource: []   
+        }) ;
+    this.setData({ t3: 'white' })
+         },
+
   bindPhoneInput(e) {
     console.log(e.detail.value);
     var val = e.detail.value;
@@ -53,7 +137,6 @@ Page({
       if (checkedNum) {
         this.setData({
           btnDisabled: false,
-          
         })
       }
     } else {
@@ -102,7 +185,7 @@ Page({
 
   },
   checkPhoneNum: function (phone) {
-    let str = /^1\d{10}$/
+    let str = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/
     if (str.test(phone)) {
       return true
     } else {
@@ -119,18 +202,17 @@ Page({
   },
   getCode(e) {
     this.setData({ btnDisabled: true})
-    
     clearInterval(this.data.setInter)
     console.log('获取验证码');
     var that = this;
     that.createCode();
     console.log('code' + this.data.code);
-      zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
-     zhenzisms.client.send(function (res) {
-     if (res.data.code == 0) {
+    zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
+    zhenzisms.client.send(function (res) {
+    if (res.data.code == 0) {
     that.timer();
     that.timer1();
-   that.setData({
+    that.setData({
       time: 0,
     })
     return;
@@ -192,10 +274,21 @@ Page({
   save(e) {
     var that=this;
     console.log('姓名: ' + this.data.name);
+    console.log('学校: ' + this.data.school);
     console.log('院系: ' + this.data.yuanxi);
     console.log('学号: ' + this.data.number);
     console.log('手机号: ' + this.data.phone);
     console.log('验证码: ' + this.data.codee);
+    if (this.data.t1 == 'red' || this.data.t2 == 'red' || this.data.t3 == 'red' || this.data.t4 == 'red')
+      wx.showToast({
+        title: '信息有误',
+        icon: 'none'
+      })
+    var m = this.data.yuanxi;
+    console.log(m);
+    if (this.data.adapterSource.indexOf(m) == -1){
+      this.setData({ t3: 'red' })}
+    else this.setData({ t3: 'white' })
     var oldcode = this.data.codee;
     var result = 3;//通过
     if (typeof (oldcode) == "undefined" || oldcode == '') {
@@ -254,7 +347,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
