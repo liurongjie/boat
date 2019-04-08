@@ -3,15 +3,15 @@
 
 <view class='pro_name'>
   <image bindtap='back' style='width:50rpx;height:50rpx;margin-right:10rpx;' src='/static/icon/left.svg'></image>
-  {{production_name}}
+  {{data_list.production__name}}
 </view>
 
   <map
       style="width: 100%; height: 800rpx"
-      latitude="{{latitude}}"
-      longitude="{{longitude}}"
+      latitude="{{data_list.production__merchant__latitude}}"
+      longitude="{{data_list.production__merchant__longitude}}"
       show-location></map>
 
 <view class='pro_location'>
 <image style='width:30rpx;height:30rpx' src='/static/icon/dingwei.svg'></image>
-{{location}}</view>
+{{data_list.production__merchant__location}}</view>

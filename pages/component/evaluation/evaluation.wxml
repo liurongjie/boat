@@ -43,20 +43,20 @@
 
 
 <scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
- <block wx:for="{{res}}" wx:key="*this">  
+ <block wx:for="{{evaluation_list}}" wx:key="*this">  
     <view class='user_evaluation_first' data-index="{{index}}" bindtap='selectindex'>
       <view class='user_inform'>
 
         <view>
-          <image class='userpic' src='{{item.pic}}'></image>
+          <image class='userpic' src='{{item.user__picture}}'></image>
         </view>
 
-        <view class='user_pickname'>{{item.name}}</view>
+        <view class='user_pickname'>{{item.user__name}}</view>
 
       </view>
 
       <view class='user_evaluation_text'>
-          {{item.text}}
+          {{item.context}}
       </view>
 
     </view>
