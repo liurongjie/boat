@@ -42,7 +42,7 @@
     <view class='pro_disc_content1' >{{data_list.production__name}}</view>
     <view class='pro_disc_content2'>
       <view class='leijicantuan'>累计参团{{data_list.cutnumber}}人次</view>
-      <view class='haopinglv'>好评率{{99}}%</view>
+      <view class='haopinglv'>好评率{{data_list.production__reputation}}%</view>
       <view class='zonghepaiming'>综合排名第{{1}}</view>
     </view>
   </view>
@@ -67,7 +67,7 @@
 <!-- 评价-->
 <view class='pro_evaluation'>
   <view class='pro_evaluation_index'>评价</view>
-  <view class='pro_evaluation_text'>往期好评率（{{evaluationlist.length}}）98.5%</view>
+  <view class='pro_evaluation_text'>往期好评率（{{evaluationlist.length}}）{{data_list.production__reputation}}%</view>
   <view class='pro_evaluation_all' bindtap='pro_evaluation'>全部➤</view>
 </view>
 
@@ -80,7 +80,10 @@
       <image class='userpic' src='{{evaluationlist[0].user__picture}}'></image>
     </view>
 
+    <view class='user_department'>{{evaluationlist[0].user__department}}</view>
+
     <view class='user_pickname'>{{evaluationlist[0].user__name}}</view>
+ 
   </view>
 
   <view class='user_evaluation_text'>

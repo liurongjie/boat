@@ -11,7 +11,15 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    markers: [{
+      // iconPath: '/resources/others.png',
+      id: 0,
+      latitude:"",
+      longitude: "",
+      width: 50,
+      height: 50,
+    }],
+    data_list:{}
   },
 
   ready: function () {
@@ -20,6 +28,15 @@ Component({
       data_list: common.currentData,
     })
     console.log("地图页信息：",this.data.data_list)
+
+    this.setData({
+      markers: [{
+        latitude: this.data.data_list.production__merchant__latitude,
+        longitude: this.data.data_list.production__merchant__longitude,
+      }],
+     
+    })
+
   },
 
   /**
