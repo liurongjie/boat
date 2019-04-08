@@ -6,10 +6,10 @@
 <image src='/static/icon/bookmark.png' style='position:absolute;width:66rpx;height:80rpx;left:40rpx;top:40rpx;'></image>
 <text style='position:absolute;width:66rpx;height:80rpx;left:40rpx;top:42rpx;font-size:13rpx;color:white;font-weight:100;text-align:center;'>综合排名</text>
 <text style='position:absolute;width:66rpx;height:80rpx;left:39rpx;top:60rpx;font-size:38rpx;color:white;font-weight:500;text-align:center;'>{{pai}}</text>
-<text style='position:absolute;left:130rpx;top:40rpx;font-size:32rpx;font-weight:600;'>武汉大学BOAT推荐驾校（C1普通全包班）</text>
-<text style='position:absolute;left:130rpx;top:96rpx;font-size:20rpx;font-weight:100;opacity:0.7'>累计参团{{n1}}次</text>
-<text style='position:absolute;left:360rpx;top:96rpx;font-size:20rpx;font-weight:100;opacity:0.7'>好评率{{n2}}%</text>
-<text style='position:absolute;left:560rpx;top:96rpx;font-size:20rpx;font-weight:100;opacity:0.7'>推荐排名第{{pai}}</text>
+<text style='position:absolute;left:130rpx;top:40rpx;font-size:32rpx;font-weight:600;'>{{data_list.production__name}}</text>
+<text style='position:absolute;left:130rpx;top:96rpx;font-size:20rpx;font-weight:100;opacity:0.7'>累计参团{{data_list.cutnumber}}次</text>
+<text style='position:absolute;left:360rpx;top:96rpx;font-size:20rpx;font-weight:100;opacity:0.7'>好评率{{data_list.production__reputation}}%</text>
+<text style='position:absolute;left:560rpx;top:96rpx;font-size:20rpx;font-weight:100;opacity:0.7'>推荐排名第{{1}}</text>
 </view>
 <view class='hui1'></view>
 
@@ -22,9 +22,9 @@
 
 
 <view class='jingdu'>
-<image src="{{url}}" style='position:absolute;left:50rpx;top:50rpx;width:150rpx;height:150rpx;'></image>
+<image src="{{pic_url}}" style='position:absolute;left:50rpx;top:50rpx;width:150rpx;height:150rpx;'></image>
 
-<text style='position:absolute;top:60rpx;left:210rpx;font-size:28rpx;opacity:0.8;font-weight:500;'>拼单还需要13天完成</text>
+<text style='position:absolute;top:60rpx;left:210rpx;font-size:28rpx;opacity:0.8;font-weight:500;'>拼单还需要{{date_day}}天完成</text>
 
 <text style='position:absolute;top:105rpx;left:210rpx;font-size:22rpx;opacity:0.8;font-weight:100;'>右侧为实时定价</text>
 
@@ -34,9 +34,9 @@
 
 <text style='color:#CB2C29;position:absolute;top:100rpx;left:520rpx;font-weight:600'>¥</text>
 
-<text style='color:#CB2C29;position:absolute;top:70rpx;left:560rpx;font-weight:400;font-size:70rpx;'>{{price}}</text>
+<text style='color:#CB2C29;position:absolute;top:70rpx;left:560rpx;font-weight:400;font-size:70rpx;'>{{data_list.startprice-data_list.saveprice}}</text>
 
-<text style='position:absolute;top:160rpx;left:530rpx;font-weight:400;font-size:20rpx;width:300rpx;opacity:0.5'>初始价格为{{preprice}}元</text>
+<text style='position:absolute;top:160rpx;left:530rpx;font-weight:400;font-size:20rpx;width:300rpx;opacity:0.5'>初始价格为{{data_list.startprice}}元</text>
 
 </view>
 

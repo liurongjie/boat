@@ -10,6 +10,7 @@
       style="width: 100%; height: 800rpx"
       latitude="{{data_list.production__merchant__latitude}}"
       longitude="{{data_list.production__merchant__longitude}}"
+      markers="{{markers}}"
       show-location></map>
 
 <view class='pro_location'>
