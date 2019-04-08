@@ -16,7 +16,7 @@ Component({
       end_time: common.currentData.endtime,
     })
 
-    console.log("[page2]获取产品详情页数据：",this.data.data_list)
+    console.log("[page2]获取产品详情页数据:",this.data.data_list)
 
     var timestamp = Date.parse(new Date());
     timestamp = timestamp / 1000;
@@ -35,7 +35,7 @@ Component({
       date_minute: date_min,
       date_second: date_sec
     })
-    console.log("[page2]获取当前时间戳为：" + timestamp); 
+    console.log("[page2]获取当前时间戳为:" + timestamp); 
     
     var that = this
     wx.request({
@@ -55,14 +55,28 @@ Component({
     })
 
     console.log("[page2]将获取的评论存在公共js中：", common.currentEvaluation)
+
+
+    var picture_production_url=[];
+ 
+    var url_temp1 ='https://xiaoyibang.top:8001/uploads/'+this.data.data_list.production__merchant__pic1
+    picture_production_url.push(url_temp1)
+    var url_temp2 = 'https://xiaoyibang.top:8001/uploads/' + this.data.data_list.production__merchant__pic2
+    picture_production_url.push(url_temp2)
+    var url_temp3 = 'https://xiaoyibang.top:8001/uploads/' + this.data.data_list.production__merchant__pic3
+    picture_production_url.push(url_temp3)
+
+    this.setData({
+      picture_production: picture_production_url
+    })
+    console.log(this.data.picture_production)
+    // https://xiaoyibang.top:8001/uploads/photo/Context_FoVriTp.png
   },
   /**
    * 组件的初始数据
    */
   data: {
-    picture_production: [
-      '/static/pic/1.jpg', '/static/pic/2.jpg', '/static/pic/3.jpg'
-    ],
+    picture_production: [],
     // icon62: '',
     // percent:'',
     // production_name: '',

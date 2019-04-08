@@ -1,6 +1,6 @@
 
 var common = require("../../../common/index.js")
-
+var evalu_number='14';
 Component({
   /**
    * 组件的属性列表
@@ -33,11 +33,34 @@ Component({
 
 
      lower: function () {
+
+      //  scancomment(request):
+      //  if request.method == 'GET':
+      //    number = request.GET.get('number', '')
+      //  periodid = request.GET.get('periodid', '')
+
+      
     //   var result = this.data.res;
       var result = common.currentEvaluation;//本地
       var result2 = [];
+
+      //  scancomment
+
+       wx.request({
+         url: 'https://xiaoyibang.top:8001/dajia/scancomment',
+         data: {
+           'number': evalu_number,
+           'periodid': this.data.data_list.periodid,
+    
+         },
+         success: (res) => {
+          
+            console.log(res.data)
+         },
+      })
+
        var resArr = common.currentEvaluation;//云端
-      for (let i = result.length; i < result.length + 10; i++) {
+      for (let i = result.length; i < result.length + 5; i++) {
         result2.push(resArr[i]);
       };
 
