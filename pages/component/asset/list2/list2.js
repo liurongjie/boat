@@ -45,7 +45,6 @@ Component({
         order.push(common.orderlist[i]);
       }
     }
-    
     this.setData({ lists: order });
 
   },
