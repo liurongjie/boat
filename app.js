@@ -4,7 +4,6 @@ App({
   list:1,
   index:1,
   buy_index:1,
-  order_state:0,
   onLaunch: function () {
     var that = this;
     //身份信息获取
@@ -29,8 +28,7 @@ App({
       },
       success: (res) => {
         common.homelist = res.data;
-        console.log(res.data)
-        console.log(res)
+       
       }
     })
     //订单信息
@@ -40,10 +38,12 @@ App({
         'openid':that.globalData.openid,
       },
       success:(res)=>{
+        
         if(res.data.response){
+          
           common.orderlist=res.data.period;
+          console.log(common.orderlist)
         }
-       
       }
     })
 

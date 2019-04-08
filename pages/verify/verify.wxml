@@ -1,19 +1,30 @@
 <!--pages/verify/verify.wxml-->
-<title></title>
+
   <image src='/static/pic/background.png' style='position:absolute;width:100%;height:100%;filter: blur(40rpx);'></image>
-  <image src='/static/icon/Icon3.png' style='position:absolute;left:365rpx;top:160rpx;width:27rpx;height:32rpx;'></image>
- <text style='position:absolute;left:280rpx;top:200rpx;font-size:50rpx;font-weight:100'>校园认证</text>
- <text style='position:absolute;left:264rpx;top:280rpx;font-size:28rpx;font-weight:100;opacity:0.5'>本校同舟  共享优惠</text>
- <text style='position:absolute;left:290rpx;top:320rpx;font-size:28rpx;font-weight:100;opacity:0.3;font-weight:600'>比团购  更优惠</text>
-<view style='position:absolute;width:100%;top:450rpx;height:100rpx;background-color:white;'>
-<input class="input1" name="name"  bindinput='name'></input>
+  <image src='/static/icon/Icon3.png' style='position:absolute;left:365rpx;top:120rpx;width:27rpx;height:32rpx;'></image>
+ <text style='position:absolute;left:280rpx;top:160rpx;font-size:50rpx;font-weight:100'>校园认证</text>
+ <text style='position:absolute;left:264rpx;top:240rpx;font-size:28rpx;font-weight:100;opacity:0.5'>本校同舟  共享优惠</text>
+ <text style='position:absolute;left:290rpx;top:280rpx;font-size:28rpx;font-weight:100;opacity:0.3;font-weight:600'>比团购  更优惠</text>
+ <view style='position:absolute;width:99.5%;top:340rpx;height:100rpx;background-color:white; border:1px solid {{t1}};'>
+<input class="input1" name="name"  bindinput='name' ></input>
 <text class='input11'>姓名</text>
 </view>
-<view style='position:absolute;width:100%;top:560rpx;height:100rpx;background-color:white;'>
-<input class="input1" name="yuanxi"  bindinput='yuanxi'></input>
+<view style='position:absolute;width:99.5%;top:450rpx;height:100rpx;background-color:white; border:1px solid {{t2}};'>
+<input class="input1" name="school" disabled='true'  bindinput='school' value="{{inputValue1}}"></input>
+<text class='input11'>学校</text>
+</view>
+<view style='position:absolute;width:99.5%;top:560rpx;height:100rpx;background-color:white; border:1px solid {{t3}};'>
+
+<scroll-view scroll-y="true" class="scrollview" hidden="{{hideScroll}}" style="{{arrayHeight>340?'height:340rpx':''}}">
+  <view wx:for="{{bindSource}}"> 
+     <view id="{{item}}" bindtap="itemtap" class="itemview">{{item}}</view> 
+      </view>
+      </scroll-view>
+
+<input class="input1" name="yuanxi" value="{{inputValue2}}" bindinput='yuanxi'></input>
 <text class='input11'>院系</text>
 </view>
-<view style='position:absolute;width:100%;top:670rpx;height:100rpx;background-color:white;'>
+<view style='position:absolute;width:99.5%;top:670rpx;height:100rpx;background-color:white;border:1px solid {{t4}};'>
 <input class="input1" name="number"  bindinput='number'></input>
 <text class='input11'>学号</text>
 </view>
