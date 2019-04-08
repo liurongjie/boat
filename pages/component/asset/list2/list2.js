@@ -24,7 +24,7 @@ Component({
     interval: 3000,
     loading: false,
     plain: false,
-    index: 0,
+    index:4,
     hiddenName: true,
     color: 'white',
     selected: false,

@@ -1,9 +1,7 @@
 // compoment/dingdan/dingdan.js
 var jsonData = require('../../data/json.js');
-var common=require('../../common/index.js');
 Page({
   data: {
-    curentorder:'',
     state: '',
     color1: '',
     color2: '',
@@ -39,22 +37,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      curentorder:common.data.orderdetail,
-    })
-
-
-
-
-
-
-
-
-
-
-
-
-
     var postid = options.id
     this.setData({
       index: postid
@@ -137,7 +119,7 @@ Page({
   },
 
   onReady: function () {
-    var { lists } = this.data;
+    var lists  = this.data;
     console.log(lists.state);
     if (lists.state == 1) this.setData({ state: '预付完成  待完成拼团', color1: '#FEB25E ', color2: '#FE8F57 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '实时价', price1: '当前实时价', tiao: true, height: '55%', top: '1025rpx' });
     if (lists.state == 2) this.setData({ state: '拼单完成  待完成支付', color1: '#FF060D ', color2: '#FF64A7 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '最终价', price1: '最终交易价' });
