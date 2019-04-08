@@ -1,7 +1,9 @@
 // compoment/dingdan/dingdan.js
 var jsonData = require('../../data/json.js');
+var common=require('../../common/index.js');
 Page({
   data: {
+    curentorder:'',
     state: '',
     color1: '',
     color2: '',
@@ -37,6 +39,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      curentorder:common.data.orderdetail,
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
     var postid = options.id
     this.setData({
       index: postid
