@@ -7,11 +7,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-     //根据页面决定按钮执行的任务
-      taskfunc:{
-        type: String,
-        value: ""
-    },//任务调用的函数名
+     
+      
   },
 
   /**
@@ -65,19 +62,23 @@ Component({
       var that=this;
       switch (that.data.status) {
         case 4:
+        //预付一半
           break;
         case 3:
+        //看我的船
           wx.navigateTo({
             url: '../teamcut/teamcut',
           })
           break;
         case 2:
+        //预付一元
           that.setData({
             status: 3
           })
           that.buyalone();
           break;
         case 1:
+        //我要上船
           that.setData({
             status: 2
           })
@@ -87,7 +88,17 @@ Component({
 
       }
     },
+    checkorder:function(){
+      for(var  i=0;i<common.orderlist.length;i++){
+        if (common.currentData.periodid == common.orderlist[i].period_id){
+
+        }
+      }
+
+      
+    },
     buyalone:function(){
+      
       wx.request({
         url: 'https://xiaoyibang.top:8001/dajia/buyalone',
         data:{

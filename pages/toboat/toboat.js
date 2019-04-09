@@ -74,7 +74,7 @@ Page({
 
   },
 
-  changestatus_buy:function(){
+  changestatus:function(){
     console.log("changed to ", app.buy_index)
     this.setData({
       buy_index: app.buy_index
@@ -83,19 +83,5 @@ Page({
   },
 
 
-  change_evaluation:function(){
-    this.setData({
-      buy_index: app.buy_index
-    })
-    console.log("changed to ", this.data.buy_index)
-  },
-
-
-  backto_boat:function(){
-
-    this.setData({
-      buy_index: app.buy_index
-    })
-    console.log("changed to ", this.data.buy_index)
-  }
+  
 })
