@@ -3,6 +3,7 @@ var data={
   orderstatus:1,
   ordertitle:"我的订单",
 }
+//选择订单类型函数
 function chooseorderstatus(provider){
   data.orderstatus=provider;
   switch (provider)
@@ -24,18 +25,21 @@ function chooseorderstatus(provider){
        break;
   }
 }
+//首页商品信息
 var homelist={
 
 }
+//首页订单信息
 var orderlist={
 
 }
+//订单细节
 var orderdetail={
 
 }
 
 
-
+//正在浏览商品
 var currentData={
 
 }
@@ -44,7 +48,7 @@ var currentData={
 var currentEvaluation={
 
 }
-
+//首页tab组件选择
 function changelist(provider){
   data.index=provider;
 }

@@ -51,7 +51,7 @@ Component({
       screen_height: app.globalData.h,
     })
   
-    console.log("获取产品list:",this.data.production)
+   
 
 
     this.setData({
@@ -69,16 +69,15 @@ Component({
 
       // var $data =e.currentTatget;
       var pro_data = e.currentTarget.dataset
-      console.log(pro_data.bean)
       app.index = 4;//4代表参团页
       common.currentData = pro_data.bean
-      console.log('[page1]将产品数据集存至common.currentData：',common.currentData)
+      
 
       wx.navigateTo({
         url: '../toboat/toboat'
       })
-      app.buy_index=1,
-        console.log("[page1]跳转至toboat页", app.buy_index);
+      app.buy_index=1;
+        
     },
 
    

@@ -24,7 +24,7 @@ Component({
     interval: 3000,
     loading: false,
     plain: false,
-    index: 0,
+    index:4,
     hiddenName: true,
     color: 'white',
     selected: false,
@@ -45,7 +45,6 @@ Component({
         order.push(common.orderlist[i]);
       }
     }
-    
     this.setData({ lists: order });
 
   },
@@ -54,9 +53,9 @@ Component({
    */
   methods: {
     selectindex: function (e) {
-      var index = e.currentTarget.dataset.index;//获取data-index
+      var index = e.currentTarget.dataset.item;//获取data-index
       wx.navigateTo({
-        url: '../orderinfo/orderinfo?id=' + index,
+        url: '../orderinfo/orderinfo?item=' + item,
       })
       console.log(index)
     }

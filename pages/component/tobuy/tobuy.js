@@ -9,14 +9,14 @@ Component({
    */
 
   ready:function(){
-  
+    console.log(common.currentData)
     this.setData({
       data_list: common.currentData,
       start_time: common.currentData.starttime,
       end_time: common.currentData.endtime,
     })
 
-    console.log("[page2]获取产品详情页数据:",this.data.data_list)
+   
 
     var timestamp = Date.parse(new Date());
     timestamp = timestamp / 1000;
@@ -35,7 +35,7 @@ Component({
       date_minute: date_min,
       date_second: date_sec
     })
-    console.log("[page2]获取当前时间戳为:" + timestamp); 
+     
     
     var that = this
     wx.request({
@@ -45,8 +45,6 @@ Component({
         // this.pro_data.production_id
       },
       success: (res) => {
-
-        console.log("[page2]获取评论:", res.data.data)
         that.setData({
           evaluationlist: res.data.data
         })
@@ -54,7 +52,7 @@ Component({
       }
     })
 
-    console.log("[page2]将获取的评论存在公共js中：", common.currentEvaluation)
+   
 
 
     var picture_production_url=[];
@@ -69,8 +67,7 @@ Component({
     this.setData({
       picture_production: picture_production_url
     })
-    console.log(this.data.picture_production)
-    // https://xiaoyibang.top:8001/uploads/photo/Context_FoVriTp.png
+  
   },
   /**
    * 组件的初始数据

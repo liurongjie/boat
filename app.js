@@ -40,9 +40,8 @@ App({
       success:(res)=>{
         
         if(res.data.response){
-          
+          console.log(res.data.period);
           common.orderlist=res.data.period;
-          console.log(common.orderlist)
         }
       }
     })

@@ -9,6 +9,7 @@
 <mymap wx:if="{{buy_index==3}}" > </mymap>
 
 
+
 <evaluation wx:if="{{buy_index==4}}" bindtap="backto_boat"></evaluation>
 
 <bottom taskfunc='goboat' bindtap='changestatus_buy'></bottom>
