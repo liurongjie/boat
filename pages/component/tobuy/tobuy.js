@@ -1,80 +1,28 @@
-// pages/component/tobuy/tobuy.js
+4// pages/component/tobuy/tobuy.js
 var jsonData = require('../../../data/evaluation.js');
+
+var common = require("../../../common/index.js");
 
 Component({
   /**
    * 组件的属性列表
    */
-  properties: {
-    location: {
-      type: String,
-      value: '',
-    },
-
-  
-    production_name: {
-      type: String,
-      value: '',
-    },
-
-    real_time_price: {
-      type: String,
-      value: '',
-    },
-
-    start_price: {
-      type: String,
-      value: '',
-    },
-
-    start_time: {
-      type: String,
-      value: '',
-    },
-
-    type: {
-      type: String,
-      value: '',
-    },
-
-    production_id: {
-      type: String,
-      value: '',
-    },
-
-    onboat_people_number: {
-      type: String,
-      value: '',
-    },
-
-    longitude: {
-      type: String,
-      value: '',
-    },
-
-    latitude: {
-      type: String,
-      value: '',
-    },
-
-    end_time: {
-      type: String,
-      value: '',
-    },
-
-    cut_times: {
-      type: String,
-      value: '',
-    },
-  },
 
   ready:function(){
-  
+    console.log(common.currentData)
+    this.setData({
+      data_list: common.currentData,
+      start_time: common.currentData.starttime,
+      end_time: common.currentData.endtime,
+    })
+
+   
+
     var timestamp = Date.parse(new Date());
     timestamp = timestamp / 1000;
     var temp ;
-    temp = Math.ceil((timestamp - this.properties.start_time) / (this.properties.end_time - this.properties.start_time )*100);
-    var date = this.properties.end_time - timestamp;
+    temp = Math.ceil((timestamp - this.data.start_time) / (this.data.end_time - this.data.start_time )*100);
+    var date = this.data.end_time - timestamp;
     var date_day = parseInt(date/3600/24);
     var date_hour = parseInt((date-date_day*24*3600)/3600);
     var date_min = parseInt(  ( date -date_hour  * 3600  - date_day * 3600*24  )/60);
@@ -87,43 +35,61 @@ Component({
       date_minute: date_min,
       date_second: date_sec
     })
-    console.log("当前时间戳为：" + timestamp); 
-    console.log("tobuy_properties信息：", this.properties)
+     
     
+    var that = this
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/firstcomment',
+      data: {
+        'productionid': common.currentData.production,
+        // this.pro_data.production_id
+      },
+      success: (res) => {
+        that.setData({
+          evaluationlist: res.data.data
+        })
+        common.currentEvaluation = this.data.evaluationlist
+      }
+    })
+
+   
 
 
-    // console.log(jsonData.dataList[0])
+    var picture_production_url=[];
+ 
+    var url_temp1 ='https://xiaoyibang.top:8001/uploads/'+this.data.data_list.production__merchant__pic1
+    picture_production_url.push(url_temp1)
+    var url_temp2 = 'https://xiaoyibang.top:8001/uploads/' + this.data.data_list.production__merchant__pic2
+    picture_production_url.push(url_temp2)
+    var url_temp3 = 'https://xiaoyibang.top:8001/uploads/' + this.data.data_list.production__merchant__pic3
+    picture_production_url.push(url_temp3)
+
     this.setData({
-      evaluation: jsonData.dataList[0]
-     })
-
-    console.log(this.data.evaluation)
-
-    
+      picture_production: picture_production_url
+    })
+  
   },
   /**
    * 组件的初始数据
    */
   data: {
-    picture_production: [
-      '/static/pic/1.jpg', '/static/pic/2.jpg', '/static/pic/3.jpg'
-    ],
-    icon62: '/static/pic/1211.png',
-    percent:'',
-    production_name: 'C1包过班',
-    onboat_people_number: 99, 
-    cut_times: 12148,
-    start_price: 2880,
-    real_time_price: 2654,
-    start_time: 1554018544,
-    end_time: 1554818544,
+    picture_production: [],
+    // icon62: '',
+    // percent:'',
+    // production_name: '',
+    // onboat_people_number: '', 
+    // cut_times: '',
+    // start_price: '',
+    // real_time_price: '',
+    start_time: '',
+    end_time: '',
     now:'',
     date_day:"",
     date_hour: "",
     date_minute: "",
     date_second: "",
-
-    evaluation:{}
+    // evaluationlist :[],
+    data_list:{},
   },
 
   /**
@@ -133,7 +99,7 @@ Component({
     pro_map:function(){
       var app =getApp();
       app.buy_index=3;
-      console.log("查看地图", app.buy_index)
+      console.log("[page2]跳转查看地图", app.buy_index)
 
       
     },
@@ -141,7 +107,7 @@ Component({
     pro_evaluation:function(){
       var app = getApp();
       app.buy_index =4;
-      console.log("查看地图", app.buy_index)
+      console.log("[page2]跳转查看评论", app.buy_index)
     }
   }
 })

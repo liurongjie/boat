@@ -10,10 +10,10 @@
 
 <!-- swiper组件下的商品详细价格、参团人数等信息 -->
 <view class='flex-wrp'>  
-  <text class='desc_price_symbol'>￥</text><text class=".desc_price_num">{{real_time_price}}</text>
+  <text class='desc_price_symbol'>￥</text><text class=".desc_price_num">{{data_list.startprice-data_list.saveprice}}</text>
   <view class=" desc_oldprice_people_num">                    
-    <view class=".desc_startprice">初始价格为{{start_price}}</view>
-    <view class=".desc_cut_num">{{onboat_people_number}}人正在拼</view>
+    <view class=".desc_startprice">初始价格为{{data_list.startprice}}</view>
+    <view class=".desc_cut_num">{{data_list.number}}人正在拼</view>
   </view>
   <view class="to_end_progress" >
     <view class='progress_text_view'>
@@ -39,10 +39,10 @@
   </view>
 
   <view class='pro_disc_content'> 
-    <view class='pro_disc_content1' >{{production_name}}</view>
+    <view class='pro_disc_content1' >{{data_list.production__name}}</view>
     <view class='pro_disc_content2'>
-      <view class='leijicantuan'>累计参团{{cut_times}}人次</view>
-      <view class='haopinglv'>好评率{{99}}%</view>
+      <view class='leijicantuan'>累计参团{{data_list.cutnumber}}人次</view>
+      <view class='haopinglv'>好评率{{data_list.production__reputation}}%</view>
       <view class='zonghepaiming'>综合排名第{{1}}</view>
     </view>
   </view>
@@ -56,7 +56,7 @@
 <!-- 位置 -->
 <view class='pro_location'>
   <view class='pro_location_index'>位置</view>
-  <view class='pro_location_text'>{{location}}</view>
+  <view class='pro_location_text'>{{data_list.production__merchant__location}}</view>
   <view class='pro_location_map' bindtap='pro_map'>地图➤</view>
 </view>
 
@@ -67,7 +67,7 @@
 <!-- 评价-->
 <view class='pro_evaluation'>
   <view class='pro_evaluation_index'>评价</view>
-  <view class='pro_evaluation_text'>往期好评率（16）91.5%</view>
+  <view class='pro_evaluation_text'>往期好评率（{{evaluationlist.length}}）{{data_list.production__reputation}}%</view>
   <view class='pro_evaluation_all' bindtap='pro_evaluation'>全部➤</view>
 </view>
 
@@ -77,14 +77,17 @@
   <view class='user_inform'>
     <view>
     <!-- 用户头像 -->
-      <image class='userpic' src='{{evaluation.pic}}'></image>
+      <image class='userpic' src='{{evaluationlist[0].user__picture}}'></image>
     </view>
 
-    <view class='user_pickname'>{{evaluation.name}}</view>
+    <view class='user_department'>{{evaluationlist[0].user__department}}</view>
+
+    <view class='user_pickname'>{{evaluationlist[0].user__name}}</view>
+ 
   </view>
 
   <view class='user_evaluation_text'>
-      {{evaluation.text}}
+      {{evaluationlist[0].context}}
   </view>
 </view>
 

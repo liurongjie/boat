@@ -1,38 +1,41 @@
 // pages/component/pro_map/mapview.js
+
+var common = require("../../../common/index.js");
 Component({
   /**
    * 组件的属性列表
    */
-  properties: {
-    location_latitude:{
-      type:String,
-      value:'',
-    },
-
-    location_longitude:{
-      type: String,
-      value:'',
-    },
-
-
-    location:{
-      type:String,
-      value:'',
-    },
-
-
-    production_name: {
-      type: String,
-      value: '',
-    },
-
-  },
 
 
   /**
    * 组件的初始数据
    */
   data: {
+    markers: [{
+      // iconPath: '/resources/others.png',
+      id: 0,
+      latitude:"",
+      longitude: "",
+      width: 50,
+      height: 50,
+    }],
+    data_list:{}
+  },
+
+  ready: function () {
+
+    this.setData({
+      data_list: common.currentData,
+    })
+    console.log("地图页信息：",this.data.data_list)
+
+    this.setData({
+      markers: [{
+        latitude: this.data.data_list.production__merchant__latitude,
+        longitude: this.data.data_list.production__merchant__longitude,
+      }],
+     
+    })
 
   },
 

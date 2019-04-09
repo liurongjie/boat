@@ -21,10 +21,10 @@
       </view>
       </scroll-view>
 
-<input class="input1" name="yuanxi"  bindinput='yuanxi'></input>
+<input class="input1" name="yuanxi" value="{{inputValue2}}" bindinput='yuanxi'></input>
 <text class='input11'>院系</text>
 </view>
-<view style='position:absolute;width:100%;top:670rpx;height:100rpx;background-color:white;'>
+<view style='position:absolute;width:99.5%;top:670rpx;height:100rpx;background-color:white;border:1px solid {{t4}};'>
 <input class="input1" name="number"  bindinput='number'></input>
 <text class='input11'>学号</text>
 </view>

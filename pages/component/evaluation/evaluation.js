@@ -1,8 +1,6 @@
-// pages/component/evaluation/evaluation.js
 
-var jsonData = require('../../../data/evaluation.js');
-
-
+var common = require("../../../common/index.js")
+var evalu_number='14';
 Component({
   /**
    * 组件的属性列表
@@ -15,83 +13,54 @@ Component({
    * 组件的初始数据
    */
   data: {
-
-    res: [
-      {
-        "id": 2,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-
-      {
-        "id": 3,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-
-      {
-        "id": 4,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-
-      {
-        "id": 5,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-
-      {
-        "id": 6,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-      {
-        "id": 5,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-
-      {
-        "id": 6,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-      {
-        "id": 5,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-
-      {
-        "id": 6,
-        "name": "洛洛",
-        "pic": '/static/userpic.jpg',
-        "text": 'BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了，谢谢育才给了我这么美好的啊BOAT驾校真的不错，我特别开心，看着大家都在武汉学会了开车以后我再也不敢再武汉路面上溜达了'
-      },
-
-     
-    ],
+    data_list:{},
+    evaluation_list:{}
   },
 
+  ready:function(){
+    this.setData({
+      data_list: common.currentData,
+      evaluation_list: common.currentEvaluation
+    })
+    console.log("[page3]获取公共js数据",this.data)
+  },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    lower: function () {
-      var result = this.data.res;
+
+
+
+     lower: function () {
+
+      //  scancomment(request):
+      //  if request.method == 'GET':
+      //    number = request.GET.get('number', '')
+      //  periodid = request.GET.get('periodid', '')
+
+      
+    //   var result = this.data.res;
+      var result = common.currentEvaluation;//本地
       var result2 = [];
-      var resArr = jsonData.dataList;
-      for (let i = result.length; i < result.length + 10; i++) {
+
+      //  scancomment
+
+       wx.request({
+         url: 'https://xiaoyibang.top:8001/dajia/scancomment',
+         data: {
+           'number': evalu_number,
+           'periodid': this.data.data_list.periodid,
+    
+         },
+         success: (res) => {
+          
+            console.log(res.data)
+         },
+      })
+
+       var resArr = common.currentEvaluation;//云端
+      for (let i = result.length; i < result.length + 5; i++) {
         result2.push(resArr[i]);
       };
 
@@ -105,6 +74,7 @@ Component({
         });
         return false;
       } else {
+
         wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”  
           title: '加载中',
           icon: 'loading',

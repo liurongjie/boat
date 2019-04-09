@@ -24,16 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   wx.request({
-     url: 'https://xiaoyibang.top:8001/dajia/home',
-     data:{
-       'teamid':this.data.teamid,
-     },
-     success:(res)=>{
-
-     },
-   })
-   
+    
 
   },
 
@@ -91,7 +82,7 @@ Page({
     app.globalData.nickName = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
-    if(!app.globalData.openid){
+    if(app.globalData.openid){
       wx.login({
         success: res => {
           code = res.code;
@@ -115,17 +106,6 @@ Page({
       })
     }
     
-   
-
-
-
-
-
-
-
-
-
-
 
     var animation =wx.createAnimation({
       transformOrigin:"100% 20%",

@@ -31,17 +31,17 @@
       </view>
     </view>
     
-    <button id='row-two' bindtap="{{taskfunc}}" class="bottom" style='height:5.8vh;width:320rpx;background: linear-gradient(to bottom right, #F7907E, #FDB38F);left:414.7rpx;bottom:2.25vh;display: flex;align-items: center;justify-content: center;border-radius: 46rpx;color:white;font-size: 44rpx;box-shadow:0rpx 20rpx 30rpx #BBB;'>
-      <view wx:if="{{taskfunc=='goboat'}}">
+    <button id='row-two' bindtap="buy" class="bottom" style='height:5.8vh;width:320rpx;background: linear-gradient(to bottom right, #F7907E, #FDB38F);left:414.7rpx;bottom:2.25vh;display: flex;align-items: center;justify-content: center;border-radius: 46rpx;color:white;font-size: 44rpx;box-shadow:0rpx 20rpx 30rpx #BBB;'>
+      <view wx:if="{{status==1}}">
           我要上船
       </view>
-      <view wx:if="{{taskfunc=='myboat'}}" >
-          看我的船
-      </view>
-      <view wx:if="{{taskfunc=='prepay1'}}" >
+      <view wx:if="{{status==2}}" >
           预付一元
       </view>
-      <view wx:if="{{taskfunc=='prepay2'}}" >
+      <view wx:if="{{status==3}}" >
+          看我的船
+      </view>
+      <view wx:if="{{status==4}}" >
           预付一半
       </view>
     </button>

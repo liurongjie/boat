@@ -8,11 +8,12 @@
 }
 .scrollview{
   position: absolute;
-  width: 300rpx;
+  width: auto;
   height: auto;
-  top: 100rpx;
-  
-  background: black;
+  top: 110rpx;
+  left: 160rpx;
+  background: white;
+  z-index: 10;
 }
 .phone_personal{
   left: 100rpx;

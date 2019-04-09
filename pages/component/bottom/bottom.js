@@ -1,16 +1,14 @@
 // pages/component/bottom/bottom.js
 
 var app = getApp();
+var common=require("../../../common/index.js")
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-     //根据页面决定按钮执行的任务
-      taskfunc:{
-        type: String,
-        value: ""
-    },//任务调用的函数名
+     
+      
   },
 
   /**
@@ -18,76 +16,105 @@ Component({
    */
   data: {
     pay:true,
+    status:1,
+    text:"我要上船",
    },
 
   /**
    * 组件的方法列表
    */
-
+  ready: function () {
+    console.log(common.currentData)
+  },
   methods: {
-
     goback:function(){
-
-      if ((app.buy_index == 4) || (app.buy_index == 3) || (app.buy_index == 2))
-      {
-        app.buy_index =1
+      var that = this;
+      if (app.buy_index == 4 || app.buy_index==3 ){//如果处于评论页，直接返回商品页
+        app.buy_index = 1; 
       }
-      else{
-        wx.navigateBack({
-          delta: 1,
-        })
+      else{//否则正常返回
+        switch (that.data.status) {
+          case 4:
+            break;
+          case 3:
+            that.setData({
+              status: 2
+            })
+            app.buy_index = 2;
+            break;
+          case 2:
+            that.setData({
+              status: 1
+            })
+            app.buy_index = 1;
+            break;
+          case 1:
+            wx.navigateBack({
+              delta: 1,
+            })
+            break;
       }
-      
+     
+      }
 
-    
-
-      //console.log(this.data.taskfunc);
     },
+    buy:function(){
+      var that=this;
+      switch (that.data.status) {
+        case 4:
+        //预付一半
+          break;
+        case 3:
+        //看我的船
+          wx.navigateTo({
+            url: '../teamcut/teamcut',
+          })
+          break;
+        case 2:
+        //预付一元
+          that.setData({
+            status: 3
+          })
+          that.buyalone();
+          break;
+        case 1:
+        //我要上船
+          that.checkorder();
+          app.buy_index = 2;
+          break;
 
-    goboat:function() {
-      
+
+      }
+    },
+    checkorder:function(){
       this.setData({
-        taskfunc : 'prepay1'
+        status: 2
       })
-      app.buy_index = 2,
-      console.log("go on boat,here is bottom.js", app.buy_index);
-    },
+      for(var  i=0;i<common.orderlist.length;i++){
+        if (common.currentData.periodid == common.orderlist[i].period_id){
+          this.setData({
+            status: 3
+          })
+          break;
+        }
+      }
 
-    myboat: function () {
-      // body...
-      wx.navigateTo({
-        url: '../teamcut/teamcut',
+      
+    },
+    buyalone:function(){
+      
+      wx.request({
+        url: 'https://xiaoyibang.top:8001/dajia/buyalone',
+        data:{
+          "openid": app.globalData.openid,
+          "periodid": common.currentData.periodid,
+        },
+        success:(res)=>{
+          console.log(res.data)
+        }
       })
-      console.log("see my boat");
-    },
-
-    prepay1: function () {
-      // body...
-      console.log("pre-pay 1 yuan");
-      // 支付成功
-      if( this.data.pay)
-      {
-        wx.showToast({
-          title: '支付成功',
-        })
-        this.setData({
-          taskfunc: 'myboat'
-        })
-        // wx.request({
-        //   url: 'https://xiaoyibang.top:8001/dajia/buyalone',
-        // })
-      }
-      else{
-        console.log("未支付成功")
-      }
-       
-    },
-
-    prepay2: function () {
-      // body...
-      console.log("pre-pay half price");
-    },
-
+    }
+   
    
   }
 })

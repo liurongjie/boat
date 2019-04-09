@@ -13,10 +13,10 @@
   </view>
 
   <view class='pro_disc_content'> 
-    <view class='pro_disc_content1' >武大BOAT推荐驾校</view>
+    <view class='pro_disc_content1' >{{data_list.production__name}}</view>
     <view class='pro_disc_content2'>
-      <view class='leijicantuan'>累计参团{{241}}人次</view>
-      <view class='haopinglv'>好评率{{99}}%</view>
+      <view class='leijicantuan'>累计参团{{data_list.cutnumber}}人次</view>
+      <view class='haopinglv'>好评率{{data_list.production__reputation}}%</view>
       <view class='zonghepaiming'>综合排名第{{1}}</view>
     </view>
   </view>
@@ -32,7 +32,7 @@
 <!-- 评价-->
 <view class='pro_evaluation'>
   <view class='pro_evaluation_index'>评价</view>
-  <view class='pro_evaluation_text'>往期好评率（16）91.5%</view>
+  <view class='pro_evaluation_text'>往期好评率（{{evaluation_list.length}}）{{data_list.production__reputation}}%</view>
   <view class='pro_evaluation_all'></view>
 </view>
 
@@ -43,20 +43,20 @@
 
 
 <scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
- <block wx:for="{{res}}" wx:key="*this">  
+ <block wx:for="{{evaluation_list}}" wx:key="*this">  
     <view class='user_evaluation_first' data-index="{{index}}" bindtap='selectindex'>
       <view class='user_inform'>
 
         <view>
-          <image class='userpic' src='{{item.pic}}'></image>
+          <image class='userpic' src='{{item.user__picture}}'></image>
         </view>
 
-        <view class='user_pickname'>{{item.name}}</view>
+        <view class='user_pickname'>{{item.user__name}}</view>
 
       </view>
 
       <view class='user_evaluation_text'>
-          {{item.text}}
+          {{item.context}}
       </view>
 
     </view>

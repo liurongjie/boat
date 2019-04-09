@@ -16,4 +16,7 @@
   <list3 wx:if="{{list==4&&status==1}}"></list3>
   <list4 wx:if="{{list==5&&status==1}}"></list4>
   <list5 wx:if="{{list==6&&status==1}}"></list5>
+  <view bindtap='back' wx:if="{{list!=1&&status==1}}" class='back'>
+  <image src='/static/back.svg' style='width:100%;height:100%'></image>
+  </view>
 </view>
