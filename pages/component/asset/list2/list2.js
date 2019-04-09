@@ -1,7 +1,6 @@
 // pages/component/asset/list2/list2.js
 var app = getApp();
 var common=require('../../../../common/index.js');
-var jsonData = require('../../../../data/json.js');
 Component({
   /**
    * 组件的属性列表
@@ -53,11 +52,10 @@ Component({
    */
   methods: {
     selectindex: function (e) {
-      var index = e.currentTarget.dataset.item;//获取data-index
+      common.currentorder = e.currentTarget.dataset.item;//获取data-index
       wx.navigateTo({
-        url: '../orderinfo/orderinfo?item=' + item,
+        url: '../orderinfo/orderinfo'
       })
-      console.log(index)
     }
 
   }

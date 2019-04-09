@@ -78,11 +78,12 @@ Page({
   },
 
   onGotUserInfo: function (e) {
+    var app1=app;
     var code;
     app.globalData.nickName = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
-    if(app.globalData.openid){
+    if(!app.globalData.openid){
       wx.login({
         success: res => {
           code = res.code;
@@ -95,17 +96,14 @@ Page({
               'pic': app.globalData.avatarUrl
             },
             success: (res) => {
-              wx.setStorage({
-                key: 'information',
-                data: res.data,
-              })
-
+              wx.setStorageSync('information', res.data)
+              app.getuserinformation();
             },
           })
         }
       })
     }
-    
+   
 
     var animation =wx.createAnimation({
       transformOrigin:"100% 20%",

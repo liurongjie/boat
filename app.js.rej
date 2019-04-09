@@ -1,0 +1,12 @@
+diff a/app.js b/app.js	(rejected hunks)
+@@ -40,9 +40,8 @@
+       success:(res)=>{
+         
+         if(res.data.response){
+-          
++          console.log(res.data.period);
+           common.orderlist=res.data.period;
+-          console.log(common.orderlist)
+         }
+       }
+     })

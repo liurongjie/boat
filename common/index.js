@@ -54,7 +54,9 @@ var currentEvaluation={
 function changelist(provider){
   data.index=provider;
 }
+var currentorder={
 
+}
 
 module.exports = {
   data: data,
@@ -62,6 +64,7 @@ module.exports = {
   homelist: homelist,//首页商品信息
   currentData: currentData,//目前选择的商品
   orderlist: orderlist,//订单信息
+  currentorder:currentorder,//当前查看订单
   orderdetail: orderdetail,//订单细节
   chooseorderstatus: chooseorderstatus,//函数：选择订单状态
 }
