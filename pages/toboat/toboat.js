@@ -75,6 +75,7 @@ Page({
   },
 
   changestatus_buy:function(){
+    console.log("changed to ", app.buy_index)
     this.setData({
       buy_index: app.buy_index
     })
