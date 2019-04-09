@@ -44,9 +44,6 @@
   <button bindtap='you'style='background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );height:120rpx;position:absolute;right:0rpx;bottom:0rpx;width:180rpx;border-radius: 0rpx;color:white;font-size:30rpx;line-height:120rpx;'>{{you}}</button>
 </view>
 
-
-
-
 <text style='position:absolute;top:740rpx;left:80rpx;font-size: 24rpx;'>拼团完成 : {{ytime}}</text>
 <view class='line'></view>
 <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{ytime}}</text>
