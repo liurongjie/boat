@@ -1,15 +1,17 @@
 // pages/component/bottom/bottom.js
 
 var app = getApp();
-var common=require("../../../common/index.js");
-var that=this;
+var common=require("../../../common/index.js")
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-     
-     
+     //根据页面决定按钮执行的任务
+      taskfunc:{
+        type: String,
+        value: ""
+    },//任务调用的函数名
   },
 
   /**
@@ -30,33 +32,34 @@ Component({
   methods: {
     goback:function(){
       var that = this;
-      switch (that.data.status){
-        case 4:
-          break;
-        case 3:
-          that.setData({
-            status: 2
-          })
-          break;
-        case 2:
-          that.setData({
-            status: 1
-          })
-          break;
-        case 1:
-          wx.navigateBack({
-            delta: 1,
-          })
-          break;
-        
-
+      if (app.buy_index == 4 || app.buy_index==3 ){//如果处于评论页，直接返回商品页
+        app.buy_index = 1; 
       }
-      
-      
+      else{//否则正常返回
+        switch (that.data.status) {
+          case 4:
+            break;
+          case 3:
+            that.setData({
+              status: 2
+            })
+            app.buy_index = 2;
+            break;
+          case 2:
+            that.setData({
+              status: 1
+            })
+            app.buy_index = 1;
+            break;
+          case 1:
+            wx.navigateBack({
+              delta: 1,
+            })
+            break;
+      }
+     
+      }
 
-    
-
-      //console.log(this.data.taskfunc);
     },
     buy:function(){
       var that=this;
@@ -78,6 +81,7 @@ Component({
           that.setData({
             status: 2
           })
+          app.buy_index = 2;
           break;
 
 

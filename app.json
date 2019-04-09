@@ -3,6 +3,7 @@
 
 
     "pages/home/home",
+    "pages/toboat/toboat",
     "pages/verify/verify",
     "pages/orderinfo/orderinfo"
   

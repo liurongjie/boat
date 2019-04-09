@@ -12,7 +12,7 @@
 
 <evaluation wx:if="{{buy_index==4}}" bindtap="backto_boat"></evaluation>
 
-<bottom taskfunc='goboat' bindtap='changestatus_buy'></bottom>
+<bottom  bindtap='changestatus_buy'></bottom>
 </scroll-view>
 
 
