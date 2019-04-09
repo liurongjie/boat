@@ -1,79 +1,79 @@
 // pages/component/asset/list/list.js
-var app=getApp();
+var app = getApp();
 Component({
-  /**
-   * ç»„ä»¶çš„å±æ€§åˆ—è¡¨
-   */
-  properties: {
-
-  },
-
-  /**
-   * ç»„ä»¶çš„åˆå§‹æ•°æ®
-   */
-  data: {
-    name:'',
-    pic:'',
-    teamname:'',
-    time:'',
-    list:1,
-    h:'',
-    h1:'',
-    h2:''
-  },
-ready:function(){
-  this.setData({ 
-    name: app.globalData.name,
-    pic: app.globalData.avatarUrl, 
-    teamname: app.globalData.teamname, 
-    time: app.globalData.time,  
-    })
-  var h = app.globalData.h;
-  var h1 =h;
-  h=(12/640)*h;
-  h1=(250/800)*h1;
-  var h2=h+15;
-  this.setData({h:h,h1:h1,h2:h2});
-},
-  /**
-   * ç»„ä»¶çš„æ–¹æ³•åˆ—è¡¨
-   */
-  methods: {
-    changelist2:function(){
-      app.list=2;
+    /**
+     * ×é¼şµÄÊôĞÔÁĞ±í
+     */
+    properties: {
 
     },
-    changelist31: function () {
-      app.list = 3;
-      app.order_state=1;
+
+    /**
+     * ×é¼şµÄ³õÊ¼Êı¾İ
+     */
+    data: {
+        name: '',
+        pic: '',
+        teamname: '',
+        time: '',
+        list: 1,
+        h: '',
+        h1: '',
+        h2: ''
     },
-    changelist32: function () {
-      app.list = 3;
-      app.order_state = 2;
+    ready: function () {
+        this.setData({
+            name: app.globalData.name,
+            pic: app.globalData.avatarUrl,
+            teamname: app.globalData.teamname,
+            time: app.globalData.time,
+        })
+        var h = app.globalData.h;
+        var h1 = h;
+        h = (12 / 640) * h;
+        h1 = (250 / 800) * h1;
+        var h2 = h + 15;
+        this.setData({ h: h, h1: h1, h2: h2 });
     },
-    changelist33: function () {
-      app.list = 3;
-      app.order_state = 3;
-    },
-    changelist34: function () {
-      app.list = 3;
-      app.order_state = 4;
-    },
-    changelist35: function () {
-      app.list = 3;
-      app.order_state = 5;
-    },
-    changelist4: function () {
-      app.list = 4;
-     
-    },
-    changelist5: function () {
-      app.list = 5;
-      
-    },
-    changelist6: function () {
-      app.list = 6;
-      
+    /**
+     * ×é¼şµÄ·½·¨ÁĞ±í
+     */
+    methods: {
+        changelist2: function () {
+            app.list = 2;
+
+        },
+        changelist31: function () {
+            app.list = 3;
+            app.order_state = 1;
+        },
+        changelist32: function () {
+            app.list = 3;
+            app.order_state = 2;
+        },
+        changelist33: function () {
+            app.list = 3;
+            app.order_state = 3;
+        },
+        changelist34: function () {
+            app.list = 3;
+            app.order_state = 4;
+        },
+        changelist35: function () {
+            app.list = 3;
+            app.order_state = 5;
+        },
+        changelist4: function () {
+            app.list = 4;
+
+        },
+        changelist5: function () {
+            app.list = 5;
+
+        },
+        changelist6: function () {
+            app.list = 6;
+
+        }
     }
-  }
 })

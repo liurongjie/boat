@@ -2,6 +2,7 @@
 var zhenzisms = require('../../utils/zhenzisms.js');
 //获取应用实例
 const app = getApp();
+var arrayHeight = 0;
 Page({
 
   /**
@@ -25,23 +26,88 @@ Page({
     time: 0,
     setInter: '',
     text: '恭喜您 \n 提交成功',
-    isShow: false
+    isShow: false,
+    t1:'white',
+    t2:'white',
+    t3: 'white',
+    school:'',
+    inputValue1:'武汉大学',
+    adapterSource: ["weixin", "wechat", "android", "Android", "IOS", "java", "javascript", "微信小程序", "微信公众号", "微信开发者工具"], 
+     bindSource: [], 
+    hideScroll: true,
+
   },
   name: function (e) {
+    let reg = /^[\u4e00-\u9fa5]+|[a-zA-Z]+$/;
+    var x = e.detail.value;
+    if (!reg.test(x)){
     this.setData({
-      name: e.detail.value
+      t1: 'red'
+    })}
+    else this.setData({
+      
+        name: x, t1: 'white'
+    })
+    
+  },
+  school: function (e) {
+
+    var x = e.detail.value;
+    if(x=='WHU')
+    this.setData({
+      school: e.detail.value,
+      inputValue1:'武汉大学'
     })
   },
   number: function (e) {
+ 
     this.setData({
       number: e.detail.value
     })
   },
   yuanxi: function (e) {
-    this.setData({
-      yuanxi: e.detail.value
+    var newSource = []
+    let reg = /^[\u4e00-\u9fa5]+$/;
+    var x = e.detail.value;
+    if (!reg.test(x)) {
+      this.setData({
+        t3: 'red'
+      })
+    }
+    else {
+      this.setData({
+      yuanxi: x, t3: 'white'
+    });
+    this.data.adapterSource.forEach(function(e){
+      if(e.indexOF(x)!=-1){
+        console.log(e);
+        newSource.push(e)
+      }
     })
+    };
+    if (newSource.length != 0) {
+      this.setData({ 
+        hideScroll: false, 
+       bindSource: newSource, 
+        arrayHeight: newSource.length * 71     
+         })   
+          } else 
+          {    
+              this.setData({      
+                 hideScroll: true,    
+                     bindSource: []    
+                       })    
+                       }
+
   },
+  itemtap: function (e) {
+    this.setData({
+      inputValue: e.target.id, 
+       hideScroll: true,  
+       bindSource: []   
+        }) 
+         },
+
   bindPhoneInput(e) {
     console.log(e.detail.value);
     var val = e.detail.value;
@@ -119,18 +185,17 @@ Page({
   },
   getCode(e) {
     this.setData({ btnDisabled: true})
-    
     clearInterval(this.data.setInter)
     console.log('获取验证码');
     var that = this;
     that.createCode();
     console.log('code' + this.data.code);
-      zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
-     zhenzisms.client.send(function (res) {
-     if (res.data.code == 0) {
+    zhenzisms.client.init('https://sms_developer.zhenzikj.com', '100932', 'd3f05b95-a1b6-4bd0-9c7d-b81c46caf112');
+    zhenzisms.client.send(function (res) {
+    if (res.data.code == 0) {
     that.timer();
     that.timer1();
-   that.setData({
+    that.setData({
       time: 0,
     })
     return;
