@@ -2,17 +2,21 @@
 <scroll-view scroll-y style='position:absolute;width:100%;height:100%'>
 <title></title>
 
-<tobuy wx:if="{{buy_index==1}}" bindtap="change_evaluation" ></tobuy>
+<tobuy wx:if="{{buy_index==1}}" bindtap="changestatus" ></tobuy>
 
-<prepay wx:if="{{buy_index==2}}" ></prepay>
+<prepay wx:if="{{buy_index==2}}" bindtap="changestatus"></prepay>
 
-<mymap wx:if="{{buy_index==3}}" > </mymap>
+<mymap wx:if="{{buy_index==3}}" bindtap="changestatus"> </mymap>
 
 
+<<<<<<< HEAD
 
 <evaluation wx:if="{{buy_index==4}}" bindtap="backto_boat"></evaluation>
+=======
+<evaluation wx:if="{{buy_index==4}}" bindtap="changestatus"></evaluation>
+>>>>>>> d48b90de9f78d8c9946628e9dd17221dc0209f69
 
-<bottom  bindtap='changestatus_buy'></bottom>
+<bottom  bindtap='changestatus'></bottom>
 </scroll-view>
 
 

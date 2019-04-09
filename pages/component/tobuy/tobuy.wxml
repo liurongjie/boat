@@ -10,7 +10,7 @@
 
 <!-- swiper组件下的商品详细价格、参团人数等信息 -->
 <view class='flex-wrp'>  
-  <text class='desc_price_symbol'>￥</text><text class=".desc_price_num">{{data_list.startprice-data_list.saveprice}}</text>
+  <text class='desc_price_symbol'>￥</text><text class=".desc_price_num">{{data_list.startprice-data_list.cutprice}}</text>
   <view class=" desc_oldprice_people_num">                    
     <view class=".desc_startprice">初始价格为{{data_list.startprice}}</view>
     <view class=".desc_cut_num">{{data_list.number}}人正在拼</view>

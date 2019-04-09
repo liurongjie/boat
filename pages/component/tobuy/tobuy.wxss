@@ -125,7 +125,6 @@
 .pro_disc_index_photo{
   height: 100%;
   width: 100%;
-
 }
 
 .pro_disc_content{
