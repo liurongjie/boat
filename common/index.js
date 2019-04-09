@@ -1,3 +1,5 @@
+
+
 var data={
   index:1,
   orderstatus:1,
@@ -27,18 +29,18 @@ function chooseorderstatus(provider){
 }
 //首页商品信息
 var homelist={
+  
+}
+function gethomelist(){
 
 }
 //首页订单信息
 var orderlist={
-
 }
 //订单细节
 var orderdetail={
 
 }
-
-
 //正在浏览商品
 var currentData={
 
@@ -52,13 +54,14 @@ var currentEvaluation={
 function changelist(provider){
   data.index=provider;
 }
-module.exports={
-  data:data,
-  changelist:changelist,
-  orderlist:orderlist,
-  orderdetail:orderdetail,
-  homelist:homelist,
-  chooseorderstatus:chooseorderstatus,
-  currentData: currentData,
 
+
+module.exports = {
+  data: data,
+  changelist: changelist,//函数：改变首页list
+  homelist: homelist,//首页商品信息
+  currentData: currentData,//目前选择的商品
+  orderlist: orderlist,//订单信息
+  orderdetail: orderdetail,//订单细节
+  chooseorderstatus: chooseorderstatus,//函数：选择订单状态
 }
