@@ -3,6 +3,7 @@ var jsonData = require('../../data/json.js');
 var common=require('../../common/index.js');
 Page({
   data: {
+    orderstatus:'',
     state: '',
     color1: '',
     ytime: '',
@@ -10,8 +11,8 @@ Page({
     state1: '',
 
     order:'',
-
-    url: '',//图片
+    
+    url: "https://xiaoyibang.top:8001/uploads/",
     name: '',//名字
     preprice: '',//之前的价格
     prodesc: '',//产品描述
@@ -67,23 +68,39 @@ Page({
     if (state == 5) this.setData({ state: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '查看评价', price: '最终价', price1: '订单实付价', quxiao: '' });
     
     var order = common.currentorder;
+    order.production__merchant__logo = this.data.url + order.production__merchant__logo;
     switch(state){
-      case 1 :
+      case '1' :
         order.time1=this.timetransform(order.time1);
         break;
-      case 2:
+      case '2':
+        order.time1 = this.timetransform(order.time1);
+        order.time2 = this.timetransform(order.time2);
         break;
-      case 3:
+      case '3':
+        order.time1 = this.timetransform(order.time1);
+        order.time2 = this.timetransform(order.time2);
+        order.time3 = this.timetransform(order.time3);
+        
         break;
-      case 4:
+      case '4':
+        order.time1 = this.timetransform(order.time1);
+        order.time2 = this.timetransform(order.time2);
+        order.time3 = this.timetransform(order.time3);
+        order.time4 = this.timetransform(order.time4);
         break;
-      case 5:
+      case '5':
+        order.time1 = this.timetransform(order.time1);
+        order.time2 = this.timetransform(order.time2);
+        order.time3 = this.timetransform(order.time3);
+        order.time4 = this.timetransform(order.time4);
+        order.time5 = this.timetransform(order.time5);
         break;
     }
     this.setData({
-      order: common.currentorder,
+      order: order,
     });
-    console.log(this.data.order)
+   
   },
   back: function () {
     wx.navigateBack({
@@ -115,7 +132,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    clearInterval(this.data.setInter)
+   
   },
 
   /**

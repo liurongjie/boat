@@ -9,15 +9,17 @@
 <text style='position:absolute;top:250rpx;left:50rpx;font-weight:200;font-size:25rpx;z-index:99;color:white'>{{state1}}</text>
 <view style='position: absolute;top:330rpx;width: 90%;left: 5%;height:{{height}};box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10);'>
 </view>
- <image src='{{url}}' class='image'></image>
-<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 370rpx;font-size:30rpx;'>{{name}}</text>
-<text style='position:absolute;width: 350rpx;height: 150rpx;left:330rpx;top: 420rpx;font-size:30rpx;'>[{{prodesc}}]</text>
-<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 470rpx;font-size:20rpx;color:#FE8F57'>初始价格为{{preprice}}元</text>
+ <image src='{{order.production__merchant__logo}}' class='image'></image>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 370rpx;font-size:30rpx;'>{{order.production__name
+}}</text>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:330rpx;top: 420rpx;font-size:30rpx;'>[一月试车+车接车送]</text>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 470rpx;font-size:20rpx;color:#FE8F57'>初始价格为{{order.period__startprice}}元</text>
 <text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 510rpx;font-size:20rpx;color:grey'>目前已经超过{{percent}}%用户</text>
 
 <view style='position: absolute;left: 10%;width: 80%;top:550rpx;height:120rpx;background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );'>
 <text class='boat'>BOAT</text>
-<text style='color:white;position:relative;top:-54rpx;left:-320rpx;font-size:60rpx;'>{{presentprice}}</text>
+<text style='color:white;position:relative;top:-54rpx;left:-320rpx;font-size:60rpx;'>{{order.period__startprice-order.steam__cutprice
+-order.period__cutprice}}</text>
 </view>
 <text style='color:white;position:absolute;top:640rpx;left:90rpx;font-size:20rpx;width:100rpx;z-index:99'>{{price1}}</text>
 
@@ -44,10 +46,10 @@
   <button bindtap='you'style='background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );height:120rpx;position:absolute;right:0rpx;bottom:0rpx;width:180rpx;border-radius: 0rpx;color:white;font-size:30rpx;line-height:120rpx;'>{{you}}</button>
 </view>
 
-<text style='position:absolute;top:740rpx;left:80rpx;font-size: 24rpx;'>拼团完成 : {{ytime}}</text>
+<text style='position:absolute;top:740rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{order.time1}}</text>
 <view class='line'></view>
-<text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{ytime}}</text>
-<view class='line1'></view>
+<!-- <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{ytime}}</text>
+<view class='line1'></view> -->
 
 <view wx:if='{{stat1==3}}'>
       <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime1}}</text>

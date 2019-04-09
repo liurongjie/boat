@@ -31,8 +31,9 @@ App({
         that.globalData.w = res.windowWidth;
       },
     });
-    that.getorderlist();
     that.getuserinformation();
+    that.getorderlist();
+    
   },
   getuserinformation:function(){
     var information = wx.getStorageSync('information')
