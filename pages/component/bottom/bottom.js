@@ -79,9 +79,7 @@ Component({
           break;
         case 1:
         //我要上船
-          that.setData({
-            status: 2
-          })
+          that.checkorder();
           app.buy_index = 2;
           break;
 
@@ -89,9 +87,15 @@ Component({
       }
     },
     checkorder:function(){
+      this.setData({
+        status: 2
+      })
       for(var  i=0;i<common.orderlist.length;i++){
         if (common.currentData.periodid == common.orderlist[i].period_id){
-
+          this.setData({
+            status: 3
+          })
+          break;
         }
       }
 
