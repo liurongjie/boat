@@ -33,6 +33,7 @@ App({
     });
     that.getuserinformation();
     that.getorderlist();
+    
   },
   getuserinformation:function(){
     var information = wx.getStorageSync('information')
