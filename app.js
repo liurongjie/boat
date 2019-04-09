@@ -6,21 +6,7 @@ App({
   buy_index:1,
   onLaunch: function () {
     var that=this;
-    //身份信息获取
-    var information= wx.getStorageSync('information')
-    console.log(information)
-    if(information.status==0){
-      that.globalData.status=information.status;
-      
-      that.globalData.openid=information.openid;
-    }
-    else{
-      that.globalData.status = information.status;
-      that.globalData.openid = information.openid;
-      that.globalData.name=information.name;
-      that.globalData.time=information.number;
-      that.globalData.teamname = information.team_name;
-    }
+    
     //首页商品信息
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/home',

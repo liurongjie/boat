@@ -82,7 +82,7 @@ Page({
     app.globalData.nickName = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
-    if(app.globalData.openid){
+    if(!app.globalData.openid){
       wx.login({
         success: res => {
           code = res.code;
@@ -95,17 +95,30 @@ Page({
               'pic': app.globalData.avatarUrl
             },
             success: (res) => {
-              wx.setStorage({
-                key: 'information',
-                data: res.data,
-              })
+              console.log(res.data)
+              wx.setStorageSync('information', res.data);
 
             },
           })
         }
       })
     }
-    
+    //身份信息获取
+    var information = wx.getStorageSync('information')
+    console.log(information)
+    console.log(information)
+    if (information.status == 0) {
+      app.globalData.status = information.status;
+
+      app.globalData.openid = information.openid;
+    }
+    else {
+      app.globalData.status = information.status;
+      app.globalData.openid = information.openid;
+      app.globalData.name = information.name;
+      app.globalData.time = information.number;
+      app.globalData.teamname = information.team_name;
+    }
 
     var animation =wx.createAnimation({
       transformOrigin:"100% 20%",

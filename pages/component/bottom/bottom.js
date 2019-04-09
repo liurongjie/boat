@@ -67,7 +67,7 @@ Component({
         case 3:
         //看我的船
           wx.navigateTo({
-            url: '../teamcut/teamcut',
+            url: '/pages/teamcut/teamcut',
           })
           break;
         case 2:
