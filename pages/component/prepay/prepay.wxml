@@ -34,7 +34,7 @@
 
 <text style='color:#CB2C29;position:absolute;top:100rpx;left:520rpx;font-weight:600'>¥</text>
 
-<text style='color:#CB2C29;position:absolute;top:70rpx;left:560rpx;font-weight:400;font-size:70rpx;'>{{data_list.startprice-data_list.saveprice}}</text>
+<text style='color:#CB2C29;position:absolute;top:70rpx;left:560rpx;font-weight:400;font-size:70rpx;'>{{data_list.startprice-data_list.cutprice}}</text>
 
 <text style='position:absolute;top:160rpx;left:530rpx;font-weight:400;font-size:20rpx;width:300rpx;opacity:0.5'>初始价格为{{data_list.startprice}}元</text>
 
