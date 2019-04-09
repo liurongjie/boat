@@ -78,6 +78,7 @@ Page({
   },
 
   onGotUserInfo: function (e) {
+    var app1=app;
     var code;
     app.globalData.nickName = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
@@ -95,30 +96,14 @@ Page({
               'pic': app.globalData.avatarUrl
             },
             success: (res) => {
-              console.log(res.data)
-              wx.setStorageSync('information', res.data);
-
+              wx.setStorageSync('information', res.data)
+              app.getuserinformation();
             },
           })
         }
       })
     }
-    //身份信息获取
-    var information = wx.getStorageSync('information')
-    console.log(information)
-    console.log(information)
-    if (information.status == 0) {
-      app.globalData.status = information.status;
-
-      app.globalData.openid = information.openid;
-    }
-    else {
-      app.globalData.status = information.status;
-      app.globalData.openid = information.openid;
-      app.globalData.name = information.name;
-      app.globalData.time = information.number;
-      app.globalData.teamname = information.team_name;
-    }
+   
 
     var animation =wx.createAnimation({
       transformOrigin:"100% 20%",

@@ -13,11 +13,14 @@ Component({
    */
   data: {
     list:1,
-    status: 1,
+    status: 0,
   },
  ready:function(){
-   app.list=1;
-   this.setData({list:1});
+   this.setData(
+     {
+       status: app.globalData.status,
+     }
+   )
    
  },
   /**

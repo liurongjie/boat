@@ -6,6 +6,7 @@ App({
   buy_index:1,
   onLaunch: function () {
     var that=this;
+    //身份信息获取
     
     //首页商品信息
     wx.request({
@@ -31,8 +32,24 @@ App({
       },
     });
     that.getorderlist();
+    that.getuserinformation();
   },
+  getuserinformation:function(){
+    var information = wx.getStorageSync('information')
+    console.log(information)
+    if (information.status == 0) {
+      this.globalData.status = information.status;
 
+      this.globalData.openid = information.openid;
+    }
+    else {
+      this.globalData.status = information.status;
+      this.globalData.openid = information.openid;
+      this.globalData.name = information.name;
+      this.globalData.time = information.number;
+      this.globalData.teamname = information.team_name;
+    }
+  },
   getorderlist:function(){
     var that = this;
     wx.request({
