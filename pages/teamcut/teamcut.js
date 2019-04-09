@@ -1,9 +1,13 @@
 // pages/teamcut/teamcut.js
 var app = getApp();
-var jsonData = require('../../data/teamcut.js');
+
+var common = require('../../common/index.js');
+
 let loadingMore = false
 let lastScollTop = 0;
 let lastRequestTime = 0;
+
+
 Page({
 
   /**
@@ -67,6 +71,13 @@ Page({
         "cutprice": "124"
       },
     ],
+
+    periodid:'',
+    nickName: '',
+    avatarUrl: '',
+    openid: '',
+
+
     selectPerson: true,
     firstPerson: '武汉大学',
     selectArea: false,
@@ -145,45 +156,55 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var that = this;
 
-    wx.request({
-      url: '',
-      data: {
 
-      },
-      method: 'get',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function(res) {
-        //将获取到的json数据，存在名字叫zhihu的这个数组中
-        that.setData({
-          lists: res.data
-        })
-      },
-      fail: function() {
-        //将获取到的json数据，存在名字叫zhihu的这个数组中
-        that.setData({
-          lists: jsonData.dataList
-        })
+  
+    // if (this.isEmptyObject(options)) {
+    //   console.log('options:', options, "is empty")
+    // }
+    // else {
+    //   console.log('options:', options, "is not empty")
+    // }
 
-      }
-    });
+
+    console.log("onLoad:",options)
+
+    if (!this.isEmptyObject(options)){
+      this.setData({
+        periodid: options.periodid,
+        nickName: options.nickName,
+        avatarUrl: options.avatarUrl,
+        openid: options.openid,
+      })
+      console.log("options不为空")
+    }
+    else{
+      this.setData({
+        
+        nickName: app.globalData.nickName,
+        avatarUrl: app.globalData.avatarUrl ,
+     
+      })
+      console.log("options为空")
+    }
+     
+  
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function (options) {
+    
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
+  
 
   },
 
@@ -219,11 +240,35 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-    return {
-      title: '微信小程序联盟',
-      desc: '最具人气的小程序开发联盟!',
-      path: '../../home/home'
+
+    // common.currentData
+    console.log(common.currentData.periodid)
+    return { 
+      title: 'BOAT', 
+      path: 'pages/teamcut/teamcut?periodid=' + 
+      common.currentData.periodid+
+        '&' + 'nickName=' + app.globalData.nickName+
+      '&' + 'avatarUrl=' + app.globalData.avatarUrl+
+      '&' + 'openid=' + app.globalData.openid,
+
+      // imageUrl: "/images/1.jpg", 
+      success: (res) => { 
+         console.log("转发成功", res); 
+         },
+      fail: (res) => {
+         console.log("转发失败", res);
+      }
     }
 
-  }
+    
+  },
+
+  isEmptyObject:function (data) {
+    var t;
+    for (t in data)
+      return !1;
+    return !0
+  },
+
+
 })
