@@ -117,3 +117,10 @@ button::after { border: none; }
   height: 2rpx;
   background: rgba(85, 85, 85, 0.10);
 }
+progress{
+  position: absolute;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40rpx;
+  
+}

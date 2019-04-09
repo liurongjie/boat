@@ -25,6 +25,8 @@ Page({
     ytime3:'', //评价时间
 
 
+
+
     process: 0,//40比80作为进度条0-80
     percent: '90',
     zuo: '',
@@ -40,20 +42,52 @@ Page({
     hour: '',
     minute: '',
     second: '',
-    id: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  timeapproach:function(endtime){
+    this.data.setInter = setInterval(
+      () => {
+        var nowtime = Math.floor(new Date().getTime() / 1000);
+        var time=endtime-nowtime;
+        var day=Math.floor(time/(3600*24));
+        var hour= Math.floor((time-day*3600*24)/3600);
+        var minute= Math.floor((time-day*3600*24-hour*3600)/60);
+        var second = time -  day * 3600 * 24 - hour * 3600-minute*60;
+        this.setData({
+          day:day,
+          hour:hour,
+          minute:minute,
+          second:second,
+        })
+       
+       
+      }
+      , 1000)
+  },
+  getprocess:function(starttime,endtime){
+    var nowtime = Math.floor(new Date().getTime() / 1000);
+    var process = Math.floor(100*(endtime-nowtime)/(endtime-starttime));
+    console.log(process)
+    this.setData({
+      process:process,
+    })
+  },
    
 
 
 
     
-  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -68,6 +102,9 @@ Page({
     if (state == 5) this.setData({ state: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '查看评价', price: '最终价', price1: '订单实付价', quxiao: '' });
     
     var order = common.currentorder;
+    console.log(common.currentorder)
+    this.timeapproach(common.currentorder.period__endtime);
+    this.getprocess(common.currentorder.period__starttime, common.currentorder.period__endtime);
     order.production__merchant__logo = this.data.url + order.production__merchant__logo;
     switch(state){
       case '1' :
@@ -100,7 +137,7 @@ Page({
     this.setData({
       order: order,
     });
-   
+  
   },
   back: function () {
     wx.navigateBack({
@@ -116,7 +153,6 @@ Page({
 
   },
   timetransform:function(time){
-    console.log("函数正在运行")
     var unixTimestamp = new Date(time * 1000);
     var commonTime = unixTimestamp.toLocaleString();
     return commonTime;
@@ -132,7 +168,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-   
+    clearInterval(this.data.setInter)
   },
 
   /**
