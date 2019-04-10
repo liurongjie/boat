@@ -1,9 +1,9 @@
 .title{
   position: fixed;
-  top: 0rpx;
+  top: 4.5vh;
   width: 100%;
   height: 80rpx;
-  padding-top: 70rpx;
+  
   display: flex;
   flex-direction: row;
   z-index: 100;
