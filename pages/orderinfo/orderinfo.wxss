@@ -124,3 +124,15 @@ progress{
   margin-top: 40rpx;
   
 }
+.zuobutton{
+  background-color:rgba(100,100,100,0.5);
+  height:120rpx;
+  position:absolute;
+  right:180rpx;
+  bottom:0rpx;
+  width:180rpx;
+  border-radius: 0rpx;
+  color:white;
+  font-size:30rpx;
+  line-height:120rpx;
+}

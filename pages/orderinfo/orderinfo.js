@@ -151,6 +151,76 @@ Page({
     var commonTime = unixTimestamp.toLocaleString();
     return commonTime;
   },
+  zuo:function(){
+    console.log("正在运行左")
+    var state = this.data.orderstatus;
+    var that=this;
+    switch (state) {
+      case '1':
+        this.deleteorder();
+        break;
+      case '2':
+        this.deleteorder();
+        break;
+      case '3':
+        
+        break;
+      case '4':
+        
+        break;
+      case '5':
+        
+        break;
+    }
+  },
+  you:function(){
+    var state = this.data.orderstatus;
+    var that = this;
+    switch (state) {
+      case '1':
+        
+        break;
+      case '2':
+        
+        break;
+      case '3':
+
+        break;
+      case '4':
+
+        break;
+      case '5':
+
+        break;
+    }
+  },
+  deleteorder:function(){
+    var that=this;
+    wx.showModal({
+      title: '删除此订单',
+      content: '',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: 'https://xiaoyibang.top:8001/dajia/cancel',
+            data: {
+              'orderid': that.data.order.orderid,
+            },
+            success: (res) => {
+            }
+          })
+
+          //这里是点击了确定以后
+          console.log('用户点击确定');
+          wx.navigateBack({
+            delta: 1
+          })
+        } else {//这里是点击了取消以后
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
