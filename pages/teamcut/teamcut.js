@@ -164,6 +164,7 @@ Page({
       this.setData({
         t: 'null'
       })
+      console.log("分享功能", this.data.t)
     }else{
       console.log("分享功能",this.data.t)
     }
