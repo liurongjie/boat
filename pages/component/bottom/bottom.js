@@ -38,9 +38,9 @@ Component({
             break;
           case 3:
             that.setData({
-              status: 2
+              status: 1
             })
-            app.buy_index = 2;
+            app.buy_index = 1;
             break;
           case 2:
             that.setData({
