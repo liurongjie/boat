@@ -58,7 +58,9 @@ var data={
   var currentorder={
   
   }
-  
+  var onecut={
+
+  }
   module.exports = {
     data: data,
     changelist: changelist,//函数：改变首页list
@@ -68,4 +70,5 @@ var data={
     currentorder:currentorder,//当前查看订单
     orderdetail: orderdetail,//订单细节
     chooseorderstatus: chooseorderstatus,//函数：选择订单状态
+    onecut:onecut,//成员砍价
   }

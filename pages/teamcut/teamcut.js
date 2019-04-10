@@ -14,63 +14,9 @@ Page({
    * 页面的初始数据
    */
   data: {
- 
-    res: [{
-        "id": 31,
-        "tname": "云顶工坊",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-      {
-        "id": 3,
-        "tname": "Jess MLR",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-      {
-        "id": 2,
-        "tname": "洛洛",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-
-      {
-        "id": 4,
-        "tname": "武大吴彦祖",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-      {
-        "id": 5,
-        "tname": "武大小猪",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-      {
-        "id": 6,
-        "tname": "武大小猪",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-      {
-        "id": 7,
-        "tname": "武大小猪",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-      {
-        "id": 8,
-        "tname": "武大小猪",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-      {
-        "id": 9,
-        "tname": "武大小猪",
-        "pic": "/static/icon3.jpg",
-        "cutprice": "124"
-      },
-    ],
+    onecut:[],//团队成员
+    twocut:[],//他人砍价
+    res: [],//展示内容
 
     periodid:'',
     nickName: '',
@@ -95,37 +41,38 @@ Page({
     flag_hhh:'',
 
   },
+  //下拉刷新
   lower: function() {
-    var result = this.data.res;
-    var resArr = jsonData.dataList;
-    for (let i = 0; i < 10; i++) {
-      result.push(resArr[i]);
-    };
+    // var result = this.data.res;
+    // var resArr = jsonData.dataList;
+    // for (let i = 0; i < 10; i++) {
+    //   result.push(resArr[i]);
+    // };
     
-    var cont = result.concat(resArr);
-    console.log(resArr.length);
-    if (cont.length >= 100) {
-      wx.showToast({ //如果全部加载完成了也弹一个框
-        title: '我也是有底线的',
-        icon: 'success',
-        duration: 300
-      });
-      return false;
-    } else {
-      this.setData({
-        res: result,
-      })
-      wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”  
-        title: '加载中',
-        icon: 'loading',
-      });
-      setTimeout(() => {
-        this.setData({
-          res: cont
-        });
-        wx.hideLoading();
-      }, 1500)
-    }
+    // var cont = result.concat(resArr);
+    // console.log(resArr.length);
+    // if (cont.length >= 100) {
+    //   wx.showToast({ //如果全部加载完成了也弹一个框
+    //     title: '我也是有底线的',
+    //     icon: 'success',
+    //     duration: 300
+    //   });
+    //   return false;
+    // } else {
+    //   this.setData({
+    //     res: result,
+    //   })
+    //   wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”  
+    //     title: '加载中',
+    //     icon: 'loading',
+    //   });
+    //   setTimeout(() => {
+    //     this.setData({
+    //       res: cont
+    //     });
+    //     wx.hideLoading();
+    //   }, 1500)
+    // }
   },
 
   clickPerson: function() {
@@ -159,6 +106,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log(options.steamid)
+    this.getorderdetail(options.steamid);
     if(this.data.btn_index==1)
     {
       this.setData({
@@ -170,16 +119,7 @@ Page({
     }
   
 
-    wx.request({
-      url: 'https://xiaoyibang.top:8001/dajia/orderdetail',
-      data: {
-        'steamid':'o-Iml5OCySa6pg3Wc99VZp_ggljU20190409215716',
-      },
-      success: (res) => {
-       console.log(res)
-
-      }
-    })
+   
     // if (this.isEmptyObject(options)) {
     //   console.log('options:', options, "is empty")
     // }
@@ -190,7 +130,7 @@ Page({
 
     console.log("onLoad:",options)
 
-    if (!this.isEmptyObject(options)){
+    if (!this.isEmptyObject(options.nickName)){
       this.setData({
         periodid: options.periodid,
         nickName: options.nickName,
@@ -204,7 +144,6 @@ Page({
     else{
       this.setData({
         btn_index: 0,
-
         nickName: app.globalData.nickName,
         avatarUrl: app.globalData.avatarUrl ,
      
@@ -215,7 +154,46 @@ Page({
   
 
   },
+  getorderdetail:function(steamid){
+    var that=this;
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/orderdetail',
+      data: {
+        'steamid': steamid,
+      },
+      success: (res) => {
+        console.log(res.data)
+        that.setData({
+          onecut:res.data.onecut,
+          twocut:res.data.twocut,
+        })
+        that.merge();
 
+      }
+    })
+  },
+  //合并onecut和twocut生成res
+  merge:function(){
+    var data=[];
+    for(var i=0;i<this.data.onecut.length;i++){
+      var middle={};
+      middle.pic = this.data.onecut[i].order__user__picture;
+      middle.name = this.data.onecut[i].order__user__name;
+      middle.cutprice = this.data.onecut[i].order__cutprice;
+      data.push(middle);
+    }
+    for (var i = 0; i < this.data.twocut.length; i++) {
+      var middle = {};
+      middle.pic = this.data.twocut[i].audience__picture;
+      middle.name = this.data.twocut[i].audience__nickname;
+      middle.cutprice = this.data.twocut[i].cutprice;
+      data.push(middle);
+    }
+    this.setData({
+      res:data,
+    })
+
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -327,9 +305,12 @@ Page({
   },
 
   team_inview:function(){
+    console.log(this.data.onecut)
+    common.onecut = this.data.onecut;
     wx.navigateTo({
-      url: '/pages/myteam/myteam',
+      url: "/pages/myteam/myteam" ,
     })
+  
   },
 
   change_statue:function(){

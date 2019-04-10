@@ -7,15 +7,15 @@
   <view class='rule'>活动规则</view>
   </view>
    
-   <image src='/static/pic/1.jpg' class='master'></image>
+   <image src='{{master.pic}}' class='master'></image>
    <view class='box1'>
-      <view class='name'>珞珈山李坤</view>
+      <view class='name'>{{master.name}}</view>
        <view class='name2'>组长</view>
        <view class='right'></view>
    </view>
    <view class='box2'>
-      <view wx:for="{{array}}" class='box3' wx:key="url">
-        <image src="{{item.url}}" class='photo'></image>
+      <view wx:for="{{team}}" class='box3' wx:key="url">
+        <image src="{{item.pic}}" class='photo'></image>
         <view class='name'>{{item.name}}</view>
       </view>
       <view class='member'>组员</view>

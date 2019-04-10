@@ -159,19 +159,19 @@ Page({
     var state = this.data.orderstatus;
     var that = this;
     switch (state) {
-      case '1':
+      case 1:
         this.gotomyteam();
         break;
-      case '2':
+      case 2:
         this.gotomyteam();
         break;
-      case '3':
+      case 3:
         this.completeorder();
         break;
-      case '4':
+      case 4:
 
         break;
-      case '5':
+      case 5:
 
         break;
     }
@@ -211,7 +211,7 @@ Page({
   },
   gotomyteam:function(){
     wx.navigateTo({
-      url: "/pages/teamcut/teamcut",
+      url: "/pages/teamcut/teamcut?steamid="+this.data.order.steam_id,
     })
   },
   completeorder:function(){
