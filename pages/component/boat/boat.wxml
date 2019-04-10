@@ -1,28 +1,32 @@
 
-<view class="btn_1">
-  <!-- <button class='btn_left'> 校园大件</button>
-  <button class='btn_right'> 校园日常</button> -->
+<view class='lang' style='width:200%;height:90%;position:absolute;top:10%;left:-200rpx;'>
+<image src='/static/lang.png' style='width:100%;height:100%;'></image>
 </view>
-
 <view class="btn_2" style='position:absolute;top:10%'>
-  <button class='btn_sec1'   bindtap='btn_1' > {{btn_1_text}}</button>
-  <button class='btn_sec2'   bindtap='btn_2' > {{btn_2_text}}</button> 
-  <button class='btn_sec3'   bindtap='btn_3' > {{btn_3_text}}</button>
-  <button class='btn_sec4'   bindtap='btn_4' > {{btn_4_text}}</button>
+  <button bindtap='btn_1'  class="{{bg1?'btn_sec1':'btn_sec1_false'}}"> {{btn_1_text}}</button>
+  <button  bindtap='btn_2'  class="{{bg2?'btn_sec2':'btn_sec2_false'}}"> {{btn_2_text}}</button> 
+  <button  bindtap='btn_3'  class="{{bg3?'btn_sec3':'btn_sec3_false'}}"> {{btn_3_text}}</button>
+  <button  bindtap='btn_4'  class="{{bg4?'btn_sec4':'btn_sec4_false'}}"> {{btn_4_text}}</button>
 </view>
 
 <view class='swiper_view' >
+
+ <image src='{{f}}' style='position:absolute;width:80%;height:80%; border-radius:30px;left:10%;' ></image>
   <swiper class='swiper_content' bindchange='swiper' current='{{current_index}}' >
     <block>
       <swiper-item wx:for="{{production}}" wx:for-index="index" wx:for-item="item"  wx:if="{{item.type==btn_type}}" wx:key="production_name"
         data-bean='{{item}}' bindtap='gotoboat'>      
        
-        <block >
-          <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>
+       
+       
+        <block>
+          
+          
+          <view style='font-size:50rpx;color:white;font-weight:600;margin-left:120rpx;'>
            {{item.production__name}}
            </view>
-           <view class='pro_inform_text'>{{item.production__introduction}}</view>
-           <view class='inform' style='z-index:10'>
+           <view class='pro_inform_text' style='margin-left:120rpx'>{{item.production__introduction}}</view>
+           <view class='inform' style='left:10%;'>
                   <view class='pro_data'>
                     
                     <view class='pro_data_block'>
@@ -51,9 +55,10 @@
 
                    </view>
            </view>
-
+           
           <view style='width:100%;height:100%;'>
-          <view  style="position:absolute;width:100%;height:200rpx;bottom:50%;margin-left:45rpx">
+          
+          <view  style="position:absolute;width:100%;height:200rpx;bottom:37vh;margin-left:120rpx">
             <view class='shaketoo' >
                   <image  class='img_chuanfan shengsuo' src='../../../static/pic/chuanfan.svg'></image>
             </view>
@@ -68,7 +73,9 @@
           </view>
 
           <view class='shake1'>
-               <image src='/static/icon/bigboat.svg'style="width:100%;height:100%"></image>
+           <image src='/static/icon/bigboat.svg'style="width:100%;height:100%"></image>
+          
+              
             </view>
 </view>
         </block>

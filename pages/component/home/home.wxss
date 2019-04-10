@@ -68,7 +68,7 @@ position: relative;
 margin-top: 30rpx;
 top:560rpx;
 left: 10%;
-border-radius: 10rpx;
+border-radius: 30rpx;
 background-color: white;
 box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
 background: linear-gradient(to bottom right,#FEB25E,#FE8F57);
@@ -87,7 +87,7 @@ box-shadow: 0rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
 background: linear-gradient(to bottom right,#FF060D,#FF64A7);
 z-index: -1;
 overflow: hidden;
-border-radius: 10rpx;
+border-radius: 30rpx;
 }
 .bai{
 width: 80%;
@@ -117,7 +117,7 @@ z-index: -1;
   height: 15rpx;
   border-radius: 100%;
   position: relative;
-  top: -120rpx;
+  top: 260rpx;
   left: 50rpx;
   margin-bottom: 36rpx;
   background-color: #FEB25E;
@@ -127,7 +127,7 @@ z-index: -1;
   height: 20rpx;
   border-radius: 100%;
   position: relative;
-  top: -280rpx;
+  top: 100rpx;
   left: 90rpx;
   margin-bottom: 30rpx;
   font-size: 25rpx;
@@ -137,11 +137,12 @@ width: 480rpx;
 height: 2rpx;
 background-color: rgba(85, 85, 85, 0.10);
 position: relative;
-top: -395rpx;
+top: -15rpx;
 left: 50rpx;
 margin-bottom: 48rpx;
 }
 .date{
+  font-family: 'Arial';
   position: absolute;
   width: 300rpx;
   height: 70rpx;
@@ -150,21 +151,23 @@ margin-bottom: 48rpx;
   font-weight:bold;
 }
 .year{
+   font-family: 'Arial';
   position: absolute;
   left:80rpx;
   top:28rpx;
   font-size: 18rpx;
-  font-weight: 600;
+  font-weight: bold;
 }
 .month{
+   font-family: 'Arial';
   position: absolute;
   left:80rpx;
   top:5rpx;
   font-size: 18rpx;
-  
   font-weight:bold;
 }
 .day{
+   font-family: 'Arial';
   position: absolute;
   left: 20rpx;
   margin-left: 10rpx;

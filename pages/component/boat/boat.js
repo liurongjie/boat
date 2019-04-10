@@ -27,6 +27,8 @@ Component({
     text_2: '',
     text_3: '',
 
+    f:'/static/pic/j1.png',
+   
 
     swiper_index:0,
 
@@ -37,7 +39,13 @@ Component({
     real_time_price:'',
     start_price:"",
     screen_height:"",
-
+   
+    color1:'#FDB38F',
+    color2:'#F7907E',
+    bg1: true,
+    bg2: false,
+    bg3: false,
+    bg4: false,
     current_index:0,//不同种类查看都返回该类第一个产品
 
   },
@@ -85,8 +93,13 @@ Component({
       
       console.log("[page1]触发按钮1")
       this.setData({
+        f:'/static/pic/j1.png',
         btn_type: 1,
-        current_index:0
+        current_index:0,
+        bg1: true,
+        bg2: false,
+        bg3: false,
+        bg4: false,
       })
     },
 
@@ -94,23 +107,38 @@ Component({
       console.log("[page1]触发按钮2")
       this.setData({
         btn_type:2,
-        current_index: 0
+        f: '/static/pic/j2.png',
+        current_index: 0,
+        bg2: true,
+        bg1: false,
+        bg3: false,
+        bg4: false,
       })
     },
 
     btn_3: function () {
       console.log("[page1]触发按钮3")
       this.setData({
+        f: '/static/pic/j3.png',
         btn_type: 3,
-        current_index: 0
+        current_index: 0,
+        bg3: true,
+        bg2: false,
+        bg1: false,
+        bg4: false,
       })
     },
 
     btn_4: function () {
       console.log("[page1]触发按钮4")
       this.setData({
+        f: '/static/pic/j4.png',
         btn_type: 4,
-        current_index: 0
+        current_index: 0,
+        bg4: true,
+        bg2: false,
+        bg3: false,
+        bg1: false,
       })
     },
 
