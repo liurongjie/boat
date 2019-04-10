@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/remark/remark",
     "pages/home/home",
     "pages/verify/verify",
     "pages/orderinfo/orderinfo"
-  
   ],
   "window": {
     "backgroundTextStyle": "light",

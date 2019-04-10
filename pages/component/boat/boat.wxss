@@ -1,14 +1,13 @@
 /* pages/secondP/secondP.wxss */
 
 .swiper_view{
-  position: relative;
+  position: absolute;
   width: 100%;
   left: 10%;
-  height: 900rpx;
- 
- 
+  height: 70%;
+  top:15%;
   box-sizing:border-box;
-
+  margin-top: 10rpx;
 
 
 }
@@ -30,12 +29,12 @@
 .shake1 {
     position: absolute;
     width: 800rpx;
-    height: 800rpx;
+    height: 70%;
     left: 100rpx;
-    top: 100rpx;
+    top: 30%;
     animation: shake 3s 0s ;
     animation-timing-function: ease;
-    z-index:100;
+    
 	}
 
 .swiper_content{
@@ -423,12 +422,11 @@ background-color:rgba(151, 16, 99, 0.541);
 
 
 .img_chuanfan{
+  top: 0rpx;
    width: 100%;
-   height:200rpx;
+   height: 100%;
+   
    position: absolute;
-   
-
-   
 }
 
 
@@ -577,7 +575,7 @@ background-color:rgba(151, 16, 99, 0.541);
   
 	 animation: shake 3s 0s  ;
 	 animation-timing-function: ease;
-   z-index: 2;
+   
 }
   
 .shaketoo{
@@ -585,10 +583,10 @@ background-color:rgba(151, 16, 99, 0.541);
    width: 300rpx;
    height: 200rpx;
    left: 180rpx;
-   top: 640rpx;
+   top: 0rpx;
 	 animation: shake 3s 0s ;
 	 animation-timing-function: ease;
-   z-index: 2;
+  
 
 }
 
@@ -597,10 +595,10 @@ background-color:rgba(151, 16, 99, 0.541);
    width: 300rpx;
    height: 200rpx;
    left: 290rpx;
-   top: 690rpx;
+   top: 50rpx;
 	 animation: miss 1s 0s ,shaketext 2s 1s ;
 	 animation-timing-function: ease;
-     z-index:4;
+   
 }
 
 .shake_text2{
@@ -608,10 +606,10 @@ background-color:rgba(151, 16, 99, 0.541);
    width: 300rpx;
    height: 200rpx;
    left: 270rpx;
-   top: 720rpx;
+   top: 80rpx;
 	 animation: miss 1s 0s ,shaketext 2s 1s ;
 	 animation-timing-function: ease;
-   z-index: 4;
+   
 }
 
 
