@@ -28,9 +28,9 @@
 
 <view class='tab'>
 
-
-<button class='fenxiang' open-type='share' >分享好友砍价</button>
-<button class='chakan' bindtap='team_inview'>查看拼团成员</button>
+<!-- <button bindtap='overhhh'>change</button> -->
+<button class='fenxiang' open-type='{{t}}'  bindtap='change_statue' >{{btn_text_left[btn_index]}}</button>
+<button class='chakan' bindtap='team_inview'>{{btn_text_right[btn_index]}}</button>
 </view>
 </view>
 
@@ -51,7 +51,7 @@
   <view style=' margin-bottom: 40rpx; height: 100rpx;width: 90%;margin-left:5%;' data-index="{{index}}" bindtap='selectindex'>
      <view class='m'>
      <image src='{{item.pic}}' class='img'></image>
-     <text class='tn'>{{item.tname}}</text>
+     <text class='tn'>{{item.name}}</text>
     <text class='te'>{{item.cutprice}}</text>
     <text class='te1'>元</text>
      </view>

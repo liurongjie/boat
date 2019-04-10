@@ -1,35 +1,14 @@
 // pages/myteam/myteam.js
 var jsonData = require('../../data/teamcut.js');
+var common=require('../../common/index.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    array:[
-      {
-        url:'/static/pic/1.jpg',
-        name:'珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-      {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },  {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },  {
-        url: '/static/pic/1.jpg',
-        name: '珞珈李坤'
-      },
-    ],
+    master:{},
+    team:[],
     res: [{
       "id": 31,
       "tname": "云顶工坊",
@@ -123,6 +102,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+    var onecut=common.onecut;
+    var data=[];
+    for(var i=onecut.length-1;i>=0;i--){
+      var middle = {};
+      middle.pic = onecut[i].order__user__picture;
+      middle.name = onecut[i].order__user__name;
+      //middle.cutprice =  onecut[i].order__cutprice;
+      data.push(middle);
+    }
+    
+    this.setData({
+      team:data,
+      master:data[0],
+    })
 
   },
 

@@ -334,6 +334,7 @@ Page({
           key: 'information',
           data: res.data,
         })
+        app.getuserinformation();
       }
       
     })

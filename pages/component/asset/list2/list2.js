@@ -31,19 +31,56 @@ Component({
   ready:function(){
     var order=[];
     if (common.data.orderstatus=='1'){
+
       this.setData({ orderstatus: true });
     }
-    this.setData({ title: common.data.ordertitle });
-    console.log(common.orderlist);
-    for(var i=0;i<common.orderlist.length;i++){  
-      if (common.orderlist[i].status==common.data.orderstatus){
-        var timestamp = Math.round(new Date().getTime() / 1000);
-        console.log('时间啊' + timestamp)
+    
+    //显示全部
+    if (common.data.orderstatus == '0') {
+      for (var i = 0; i < common.orderlist.length; i++) {
         var middle = common.orderlist[i];
-        middle.day = Math.floor((common.orderlist[i].period__endtime - timestamp)/(3600*24));
-        order.push(middle);
+        if (middle.status=='0') {
+          middle.bindtap='已取消';//订单已经取消
+          middle.day=false;
+          order.push(middle);
+        }
+        else if (middle.status == '1'){
+          var timestamp = Math.round(new Date().getTime() / 1000);
+          middle.bindtap='进入订单';
+          middle.day = Math.floor((middle.period__endtime - timestamp) / (3600 * 24));
+          order.push(middle);
+        }
+        else{
+          middle.bindtap = '进入订单';//订单已经取消
+          order.push(middle);
+        }
+        
+    }
+
+    }
+    else if (common.data.orderstatus == '1'){
+      for (var i = 0; i < common.orderlist.length; i++) {
+        if (common.orderlist[i].status == common.data.orderstatus) {
+          var timestamp = Math.round(new Date().getTime() / 1000);
+          console.log('时间啊' + timestamp)
+          var middle = common.orderlist[i];
+          middle.day = Math.floor((common.orderlist[i].period__endtime - timestamp) / (3600 * 24));
+          middle.bindtap = '进入订单';
+          order.push(middle);
+        }
       }
     }
+    else{
+      for (var i = 0; i < common.orderlist.length; i++) {
+        if (common.orderlist[i].status == common.data.orderstatus) {
+          var middle = common.orderlist[i];
+          middle.day=false;
+          middle.bindtap = '进入订单';
+          order.push(middle);
+        }
+      }
+    }
+    this.setData({ title: common.data.ordertitle });
     this.setData({ lists: order });
 
   },
@@ -52,10 +89,14 @@ Component({
    */
   methods: {
     selectindex: function (e) {
-      common.currentorder = e.currentTarget.dataset.item;//获取data-index
-      wx.navigateTo({
-        url: '../orderinfo/orderinfo'
-      })
+      if (e.currentTarget.dataset.item.status!='0'){
+        common.currentorder = e.currentTarget.dataset.item;//获取data-index
+        console.log(common.currentorder)
+        wx.navigateTo({
+          url: '../orderinfo/orderinfo'
+        })
+      }
+      
     }
 
   }
