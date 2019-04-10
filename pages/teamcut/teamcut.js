@@ -76,8 +76,9 @@ Page({
     nickName: '',
     avatarUrl: '',
     openid: '',
-
-
+    btn_text_left:['分享好友砍价','砍这好友一刀','帮Ta召唤好友'],
+    btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
+    btn_index:0,
     selectPerson: true,
     firstPerson: '武汉大学',
     selectArea: false,
@@ -86,11 +87,12 @@ Page({
     hour: '20',
     minute: '43',
     second: '10',
-
+    t:'',
     list: [],
     hasMore: true, //列表是否有数据未加载
     page: 1,
     size: 8, //每页8条数据
+    
 
   },
   lower: function() {
@@ -125,6 +127,7 @@ Page({
       }, 1500)
     }
   },
+
   clickPerson: function() {
     var selectPerson = this.data.selectPerson;
     if (selectPerson == true) {
@@ -157,8 +160,18 @@ Page({
    */
   onLoad: function(options) {
 
-
   
+
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/orderdetail',
+      data: {
+        'steamid':'o-Iml5OCySa6pg3Wc99VZp_ggljU20190409215716',
+      },
+      success: (res) => {
+       console.log(res)
+
+      }
+    })
     // if (this.isEmptyObject(options)) {
     //   console.log('options:', options, "is empty")
     // }
@@ -175,12 +188,15 @@ Page({
         nickName: options.nickName,
         avatarUrl: options.avatarUrl,
         openid: options.openid,
+        btn_index:1,
+  
       })
       console.log("options不为空")
     }
     else{
       this.setData({
-        
+        btn_index: 0,
+
         nickName: app.globalData.nickName,
         avatarUrl: app.globalData.avatarUrl ,
      
@@ -243,23 +259,68 @@ Page({
 
     // common.currentData
     console.log(common.currentData.periodid)
-    return { 
-      title: 'BOAT', 
-      path: 'pages/teamcut/teamcut?periodid=' + 
-      common.currentData.periodid+
-        '&' + 'nickName=' + app.globalData.nickName+
-      '&' + 'avatarUrl=' + app.globalData.avatarUrl+
-      '&' + 'openid=' + app.globalData.openid,
+    this.overhhh()
 
-      // imageUrl: "/images/1.jpg", 
-      success: (res) => { 
-         console.log("转发成功", res); 
-         },
-      fail: (res) => {
-         console.log("转发失败", res);
+    switch (this.data.btn_index) {
+      case 0:
+      {
+          console.log("btn_index:", this.data.btn_index)
+          return {
+            title: 'BOAT',
+            path: 'pages/teamcut/teamcut?periodid=' +
+              common.currentData.periodid +
+              '&' + 'nickName=' + app.globalData.nickName +
+              '&' + 'avatarUrl=' + app.globalData.avatarUrl +
+              '&' + 'openid=' + app.globalData.openid,
+
+            // imageUrl: "/images/1.jpg", 
+            success: (res) => {
+              console.log("转发成功", res);
+
+            },
+            fail: (res) => {
+              console.log("转发失败", res);
+            }
+          };
+         
       }
-    }
+        break;
+      case 1:
+        {
+            console.log("btn_index:", this.data.btn_index)
+            wx.showToast({
+            title: '砍了！',
+            })
+            this.setData({
+              btn_index: 2
+            })
+           
+        }
+        break;
+      case 2:
+        {
+         
+          console.log("btn_index:", this.data.btn_index)
+          return {
+            title: 'BOAT',
+            path: 'pages/teamcut/teamcut?periodid=' +
+              this.data.periodid +
+              '&' + 'nickName=' + this.data.nickName +
+              '&' + 'avatarUrl=' + this.data.avatarUrl +
+              '&' + 'openid=' + this.data.openid,
 
+            // imageUrl: "/images/1.jpg", 
+            success: (res) => {
+              console.log("转发成功", res);
+            },
+            fail: (res) => {
+              console.log("转发失败", res);
+            }
+          };
+        }
+        break;
+      
+    }
     
   },
 
@@ -274,6 +335,26 @@ Page({
     wx.navigateTo({
       url: '/pages/myteam/myteam',
     })
+  },
+
+
+  overhhh:function(){
+    
+    if(this.data.btn_index==1)
+    {
+      this.setData({
+        t: 'Name'
+      })
+    }
+    else if (this.data.btn_index != 1)
+    {
+      this.setData({
+        t: 'share'
+      })
+    }
+
+    console.log("open_data", this.data.t)
+    //t: 'groupName'
   }
 
 

@@ -28,9 +28,9 @@
 
 <view class='tab'>
 
-
-<button class='fenxiang' open-type='share' >分享好友砍价</button>
-<button class='chakan' bindtap='team_inview'>查看拼团成员</button>
+<!-- <button bindtap='overhhh'>change</button> -->
+<button class='fenxiang' open-type='{{t}}'   >{{btn_text_left[btn_index]}}</button>
+<button class='chakan' bindtap='team_inview'>{{btn_text_right[btn_index]}}</button>
 </view>
 </view>
 
