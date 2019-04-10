@@ -4,39 +4,32 @@ var common=require('../../common/index.js');
 Page({
   data: {
     orderstatus:'',
-    state: '',
+    order: '',
+    //根据订单状态不同布局不同
+    title: '',
+    title1: '',
     color1: '',
-    ytime: '',
     color2: '',
-    state1: '',
-
-    order:'',
+    zuo: '',
+    you: '',
+    price: '',
+    price1: '',
+    quxiao: '关于取消：组团过程中因个人意愿取消订单，定金将不予退还',
+   
     
     url: "https://xiaoyibang.top:8001/uploads/",
-    name: '',//名字
-    preprice: '',//之前的价格
-    prodesc: '',//产品描述
-    presentprice: '',//当前价格
-    begintime: '',//开始时间
-    endtime: '',//结束时间
-    stat1: 1,//订单state
-    ytime1:'',//支付时间
-    ytime2:'',//完成时间
-    ytime3:'', //评价时间
+
 
 
 
 
     process: 0,//40比80作为进度条0-80
-    percent: '90',
-    zuo: '',
-    you: '',
-    price: '',
-    price1: '',
+    
+   
     tiao: false,
-    quxiao: '关于取消：组团过程中因个人意愿取消订单，定金将不予退还',
     height: '64%',
     top: '1140rpx',
+    //定时器时间
     setInter: '',
     day: '',
     hour: '',
@@ -95,11 +88,11 @@ Page({
  
   onReady: function () {
     var state=common.data.orderstatus;
-    if (state == 1) this.setData({ state: '预付完成  待完成拼团', color1: '#FEB25E ', color2: '#FE8F57 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '实时价', price1: '当前实时价', tiao: true, height: '55%', top: '1025rpx' });
-    if (state == 2) this.setData({ state: '拼单完成  待完成支付', color1: '#FF060D ', color2: '#FF64A7 ', state1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '最终价', price1: '最终交易价' });
-    if (state == 3) this.setData({ state: '支付完成  待确认结束', color1: '#2EA0B6 ', color2: '#00ADCD ', state1: '预付费用1元 已退还', zuo: '联系我们', you: '我已完成', price: '已支付', price1: '最终支付价', quxiao: '' });
-    if (state == 4) this.setData({ state: '订单完成  待评价完成', color1: '#5EE4FE ', color2: '#57ABFE ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '我要评价', price: '最终价', price1: '最终交易价', quxiao: '' });
-    if (state == 5) this.setData({ state: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', state1: '预付费用1元 已退还', zuo: '申请维权', you: '查看评价', price: '最终价', price1: '订单实付价', quxiao: '' });
+    if (state == 1) this.setData({title: '预付完成  待完成拼团', color1: '#FEB25E ', color2: '#FE8F57 ', title1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '实时价', price1: '当前实时价', tiao: true, height: '55%', top: '1025rpx' });
+    if (state == 2) this.setData({ title: '拼单完成  待完成支付', color1: '#FF060D ', color2: '#FF64A7 ', title1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '最终价', price1: '最终交易价' });
+    if (state == 3) this.setData({ title: '支付完成  待确认结束', color1: '#2EA0B6 ', color2: '#00ADCD ', title1: '预付费用1元 已退还', zuo: '联系我们', you: '我已完成', price: '已支付', price1: '最终支付价', quxiao: '' });
+    if (state == 4) this.setData({ title: '订单完成  待评价完成', color1: '#5EE4FE ', color2: '#57ABFE ', title1: '预付费用1元 已退还', zuo: '申请维权', you: '我要评价', price: '最终价', price1: '最终交易价', quxiao: '' });
+    if (state == 5) this.setData({ title: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', title1: '预付费用1元 已退还', zuo: '申请维权', you: '查看评价', price: '最终价', price1: '订单实付价', quxiao: '' });
     
     var order = common.currentorder;
     console.log(common.currentorder)
@@ -136,6 +129,7 @@ Page({
     }
     this.setData({
       order: order,
+      orderstatus:state,
     });
   
   },

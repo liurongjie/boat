@@ -4,9 +4,9 @@
 <button bindtap='back' class='back'>
 </button>
 <view style='position:absolute;top:150rpx;height:150rpx;width:100%;background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );color:white'>
-<text style='position:relative;top:20rpx;margin-left:50rpx;font-weight:200;'>{{state}}</text>
+<text style='position:relative;top:20rpx;margin-left:50rpx;font-weight:200;'>{{title}}</text>
 </view>
-<text style='position:absolute;top:250rpx;left:50rpx;font-weight:200;font-size:25rpx;z-index:99;color:white'>{{state1}}</text>
+<text style='position:absolute;top:250rpx;left:50rpx;font-weight:200;font-size:25rpx;z-index:99;color:white'>{{title1}}</text>
 <view style='position: absolute;top:330rpx;width: 90%;left: 5%;height:{{height}};box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10);'>
 </view>
  <image src='{{order.production__merchant__logo}}' class='image'></image>
@@ -53,12 +53,12 @@
 <!-- <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{ytime}}</text>
 <view class='line1'></view> -->
 
-<view wx:if='{{stat1==3}}'>
+<view wx:if='{{orderstatus==3}}'>
       <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime1}}</text>
       <view class='line2'></view>
 </view>
 
-<view wx:if='{{stat1==4}}'>
+<view wx:if='{{orderstatus==4}}'>
       <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime1}}</text>
       <view class='line2'></view>
       
@@ -67,7 +67,7 @@
 
 </view>
 
-<view wx:if='{{stat1==5}}'>
+<view wx:if='{{orderstatus==5}}'>
       <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime1}}</text>
       <view class='line2'></view>
       
