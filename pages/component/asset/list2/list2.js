@@ -40,7 +40,7 @@ Component({
         var timestamp = Math.round(new Date().getTime() / 1000);
         console.log('时间啊' + timestamp)
         var middle = common.orderlist[i];
-        middle.period__endtime = Math.round((common.orderlist[i].period__endtime - timestamp)/(3600*24));
+        middle.day = Math.floor((common.orderlist[i].period__endtime - timestamp)/(3600*24));
         order.push(middle);
       }
     }
