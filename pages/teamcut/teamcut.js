@@ -270,5 +270,11 @@ Page({
     return !0
   },
 
+  team_inview:function(){
+    wx.navigateTo({
+      url: '/pages/myteam/myteam',
+    })
+  }
+
 
 })

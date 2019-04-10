@@ -30,7 +30,7 @@
 
 
 <button class='fenxiang' open-type='share' >分享好友砍价</button>
-<view class='chakan' >查看拼团成员</view>
+<button class='chakan' bindtap='team_inview'>查看拼团成员</button>
 </view>
 </view>
 
