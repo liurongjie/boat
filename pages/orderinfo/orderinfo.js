@@ -1,6 +1,7 @@
 // compoment/dingdan/dingdan.js
 var jsonData = require('../../data/json.js');
 var common=require('../../common/index.js');
+var app = getApp();
 Page({
   data: {
     orderstatus:'',
@@ -210,10 +211,13 @@ Page({
 
   },
   gotomyteam:function(){
+    console.log(this.data.order)
     wx.navigateTo({
-      url: "/pages/teamcut/teamcut?steamid="+this.data.order.steam_id,
+      url: "/pages/teamcut/teamcut?steamid=" + this.data.order.steam_id + '&periodid=' + this.data.order.period_id
+        + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName
     })
   },
+    
   completeorder:function(){
     var that = this;
     wx.showModal({

@@ -14,17 +14,22 @@ Page({
    * 页面的初始数据
    */
   data: {
+  //云端获取
+    period:{},
     onecut:[],//团队成员
     twocut:[],//他人砍价
+    cutprice:0,
     res: [],//展示内容
-
+  //数据缓存
     periodid:'',
     nickName: '',
     avatarUrl: '',
-    openid: '',
+    steamid:'',
+  //状态0自我，状态1帮我砍，状态2帮好友分享
+    btn_index: 0,//状态
     btn_text_left:['分享好友砍价','砍这好友一刀','帮Ta召唤好友'],
     btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
-    btn_index:0,//状态
+  //
     selectPerson: true,
     firstPerson: '武汉大学',
     selectArea: false,
@@ -106,46 +111,19 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  //打算传播steamid.periodid,pic name就行
   onLoad: function(options) {
-    console.log(options.steamid)
+    this.setData(
+      {
+        periodid:options.periodid,
+        nickName:options.nickName,
+        avatarUrl:options.avatarUrl,
+        steamid:options.steamid,
+      }
+    )
     this.getorderdetail(options.steamid);
-    if(this.data.btn_index==1)
-    {
-      this.setData({
-        t: 'null'
-      })
-      console.log("分享功能", this.data.t)
-    }else{
-      console.log("分享功能",this.data.t)
-    }
-    
-
-
-    console.log("onLoad:",options)
-
-    if (!this.isEmptyObject(options.nickName)){
-      this.setData({
-        periodid: options.periodid,
-        nickName: options.nickName,
-        avatarUrl: options.avatarUrl,
-        openid: options.openid,
-        btn_index:1,
-  
-      })
-      console.log("options不为空")
-    }
-    else{
-      this.setData({
-        btn_index: 0,
-        nickName: app.globalData.nickName,
-        avatarUrl: app.globalData.avatarUrl ,
-     
-      })
-      console.log("options为空")
-    }
-     
-  
-
+    this.getperiod(options.periodid);
+    console.log(options)
   },
   getorderdetail:function(steamid){
     var that=this;
@@ -165,14 +143,34 @@ Page({
       }
     })
   },
+  getperiod:function(periodid){
+    var that = this;
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/getperiod',
+      data: {
+        'periodid': that.data.periodid,
+      },
+      success: (res) => {
+       
+        that.setData({
+          period: res.data,
+         
+        })
+       
+
+      }
+    })
+  },
   //合并onecut和twocut生成res
   merge:function(){
     var data=[];
+    var cutprice=0;
     for(var i=0;i<this.data.onecut.length;i++){
       var middle={};
       middle.pic = this.data.onecut[i].order__user__picture;
       middle.name = this.data.onecut[i].order__user__name;
       middle.cutprice = this.data.onecut[i].order__cutprice;
+      cutprice=cutprice+middle.cutprice;
       data.push(middle);
     }
     for (var i = 0; i < this.data.twocut.length; i++) {
@@ -180,11 +178,34 @@ Page({
       middle.pic = this.data.twocut[i].audience__picture;
       middle.name = this.data.twocut[i].audience__nickname;
       middle.cutprice = this.data.twocut[i].cutprice;
+      cutprice = cutprice + middle.cutprice;
       data.push(middle);
     }
     this.setData({
       res:data,
+      cutprice:cutprice,
     })
+
+  },
+  /**
+  * 用户点击右上角分享
+  */
+  onShareAppMessage: function () {
+      return {
+        title: 'BOAT',
+        path: 'pages/teamcut/teamcut?periodid=' +
+          this.data.periodid +
+          '&' + 'nickName=' + this.data.nickName +
+          '&' + 'avatarUrl=' + this.data.avatarUrl +
+          '&' + 'steamid=' + this.data.steamid,
+        success: (res) => {
+          console.log("转发成功", res);
+
+        },
+        fail: (res) => {
+          console.log("转发失败", res);
+        }
+      }
 
   },
   /**
@@ -231,107 +252,9 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
+ 
 
-    // common.currentData
-    console.log(common.currentData.periodid)
-    // this.overhhh()
-    if(this.data.btn_index==0){
-      return {
-        title: 'BOAT',
-        path: 'pages/teamcut/teamcut?periodid=' +
-          common.currentData.periodid +
-          '&' + 'nickName=' + app.globalData.nickName +
-          '&' + 'avatarUrl=' + app.globalData.avatarUrl +
-          '&' + 'openid=' + app.globalData.openid,
-
-        // imageUrl: "/images/1.jpg", 
-        success: (res) => {
-          console.log("转发成功", res);
-
-        },
-        fail: (res) => {
-          console.log("转发失败", res);
-        }
-      }
-    }
-    else{
-      return {
-        title: 'BOAT',
-        path: 'pages/teamcut/teamcut?periodid=' +
-          this.data.periodid +
-          '&' + 'nickName=' + this.data.nickName +
-          '&' + 'avatarUrl=' + this.data.avatarUrl +
-          '&' + 'openid=' + this.data.openid,
-
-        // imageUrl: "/images/1.jpg", 
-        success: (res) => {
-          console.log("转发成功", res);
-        },
-        fail: (res) => {
-          console.log("转发失败", res);
-        }
-      }
-    }
-    // switch (this.data.btn_index) {
-    //   case 0:
-          
-    //       return {
-    //         title: 'BOAT',
-    //         path: 'pages/teamcut/teamcut?periodid=' +
-    //           common.currentData.periodid +
-    //           '&' + 'nickName=' + app.globalData.nickName +
-    //           '&' + 'avatarUrl=' + app.globalData.avatarUrl +
-    //           '&' + 'openid=' + app.globalData.openid,
-
-    //         // imageUrl: "/images/1.jpg", 
-    //         success: (res) => {
-    //           console.log("转发成功", res);
-
-    //         },
-    //         fail: (res) => {
-    //           console.log("转发失败", res);
-    //         }
-    //       }
-    //       break;
-
-   
-    //   case 2:
-    //       return {
-    //         title: 'BOAT',
-    //         path: 'pages/teamcut/teamcut?periodid=' +
-    //           this.data.periodid +
-    //           '&' + 'nickName=' + this.data.nickName +
-    //           '&' + 'avatarUrl=' + this.data.avatarUrl +
-    //           '&' + 'openid=' + this.data.openid,
-
-    //         // imageUrl: "/images/1.jpg", 
-    //         success: (res) => {
-    //           console.log("转发成功", res);
-    //         },
-    //         fail: (res) => {
-    //           console.log("转发失败", res);
-    //         }
-    //       }
-    //       break;
-        
-      
-    // }
-
-   
-
-
-  },
-
-  isEmptyObject:function (data) {
-    var t;
-    for (t in data)
-      return !1;
-    return !0
-  },
+  
   //右边按钮点击
   team_inview:function(){
     console.log(this.data.onecut)
@@ -368,24 +291,6 @@ Page({
 
   }
 
-  // overhhh:function(){
-    
-  //   if(this.data.btn_index==1)
-  //   {
-  //     this.setData({
-  //       t: 'Name'
-  //     })
-  //   }
-  //   else if (this.data.btn_index != 1)
-  //   {
-  //     this.setData({
-  //       t: 'share'
-  //     })
-  //   }
-
-  //   console.log("open_data", this.data.t)
-  //   //t: 'groupName'
-  // }
 
 
 })
