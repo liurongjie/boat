@@ -173,5 +173,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+
+  backto_teamcut:function(){
+    wx.navigateBack({
+      delta: 1
+    });
   }
 })
