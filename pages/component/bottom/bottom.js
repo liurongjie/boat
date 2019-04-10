@@ -74,10 +74,17 @@ Component({
           break;
         case 2:
         //预付一元
-          that.setData({
-            status: 3
-          })
-          that.buyalone();
+          
+          if(common.data.steamid){
+            that.buytogether;
+          }
+          else{
+            that.buyalone();
+            that.setData({
+              status: 3
+            })
+          }
+          
           break;
         case 1:
         //我要上船
@@ -123,6 +130,39 @@ Component({
       })
       
       
+    },
+    buytogether: function () {
+
+      wx.request({
+        url: 'https://xiaoyibang.top:8001/dajia/buytogether',
+        data: {
+          "openid": app.globalData.openid,
+          "periodid": common.currentData.periodid,
+          "steamid":common.data.steamid,
+        },
+        success: (res) => {
+         
+          if(res.data.success){
+            common.currentorder.steam_id = res.data.steamid;
+            common.currentorder.period_id = common.currentData.periodid;
+            that.setData({
+              status: 3
+            })
+            app.getorderlist();
+          }
+          else{
+            wx.showToast({ //如果全部加载完成了也弹一个框
+              title: res.data.reason,
+              icon: 'success',
+              duration: 300
+            });
+          }
+          
+
+        }
+      })
+
+
     }
    
    

@@ -2,6 +2,7 @@ var data={
     index:1,
     orderstatus:1,
     ordertitle:"我的订单",
+    steamid:'',
   }
   //选择订单类型函数
   function chooseorderstatus(provider){

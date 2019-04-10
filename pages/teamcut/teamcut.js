@@ -283,11 +283,25 @@ Page({
   },
   //右边按钮点击
   team_inview: function () {
-    console.log(this.data.onecut)
     common.onecut = this.data.onecut;
-    wx.navigateTo({
-      url: "/pages/myteam/myteam",
-    })
+    if(this.data.btn_index==0||1){
+      wx.navigateTo({
+        url: "/pages/myteam/myteam",
+      })
+    }
+    else{
+      for (var i = 0; i < common.homelist.length; i++) {
+        if (this.data.periodid == common.home[i].periodid) {
+          common.currentData = common.home[i];
+          break;
+        }
+      }
+      common.data.steamid=this.data.steamid;
+      wx.navigateTo({
+        url: "/pages/toboat/toboat",
+      })
+    }
+    
 
   },
   //左边按钮点击
