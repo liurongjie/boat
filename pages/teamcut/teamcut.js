@@ -14,6 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    url: "https://xiaoyibang.top:8001/uploads/",
   //云端获取
     period:{},
     onecut:[],//团队成员
@@ -25,6 +26,7 @@ Page({
     nickName: '',
     avatarUrl: '',
     steamid:'',
+    openid:'',
   //状态0自我，状态1帮我砍，状态2帮好友分享
     btn_index: 0,//状态
     btn_text_left:['分享好友砍价','砍这好友一刀','帮Ta召唤好友'],
@@ -38,7 +40,9 @@ Page({
     hour: '20',
     minute: '43',
     second: '10',
-    t:'share',
+  //按钮类型
+    status:'share',
+    func:'login',
     list: [],
     hasMore: true, //列表是否有数据未加载
     page: 1,
@@ -119,11 +123,76 @@ Page({
         nickName:options.nickName,
         avatarUrl:options.avatarUrl,
         steamid:options.steamid,
+        openid:options.openid,
       }
     )
     this.getorderdetail(options.steamid);
     this.getperiod(options.periodid);
     console.log(options)
+    this.checkstatus();
+  },
+  //状态获取
+  checkstatus:function(){
+    if (!app.globalData.openid){
+      this.setData({
+        status: 'getUserInfo',
+        func:'login',
+      })
+    }
+    else{
+      if (app.globalData.openid==this.data.openid){
+        this.setData({
+          btn_index: 0,
+          status: 'share',
+          func: 'change_status',
+        })
+      }
+      else {
+        var check=true;//判断是否继续检查
+        for(var i=0;i<this.data.onecut.length;i++)
+        {
+          if (app.globalData.openid == this.data.onecut[i].order__user__openid)
+          {
+            this.setData({
+              btn_index: 0,
+              status: 'share',
+              func: 'change_status',
+            })
+            check=false;
+            break;
+          }
+        }
+        if(check){
+          for (var i = 0; i < this.data.twocut.length; i++) {
+            if (app.globalData.openid == this.data.twocut[i].audience__openid) {
+              this.setData({
+                btn_index: 2,
+                status: 'share',
+                func: 'change_status',
+              })
+              check=false;
+              break;
+            }
+          }
+        }
+        if(check){
+          this.setData({
+            btn_index: 1,
+            status: 'getUserInfo',
+            func: 'cutprice',
+          })
+        }
+      }
+      console.log(this.data.btn_index)
+    }
+    
+  },
+  login:function(e){
+    app.globalData.nickName = e.detail.userInfo.nickName
+    app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
+    app.globalData.gender = e.detail.userInfo.gender
+    app.login();
+    this.checkstatus();
   },
   getorderdetail:function(steamid){
     var that=this;
@@ -148,12 +217,13 @@ Page({
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/getperiod',
       data: {
-        'periodid': that.data.periodid,
+        'periodid': periodid,
       },
       success: (res) => {
-       
+        console.log(res.data)
+        res.data[0].production__merchant__logo = that.data.url + res.data[0].production__merchant__logo;
         that.setData({
-          period: res.data,
+          period: res.data[0],
          
         })
        
@@ -197,7 +267,8 @@ Page({
           this.data.periodid +
           '&' + 'nickName=' + this.data.nickName +
           '&' + 'avatarUrl=' + this.data.avatarUrl +
-          '&' + 'steamid=' + this.data.steamid,
+          '&' + 'steamid=' + this.data.steamid +
+          '&' + 'openid=' + this.data.openid,
         success: (res) => {
           console.log("转发成功", res);
 
@@ -208,6 +279,58 @@ Page({
       }
 
   },
+  //右边按钮点击
+  team_inview: function () {
+    console.log(this.data.onecut)
+    common.onecut = this.data.onecut;
+    wx.navigateTo({
+      url: "/pages/myteam/myteam",
+    })
+
+  },
+  //左边按钮点击
+  change_status: function () {
+
+    // if (this.data.btn_index == 0) {
+    //   console.log(this.data.btn_index)
+
+    // }
+    // else if (this.data.btn_index == 1)//
+    // {
+    //   console.log(this.data.btn_index)
+    //   wx.showToast({
+    //     title: '砍了',
+    //   })
+    //   this.setData({
+    //     t: 'share',
+    //     btn_index: 2,
+    //   })
+    // } else {
+    //   console.log(this.data.btn_index)
+    // }
+
+  },
+  //帮这好友砍一刀
+  cutprice: function (steamid) {
+    var that=this;
+    wx.request({
+      url: 'https://xiaoyibang.top:8001/dajia/cutprice',
+      data: {
+        'steamid': that.data.steamid,
+        'openid': app.globalData.openid,
+        'periodid':that.data.periodid,
+      },
+      success: (res) => {
+        that.getorderdetail(that.data.steamid);
+      }
+    })
+    this.setData({
+      btn_index: 2,
+      status: 'share',
+      func: 'change_status',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -255,42 +378,7 @@ Page({
  
 
   
-  //右边按钮点击
-  team_inview:function(){
-    console.log(this.data.onecut)
-    common.onecut = this.data.onecut;
-    wx.navigateTo({
-      url: "/pages/myteam/myteam" ,
-    })
-  
-  },
-  //左边按钮点击
-  change_statue:function(){
-      if(this.data.btn_index==0)
-      {
-        console.log(this.data.btn_index)
-        
-      }
-      else if (this.data.btn_index==1)//
-      {
-        console.log(this.data.btn_index)
-        wx.showToast({
-          title: '砍了',
-        })
-        this.setData({
-          t:'share',
-          btn_index:2,
-        })
-      }else{
-        console.log(this.data.btn_index)
-      }
-      
-  },
-  //帮这好友砍一刀
-  cutprice:function(steamid){
-
-  }
-
+ 
 
 
 })

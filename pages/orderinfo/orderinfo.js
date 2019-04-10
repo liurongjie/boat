@@ -214,7 +214,7 @@ Page({
     console.log(this.data.order)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + this.data.order.steam_id + '&periodid=' + this.data.order.period_id
-        + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName
+        + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
     })
   },
     

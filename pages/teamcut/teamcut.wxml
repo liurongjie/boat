@@ -16,20 +16,20 @@
 <text style='position:absolute;font-size:24rpx;top:60rpx;color:grey;'>{{nickName}}</text>
 <text style='position:absolute;font-size:28rpx;top:120rpx;'>快和我一起组团报名，享受同等价格吧</text>
 <view class='cont1'>
-<image src='/static/pic/1.jpg'style='position:absolute;width:125rpx;height:125rpx;left:25rpx;top:25rpx;'></image>
-<text class='name'>{{period.name}}</text>
-<text style='position:absolute;font-size:18rpx;top:100rpx;color:grey;left:180rpx;'>累计参团997次</text>
+<image src='{{period.production__merchant__logo}}'style='position:absolute;width:125rpx;height:125rpx;left:25rpx;top:25rpx;'></image>
+<text class='name'>{{period.production__name}}</text>
+<text style='position:absolute;font-size:18rpx;top:100rpx;color:grey;left:180rpx;'>累计参团{{period.number}}次</text>
 <text style='position:absolute;font-size:18rpx;top:130rpx;color:grey;left:180rpx;'>好评率91.5%</text>
-<text style='position:absolute;font-size:60rpx;top:15rpx;color:#CB2C29;left:450rpx;'>2054</text>
+<text style='position:absolute;font-size:60rpx;top:15rpx;color:#CB2C29;left:450rpx;'>{{period.startprice-cutprice-period.cutprice}}</text>
 <text style='position:absolute;font-size:30rpx;top:60rpx;color:#CB2C29;left:420rpx;'>¥</text>
-<text style='position:absolute;font-size:16rpx;top:100rpx;color:grey;left:450rpx;'>初始价格为2800元</text>
+<text style='position:absolute;font-size:16rpx;top:100rpx;color:grey;left:450rpx;'>初始价格为{{period.startprice}}0元</text>
 <text style='position:absolute;font-size:16rpx;top:130rpx;color:grey;left:430rpx;'>目前砍价领先94%用户</text>
 </view>
 
 <view class='tab'>
 
 <!-- <button bindtap='overhhh'>change</button> -->
-<button class='fenxiang' open-type='{{t}}'  bindtap='change_statue' >{{btn_text_left[btn_index]}}</button>
+<button class='fenxiang' open-type='{{status}}'  bindtap='{{func}}' >{{btn_text_left[btn_index]}}</button>
 <button class='chakan' bindtap='team_inview'>{{btn_text_right[btn_index]}}</button>
 </view>
 </view>

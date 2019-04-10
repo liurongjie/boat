@@ -78,31 +78,11 @@ Page({
   },
 
   onGotUserInfo: function (e) {
-    var app1=app;
-    var code;
+
     app.globalData.nickName = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
-    if(!app.globalData.openid){
-      wx.login({
-        success: res => {
-          code = res.code;
-          wx.request({
-            url: 'https://xiaoyibang.top:8001/dajia/login',
-            data: {
-              'nickname': app.globalData.nickName,
-              'gender': app.globalData.gender,
-              'code': res.code,
-              'pic': app.globalData.avatarUrl
-            },
-            success: (res) => {
-              wx.setStorageSync('information', res.data)
-              app.getuserinformation();
-            },
-          })
-        }
-      })
-    }
+    app.login();
    
 
     var animation =wx.createAnimation({

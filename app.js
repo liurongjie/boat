@@ -35,6 +35,30 @@ App({
     that.getorderlist();
     
   },
+  login:function(){
+    var that=this;
+    if (!that.globalData.openid) {
+      wx.login({
+        success: res => {
+
+          wx.request({
+            url: 'https://xiaoyibang.top:8001/dajia/login',
+            data: {
+              'nickname': that.globalData.nickName,
+              'gender': that.globalData.gender,
+              'code': res.code,
+              'pic': that.globalData.avatarUrl
+            },
+            success: (res) => {
+              wx.setStorageSync('information', res.data)
+              this.getuserinformation(); 
+            },
+          })
+        }
+      })
+    }
+   
+  },
   getuserinformation:function(){
     var information = wx.getStorageSync('information')
     console.log(information)
@@ -80,7 +104,7 @@ App({
     nickName: '',
     avatarUrl: '',
     gender: 0,
-
+    
     
     userInfo: null,
     h:'',
