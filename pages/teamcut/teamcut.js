@@ -20,6 +20,7 @@ Page({
     onecut:[],//团队成员
     twocut:[],//他人砍价
     cutprice:0,
+    number:0,//多少位朋友砍价
     res: [],//展示内容
   //数据缓存
     periodid:'',
@@ -254,6 +255,7 @@ Page({
     this.setData({
       res:data,
       cutprice:cutprice,
+      number:data.length,
     })
 
   },

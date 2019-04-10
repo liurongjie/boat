@@ -31,7 +31,7 @@ Component({
   ready:function(){
     var order=[];
     if (common.data.orderstatus=='1'){
-
+      
       this.setData({ orderstatus: true });
     }
     
