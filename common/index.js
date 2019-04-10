@@ -25,6 +25,9 @@ function chooseorderstatus(provider){
     case '5': 
       data.ordertitle = '订单完成';
        break;
+    case '0':
+      data.ordertitle = '全部订单';
+      break;
   }
 }
 //首页商品信息

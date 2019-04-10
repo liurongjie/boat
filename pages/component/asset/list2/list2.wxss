@@ -99,3 +99,19 @@
   height: 100%;
  
 }
+.button{
+  position: absolute;
+  width: 150rpx;
+  height: 50rpx;
+  border-radius: 35rpx;
+  background-color: #FDB38F;
+  right: -25rpx;
+  bottom: -25rpx;
+
+  font-size: 30rpx;
+  font-weight: 200;
+  text-align:center;
+  line-height: 50rpx;
+  color: white;
+
+}

@@ -14,7 +14,7 @@
 }}</text>
 <text style='position:absolute;width: 350rpx;height: 150rpx;left:330rpx;top: 420rpx;font-size:30rpx;'>[一月试车+车接车送]</text>
 <text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 470rpx;font-size:20rpx;color:#FE8F57'>初始价格为{{order.period__startprice}}元</text>
-<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 510rpx;font-size:20rpx;color:grey'>目前已经超过{{percent}}%用户</text>
+<text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 510rpx;font-size:20rpx;color:grey'>目前已经超过90%用户</text>
 
 <view style='position: absolute;left: 10%;width: 80%;top:550rpx;height:120rpx;background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );'>
 <text class='boat'>BOAT</text>
@@ -44,36 +44,46 @@
   <text style='position:absolute;bottom:38rpx;margin-left:20rpx;font-weight:100;'>{{price}}:</text>
   <text style='position:absolute;bottom:38rpx;left:160rpx;color:red;font-weight:100;'>{{order.period__startprice-order.steam__cutprice
 -order.period__cutprice}}元</text>
-  <button bindtap='zuo' style='background-color:rgba(100,100,100,0.5);height:120rpx;position:absolute;right:180rpx;bottom:0rpx;width:180rpx;border-radius: 0rpx;color:white;font-size:30rpx;line-height:120rpx;'>{{zuo}}</button>
+  
+  <button  wx:if='{{orderstatus==3||orderstatus==4||orderstatus==5}}' open-type="contact"  class='zuobutton'>{{zuo}}</button>
+  <button bindtap='zuo' wx:if='{{orderstatus==1||orderstatus==2}}' class='zuobutton'>{{zuo}}</button>
   <button bindtap='you'style='background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );height:120rpx;position:absolute;right:0rpx;bottom:0rpx;width:180rpx;border-radius: 0rpx;color:white;font-size:30rpx;line-height:120rpx;'>{{you}}</button>
 </view>
 
 <text style='position:absolute;top:740rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{order.time1}}</text>
 <view class='line'></view>
-<!-- <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>建团完成 : {{ytime}}</text>
-<view class='line1'></view> -->
+<view wx:if='{{orderstatus==2}}'>
+       <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>拼团完成 : {{order.time2}}</text>
+       <view class='line1'></view>
+</view>
 
 <view wx:if='{{orderstatus==3}}'>
-      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime1}}</text>
+      <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>拼团完成 : {{order.time2}}</text>
+       <view class='line1'></view>
+      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{order.time3}}</text>
       <view class='line2'></view>
 </view>
 
 <view wx:if='{{orderstatus==4}}'>
-      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime1}}</text>
+      <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>拼团完成 : {{order.time2}}</text>
+       <view class='line1'></view>
+      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{order.time3}}</text>
       <view class='line2'></view>
       
-      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime2}}</text>
+      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime4}}</text>
       <view class='line3'></view>
 
 </view>
 
 <view wx:if='{{orderstatus==5}}'>
-      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{ytime1}}</text>
+      <text style='position:absolute;top:810rpx;left:80rpx;font-size: 24rpx;'>拼团完成 : {{order.time2}}</text>
+       <view class='line1'></view>
+      <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{order.time3}}</text>
       <view class='line2'></view>
       
-      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime2}}</text>
+      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>订单完成时间 : {{order.time4}}</text>
       <view class='line3'></view>
       
-      <text style='position:absolute;top:1020rpx;left:80rpx;font-size: 24rpx;'>评价时间 : {{ytime3}}</text>
+      <text style='position:absolute;top:1020rpx;left:80rpx;font-size: 24rpx;'>评价时间 : {{order.time5}}</text>
       <view class='line4'></view>
 </view>
