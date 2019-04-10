@@ -101,17 +101,17 @@
 }
 .button{
   position: absolute;
-  width: 200rpx;
-  height: 70rpx;
+  width: 150rpx;
+  height: 50rpx;
   border-radius: 35rpx;
   background-color: #FDB38F;
-  right: -40rpx;
-  bottom: -40rpx;
+  right: -25rpx;
+  bottom: -25rpx;
 
   font-size: 30rpx;
   font-weight: 200;
   text-align:center;
-  line-height: 70rpx;
+  line-height: 50rpx;
   color: white;
 
 }
