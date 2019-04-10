@@ -190,6 +190,7 @@ Page({
               'orderid': that.data.order.orderid,
             },
             success: (res) => {
+              app.getorderlist();
             }
           })
 

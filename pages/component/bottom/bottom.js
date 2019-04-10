@@ -100,7 +100,7 @@ Component({
         status: 2
       })
       for(var  i=0;i<common.orderlist.length;i++){
-        if (common.currentData.periodid == common.orderlist[i].period_id){
+        if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status!=0){
           common.currentorder=common.orderlist[i];
 
           this.setData({

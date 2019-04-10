@@ -12,7 +12,7 @@
   <notverify wx:if="{{status==0}}"></notverify>
   <list wx:if="{{list==1&&status==1}}" bindtap='changelist' ></list>
   <list1 wx:if="{{list==2&&status==1}}"></list1>
-  <list2 wx:if="{{list==3&&status==1}}"></list2>
+  <list2 wx:if="{{list==3&&status==1}}" bindtap='changelist'></list2>
   <list3 wx:if="{{list==4&&status==1}}"></list3>
   <list4 wx:if="{{list==5&&status==1}}"></list4>
   <list5 wx:if="{{list==6&&status==1}}"></list5>

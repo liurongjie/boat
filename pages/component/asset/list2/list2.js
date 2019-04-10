@@ -13,7 +13,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    orderstatus:false,
+    
     title:'',
     url:"https://xiaoyibang.top:8001/uploads/",
     order:[],
@@ -30,10 +30,7 @@ Component({
   },
   ready:function(){
     var order=[];
-    if (common.data.orderstatus=='1'){
-      
-      this.setData({ orderstatus: true });
-    }
+    
     
     //显示全部
     if (common.data.orderstatus == '0') {
@@ -92,6 +89,7 @@ Component({
       if (e.currentTarget.dataset.item.status!='0'){
         common.currentorder = e.currentTarget.dataset.item;//获取data-index
         console.log(common.currentorder)
+        app.list = 1;
         wx.navigateTo({
           url: '../orderinfo/orderinfo'
         })
