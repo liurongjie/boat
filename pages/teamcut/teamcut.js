@@ -24,7 +24,7 @@ Page({
     openid: '',
     btn_text_left:['分享好友砍价','砍这好友一刀','帮Ta召唤好友'],
     btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
-    btn_index:0,
+    btn_index:0,//状态
     selectPerson: true,
     firstPerson: '武汉大学',
     selectArea: false,
@@ -97,6 +97,7 @@ Page({
       selectArea: false,
     })
   },
+  //页面返回
   back: function() {
     wx.navigateBack({
       delta: 1
@@ -117,15 +118,7 @@ Page({
     }else{
       console.log("分享功能",this.data.t)
     }
-  
-
-   
-    // if (this.isEmptyObject(options)) {
-    //   console.log('options:', options, "is empty")
-    // }
-    // else {
-    //   console.log('options:', options, "is not empty")
-    // }
+    
 
 
     console.log("onLoad:",options)
@@ -246,51 +239,87 @@ Page({
     // common.currentData
     console.log(common.currentData.periodid)
     // this.overhhh()
+    if(this.data.btn_index==0){
+      return {
+        title: 'BOAT',
+        path: 'pages/teamcut/teamcut?periodid=' +
+          common.currentData.periodid +
+          '&' + 'nickName=' + app.globalData.nickName +
+          '&' + 'avatarUrl=' + app.globalData.avatarUrl +
+          '&' + 'openid=' + app.globalData.openid,
 
-    switch (this.data.btn_index) {
-      case 0:
+        // imageUrl: "/images/1.jpg", 
+        success: (res) => {
+          console.log("转发成功", res);
+
+        },
+        fail: (res) => {
+          console.log("转发失败", res);
+        }
+      }
+    }
+    else{
+      return {
+        title: 'BOAT',
+        path: 'pages/teamcut/teamcut?periodid=' +
+          this.data.periodid +
+          '&' + 'nickName=' + this.data.nickName +
+          '&' + 'avatarUrl=' + this.data.avatarUrl +
+          '&' + 'openid=' + this.data.openid,
+
+        // imageUrl: "/images/1.jpg", 
+        success: (res) => {
+          console.log("转发成功", res);
+        },
+        fail: (res) => {
+          console.log("转发失败", res);
+        }
+      }
+    }
+    // switch (this.data.btn_index) {
+    //   case 0:
           
-          return {
-            title: 'BOAT',
-            path: 'pages/teamcut/teamcut?periodid=' +
-              common.currentData.periodid +
-              '&' + 'nickName=' + app.globalData.nickName +
-              '&' + 'avatarUrl=' + app.globalData.avatarUrl +
-              '&' + 'openid=' + app.globalData.openid,
+    //       return {
+    //         title: 'BOAT',
+    //         path: 'pages/teamcut/teamcut?periodid=' +
+    //           common.currentData.periodid +
+    //           '&' + 'nickName=' + app.globalData.nickName +
+    //           '&' + 'avatarUrl=' + app.globalData.avatarUrl +
+    //           '&' + 'openid=' + app.globalData.openid,
 
-            // imageUrl: "/images/1.jpg", 
-            success: (res) => {
-              console.log("转发成功", res);
+    //         // imageUrl: "/images/1.jpg", 
+    //         success: (res) => {
+    //           console.log("转发成功", res);
 
-            },
-            fail: (res) => {
-              console.log("转发失败", res);
-            }
-          }
-          break;
+    //         },
+    //         fail: (res) => {
+    //           console.log("转发失败", res);
+    //         }
+    //       }
+    //       break;
 
    
-      case 2:
-          return {
-            title: 'BOAT',
-            path: 'pages/teamcut/teamcut?periodid=' +
-              this.data.periodid +
-              '&' + 'nickName=' + this.data.nickName +
-              '&' + 'avatarUrl=' + this.data.avatarUrl +
-              '&' + 'openid=' + this.data.openid,
+    //   case 2:
+    //       return {
+    //         title: 'BOAT',
+    //         path: 'pages/teamcut/teamcut?periodid=' +
+    //           this.data.periodid +
+    //           '&' + 'nickName=' + this.data.nickName +
+    //           '&' + 'avatarUrl=' + this.data.avatarUrl +
+    //           '&' + 'openid=' + this.data.openid,
 
-            // imageUrl: "/images/1.jpg", 
-            success: (res) => {
-              console.log("转发成功", res);
-            },
-            fail: (res) => {
-              console.log("转发失败", res);
-            }
-          }
-          break;
+    //         // imageUrl: "/images/1.jpg", 
+    //         success: (res) => {
+    //           console.log("转发成功", res);
+    //         },
+    //         fail: (res) => {
+    //           console.log("转发失败", res);
+    //         }
+    //       }
+    //       break;
         
       
-    }
+    // }
 
    
 
@@ -303,7 +332,7 @@ Page({
       return !1;
     return !0
   },
-
+  //右边按钮点击
   team_inview:function(){
     console.log(this.data.onecut)
     common.onecut = this.data.onecut;
@@ -312,14 +341,14 @@ Page({
     })
   
   },
-
+  //左边按钮点击
   change_statue:function(){
       if(this.data.btn_index==0)
       {
         console.log(this.data.btn_index)
         
       }
-      else if (this.data.btn_index==1)
+      else if (this.data.btn_index==1)//
       {
         console.log(this.data.btn_index)
         wx.showToast({
@@ -334,6 +363,10 @@ Page({
       }
       
   },
+  //帮这好友砍一刀
+  cutprice:function(steamid){
+
+  }
 
   // overhhh:function(){
     
