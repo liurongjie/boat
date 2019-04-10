@@ -29,7 +29,7 @@
 <view class='tab'>
 
 <!-- <button bindtap='overhhh'>change</button> -->
-<button class='fenxiang' open-type='{{t}}'   >{{btn_text_left[btn_index]}}</button>
+<button class='fenxiang' open-type='{{t}}'  bindtap='change_statue' >{{btn_text_left[btn_index]}}</button>
 <button class='chakan' bindtap='team_inview'>{{btn_text_right[btn_index]}}</button>
 </view>
 </view>

@@ -87,12 +87,12 @@ Page({
     hour: '20',
     minute: '43',
     second: '10',
-    t:'',
+    t:'share',
     list: [],
     hasMore: true, //列表是否有数据未加载
     page: 1,
     size: 8, //每页8条数据
-    
+    flag_hhh:'',
 
   },
   lower: function() {
@@ -159,7 +159,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    if(this.data.btn_index==1)
+    {
+      this.setData({
+        t: 'null'
+      })
+    }else{
+      console.log("分享功能",this.data.t)
+    }
   
 
     wx.request({
@@ -259,12 +266,11 @@ Page({
 
     // common.currentData
     console.log(common.currentData.periodid)
-    this.overhhh()
+    // this.overhhh()
 
     switch (this.data.btn_index) {
       case 0:
-      {
-          console.log("btn_index:", this.data.btn_index)
+          
           return {
             title: 'BOAT',
             path: 'pages/teamcut/teamcut?periodid=' +
@@ -281,26 +287,11 @@ Page({
             fail: (res) => {
               console.log("转发失败", res);
             }
-          };
-         
-      }
-        break;
-      case 1:
-        {
-            console.log("btn_index:", this.data.btn_index)
-            wx.showToast({
-            title: '砍了！',
-            })
-            this.setData({
-              btn_index: 2
-            })
-           
-        }
-        break;
+          }
+          break;
+
+   
       case 2:
-        {
-         
-          console.log("btn_index:", this.data.btn_index)
           return {
             title: 'BOAT',
             path: 'pages/teamcut/teamcut?periodid=' +
@@ -316,12 +307,15 @@ Page({
             fail: (res) => {
               console.log("转发失败", res);
             }
-          };
-        }
-        break;
+          }
+          break;
+        
       
     }
-    
+
+   
+
+
   },
 
   isEmptyObject:function (data) {
@@ -337,25 +331,46 @@ Page({
     })
   },
 
+  change_statue:function(){
+      if(this.data.btn_index==0)
+      {
+        console.log(this.data.btn_index)
+        
+      }
+      else if (this.data.btn_index==1)
+      {
+        console.log(this.data.btn_index)
+        wx.showToast({
+          title: '砍了',
+        })
+        this.setData({
+          t:'share',
+          btn_index:2,
+        })
+      }else{
+        console.log(this.data.btn_index)
+      }
+      
+  },
 
-  overhhh:function(){
+  // overhhh:function(){
     
-    if(this.data.btn_index==1)
-    {
-      this.setData({
-        t: 'Name'
-      })
-    }
-    else if (this.data.btn_index != 1)
-    {
-      this.setData({
-        t: 'share'
-      })
-    }
+  //   if(this.data.btn_index==1)
+  //   {
+  //     this.setData({
+  //       t: 'Name'
+  //     })
+  //   }
+  //   else if (this.data.btn_index != 1)
+  //   {
+  //     this.setData({
+  //       t: 'share'
+  //     })
+  //   }
 
-    console.log("open_data", this.data.t)
-    //t: 'groupName'
-  }
+  //   console.log("open_data", this.data.t)
+  //   //t: 'groupName'
+  // }
 
 
 })
