@@ -29,7 +29,12 @@ Component({
 
   },
 
+  
+
   ready:function(){
+
+   
+
     this.setData({
       data_list: common.currentData,
       start_time: common.currentData.starttime,

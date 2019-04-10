@@ -59,7 +59,7 @@
             </view>
            
             <view class='shake_text1'>
-                  <text style='color:white;font-weight:500;font-size:18rpx;'>￥</text><text style='color:white;font-weight:700;font-size:36rpx;'>{{item.startprice-item.saveprice}}</text>
+                  <text style='color:white;font-weight:500;font-size:18rpx;'>￥</text><text style='color:white;font-weight:700;font-size:36rpx;'>{{item.startprice-item.cutprice}}</text>
             </view>
             
             <view class='shake_text2'>

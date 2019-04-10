@@ -3,7 +3,7 @@
 </view>
 <view class='middle'>
   <view class='top'>
-  <image src='/static/back.svg' ></image>
+  <image src='/static/back.svg' bindtap='backto_teamcut'></image>
   <view class='rule'>活动规则</view>
   </view>
    

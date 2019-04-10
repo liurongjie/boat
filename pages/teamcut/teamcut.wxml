@@ -10,9 +10,10 @@
 <view class='regulate'>活动规则</view>
 
 
+
 <view class='content'>
-<image src='/static/pic/1.jpg' class='circle'></image>
-<text style='position:absolute;font-size:24rpx;top:60rpx;color:grey;'>珞珈山李坤</text>
+<image src='{{avatarUrl}}' class='circle'></image>
+<text style='position:absolute;font-size:24rpx;top:60rpx;color:grey;'>{{nickName}}</text>
 <text style='position:absolute;font-size:28rpx;top:120rpx;'>快和我一起组团报名，享受同等价格吧</text>
 <view class='cont1'>
 <image src='/static/pic/1.jpg'style='position:absolute;width:125rpx;height:125rpx;left:25rpx;top:25rpx;'></image>
@@ -26,8 +27,10 @@
 </view>
 
 <view class='tab'>
-<view class='fenxiang'>分享好友砍价</view>
-<view class='chakan'>查看拼团成员</view>
+
+
+<button class='fenxiang' open-type='share' >分享好友砍价</button>
+<button class='chakan' bindtap='team_inview'>查看拼团成员</button>
 </view>
 </view>
 
