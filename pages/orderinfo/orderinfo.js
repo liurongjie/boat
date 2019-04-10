@@ -152,39 +152,20 @@ Page({
     return commonTime;
   },
   zuo:function(){
-    console.log("正在运行左")
-    var state = this.data.orderstatus;
-    var that=this;
-    switch (state) {
-      case '1':
-        this.deleteorder();
-        break;
-      case '2':
-        this.deleteorder();
-        break;
-      case '3':
-        
-        break;
-      case '4':
-        
-        break;
-      case '5':
-        
-        break;
-    }
+    this.deleteorder();
   },
   you:function(){
     var state = this.data.orderstatus;
     var that = this;
     switch (state) {
       case '1':
-        
+        this.gotomyteam();
         break;
       case '2':
-        
+        this.gotomyteam();
         break;
       case '3':
-
+        this.completeorder();
         break;
       case '4':
 
@@ -225,6 +206,44 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+
+  },
+  gotomyteam:function(){
+    wx.navigateTo({
+      url: "/pages/teamcut/teamcut",
+    })
+  },
+  completeorder:function(){
+    var that = this;
+    wx.showModal({
+      title: '请确认完成订单',
+      content: '',
+      success: function (res) {
+        if (res.confirm) {
+          wx.request({
+            url: 'https://xiaoyibang.top:8001/dajia/completeorder',
+            data: {
+              'orderid': that.data.order.orderid,
+            },
+            success: (res) => {
+            }
+          })
+
+          //这里是点击了确定以后
+          console.log('用户点击确定');
+          wx.navigateBack({
+            delta: 1
+          })
+        } else {//这里是点击了取消以后
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  comment:function(){
+
+  },
+  checkcomment:function(){
 
   },
 
