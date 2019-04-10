@@ -1,0 +1,110 @@
+.back{
+  position: absolute;
+  top: 90rpx;
+  left:50rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.title{
+  position: absolute;
+  width: 100%;
+  height: 180rpx;
+  
+  background: linear-gradient(to bottom right, #5EE4FE ,#57ABFE  );
+}
+.ni{
+  position: absolute;
+  top: 52%;
+  height: 10%;
+  width: 100%;
+ 
+
+}
+.xi{
+  position: absolute;
+  width: 100%;
+  bottom: 0rpx;
+  height: 38%;
+
+}
+.t{
+  position: absolute;
+  left: 140rpx;
+  top: 80rpx;
+  color: white;
+  font-size: 40rpx;
+  font-weight: 100;
+  
+}
+
+.pic{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  left: 160rpx;
+  top: 50rpx;
+}
+.input{
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  
+  word-break:break-all; 
+}
+.re{
+  position: absolute;
+  top: 400rpx;
+   width: 100%;
+  height: 60%;
+
+}
+.stars{
+  position: absolute;
+  left: 300rpx;
+  
+  box-sizing: border-box;
+  top: 12%;
+  background-color: #fff;
+}
+.stars image{
+  width: 190rpx;
+  height: 190rpx;
+  border: 1rpx solid #000;
+  position: absolute;
+  top: 41rpx;
+  left: 36rpx;
+}
+.stars .content view{
+  font-size: 32rpx;
+  color: #4a4a4a;
+}
+.stars .content>view:last-of-type{
+  height: 40rpx;
+  margin-top: 48rpx;
+}
+.stars .content>view:last-of-type view{
+  float: left;
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 25rpx;
+  background-size: 100% 100%;
+}
+.p{
+  font-size: 36rpx;
+  position: absolute;
+  top: 0rpx;
+  opacity: 0.3;
+  font-weight: 100;
+  padding: 20rpx;
+}
+.upload{
+  bottom:50%; 
+  position: absolute;
+  width:200rpx;
+  height: 200rpx;
+  
+  left: 5%;
+  border:1px dashed rgb(219, 201, 201);
+  display: flex;
+  justify-content: center;
+}

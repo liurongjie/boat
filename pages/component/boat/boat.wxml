@@ -4,7 +4,7 @@
   <button class='btn_right'> 校园日常</button> -->
 </view>
 
-<view class="btn_2">
+<view class="btn_2" style='position:absolute;top:10%'>
   <button class='btn_sec1'   bindtap='btn_1' > {{btn_1_text}}</button>
   <button class='btn_sec2'   bindtap='btn_2' > {{btn_2_text}}</button> 
   <button class='btn_sec3'   bindtap='btn_3' > {{btn_3_text}}</button>
@@ -16,15 +16,13 @@
     <block>
       <swiper-item wx:for="{{production}}" wx:for-index="index" wx:for-item="item"  wx:if="{{item.type==btn_type}}" wx:key="production_name"
         data-bean='{{item}}' bindtap='gotoboat'>      
-        <view class='shake1'>
-<image src='/static/icon/bigboat.svg'style="width:100%;height:100%"></image>
-</view>
+       
         <block >
           <view style='font-size:50rpx;color:white;font-weight:600;margin-left:60rpx;'>
            {{item.production__name}}
            </view>
            <view class='pro_inform_text'>{{item.production__introduction}}</view>
-           <view class='inform'>
+           <view class='inform' style='z-index:10'>
                   <view class='pro_data'>
                     
                     <view class='pro_data_block'>
@@ -54,22 +52,25 @@
                    </view>
            </view>
 
-           
-          <view  style="position:absolute;width:200rpx;height:200rpx;top:{{screen_height*0.35}}rpx;margin-left:30rpx;margin-top:-230rpx;">
+          <view style='width:100%;height:100%;'>
+          <view  style="position:absolute;width:100%;height:200rpx;bottom:50%;margin-left:45rpx">
             <view class='shaketoo' >
                   <image  class='img_chuanfan shengsuo' src='../../../static/pic/chuanfan.svg'></image>
             </view>
-
+           
             <view class='shake_text1'>
                   <text style='color:white;font-weight:500;font-size:18rpx;'>￥</text><text style='color:white;font-weight:700;font-size:36rpx;'>{{item.startprice-item.cutprice}}</text>
             </view>
-
+            
             <view class='shake_text2'>
                   <text class='text_2'>初始价{{item.startprice}}</text>
             </view>
           </view>
 
-
+          <view class='shake1'>
+               <image src='/static/icon/bigboat.svg'style="width:100%;height:100%"></image>
+            </view>
+</view>
         </block>
         
        
