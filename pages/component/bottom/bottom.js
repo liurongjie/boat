@@ -74,9 +74,9 @@ Component({
           break;
         case 2:
         //预付一元
-          
+          console.log(common.data.steamid)
           if(common.data.steamid){
-            that.buytogether;
+            that.buytogether();
           }
           else{
             that.buyalone();
@@ -113,6 +113,7 @@ Component({
       
     },
     buyalone:function(){
+      var that=this;
       console.log(app.globalData.openid)
       wx.request({
         url: 'https://xiaoyibang.top:8001/dajia/buyalone',
@@ -132,7 +133,7 @@ Component({
       
     },
     buytogether: function () {
-
+      console.log("运行buytogether")
       wx.request({
         url: 'https://xiaoyibang.top:8001/dajia/buytogether',
         data: {
