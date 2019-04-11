@@ -12,7 +12,7 @@
 }
 
 
-.scroll{height:60%;left: 5%;position: absolute;top: 450rpx;margin-bottom: 150rpx;}  
+.scroll{height:54%;left: 5%;position: absolute;top: 450rpx;margin-bottom: 150rpx;}  
 
 .img{
   position: absolute;
