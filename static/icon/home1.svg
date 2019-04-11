@@ -1,28 +1,33 @@
-<svg id="组_6" data-name="组 6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g id="矩形_4" data-name="矩形 4" fill="none" stroke="#3cd2ff" stroke-width="1">
-    <rect width="24" height="24" stroke="none"/>
-    <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
-  </g>
-  <g id="icon">
-    <g id="Icon_Detail1" data-name="Icon Detail1" transform="translate(0 2)">
-      <line id="直线_1" data-name="直线 1" x2="21" transform="translate(1.5 8.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
-      <line id="直线_3" data-name="直线 3" x2="4" transform="translate(1.5 3.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
-      <line id="直线_4" data-name="直线 4" x2="5" transform="translate(1.5 5.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
-      <g id="矩形_5" data-name="矩形 5" transform="translate(17 1)" fill="none" stroke="#3cd2ff" stroke-width="1">
-        <rect width="5" height="5" stroke="none"/>
-        <rect x="0.5" y="0.5" width="4" height="4" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37">
+  <g id="组_3" data-name="组 3" transform="translate(6 2)">
+    <text id="近期活动" transform="translate(-6 33)" fill="#40d2ff" font-size="9" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="0" y="0">活</tspan><tspan y="0" font-family="MicrosoftJhengHeiUIRegular, Microsoft JhengHei UI">动</tspan><tspan y="0">清</tspan><tspan y="0" font-family="MicrosoftJhengHeiUIRegular, Microsoft JhengHei UI">单</tspan></text>
+    <g id="组_5" data-name="组 5" transform="translate(0 -1)">
+      <g id="矩形_4" data-name="矩形 4" transform="translate(0 -1)" fill="none" stroke="#3dd2ff" stroke-width="1">
+        <rect width="24" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
       </g>
-      <line id="直线_1-2" data-name="直线 1" x2="6" transform="translate(1.5 1.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
-    </g>
-    <g id="Icon_Detail2" data-name="Icon Detail2" transform="translate(0 12)">
-      <line id="直线_1-3" data-name="直线 1" x2="21" transform="translate(1.5 8.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
-      <line id="直线_3-2" data-name="直线 3" x2="4" transform="translate(1.5 3.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
-      <line id="直线_4-2" data-name="直线 4" x2="5" transform="translate(1.5 5.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
-      <g id="矩形_5-2" data-name="矩形 5" transform="translate(17 1)" fill="none" stroke="#3cd2ff" stroke-width="1">
-        <rect width="5" height="5" stroke="none"/>
-        <rect x="0.5" y="0.5" width="4" height="4" fill="none"/>
+      <g id="icon" transform="translate(0 -1)">
+        <g id="Icon_Detail1" data-name="Icon Detail1" transform="translate(0 2)">
+          <line id="直线_1" data-name="直线 1" x2="21" transform="translate(1.5 8.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+          <line id="直线_3" data-name="直线 3" x2="4" transform="translate(1.5 3.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+          <line id="直线_4" data-name="直线 4" x2="5" transform="translate(1.5 5.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+          <g id="矩形_5" data-name="矩形 5" transform="translate(17 1)" fill="none" stroke="#3dd2ff" stroke-width="1">
+            <rect width="5" height="5" stroke="none"/>
+            <rect x="0.5" y="0.5" width="4" height="4" fill="none"/>
+          </g>
+          <line id="直线_1-2" data-name="直线 1" x2="6" transform="translate(1.5 1.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+        </g>
+        <g id="Icon_Detail2" data-name="Icon Detail2" transform="translate(0 12)">
+          <line id="直线_1-3" data-name="直线 1" x2="21" transform="translate(1.5 8.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+          <line id="直线_3-2" data-name="直线 3" x2="4" transform="translate(1.5 3.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+          <line id="直线_4-2" data-name="直线 4" x2="5" transform="translate(1.5 5.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+          <g id="矩形_5-2" data-name="矩形 5" transform="translate(17 1)" fill="none" stroke="#3dd2ff" stroke-width="1">
+            <rect width="5" height="5" stroke="none"/>
+            <rect x="0.5" y="0.5" width="4" height="4" fill="none"/>
+          </g>
+          <line id="直线_1-4" data-name="直线 1" x2="6" transform="translate(1.5 1.5)" fill="none" stroke="#3dd2ff" stroke-width="1"/>
+        </g>
       </g>
-      <line id="直线_1-4" data-name="直线 1" x2="6" transform="translate(1.5 1.5)" fill="none" stroke="#3cd2ff" stroke-width="1"/>
     </g>
   </g>
 </svg>

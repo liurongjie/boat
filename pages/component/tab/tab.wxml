@@ -1,6 +1,6 @@
 <view class="bottom" style='height:{{h}}px'>
   <view wx:if="{{index==1}}" class='content1' style='width: {{h1}}px;height: {{h1}}px;' >
-    <image src='../../../static/icon/home.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
+    <image src='../../../static/icon/home1.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
    
   </view>
   <view wx:if="{{index!=1}}" class='content1' bindtap='changelist'  data-index='1'    style='width: {{h1}}px;height: {{h1}}px;'>
@@ -20,7 +20,7 @@
     
   </view>
   <view wx:if="{{index==2}}" class='content3' style='width: {{h1}}px;height: {{h1}}px;'>
-    <image src='../../../static/icon/account.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
+    <image src='../../../static/icon/account1.svg' style='width:70%;height:70%;margin-left:10rpx;'></image>
    
   </view>
 

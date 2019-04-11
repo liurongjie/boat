@@ -113,7 +113,7 @@ Component({
       
     },
     buyalone:function(){
-      
+      console.log(app.globalData.openid)
       wx.request({
         url: 'https://xiaoyibang.top:8001/dajia/buyalone',
         data:{

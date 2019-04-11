@@ -22,7 +22,7 @@
 <text style='position:absolute;font-size:18rpx;top:130rpx;color:grey;left:180rpx;'>好评率91.5%</text>
 <text style='position:absolute;font-size:60rpx;top:15rpx;color:#CB2C29;left:450rpx;'>{{period.startprice-cutprice-period.cutprice}}</text>
 <text style='position:absolute;font-size:30rpx;top:60rpx;color:#CB2C29;left:420rpx;'>¥</text>
-<text style='position:absolute;font-size:16rpx;top:100rpx;color:grey;left:450rpx;'>初始价格为{{period.startprice}}0元</text>
+<text style='position:absolute;font-size:16rpx;top:100rpx;color:grey;left:450rpx;'>初始价格为{{period.startprice}}元</text>
 <text style='position:absolute;font-size:16rpx;top:130rpx;color:grey;left:430rpx;'>目前砍价领先94%用户</text>
 </view>
 
@@ -42,7 +42,7 @@
 <text style='position:absolute;bottom:40rpx;left:350rpx;color:white;font-size:24rpx;'>本轮结束，快去抱团吧~</text>
 </view>
 
-<text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有{{number}}位朋友帮忙砍价{{cutprice}}6元-</text>
+<text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有{{number}}位朋友帮忙砍价{{cutprice}}元-</text>
 
 
 <scroll-view scroll-y class="scroll" bindscrolltolower='lower' >

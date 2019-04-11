@@ -284,15 +284,15 @@ Page({
   //右边按钮点击
   team_inview: function () {
     common.onecut = this.data.onecut;
-    if(this.data.btn_index==0||1){
+    if(this.data.btn_index==0){
       wx.navigateTo({
         url: "/pages/myteam/myteam",
       })
     }
     else{
       for (var i = 0; i < common.homelist.length; i++) {
-        if (this.data.periodid == common.home[i].periodid) {
-          common.currentData = common.home[i];
+        if (this.data.periodid == common.homelist[i].periodid) {
+          common.currentData = common.homelist[i];
           break;
         }
       }
