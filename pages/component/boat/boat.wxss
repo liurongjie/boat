@@ -9,7 +9,7 @@
   top:15%;
   box-sizing:border-box;
   margin-top: 10rpx;
- 
+
 
 }
 @keyframes swing {
