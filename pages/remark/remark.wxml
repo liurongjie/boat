@@ -1,40 +1,39 @@
-<view class='title'>
-  <view bindtap='back'class='back'>
-  <image src='/static/back.svg' style='width:100%;height:100%'></image>
+<navigationBar id="navigationBar" placeholderBg="" color="wihte" title="发布评价" back="{{true}}" background="linear-gradient(to bottom right, #5EE4FE ,#57ABFE  )" fixed="{{fixed}}"></navigationBar>
+<view class='container'>
+  <view class='production'>
+    <image src='{{url}}'></image>
+    <view style='display:flex;flex-direction:column;'>
+      <text style='position:relative;font-size:32rpx;width:500rpx;top: 100rpx;'>{{name}}</text>
+      <text style='position:relative;font-size:32rpx;width:500rpx;top: 100rpx;'>[{{desc}}]</text>
+    </view>
   </view>
-   <text class='t'>发布评价</text>
-</view>
-<view style='position:absolute;width:100%;height:200rpx;top:180rpx;border-bottom:1px solid grey;'>
-  <image class='pic' src='{{url}}'></image>
-  <text style='position:absolute;left:280rpx;top:50rpx;font-size:32rpx;width:500rpx;'>{{name}}</text>
-  <text style='position:absolute;left:280rpx;top:100rpx;font-size:32rpx;width:500rpx;'>[{{desc}}]</text>
-</view>
-<view class='re'>
-<textarea bindinput='remarkinput' class='input'></textarea>
 
-<view class='upload' bindtap='choosepic'>
+  <view class='judge'>
+    <textarea bindinput='remarkinput' class='input'></textarea>
+
+    <view class='upload' bindtap='choosepic'>
       <text style='position:relative;top:120rpx;font-size:32rpx;opacity:0.3'>添加图片</text>
-  </view>
-<text class='p'>{{ph}}</text>
-<view style='position:absolute; width:100%;height:2rpx;background:grey;top:51%'></view>
-<view class='ni'>
-<text style='position:relative;left:100rpx;width:200rpx;font-size:30rpx;'>匿名</text>
-<text style='position:relative;left:280rpx;font-size:30rpx;'>你的评价能够帮到其他小伙伴</text>
-<view style='position:relative; width:100%;height:2rpx;background:grey;margin-top:2%;opacity:0.3'></view>
-</view>
-<view class='xi'>
+    </view>
+    <text class='p'>{{ph}}</text>
+    <view style='position:relative; width:100%;height:2rpx;background:grey;'></view>
+    <view class='ni'>
+      <!-- <text style='position:relative;left:100rpx;width:200rpx;font-size:30rpx;'>匿名</text> -->
+      <text style='position:relative;font-size:30rpx;'>你的评价能够帮到其他小伙伴</text>
+      <view style='position:relative; width:100%;height:2rpx;background:grey;margin-top:2%;opacity:0.3'></view>
+    </view>
+    <view class='xi'>
+      <text style='position:relative;top:35%;left:100rpx;font-weight:100;'>最终评分</text>
+      <view class='stars'>
 
-<view class='stars'>
-    <view class='content'>
-      <view>
-        <view wx:for="{{stars}}" wx:key="" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;' data-index="{{index}}" bindtap='score'>
-      
+        <view class='content'>
+          <view>
+            <view wx:for="{{stars}}" wx:key="" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;' data-index="{{index}}" bindtap='score'>
+
+            </view>
+          </view>
         </view>
       </view>
     </view>
   </view>
- <text style='position:absolute;top:30%;left:100rpx;font-weight:100;'>最终评分</text>
-</view>
-
-
+  <button>点击上传</button>
 </view>

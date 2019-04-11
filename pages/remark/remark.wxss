@@ -1,67 +1,69 @@
-.back{
-  position: absolute;
-  top: 90rpx;
-  left:50rpx;
-  width: 40rpx;
-  height: 40rpx;
-}
-.title{
-  position: absolute;
+.container{
+  position: fixed;
   width: 100%;
-  height: 180rpx;
-  
-  background: linear-gradient(to bottom right, #5EE4FE ,#57ABFE  );
+  height: 100%;
 }
-.ni{
-  position: absolute;
-  top: 52%;
-  height: 10%;
-  width: 100%;
- 
-
+.production{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:20%;
+  display: flex;
+  flex-direction: row;
 }
-.xi{
-  position: absolute;
-  width: 100%;
-  bottom: 0rpx;
-  height: 38%;
-
-}
-.t{
-  position: absolute;
-  left: 140rpx;
-  top: 80rpx;
-  color: white;
-  font-size: 40rpx;
-  font-weight: 100;
-  
-}
-
-.pic{
-  position: absolute;
+.production image{
+  position: relative;
   width: 100rpx;
   height: 100rpx;
-  left: 160rpx;
-  top: 50rpx;
+  top: 100rpx;
+  margin-left: 100rpx;
 }
-.input{
-  position: absolute;
+.judge{
+  position: relative;
   width: 100%;
   height: 60%;
-  
-  word-break:break-all; 
-}
-.re{
-  position: absolute;
-  top: 400rpx;
-   width: 100%;
-  height: 60%;
+  margin-top: 10%;
+  border-top:1px solid grey;
 
 }
+.judge .input{
+  position: relative;
+  width: 100%;
+  height: 40%;
+  word-break:break-all; 
+}
+.judge .upload{
+  position: relative;
+  width:200rpx;
+  height: 200rpx;
+  left: 5%;
+  border:1px dashed rgb(219, 201, 201);
+  text-align: center;
+}
+.p{
+  position: absolute;
+  font-size: 36rpx;
+  top: 0rpx;
+  opacity: 0.3;
+  font-weight: 100;
+  padding: 20rpx;
+}
+.ni{
+  position: relative;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+}
+.xi{
+  position: relative;
+  width: 100%;
+  height: 38%;
+}
+
 .stars{
   position: absolute;
   left: 300rpx;
-  
   box-sizing: border-box;
   top: 12%;
   background-color: #fff;
@@ -89,22 +91,5 @@
   margin-right: 25rpx;
   background-size: 100% 100%;
 }
-.p{
-  font-size: 36rpx;
-  position: absolute;
-  top: 0rpx;
-  opacity: 0.3;
-  font-weight: 100;
-  padding: 20rpx;
-}
-.upload{
-  bottom:50%; 
-  position: absolute;
-  width:200rpx;
-  height: 200rpx;
-  
-  left: 5%;
-  border:1px dashed rgb(219, 201, 201);
-  display: flex;
-  justify-content: center;
-}
+
+
