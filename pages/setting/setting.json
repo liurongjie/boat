@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "list1": "../component/asset/list1/list1",
+    "list2": "../component/asset/list2/list2",
+    "list3": "../component/asset/list3/list3",
+    "list4": "../component/asset/list4/list4",
+    "list5": "../component/asset/list5/list5"
+  }
+}

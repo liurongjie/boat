@@ -1,0 +1,2 @@
+
+<navigationBar id="navigationBar" placeholderBg="" color="wihte" title="发布评价" back="{{true}}" background="linear-gradient(to bottom right, #5EE4FE ,#57ABFE  )" fixed="{{fixed}}"></navigationBar><web-view src="http://mp.weixin.qq.com/s?__biz=MzUxNTI3NTUxNw==&mid=2247483738&idx=1&sn=bd31ca36cc56eee4f51a75aeb5da95da&chksm=f9b86ec8cecfe7ded8ef0f54f6e37fea4821433cde3ac59c6a3291a9af48da2902e12543ba75&mpshare=1&scene=23&srcid=#rd"></web-view>

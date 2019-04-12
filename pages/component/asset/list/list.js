@@ -42,23 +42,35 @@ ready:function(){
   methods: {
     chooseorderstatus:function(e){
       common.chooseorderstatus(e.currentTarget.dataset.status);
-      app.list = 3;
+      app.list = 2;
+      wx.navigateTo({
+        url: "/pages/setting/setting" 
+      })
     },
     changelist2:function(){
-      app.list=2;
-
+      
+      app.list=1;
+      wx.navigateTo({
+        url: "/pages/setting/setting"
+      })
     },
     changelist4: function () {
-      app.list = 4;
-     
+      app.list = 3;
+      wx.navigateTo({
+        url: "/pages/setting/setting"
+      })
     },
     changelist5: function () {
-      app.list = 5;
-      
+      app.list = 4;
+      wx.navigateTo({
+        url: "/pages/setting/setting"
+      })
     },
     changelist6: function () {
-      app.list = 6;
-      
+      app.list = 5;
+      wx.navigateTo({
+        url: "/pages/setting/setting"
+      })
     }
   }
 })
