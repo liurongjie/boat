@@ -7,7 +7,6 @@
       <text>认证信息：{{teamname}}{{time}}级</text>
   </view>
   <view class='beike'>
-  <text class='bo'>BOAT</text>
   <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:100rpx;top:36rpx;'></image>
   <text class='w'>我的贝壳：79 </text>
   <text class='w1'>仅限校园大件可用>></text>

@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/home/home",
+      "pages/home/home",
     "pages/setting/setting",
-    
+ 
+   
+   
     "pages/webview/webview",
     "pages/remark/remark",
     "pages/myteam/myteam",
