@@ -75,6 +75,9 @@ Component({
         //预付一元
           if(common.data.steamid){
             that.buytogether();
+            that.setData({
+              status: 3
+            })
           }
           else{
             that.buyalone();
@@ -130,9 +133,7 @@ Component({
     },
     buytogether: function () {
       console.log("运行buytogether")
-      that.setData({
-        status: 3
-      })
+      var that=this;
       wx.request({
         url: 'https://xiaoyibang.top:8001/dajia/buytogether',
         data: {
@@ -146,6 +147,7 @@ Component({
             common.currentorder.steam_id = res.data.steamid;
             common.currentorder.orderid = res.data.orderid;
             app.getorderlist();
+            
           }
           else{
             wx.showToast({ //如果全部加载完成了也弹一个框
@@ -153,6 +155,9 @@ Component({
               icon: 'success',
               duration: 300
             });
+            that.setData({
+              status: 2
+            })
           }
           
 
