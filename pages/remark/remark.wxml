@@ -2,9 +2,9 @@
 <view class='container'>
   <view class='production'>
     <image src='{{url}}'></image>
-    <view style='display:flex;flex-direction:column;'>
-      <text style='position:relative;font-size:32rpx;width:500rpx;top: 100rpx;'>{{name}}</text>
-      <text style='position:relative;font-size:32rpx;width:500rpx;top: 100rpx;'>[{{desc}}]</text>
+    <view style='display:flex;flex-direction:column;margin-left:50rpx;'>
+      <text style='position:relative;font-size:32rpx;font-weight:700;'>{{name}}</text>
+      <text style='position:relative;font-size:32rpx;font-weight:700;margin-top:10rpx;margin-left:20rpx;'>[{{desc}}]</text>
     </view>
   </view>
 
@@ -12,10 +12,11 @@
     <textarea bindinput='remarkinput' class='input'></textarea>
 
     <view class='upload' bindtap='choosepic'>
-      <text style='position:relative;top:120rpx;font-size:32rpx;opacity:0.3'>添加图片</text>
+      <image src='/static/camera.svg'></image>
+      <text style='position:relative;margin-top:20rpx;font-size:30rpx;opacity:0.3'>添加图片</text>
     </view>
     <text class='p'>{{ph}}</text>
-    <view style='position:relative; width:100%;height:2rpx;background:grey;'></view>
+    <view style='position:relative; width:100%;height:2rpx;background:1px solid rgba(100, 100, 100, 0.5);'></view>
     <view class='ni'>
       <!-- <text style='position:relative;left:100rpx;width:200rpx;font-size:30rpx;'>匿名</text> -->
       <text style='position:relative;font-size:30rpx;'>你的评价能够帮到其他小伙伴</text>
