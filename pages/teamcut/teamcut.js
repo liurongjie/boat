@@ -23,7 +23,7 @@ Page({
     number:0,//多少位朋友砍价
     res: [],//展示内容
   //数据缓存
-    periodid:'',
+    orderid:'',
     nickName: '',
     avatarUrl: '',
     steamid:'',
@@ -120,7 +120,7 @@ Page({
   onLoad: function(options) {
     this.setData(
       {
-        periodid:options.periodid,
+        orderid:options.orderid,
         nickName:options.nickName,
         avatarUrl:options.avatarUrl,
         steamid:options.steamid,
@@ -128,7 +128,7 @@ Page({
       }
     )
     this.getorderdetail(options.steamid);
-    this.getperiod(options.periodid);
+    this.getperiod(options.orderid);
     console.log(options)
     this.checkstatus();
   },
@@ -213,15 +213,14 @@ Page({
       }
     })
   },
-  getperiod:function(periodid){
+  getperiod:function(orderid){
     var that = this;
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/getperiod',
       data: {
-        'periodid': periodid,
+        'orderid': orderid,
       },
       success: (res) => {
-        console.log(res.data)
         res.data[0].production__merchant__logo = that.data.url + res.data[0].production__merchant__logo;
         that.setData({
           period: res.data[0],
@@ -265,8 +264,8 @@ Page({
   onShareAppMessage: function () {
       return {
         title: 'BOAT',
-        path: 'pages/teamcut/teamcut?periodid=' +
-          this.data.periodid +
+        path: 'pages/teamcut/teamcut?orderid=' +
+          this.data.orderid +
           '&' + 'nickName=' + this.data.nickName +
           '&' + 'avatarUrl=' + this.data.avatarUrl +
           '&' + 'steamid=' + this.data.steamid +

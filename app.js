@@ -61,7 +61,6 @@ App({
   },
   getuserinformation:function(){
     var information = wx.getStorageSync('information')
-    console.log(information)
     if (information.status == 0) {
       this.globalData.status = information.status;
 

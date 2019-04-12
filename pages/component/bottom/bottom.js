@@ -66,15 +66,13 @@ Component({
           break;
         case 3:
         //看我的船
-          
           wx.navigateTo({
-            url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&periodid=' + common.currentorder.period_id
+            url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid
               + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' +                      app.globalData.openid
           })
           break;
         case 2:
         //预付一元
-          console.log(common.data.steamid)
           if(common.data.steamid){
             that.buytogether();
           }
@@ -102,7 +100,6 @@ Component({
       for(var  i=0;i<common.orderlist.length;i++){
         if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status!=0){
           common.currentorder=common.orderlist[i];
-
           this.setData({
             status: 3
           })
@@ -122,9 +119,8 @@ Component({
           "periodid": common.currentData.periodid,
         },
         success:(res)=>{
-          console.log(res.data);
           common.currentorder.steam_id=res.data.steamid;
-          common.currentorder.period_id = common.currentData.periodid;
+          common.currentorder.orderid = res.data.orderid;
           app.getorderlist();
           
         }
@@ -148,7 +144,7 @@ Component({
          
           if(res.data.success){
             common.currentorder.steam_id = res.data.steamid;
-            common.currentorder.period_id = common.currentData.periodid;
+            common.currentorder.orderid = res.data.orderid;
             app.getorderlist();
           }
           else{

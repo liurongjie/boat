@@ -9,7 +9,6 @@ Component({
    */
 
   ready:function(){
-    console.log(common.currentData)
     this.setData({
       data_list: common.currentData,
       start_time: common.currentData.starttime,
