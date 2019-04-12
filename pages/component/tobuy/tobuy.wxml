@@ -98,14 +98,19 @@
 <!-- 详情-->
 <view class='pro_inform'>
   <view class='pro_inform_display'>
-    <view class='pro_inform_index'>详情</view>
-    <view class='pro_inform_title'>车接车送</view>
-    <view class='pro_inform_title'>官方保证</view>
-    <view class='pro_inform_title'>极速退款</view>
+    <view class='pro_inform_index'>-大</view>
+    <view class='pro_inform_index_small'>/</view>
+    <view class='pro_inform_index'>件</view>
+    <view class='pro_inform_index_small'>/</view>
+    <view class='pro_inform_index'>详</view>
+    <view class='pro_inform_index_small'>/</view>
+    <view class='pro_inform_index'>情-</view>
   </view>
+
+   <view class='line_dis'>COMMODITY INFORMATION</view>
 </view>
 
 
-<view class='pro_inform_content'>
-    商品的详细情况...
+<view class='pro_inform_content' >
+    <image mode="widthFix" src='{{pic_producation}}'></image>
 </view>

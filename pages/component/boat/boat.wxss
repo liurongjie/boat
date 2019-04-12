@@ -79,7 +79,7 @@
     position: absolute;
     width: 800rpx;
     height: 75%;
-    left: 200rpx;
+    left: 250rpx;
     top: 30%;
     animation: shake 3s 0s ;
     animation-timing-function: ease;
@@ -391,9 +391,9 @@ background:linear-gradient(to bottom right, #BEBEBE, #949494);
 
 .pro_inform_text{
   font-size:30rpx;
-  color:grey;
+  color:rgb(216, 216, 216);
   font-weight:300;
-  margin-right:60rpx;
+  margin-right:270rpx;
   margin-left:30rpx;
   margin-top:30rpx;
  
@@ -421,9 +421,9 @@ background:linear-gradient(to bottom right, #BEBEBE, #949494);
   position:relative;
   display:flex;
   flex-direction: column;
-  margin-top: 60rpx;
-  margin-left:60rpx;
-  width: 40%;
+  margin-top: 80rpx;
+  margin-left:30rpx;
+  width: 30%;
   height:60%;
   text-align:center;
 

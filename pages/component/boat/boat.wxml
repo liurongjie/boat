@@ -22,7 +22,7 @@
         <block>
           
           
-          <view style='font-size:50rpx;color:white;font-weight:600;margin-left:120rpx;'>
+          <view style='font-size:50rpx;color:white;font-weight:600;margin-left:120rpx;margin-top:80rpx;'>
            {{item.production__name}}
            </view>
            <view class='pro_inform_text' style='margin-left:120rpx'>{{item.production__introduction}}</view>
@@ -58,7 +58,7 @@
            
           <view style='width:100%;height:100%;'>
           
-          <view  style="position:absolute;width:100%;height:200rpx;bottom:37vh;margin-left:120rpx">
+          <view  style="position:absolute;width:100%;height:200rpx;bottom:36vh;margin-left:180rpx">
             <view class='shaketoo' >
                   <image  class='img_chuanfan shengsuo' src='../../../static/pic/chuanfan.svg'></image>
             </view>

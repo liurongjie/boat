@@ -14,7 +14,7 @@ Component({
       start_time: common.currentData.starttime,
       end_time: common.currentData.endtime,
     })
-
+    
    
 
     var timestamp = Date.parse(new Date());
@@ -32,7 +32,8 @@ Component({
       date_day: date_day,
       date_hour: date_hour,
       date_minute: date_min,
-      date_second: date_sec
+      date_second: date_sec,
+      pic_producation: 'https://xiaoyibang.top:8001/uploads/'+this.data.data_list.production__introductionpic,
     })
      
     
@@ -89,6 +90,7 @@ Component({
     date_second: "",
     // evaluationlist :[],
     data_list:{},
+    pic_producation:"",
   },
 
   /**
