@@ -134,6 +134,9 @@ Component({
     },
     buytogether: function () {
       console.log("运行buytogether")
+      that.setData({
+        status: 3
+      })
       wx.request({
         url: 'https://xiaoyibang.top:8001/dajia/buytogether',
         data: {
@@ -146,9 +149,6 @@ Component({
           if(res.data.success){
             common.currentorder.steam_id = res.data.steamid;
             common.currentorder.period_id = common.currentData.periodid;
-            that.setData({
-              status: 3
-            })
             app.getorderlist();
           }
           else{
