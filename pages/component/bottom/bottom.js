@@ -59,40 +59,57 @@ Component({
 
     },
     buy:function(){
-      var that=this;
-      switch (that.data.status) {
-        case 4:
-        //预付一半
-          break;
-        case 3:
-        //看我的船
+
+      if(app.globalData.status==0)
+      {
+        wx.showToast({
+          title:'未认证正在跳转',
+          duration:1000,
+          icon:'loading',
+        })
+
+        setTimeout(function(){
           wx.navigateTo({
-            url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid
-              + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' +                      app.globalData.openid
-          })
-          break;
-        case 2:
-        //预付一元
-          if(common.data.steamid){
-            that.buytogether();
-            
-          }
-          else{
-            that.buyalone();
-            that.setData({
-              status: 3
-            })
-          }
-          
-          break;
-        case 1:
-        //我要上船
-          that.checkorder();
-          app.buy_index = 2;
-          break;
-
-
+            url:"/pages/verify/verify",
+          },1000)
+        })
       }
+      else
+      {
+        var that=this;
+        switch (that.data.status) {
+          case 4:
+          //预付一半
+            break;
+          case 3:
+          //看我的船
+            wx.navigateTo({
+              url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid
+                + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' +                      app.globalData.openid
+            })
+            break;
+          case 2:
+          //预付一元
+            if(common.data.steamid){
+              that.buytogether();
+              
+            }
+            else{
+              that.buyalone();
+              that.setData({
+                status: 3
+              })
+            }
+            
+            break;
+          case 1:
+          //我要上船
+            that.checkorder();
+            app.buy_index = 2;
+            break;
+        }
+      }
+      
     },
     checkorder:function(){
       this.setData({
