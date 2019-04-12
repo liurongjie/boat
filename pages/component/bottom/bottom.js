@@ -75,9 +75,7 @@ Component({
         //预付一元
           if(common.data.steamid){
             that.buytogether();
-            that.setData({
-              status: 3
-            })
+            
           }
           else{
             that.buyalone();
@@ -146,6 +144,9 @@ Component({
           if(res.data.success){
             common.currentorder.steam_id = res.data.steamid;
             common.currentorder.orderid = res.data.orderid;
+            that.setData({
+              status: 3
+            })
             app.getorderlist();
             
           }
