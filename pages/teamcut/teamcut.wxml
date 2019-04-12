@@ -35,9 +35,9 @@
 <view class='tiao'>
 <view class='da'></view>
 <view style='position: absolute;bottom: 100rpx;left: 5%;width: {{process}}%;height: 30rpx;background-color: #FEB25E;border-radius: 20rpx;'></view>
-<text style='position:absolute;bottom:40rpx;left:150rpx;color:white;font-size:24rpx;'>还剩</text>
-<view style='position:absolute;bottom:40rpx;left:210rpx;color:white;font-size:24rpx;'>{{day}}天{{hour}}:{{minute}}:{{second}}</view>
-<text style='position:absolute;bottom:40rpx;left:350rpx;color:white;font-size:24rpx;'>本轮结束，快去抱团吧~</text>
+<text wx:if="{{end}}" style='position:absolute;bottom:40rpx;left:150rpx;color:white;font-size:24rpx;'>还剩{{day}}天{{hour}}:{{minute}}:{{second}}本轮结束，快去抱团吧~</text>
+<text wx:if="{{!end}}" style='position:absolute;bottom:40rpx;left:150rpx;color:white;font-size:24rpx;'>{{sentence}}</text>
+
 </view>
 
 <text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有{{number}}位朋友帮忙砍价{{cutprice}}元-</text>

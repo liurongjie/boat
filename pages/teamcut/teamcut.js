@@ -15,6 +15,7 @@ Page({
    */
   data: {
     url: "https://xiaoyibang.top:8001/uploads/",
+    end:false,//判定订单是否取消或者过期
   //云端获取
     period:{},
     onecut:[],//团队成员
@@ -28,14 +29,14 @@ Page({
     avatarUrl: '',
     steamid:'',
     openid:'',
+    periodid:'',
   //状态0自我，状态1帮我砍，状态2帮好友分享
     btn_index: 0,//状态
     btn_text_left:['分享好友砍价','砍这好友一刀','帮Ta召唤好友'],
     btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
+    sentence:'',//展示句子
   //
-    selectPerson: true,
-    firstPerson: '武汉大学',
-    selectArea: false,
+   
     process: 40, //0到90
     day: '14',
     hour: '20',
@@ -85,28 +86,7 @@ Page({
     // }
   },
 
-  clickPerson: function() {
-    var selectPerson = this.data.selectPerson;
-    if (selectPerson == true) {
-      this.setData({
-        selectArea: true,
-        selectPerson: false,
-      })
-    } else {
-      this.setData({
-        selectArea: false,
-        selectPerson: true,
-      })
-    }
-  },
-  mySelect: function(e) {
-
-    this.setData({
-      firstPerson: e.target.dataset.me,
-      selectPerson: true,
-      selectArea: false,
-    })
-  },
+ 
   //页面返回
   back: function() {
     wx.navigateBack({
@@ -127,9 +107,9 @@ Page({
         openid:options.openid,
       }
     )
-    this.getorderdetail(options.steamid);
     this.getperiod(options.orderid);
-    console.log(options)
+    this.getorderdetail(options.steamid);
+  
     this.checkstatus();
   },
   //状态获取
@@ -150,6 +130,7 @@ Page({
       }
       else {
         var check=true;//判断是否继续检查
+        //是否为组团成员
         for(var i=0;i<this.data.onecut.length;i++)
         {
           if (app.globalData.openid == this.data.onecut[i].order__user__openid)
@@ -222,10 +203,29 @@ Page({
       },
       success: (res) => {
         res.data[0].production__merchant__logo = that.data.url + res.data[0].production__merchant__logo;
+        console.log('期表id' + res.data[0])
         that.setData({
-          period: res.data[0],
-         
+          period: res.data[0], 
+          periodid: res.data[0].period_id,
         })
+        console.log('期表id'+that.data.periodid)
+        if(res.data[0].status==1){
+          that.setData({
+            end:true,
+          });
+        }
+        else if (res.data[0].status == 0){
+          that.setData({
+            sentence:'该订单已取消',
+            end:false,
+          })
+        }
+        else{
+          that.setData({
+            sentence: '该订单已取消',
+            end: false,
+          })
+        }
        
 
       }
@@ -282,6 +282,9 @@ Page({
   },
   //右边按钮点击
   team_inview: function () {
+    if (!this.data.end) {
+      return '';
+    }
     common.onecut = this.data.onecut;
     if(this.data.btn_index==0){
       wx.navigateTo({
@@ -306,34 +309,21 @@ Page({
   //左边按钮点击
   change_status: function () {
 
-    // if (this.data.btn_index == 0) {
-    //   console.log(this.data.btn_index)
-
-    // }
-    // else if (this.data.btn_index == 1)//
-    // {
-    //   console.log(this.data.btn_index)
-    //   wx.showToast({
-    //     title: '砍了',
-    //   })
-    //   this.setData({
-    //     t: 'share',
-    //     btn_index: 2,
-    //   })
-    // } else {
-    //   console.log(this.data.btn_index)
-    // }
+   
 
   },
   //帮这好友砍一刀
   cutprice: function (steamid) {
+    if(!this.data.end){
+      return '';
+    }
     var that=this;
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/cutprice',
       data: {
         'steamid': that.data.steamid,
         'openid': app.globalData.openid,
-        'periodid':that.data.periodid,
+        'periodid': that.data.periodid,
       },
       success: (res) => {
         that.getorderdetail(that.data.steamid);
