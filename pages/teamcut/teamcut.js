@@ -36,12 +36,12 @@ Page({
     btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
     sentence:'',//展示句子
   //
-   
+    setInter:'',//定时器
     process: 40, //0到90
-    day: '14',
-    hour: '20',
-    minute: '43',
-    second: '10',
+    day: '00',
+    hour: '00',
+    minute: '00',
+    second: '00',
   //按钮类型
     status:'share',
     func:'login',
@@ -213,6 +213,7 @@ Page({
           that.setData({
             end:true,
           });
+          that.timeapproach(res.data[0].period__endtime);
         }
         else if (res.data[0].status == 0){
           that.setData({
@@ -222,7 +223,7 @@ Page({
         }
         else{
           that.setData({
-            sentence: '该订单已取消',
+            sentence: '该订单已过期',
             end: false,
           })
         }
@@ -335,7 +336,35 @@ Page({
       func: 'change_status',
     })
   },
+  timeapproach: function (endtime) {
+    this.data.setInter = setInterval(
+      () => {
+        var nowtime = Math.floor(new Date().getTime() / 1000);
+        var time = endtime - nowtime;
+        var day = Math.floor(time / (3600 * 24));
+        var hour = Math.floor((time - day * 3600 * 24) / 3600);
+        var minute = Math.floor((time - day * 3600 * 24 - hour * 3600) / 60);
+        var second = time - day * 3600 * 24 - hour * 3600 - minute * 60;
+        if(hour<10){
+          hour = '0' + hour ;
+        }
+        if(minute<10){
+          minute = '0' + minute;
+        }
+        if (second < 10) {
+          second = '0' + second;
+        }
+        this.setData({
+          day: day,
+          hour: hour,
+          minute: minute,
+          second: second,
+        })
 
+
+      }
+      , 1000)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -362,8 +391,8 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
-
+  onUnload: function () {
+    clearInterval(this.data.setInter)
   },
 
   /**

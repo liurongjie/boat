@@ -48,23 +48,32 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  timeapproach:function(endtime){
+  timeapproach: function (endtime) {
     this.data.setInter = setInterval(
       () => {
         var nowtime = Math.floor(new Date().getTime() / 1000);
-        var time=endtime-nowtime;
-        var day=Math.floor(time/(3600*24));
-        var hour= Math.floor((time-day*3600*24)/3600);
-        var minute= Math.floor((time-day*3600*24-hour*3600)/60);
-        var second = time -  day * 3600 * 24 - hour * 3600-minute*60;
+        var time = endtime - nowtime;
+        var day = Math.floor(time / (3600 * 24));
+        var hour = Math.floor((time - day * 3600 * 24) / 3600);
+        var minute = Math.floor((time - day * 3600 * 24 - hour * 3600) / 60);
+        var second = time - day * 3600 * 24 - hour * 3600 - minute * 60;
+        if (hour < 10) {
+          hour = '0' + hour;
+        }
+        if (minute < 10) {
+          minute = '0' + minute;
+        }
+        if (second < 10) {
+          second = '0' + second;
+        }
         this.setData({
-          day:day,
-          hour:hour,
-          minute:minute,
-          second:second,
+          day: day,
+          hour: hour,
+          minute: minute,
+          second: second,
         })
-       
-       
+
+
       }
       , 1000)
   },
