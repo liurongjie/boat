@@ -146,7 +146,7 @@ Page({
   },
   back: function () {
     wx.navigateBack({
-      delta: 1
+      delta: 1,
     });
 
   },
@@ -206,7 +206,7 @@ Page({
           //这里是点击了确定以后
           console.log('用户点击确定');
           wx.navigateBack({
-            delta: 1
+            delta: 2
           })
         } else {//这里是点击了取消以后
           console.log('用户点击取消')

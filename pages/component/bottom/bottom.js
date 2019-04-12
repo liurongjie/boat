@@ -59,78 +59,40 @@ Component({
 
     },
     buy:function(){
-
-
-
-      if(app.globalData.status==0)
-      {
-        wx.showToast({
-          title: '未认证正在跳转',
-          duration:1000,
-          icon:'loading',
-        })
-        
-
-
-        // var navTo = setTimeOut (function () {
-         
-        // }, 1000)
-
-
-        setTimeout(function (){
-
+      var that=this;
+      switch (that.data.status) {
+        case 4:
+        //预付一半
+          break;
+        case 3:
+        //看我的船
           wx.navigateTo({
-            url: '/pages/verify/verify',
+            url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid
+              + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' +                      app.globalData.openid
           })
-
-        }, 1000) //延迟时间 这里是1秒
-
-        
+          break;
+        case 2:
+        //预付一元
+          if(common.data.steamid){
+            that.buytogether();
+            
+          }
+          else{
+            that.buyalone();
+            that.setData({
+              status: 3
+            })
+          }
+          
+          break;
+        case 1:
+        //我要上船
+          that.checkorder();
+          app.buy_index = 2;
+          break;
 
 
       }
-
-      else{
-        var that = this;
-        switch (that.data.status) {
-          case 4:
-            //预付一半
-            break;
-          case 3:
-            //看我的船
-            wx.navigateTo({
-              url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid
-                + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
-            })
-            break;
-          case 2:
-            //预付一元
-
-            wx.showToast({
-              title: '支付完成',
-            })
-            if (common.data.steamid) {
-              that.buytogether();
-            }
-            else {
-              that.buyalone();
-              that.setData({
-                status: 3
-              })
-            }
-
-            break;
-          case 1:
-            //我要上船
-            that.checkorder();
-            app.buy_index = 2;
-            break;
-
-
-        }
-
-      }
-      
     },
     checkorder:function(){
       this.setData({
@@ -169,9 +131,7 @@ Component({
     },
     buytogether: function () {
       console.log("运行buytogether")
-      that.setData({
-        status: 3
-      })
+      var that=this;
       wx.request({
         url: 'https://xiaoyibang.top:8001/dajia/buytogether',
         data: {
@@ -184,7 +144,11 @@ Component({
           if(res.data.success){
             common.currentorder.steam_id = res.data.steamid;
             common.currentorder.orderid = res.data.orderid;
+            that.setData({
+              status: 3
+            })
             app.getorderlist();
+            
           }
           else{
             wx.showToast({ //如果全部加载完成了也弹一个框
@@ -192,6 +156,9 @@ Component({
               icon: 'success',
               duration: 300
             });
+            that.setData({
+              status: 2
+            })
           }
           
 

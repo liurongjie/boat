@@ -1,10 +1,13 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/setting/setting",
-    
-    "pages/webview/webview",
     "pages/remark/remark",
+    "pages/setting/setting",
+ 
+   
+   
+    "pages/webview/webview",
+   
     "pages/myteam/myteam",
     "pages/toboat/toboat",
     "pages/teamcut/teamcut",
