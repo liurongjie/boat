@@ -1,8 +1,5 @@
 <!--compoment/dingdan/dingdan.wxml-->
-<view class='top'>
-订单详情</view>
-<button bindtap='back' class='back'>
-</button>
+<navigationBar id="navigationBar" placeholderBg="" color="black" title="订单详情" back="{{true}}" background="white" fixed="{{fixed}}"></navigationBar>
 <view style='position:absolute;top:150rpx;height:150rpx;width:100%;background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );color:white'>
 <text style='position:relative;top:20rpx;margin-left:50rpx;font-weight:200;'>{{title}}</text>
 </view>
