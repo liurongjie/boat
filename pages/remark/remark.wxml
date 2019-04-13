@@ -10,31 +10,44 @@
 
   <view class='judge'>
     <textarea bindinput='remarkinput' class='input'></textarea>
-
     <view class='upload' bindtap='choosepic'>
       <image src='/static/camera.svg'></image>
       <text style='position:relative;margin-top:20rpx;font-size:30rpx;opacity:0.3'>添加图片</text>
     </view>
     <text class='p'>{{ph}}</text>
-    <view style='position:relative; width:100%;height:2rpx;background:1px solid rgba(100, 100, 100, 0.5);'></view>
-    <view class='ni'>
-      <!-- <text style='position:relative;left:100rpx;width:200rpx;font-size:30rpx;'>匿名</text> -->
-      <text style='position:relative;font-size:30rpx;'>你的评价能够帮到其他小伙伴</text>
-      <view style='position:relative; width:100%;height:2rpx;background:grey;margin-top:2%;opacity:0.3'></view>
-    </view>
-    <view class='xi'>
-      <text style='position:relative;top:35%;left:100rpx;font-weight:100;'>最终评分</text>
-      <view class='stars'>
+  </view>
 
-        <view class='content'>
-          <view>
-            <view wx:for="{{stars}}" wx:key="" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;' data-index="{{index}}" bindtap='score'>
 
-            </view>
+  <view class='ni'>
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox data-index="{{index}}" id="2" value="{{item.name}}" checked="{{item.checks}}" />
+    </checkbox-group>
+    <text style='position:absolute;font-size:30rpx;margin-top:15rpx;margin-left:90rpx;color:rgba(0,0,0,0.5);'>匿名</text>
+    <text style='position:absolute;font-size:30rpx;margin-top:15rpx;margin-left:320rpx;color:rgba(0,0,0,0.3);'>你的评价能够帮到其他小伙伴哟</text>
+  </view>
+
+
+  <view class='xi'>
+    <text style='position:relative;font-size:35rpx;color:rgba(100,100,100,0.5);font-weight:100;margin-top: 150rpx;margin-left:100rpx;margin-right:30rpx;'>最终评分</text>
+    <view class='stars'>
+      <view class='content'>
+        <view>
+          <view wx:for="{{stars}}" wx:key="" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;' data-index="{{index}}" bindtap='score'>
           </view>
         </view>
       </view>
     </view>
   </view>
-  <button>点击上传</button>
+
+
+</view>
+<view class='bottom'>
+  <view style='width:390rpx'>
+    <text style='font-size:32rpx;margin-left:50rpx;'>最终价：</text>
+    <text style='font-size:35rpx;color:red;'> 2020</text>
+    <text style='font-size:25rpx;color:red;'>元</text>
+  </view>
+
+  <button open-type="contact" style='margin-left: 0rpx; background-color:rgba(100,100,100,0.2);border-radius: 0rpx;'>申请维权</button>
+  <button style='margin-left: 0rpx;border-radius: 0rpx;color:white;background:linear-gradient(to bottom right, #5EE4FE ,#57ABFE  );'>提交评价</button>
 </view>
