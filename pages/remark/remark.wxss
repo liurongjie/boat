@@ -1,55 +1,62 @@
-.container{
+.container {
   position: fixed;
   width: 100%;
   height: 100%;
 }
-.production{
-  position:absolute;
-  top:50rpx;
-  left:0;
-  width:100%;
-  height:20%;
+
+.production {
+  position: absolute;
+  top: 50rpx;
+  left: 0;
+  width: 100%;
+  height: 20%;
   display: flex;
   flex-direction: row;
- 
 }
-.production image{
+
+.production image {
   position: relative;
   width: 100rpx;
   height: 100rpx;
   border-radius: 50rpx;
   margin-left: 130rpx;
 }
-.judge{
+
+.judge {
   position: relative;
   width: 100%;
-  height: 60%;
-   border-top:1px solid rgba(100, 100, 100, 0.5);
+  height: 50%;
+  border-top: 1px solid rgba(100, 100, 100, 0.5);
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
 }
-.judge .input{
+
+.judge .input {
   position: relative;
   width: 100%;
-  height: 40%;
-  word-break:break-all; 
+  height: 64%;
+  word-break: break-all;
 }
-.judge .upload{
+
+.judge .upload {
   position: relative;
-  width:150rpx;
+  width: 150rpx;
   height: 150rpx;
-  left: 5%;
+  left: 3%;
   text-align: center;
   display: flex;
   flex-direction: column;
-  border:1px dashed rgb(219, 201, 201);
+  border: 1px dashed rgb(219, 201, 201);
 }
-.upload image{
+
+.upload image {
   position: relative;
-  width:50rpx;
+  width: 50rpx;
   height: 50rpx;
   margin-left: 50rpx;
   margin-top: 30rpx;
 }
-.p{
+
+.p {
   position: absolute;
   font-size: 30rpx;
   top: 0rpx;
@@ -57,42 +64,85 @@
   font-weight: 100;
   padding: 20rpx;
 }
-.ni{
+
+/*匿名*/
+
+.ni {
   position: relative;
-  height: 10%;
+  height: 8%;
   width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
 }
-.xi{
+
+/*  重写 checkbox 样式  */
+
+/* 未选中的 背景样式 */
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+  margin-left: 20rpx;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: none;
+  background: #57abfe;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.xi {
   position: relative;
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 38%;
 }
 
-.stars{
-  position: absolute;
-  left: 300rpx;
+.stars {
+  position: relative;
   box-sizing: border-box;
-  top: 12%;
   background-color: #fff;
 }
-.stars image{
+
+.stars image {
   width: 190rpx;
   height: 190rpx;
   border: 1rpx solid #000;
   position: absolute;
-  top: 41rpx;
   left: 36rpx;
 }
-.stars .content view{
+
+.stars .content view {
   font-size: 32rpx;
   color: #4a4a4a;
 }
-.stars .content>view:last-of-type{
+
+.stars .content>view:last-of-type {
   height: 40rpx;
-  margin-top: 48rpx;
+  margin-top: 145rpx;
 }
-.stars .content>view:last-of-type view{
+
+.stars .content>view:last-of-type view {
   float: left;
   width: 60rpx;
   height: 60rpx;
@@ -100,4 +150,24 @@
   background-size: 100% 100%;
 }
 
+.bottom {
+  position: absolute;
+  width: 100%;
+  height: 120rpx;
+  bottom: 0rpx;
+  box-shadow: 0rpx -10rpx 50rpx 5rpx rgba(85, 85, 85, 0.10);
+  display: flex;
+  flex-direction: row;
+  line-height: 120rpx;
+}
+.bottom button{
+  position: relative;
+  width: 180rpx;
+  height: 120rpx;
+  
+  margin-right: 0rpx;
+  font-size: 30rpx;
+  line-height: 120rpx;
+  background-color:#57ABFE ;
 
+}
