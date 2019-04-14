@@ -72,10 +72,16 @@ Component({
           wx.navigateTo({
             url:"/pages/verify/verify",
           },1000)
-        })
-      }
+         })
+        }
+
       else
       {
+
+       
+
+      
+
         var that=this;
         switch (that.data.status) {
           case 4:
@@ -90,17 +96,37 @@ Component({
             break;
           case 2:
           //预付一元
-            if(common.data.steamid){
-              that.buytogether();
-              
-            }
-            else{
-              that.buyalone();
-              that.setData({
-                status: 3
+
+            wx.showToast({
+              title: '正在购买',
+              duration: 2000,
+              icon: 'loading',
+            })
+
+            setTimeout(function () {
+              wx.showToast({
+                title: '购买完成',
+                duration: 1000,
+                icon: 'success',
               })
-            }
+            }, 1000)
+
+
+           
+
+            setTimeout(function () {
+                  if (common.data.steamid) {
+                    that.buytogether();
+                  }
+                  else {
+                    that.buyalone();
+                    that.setData({
+                      status: 3
+                    })    
+                  }
+            },2000)
             
+      
             break;
           case 1:
           //我要上船

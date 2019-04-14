@@ -50,7 +50,7 @@
         <view>
           <image class='userpic' src='{{item.user__picture}}'></image>
         </view>
-
+        <view class='user_department'>{{item.user__department}}</view>
         <view class='user_pickname'>{{item.user__name}}</view>
 
       </view>

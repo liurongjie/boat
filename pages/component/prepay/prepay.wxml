@@ -53,6 +53,9 @@
 <text style='position:absolute;top:848rpx;left:50rpx;font-size:20rpx;opacity:0.5'>定金预付后即刻生效对团队减价 如中途取消参团定金将不予退还
 </text>
 
+</view>
+
+<!-- 
 <view class='hui3'></view>
 <text style='position:absolute;top:920rpx;left:50rpx;font-size:32rpx;font-weight:600'>优惠券/体验券</text>
 
@@ -91,4 +94,4 @@
 </scroll-view>
 
 
-
+ -->
