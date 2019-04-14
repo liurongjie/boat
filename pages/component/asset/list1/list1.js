@@ -54,8 +54,22 @@ Component({
         }
       })
     },
-    push:function(){
-    
+    need:function(){
+      if(!this.data.text){
+        wx.showToast({
+          title: '未提交需求',
+          icon: 'loading',
+          duration: 1000
+        })
+      }
+      else{
+        wx.showToast({
+          title: '成功提交需求',
+          icon: 'success',
+          duration: 2000
+        })
+      }
+        
     }
 
   
