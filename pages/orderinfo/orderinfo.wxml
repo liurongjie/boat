@@ -67,7 +67,7 @@
       <text style='position:absolute;top:880rpx;left:80rpx;font-size: 24rpx;'>支付时间 : {{order.time3}}</text>
       <view class='line2'></view>
       
-      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{ytime4}}</text>
+      <text style='position:absolute;top:950rpx;left:80rpx;font-size: 24rpx;'>完成时间 : {{order.time4}}</text>
       <view class='line3'></view>
 
 </view>
