@@ -451,7 +451,7 @@ background:linear-gradient(to bottom right, #BEBEBE, #949494);
 
 .as_btn1{
   height:55rpx;
-  width:200rpx; 
+  width:230rpx; 
   position:relative;
   display:block;
   margin-left:auto;
@@ -474,7 +474,7 @@ background:linear-gradient(to bottom right, #BEBEBE, #949494);
 .as_btn2{
 
     height:55rpx;
-  width:200rpx; 
+  width:230rpx; 
   position:relative;
   display:block;
   margin-left:auto;
@@ -496,8 +496,8 @@ background:linear-gradient(to bottom right, #BEBEBE, #949494);
 
 .as_btn3{
 
-    height:55rpx;
-  width:200rpx; 
+  height:55rpx;
+  width:230rpx; 
   position:relative;
   display:block;
   margin-left:auto;

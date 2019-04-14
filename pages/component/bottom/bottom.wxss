@@ -28,7 +28,7 @@
 }
 
 .row-one_button{
-  width:35rpx;
+  width:auto;
   height:100%;
   padding-left: 0px;
   padding-right: 0px;

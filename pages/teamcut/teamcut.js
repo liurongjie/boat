@@ -98,6 +98,7 @@ Page({
    */
   //打算传播steamid.periodid,pic name就行
   onLoad: function(options) {
+    console.log("购买详情：",options)
     this.setData(
       {
         orderid:options.orderid,
