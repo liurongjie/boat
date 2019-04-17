@@ -9,8 +9,8 @@ Page({
    */
   data: {
     teamid:'0000000',
-    index:1,
-    show_flag: 'true',
+    index:3,
+    show_flag: 'false',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,
