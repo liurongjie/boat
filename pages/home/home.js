@@ -10,7 +10,7 @@ Page({
   data: {
     teamid:'0000000',
     index:1,
-    show_flag: 'false',
+    show_flag: 'true',
     animationData:{},
     checkCodeBtnOpacity:1,
     checkCodeOpacity:0,
