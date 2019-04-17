@@ -1,4 +1,4 @@
-<navigationBar id="navigationBar" placeholderBg="" color="white" title="BOAT校园" back="{{true}}" background="#CB2C29" fixed="{{fixed}}"></navigationBar>
+<navigationBar id="navigationBar" placeholderBg="" color="white" title="BOAT校园" back="{{true}}" background="#CB2C29" fixed="fixed"></navigationBar>
 
 <view class='hong'></view>
 <!-- <view class='title'>
