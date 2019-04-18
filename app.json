@@ -1,17 +1,14 @@
 {
   "pages": [
-    "pages/remark/remark",
     "pages/home/home",
-    
-    
+    "pages/myteam/myteam",
+    "pages/remark/remark",
     "pages/setting/setting",
     "pages/webview/webview",
-    "pages/myteam/myteam",
     "pages/toboat/toboat",
     "pages/teamcut/teamcut",
     "pages/verify/verify",
     "pages/orderinfo/orderinfo"
-  
   ],
   "window": {
     "backgroundTextStyle": "light",

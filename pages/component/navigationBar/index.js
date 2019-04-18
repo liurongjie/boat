@@ -38,6 +38,23 @@ Component({
         }
       }
     },
+
+
+    // fontweight:{  //导航栏字的粗细
+    //   type: Number,
+    //   value: 600,//默认
+    //   observer: function (newVal, oldVal, changedPath) {
+    //     if (!newVal) {
+    //       let obj = {};
+    //       obj[changedPath[0]] = oldVal;
+    //       this.setData(obj);
+    //     }
+    //   }
+
+    // },
+
+
+
     fontSize: {//导航栏字大小
       type: String,
       value: '40rpx',//默认
