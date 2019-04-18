@@ -40,6 +40,11 @@ ready:function(){
    * 组件的方法列表
    */
   methods: {
+    b:function(){
+      wx.navigateTo({
+        url: '../../pan/page',
+      })
+    },
     chooseorderstatus:function(e){
       common.chooseorderstatus(e.currentTarget.dataset.status);
       app.list = 2;

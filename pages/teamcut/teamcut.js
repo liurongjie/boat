@@ -14,6 +14,69 @@ Page({
    * 页面的初始数据
    */
   data: {
+    data:[
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+
+    ],
+    res:[
+      {
+        pic:'/static/cutboat.png',
+        name:'刘荣杰',
+        cutprice:75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+      {
+        pic: '/static/cutboat.png',
+        name: '刘荣杰',
+        cutprice: 75,
+      },
+    ],
+
+
+
     url: "https://xiaoyibang.top:8001/uploads/",
     end:false,//判定订单是否取消或者过期
   //云端获取
@@ -98,20 +161,20 @@ Page({
    */
   //打算传播steamid.periodid,pic name就行
   onLoad: function(options) {
-    console.log("购买详情：",options)
-    this.setData(
-      {
-        orderid:options.orderid,
-        nickName:options.nickName,
-        avatarUrl:options.avatarUrl,
-        steamid:options.steamid,
-        openid:options.openid,
-      }
-    )
-    this.getperiod(options.orderid);
-    this.getorderdetail(options.steamid);
+    // console.log("购买详情：",options)
+    // this.setData(
+    //   {
+    //     orderid:options.orderid,
+    //     nickName:options.nickName,
+    //     avatarUrl:options.avatarUrl,
+    //     steamid:options.steamid,
+    //     openid:options.openid,
+    //   }
+    // )
+    // this.getperiod(options.orderid);
+    // this.getorderdetail(options.steamid);
   
-    this.checkstatus();
+    // this.checkstatus();
   },
   //状态获取
   checkstatus:function(){

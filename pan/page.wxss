@@ -1,0 +1,164 @@
+.bstore {
+  position: relative;
+  width: 90%;
+  left: 5%;
+  background: linear-gradient(to bottom right, #fe5e5e, #fe8557);
+  justify-content: center;
+  overflow: hidden;
+}
+
+.shuo {
+  position: relative;
+  width: 90%;
+  left: 5%;
+  margin-top: 20rpx;
+  background: linear-gradient(to bottom right, #fe5e5e, #fe8557);
+}
+
+/* 底部滚动列表  */
+
+.contentBottom {
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tab-right {
+  width: 90%;
+  margin: 0rpx auto;
+  height: 240rpx;
+}
+
+.right-item {
+  padding: 0 20rpx;
+  height: 50%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-item {
+  height: 50rpx;
+  border-bottom: 1px solid #ede1d4;
+  width: 95%;
+}
+
+.name {
+  font-size: 26rpx;
+  float: left;
+  line-height: 50rpx;
+  color: white;
+  margin-left: 20rpx;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wawa {
+  font-size: 26rpx;
+  float: right;
+  line-height: 50rpx;
+  color: white;
+}
+
+.container-out {
+  height: 600rpx;
+  width: 650rpx;
+  margin: 50rpx auto;
+  border-radius: 40rpx;
+  position: relative;
+}
+
+.beike {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  height: 60rpx;
+  top: 200rpx;
+}
+
+.w {
+  position: absolute;
+  left: 50rpx;
+  font-size: 24rpx;
+  color: white;
+  top: 40rpx;
+  font-weight: 700;
+}
+
+.b {
+  position: absolute;
+  right: 20rpx;
+  width: 100rpx;
+  height: 30rpx;
+  border-radius: 25rpx;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30rpx;
+  border: 2rpx solid white;
+  color: white;
+  top: 36rpx;
+  font-size: 20rpx;
+}
+
+.container-in {
+  width: 580rpx;
+  height: 530rpx;
+  border-radius: 40rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/**小圆球
+box-shadow: inset 3px 3px 3px #fff2af;*/
+
+.circle {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.content-out {
+  position: absolute;
+  height: 150rpx;
+  width: 166.6666rpx;
+  background-color: #f5f0fc;
+  border-radius: 15rpx;
+}
+
+/**居中 加粗*/
+
+.start-btn {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 15rpx;
+  height: 150rpx;
+  width: 166.6666rpx;
+  background-color: #f5f0fc;
+  text-align: center;
+  font-size: 52rpx;
+  font-weight: bolder;
+  line-height: 150rpx;
+  color: #ffe400;
+}
+
+.award-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 140rpx;
+  width: 130rpx;
+}

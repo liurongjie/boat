@@ -1,21 +1,20 @@
-// pages/component/loading/loading.js
+// pages/component/sign/sign.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    visible: {//loading效果是否显示
-      type: Boolean,
-      value: false//默认不显示
-    },
-  },
 
+  },
 
   /**
    * 组件的初始数据
    */
   data: {
-
+    sign:false,//是否完成签到
+    color:'gray',//button框颜色
+    text:'签到完成',//button框显示
+    date:1,//连续第几天
   },
 
   /**

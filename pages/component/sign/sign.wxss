@@ -1,0 +1,28 @@
+.sign{
+  position: absolute;
+  width: 600rpx;
+  height: 800rpx;
+  margin-top: 200rpx;
+  margin-left: 75rpx;
+}
+.sign text{
+  position: absolute;
+  font-size: 22rpx;
+  width: 10rpx;
+  height: 20rpx;
+  font-weight: 200;
+  margin-top: 600rpx;
+  margin-left: 345rpx;
+}
+.sign .button{
+  position: absolute;
+  width: 520rpx;
+  height: 80rpx;
+  margin-top: 670rpx;
+  margin-left: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  font-size: 35rpx;
+  font-weight: 200;
+}

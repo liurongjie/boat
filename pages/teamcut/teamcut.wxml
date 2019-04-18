@@ -1,13 +1,96 @@
-<navigationBar id="navigationBar" placeholderBg="" color="white" title="BOAT校园" back="{{true}}" background="#CB2C29" fixed="fixed"></navigationBar>
+<navigationBar id="navigationBar" color="black" title="BOAT校园" back="true" background="white" fixed="fixed">
+</navigationBar>
+<view class='container'>
 
-<view class='hong'></view>
+  <view class='top'>
+    <image src='/static/cutboat.png' style='position:absolute;width:100%;height:100%'></image>
+    <view class='content'>
+      <image src='/static/cutboat.png' class='userpic'></image>
+      <view class='username'>珞珈山李坤</view>
+      <view class='sentence'>快和我一起组团报名，享受同等价格吧</view>
+      <view class='middle'>
+        <image src='/static/cutboat.png'></image>
+        <view class='information'>
+          <view class='productionname'> BOAT推荐驾校C1普通班</view>
+          <view class='introduction'>目前砍价已领先94%用户</view>
+          <view class='introduction'>初始价格为2800元</view>
+          <view class='price'>
+          <text style='font-size:25rpx;margin-top:20%;'>¥</text>
+          <text>2054</text>
+          </view>
+        </view>
+      </view>
+     
+    </view>
+    <view class='tab'>
+      <button class='fenxiang' open-type='{{status}}' bindtap='{{func}}'>{{btn_text_left[btn_index]}}</button>
+      <button class='chakan' bindtap='team_inview'>{{btn_text_right[btn_index]}}</button>
+    </view>
+     
+    
+    
+  </view>
+  <view class='bottom'>
+    <progress percent="{{process}}" activeColor='#FEEE58' backgroundColor='#FF6342' stroke-width='10' border-radius='5'></progress>
+    <view class='time'>
+      <view style='font-size:32rpx;margin-left:120rpx;'>距本轮结束</view>
+      <view class='box' style='background-color: white;margin-right:20rpx;'>
+        <text>7</text>
+        <text style='font-size:20rpx;'>天</text>
+      </view>
+      <view class='box' style='background-color: #2690DF;color:white;'>23</view>
+      <view class='box1'>:</view>
+      <view class='box' style='background-color: #2690DF;color:white;'>32</view>
+      <view class='box1'>:</view>
+      <view class='box' style='background-color: #2690DF;color:white;'>25</view>
+    </view>
+    <view class='sumcutprice'>-已有53位朋友帮忙砍价536元-</view>
+
+
+    <scroll-view scroll-y class="scroll">
+
+      <view wx:for="{{data}}" wx:key="name">
+        <view class='list'>
+          <image src='{{item.pic}}' class='img'></image>
+          <view class='name'>云顶工坊</view>
+          <view class='rank'>船长</view>
+          <view class='cutprice'>
+            <text style='color:#2690DF;'>15</text>
+            <text>元</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- <block wx:for="{{res}}" wx:key="*this">
+      <view class='hah'></view>
+        <view class='m'>
+          <image src='{{item.pic}}' class='img'></image>
+          <text class='tn'>可以</text>
+          <text class='te'>{{item.cutprice}}</text>
+          <text class='te1'>元</text>
+        </view>
+      </block> -->
+    </scroll-view>
+  </view>
+
+
+
+</view>
+
+
+
+
+
+
+
+<!-- <view class='hong'></view> -->
 <!-- <view class='title'>
 <view class='fh'  bindtap='back'></view>
   <text class='text'>BOAT校园</text>
 </view> -->
 
 
-<view class='regulate'>活动规则</view>
+<!-- <view class='regulate'>活动规则</view>
 
 
 
@@ -26,7 +109,7 @@
 <text style='position:absolute;font-size:16rpx;top:130rpx;color:grey;left:430rpx;'>目前砍价领先94%用户</text>
 </view>
 <view class='tab'>
-<!-- <button bindtap='overhhh'>change</button> -->
+
 <button class='fenxiang' open-type='{{status}}'  bindtap='{{func}}' >{{btn_text_left[btn_index]}}</button>
 <button class='chakan' bindtap='team_inview'>{{btn_text_right[btn_index]}}</button>
 </view>
@@ -40,10 +123,10 @@
 
 </view>
 
-<text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有{{number}}位朋友帮忙砍价{{cutprice}}元-</text>
+<text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有{{number}}位朋友帮忙砍价{{cutprice}}元-</text> -->
 
 
-<scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
+<!-- <scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
   
  <block wx:for="{{res}}" wx:key="*this">  
   <view style=' margin-bottom: 40rpx; height: 100rpx;width: 90%;margin-left:5%;' data-index="{{index}}" bindtap='selectindex'>
@@ -55,8 +138,4 @@
      </view>
     </view>  
   </block>
-</scroll-view>
-
-
-
-
+</scroll-view> -->
