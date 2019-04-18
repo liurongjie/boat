@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/home",
+    "pan/page",
+    "mx/mx",
     "pages/remark/remark",
     "pages/setting/setting",
     "pages/webview/webview",
