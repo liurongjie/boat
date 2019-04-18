@@ -5,31 +5,7 @@
   height: 100%;
   background-color:#F5F5F5;
 }
-.back{
-  position: absolute;
-  top: 100rpx;
-  left:50rpx;
-  width: 50rpx;
-  height: 50rpx;
-}
-.rightcicle{
-  position: fixed;
-  width:200rpx;
-  height: 300rpx;
-  top: 10rpx;
-  right: -40rpx;
-  z-index: 300;
-   pointer-events: none;
-}
-.leftcicle{
-  position: fixed;
-  width: 180rpx;
-  height: 300rpx;
-  top: 950rpx;
-  left: 0rpx;
-    z-index: 300;
-     pointer-events: none;
-}
+
 .point1{
   position: fixed;
   width: 12rpx;
@@ -37,7 +13,6 @@
   border-radius: 6rpx;
   top: 500rpx;
   right: 50rpx;
-    z-index: 300;
   background-color:rgba(55,150,244,0.5);
 }
 .point2{
@@ -47,7 +22,6 @@
   border-radius: 6rpx;
   top: 650rpx;
   left: 130rpx;
-    z-index: 300;
   background-color: rgba(55,150,244,0.5);
 }
 
@@ -55,7 +29,6 @@
   position: fixed;
   width: 12rpx;
   height: 12rpx;
-    z-index: 300;
   border-radius: 6rpx;
   top: 1100rpx;
   right: 50rpx;

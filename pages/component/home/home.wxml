@@ -1,78 +1,63 @@
 <!--pages/component/home/home.wxml-->
-<scroll-view scroll-y style="height: {{h}}px;width:100%;top:0rpx;">
+<navigationBar id="navigationBar" color="black" title="首页" background="white" fixed="fixed"></navigationBar>
+<view class='container'>
+<scroll-view scroll-y style="height:100%;width:100%;">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{currentSwiper}}" class='swiper' bindchange='onslidechangeend' indicator-active-color='red'>
+    <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" bindtap='rec' />
+      </swiper-item>
+    </block>
+  </swiper>
 
-<swiper
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
-  current="{{currentSwiper}}"
-  class='swiper'
-  bindchange='onslidechangeend'
-  indicator-active-color='red'
->
-  <block wx:for="{{imgUrls}}" wx:key="imgUrls">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" bindtap='rec' />
-    </swiper-item>
-  </block>
-</swiper>
-
-  <view class="dots">  
-        <block wx:for="{{imgUrls}}" wx:key="imgUrls">  
-            <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
-        </block>  
-    </view>  
+  <view class="dots">
+    <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+      <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+    </block>
+  </view>
 
 
-    <view class='ta1'>
+  <view class='ta1'>
     <text class='boat'>BOAT</text>
-<view style='position:absolute;left:20rpx;bottom:-40rpx;'>
-    <view class='circle'></view>
-    <view class='circle'></view>
-    <view class='circle'></view>
-    <view class='text'>武汉大学BOAT用户达到3W</view>
-  <view class='text'>BOAT武汉大学毕业季活动启动</view>
-  <view class='text'>第一批体验用户开始报名，尽享专属福利</view>
-  <view class='line'></view>
-    <view class='line'></view>
+    <view style='position:absolute;left:20rpx;bottom:-40rpx;'>
+      <view class='circle'></view>
+      <view class='circle'></view>
+      <view class='circle'></view>
+      <view class='text'>武汉大学BOAT用户达到3W</view>
+      <view class='text'>BOAT武汉大学毕业季活动启动</view>
+      <view class='text'>第一批体验用户开始报名，尽享专属福利</view>
       <view class='line'></view>
-</view>
-      <view class='date'>
-<text class='day'>{{day}}</text>
-<text class='month'>{{month}}</text>
-<text class='year'>{{year}}</text>
-<text style='position:absolute;left:135rpx;top:1rpx;'>|</text>
+      <view class='line'></view>
+      <view class='line'></view>
+    </view>
+    <view class='date'>
+      <text class='day'>{{day}}</text>
+      <text class='month'>{{month}}</text>
+      <text class='year'>{{year}}</text>
+      <text style='position:absolute;left:135rpx;top:1rpx;'>|</text>
       <text style='position:absolute;left:150rpx;font-weight:600;font-size:50rpx;font-style: italic;top:-5rpx;'>BOAT</text>
-      </view>
-
     </view>
 
+  </view>
 
-     <view class='ta2'>
-     <text style='position:absolute;left:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>毕业季</text>
-     <text style='position:absolute;left:50rpx;top:115rpx;color:white;font-size:30rpx;font-weight:300;'>开学季购买校园必需品
+
+  <view class='ta2'>
+    <text style='position:absolute;left:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>毕业季</text>
+    <text style='position:absolute;left:50rpx;top:115rpx;color:white;font-size:30rpx;font-weight:300;'>开学季购买校园必需品
 各类好物直降最多50</text>
-<text style='position:absolute;left:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>日用百货 应有尽有</text>
-<image src='/static/icon/Icon1.png' style='position:absolute;width:150rpx;height:150rpx;left:420rpx;top:56rpx;'></image>
-    </view>
-     <view class='ta3'>
-<image src='/static/icon/Icon2.png' style='position:absolute;width:150rpx;height:150rpx;left:50rpx;top:56rpx;'></image>
-<text style='position:absolute;right:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>会员社群</text>
-     <text style='position:absolute;right:50rpx;top:75rpx;color:white;font-size:30rpx;font-weight:300;'>
+    <text style='position:absolute;left:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>日用百货 应有尽有</text>
+    <image src='/static/icon/Icon1.png' style='position:absolute;width:150rpx;height:150rpx;left:420rpx;top:56rpx;'></image>
+  </view>
+  <view class='ta3'>
+    <image src='/static/icon/Icon2.png' style='position:absolute;width:150rpx;height:150rpx;left:50rpx;top:56rpx;'></image>
+    <text style='position:absolute;right:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>会员社群</text>
+    <text style='position:absolute;right:50rpx;top:75rpx;color:white;font-size:30rpx;font-weight:300;'>
 跟着大珈一起去采购
 感动人心的好产品吧</text>
-<text style='position:absolute;right:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>价格厚道 感动人心</text>
-    </view>
-    
-<view class='ta2'>
-     <text style='position:absolute;left:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>毕业季</text>
-     <text style='position:absolute;left:50rpx;top:115rpx;color:white;font-size:30rpx;font-weight:300;'>开学季购买校园必需品
-各类好物直降最多50</text>
-<text style='position:absolute;left:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>日用百货 应有尽有</text>
-<image src='/static/icon/Icon1.png' style='position:absolute;width:150rpx;height:150rpx;left:420rpx;top:56rpx;'></image>
-    </view>
+    <text style='position:absolute;right:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>价格厚道 感动人心</text>
+  </view>
+</scroll-view>
 
-  
+</view>
 
-    </scroll-view>
+

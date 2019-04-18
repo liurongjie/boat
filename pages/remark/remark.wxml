@@ -8,14 +8,67 @@
     </view>
   </view>
 
+
   <view class='judge'>
     <textarea bindinput='remarkinput' class='input'></textarea>
-    <view class='upload' bindtap='choosepic'>
-      <image src='/static/camera.svg'></image>
-      <text style='position:relative;margin-top:20rpx;font-size:30rpx;opacity:0.3'>添加图片</text>
+
+
+
+
+    <view class='pic_upload'>
+
+      <!-- <view class="upload">
+        <view class="imageView" bindtap="upload">
+          <image src="{{image}}" mode="aspectFill" hidden="{{imageHidden}}"></image>
+          <text style='position:relative;margin-top:20rpx;font-size:30rpx;opacity:0.3' hidden="{{!imageHidden}}">添加图片
+          </text>
+        </view>
+      </view>
+
+      <view class="upload">
+        <view class="imageView" bindtap="upload">
+          <image src="{{image}}" mode="aspectFill" hidden="{{imageHidden}}"></image>
+          <text style='position:relative;margin-top:20rpx;font-size:30rpx;opacity:0.3' hidden="{{!imageHidden}}">添加图片
+          </text>
+        </view>
+      </view>
+
+
+      <view class="upload">
+        <view class="imageView" bindtap="upload">
+          <image src="{{image}}" mode="aspectFill" hidden="{{imageHidden}}"></image>
+          <text style='position:relative;margin-top:20rpx;font-size:30rpx;opacity:0.3' hidden="{{!imageHidden}}">添加图片
+          </text>
+        </view>
+      </view> -->
+
+
+      <view class="gallery">
+        <view class="item" wx:for="{{images}}" wx:key="">
+          <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill"  bindlongpress="deleteImage" data-index="{{index}}"/>
+          <!-- 删除按钮 -->
+          <view class="delete" bindtap="delete" data-index="{{index}}">delete
+            <!-- <image src=''>
+            </image> -->
+          </view>
+        </view>
+  
+        <view class="item" bindtap="chooseImage"  wx:if="{{show_num<3}}">
+          <view class='addIcon'>添加照片(最多3张)</view>
+        </view>
+      </view>
+
+
+
     </view>
+
     <text class='p'>{{ph}}</text>
   </view>
+
+
+
+
+
 
 
   <view class='ni'>
