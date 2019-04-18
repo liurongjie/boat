@@ -1,105 +1,105 @@
 /* pages/teamcut/teamcut.wxss */
-.hong{
-  width: 100%;
-  height: 65%;
-  top: 0rpx;
-  position: absolute;
-  background: rgba(201, 101, 101, 0.281);
-}
-/* pages/component/title/title.wxss */
-.title{
+
+.container {
   position: fixed;
-  top: 0rpx;
   width: 100%;
-  height: 80rpx;
-  padding-top: 70rpx;
-  display: flex;
-  flex-direction: row;
-  z-index: 100;
-  background-color: rgba(80, 80, 80, 0.3);
-
+  height: 100%;
 }
-.title text{
+
+.top {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 48%;
+}
+
+.content {
   position: relative;
-  width: 250rpx;
-  font-size: 40rpx;
-  margin-left: 20rpx;
-  color: white;
-  font-weight: 200
-}
-.fh{
-     width: 25rpx;
-    height: 25rpx;
-    border-top: 4rpx solid #ffffff;
-    border-right: 4rpx solid #ffffff;
-    transform: rotate(225deg);
-    margin-left: 40rpx;
-    margin-top: 15rpx;
-
-
-}
-
-.content{
-  background: white;
   width: 90%;
-  height: 420rpx;
   left: 5%;
-  top:260rpx;
-  position: absolute;
+  height: 70%;
+  margin-top: 15%;
+  background: rgba(255, 255, 255, 0.5);
   display: flex;
- justify-content: center; /**内容居中*/
+  flex-direction: column;
 }
-.regulate{
-  position: absolute;
-  right: 40rpx;
-  top: 180rpx;
-  height: 40rpx;
-  width: 120rpx;
-  font-size: 24rpx;
-  background: rgba(80, 80, 80, 0.3);
-  color: white;
-  text-align: center;
-  line-height: 36rpx;
-  border-radius: 40rpx;
 
-}
-.circle{
-position: absolute;
-top: -50rpx;
+.userpic {
+  position: relative;
+  margin-top: -50rpx;
   height: 100rpx;
   width: 100rpx;
   border-radius: 100%;
+  margin-left: 290rpx;
 }
-.cont1{
-  position: absolute;
+.username {
+  position: relative;
+  font-size: 24rpx;
+  text-align: center;
+  height: 50rpx;
+  
+}
+.sentence{
+  position: relative;
+  font-size: 24rpx;
+  text-align: center;
+  height: 50rpx;
+}
+.middle{
+  position: relative;
+  width: 90%;
+  height: 50%;
+  left: 5%;
+  
+  display: flex; 
+  flex-direction: row;
+}
+.middle image{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.middle .information{
+  position: relative;
+  width: 45%;
+  margin-left: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.information .productionname{
+  font-size: 25rpx;
+  font-weight: 800;
+}
+.information .introduction{
+  font-size: 20rpx;
+  font-weight: 300;
+  margin-top: 20rpx;
+  color: rgba(0, 0, 0, 0.8);
+}
+.information .price{
+  font-size: 80rpx;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  color: #2690DF;
+}
+.tab {
+  position: relative;
   width: 90%;
   left: 5%;
-  height: 170rpx;
-  background-color: rgba(80, 80, 120, 0.1);
-  top: 180rpx;
+  height: 15%;
+  margin-top: -5%;
+  display: flex;
+  flex-direction: row;
 }
-.name{
-  position: absolute;
-  font-size: 24rpx;
-  left: 180rpx;
-  top: 20rpx;
-  width: 200rpx;
-  height: 200rpx;
-}
-.tab{
-  position: absolute;
-  top: 380rpx;
-  width: 90%;
-  height: 80rpx;
- 
-}
-.fenxiang{
-  position: absolute;
-  left: 0rpx;
-  height: 80%;
+
+.fenxiang {
+  position: relative;
+  height: 75rpx;
   width: 45%;
-  top: 10%;
-  background: #FEB25E;
+  background: #feb25e;
   border-radius: 50rpx;
   box-shadow: 0 4rpx 30rpx -3rpx grey;
   font-size: 28rpx;
@@ -107,77 +107,114 @@ top: -50rpx;
   text-align: center;
   line-height: 70rpx;
 }
-.chakan{
-  position: absolute;
-  left: 55%;
-   top: 10%;
-  height: 80%;
+
+.chakan {
+  position: relative;
+  height: 75rpx;
   width: 45%;
   background: red;
   border-radius: 50rpx;
- box-shadow: 0 4rpx 30rpx -3rpx grey;
+  box-shadow: 0 4rpx 30rpx -3rpx grey;
   font-size: 28rpx;
   color: white;
   text-align: center;
   line-height: 70rpx;
 }
-.da{
-position: absolute;
-bottom: 100rpx;
-left: 5%;
-width: 90%;
-height: 30rpx;
-background-color: #FFEAEA;
-border-radius: 20rpx;
-}
-.tiao{
-position:absolute;
-top:720rpx;
-width: 100%;
-height: 160rpx;
-
-}
-.scroll{
-  height:360rpx;
-  left: 15%;
-  width: 80%;
+.bottom{
   position: absolute;
-  top: 950rpx;
- 
-  } 
-  .m{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    
-  }
-  .tn{
-    position: absolute;
-    font-size: 28rpx;
-    left:100rpx;
-    top:36rpx;
+  width: 100%;
+  height: 52%;
+  top: 48%;
+}
 
-  }
-  .img{
-    position: absolute;
-    width: 80rpx;
-    height: 80rpx;
-    left: 0rpx;
-    top: 10rpx;
-    border-radius: 100%;
-  }
-  .te{
-    position: absolute;
-    right: 140rpx;
-    top: 40rpx;
-    color: red;
-    font-size: 28rpx;
-  }
-   .te1{
-    position: absolute;
-    right: 100rpx;
-    top: 40rpx;
+progress{
+  position: relative;
+  margin-top: 20rpx;
+  width: 90%;
+  left: 5%;
+  background-color: yellow;
+}
+.time{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  line-height: 100rpx;
+}
+.time .box{
+  position: relative;
+  margin-top: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  box-shadow: 5rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
+  font-size: 32rpx;
+}
+.time .box1{
+  position: relative;
+  margin-top: 10rpx;
+  width: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
 
-    font-size: 28rpx;
-  }
+}
+.scroll {
+  position: relative;
+  width: 100%;
+  height: 60%;
+}
+.sumcutprice{
+  position:relative;
+  font-size:30rpx;
+  color:grey;
+  width:100%;
+  height:80rpx;
+  text-align:center;
+  line-height:80rpx;
+}
+.list {
+  position: relative;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+  line-height: 80rpx;
+}
+.list .img {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 100rpx;
+  border-radius: 100%;
+}
+.list .name {
+  position: relative;
+  margin-left: 50rpx;
+  font-size: 28rpx;
+}
+.list .rank{
+  position: relative;
+  width: 80rpx;
+  height: 30rpx;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border: 1px solid #2690DF;
+  font-size: 28rpx;
+  color:#2690DF;
   
+}
+
+
+.list .cutprice {
+  position: relative;
+  color: red;
+  font-size: 28rpx;
+  margin-left: 200rpx;
+}
+
