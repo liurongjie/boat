@@ -22,6 +22,15 @@
   margin-left: 130rpx;
 }
 
+.pic_upload{
+ position: relative;
+  width: 100%;
+  height:150rpx;
+  display: flex;
+  flex-direction: row;
+
+}
+
 .judge {
   position: relative;
   width: 100%;
@@ -29,6 +38,8 @@
   border-top: 1px solid rgba(100, 100, 100, 0.5);
   border-bottom: 1px solid rgba(100, 100, 100, 0.5);
 }
+
+
 
 .judge .input {
   position: relative;
@@ -46,14 +57,26 @@
   display: flex;
   flex-direction: column;
   border: 1px dashed rgb(219, 201, 201);
+  margin-left:30rpx;
+
 }
 
+.imageView{
+   width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
 .upload image {
-  position: relative;
-  width: 50rpx;
-  height: 50rpx;
-  margin-left: 50rpx;
-  margin-top: 30rpx;
+  position:relative;
+  width:100%;
+  height:100%;
+
 }
 
 .p {
@@ -160,6 +183,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   flex-direction: row;
   line-height: 120rpx;
 }
+
 .bottom button{
   position: relative;
   width: 180rpx;
@@ -170,4 +194,53 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   line-height: 120rpx;
   background-color:#57ABFE ;
 
+}
+
+
+/*画廊*/ 
+.gallery {    
+  width:630rpx;
+  margin: 0 auto;
+  display: flex;    
+  justify-content: flex-start;    
+  flex-wrap: wrap;
+} 
+
+/*每张图片所占容器*/ 
+.item {    
+  position: relative;    
+  margin-left: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+} 
+
+.item image{
+  width: 100%;
+  height: 100%;
+} 
+
+/*add按钮*/ 
+.item .addIcon{
+  position:relative;
+  width:150rpx;
+  height:150rpx;
+  text-align:center;
+  line-height:80rpx;
+  font-size:30rpx;
+  background: #f2f2f2;
+  color: #555;
+  opacity:0.3;
+} 
+
+/*删除按钮*/
+.delete {    
+  position:absolute;
+  right:0;
+  top:0;
+  /* background:#ccc; */
+  opacity:1;
+  height: 36rpx;
+  font-size:22rpx;
+  font-weight:700;
+  padding:0 8rpx 0 10rpx;
 }
