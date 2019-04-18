@@ -1,9 +1,7 @@
 {
   "pages": [
-    "pages/remark/remark",
     "pages/home/home",
-    
-    
+    "pages/remark/remark",
     "pages/setting/setting",
     "pages/webview/webview",
     "pages/myteam/myteam",
@@ -11,7 +9,6 @@
     "pages/teamcut/teamcut",
     "pages/verify/verify",
     "pages/orderinfo/orderinfo"
-  
   ],
   "window": {
     "backgroundTextStyle": "light",
