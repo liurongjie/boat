@@ -4,6 +4,7 @@
     "tab": "../component/tab/tab",
     "home": "../component/home/home",
     "boat": "../component/boat/boat",
-    "setting": "../component/setting/setting"
+    "setting": "../component/setting/setting",
+    "sign":"../component/sign/sign"
   }
 }
