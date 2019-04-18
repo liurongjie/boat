@@ -4,7 +4,7 @@
   height: 65%;
   top: 0rpx;
   position: absolute;
-  background: red;
+  background: rgba(201, 101, 101, 0.281);
 }
 /* pages/component/title/title.wxss */
 .title{
