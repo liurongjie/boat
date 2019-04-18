@@ -1,0 +1,56 @@
+<view style='width:100%;height:100%; background:#A9E3F6;position:fixed'>
+      <view class='bstore' style='height: {{550/736*h}}px;top: {{70/736*h}}px;'>
+           <view  style='width:250rpx;height:50rpx;position:absolute;left:220rpx;background:white;border-radius:0 0 25px 25px;top:-20rpx;text-align:center;'>
+          <text style='position:relative;top:50rpx;color:white;'>贝壳商城</text>
+          </view>
+          <view class="container-out" style='top:{{80/736*h}}px;'>
+               <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};">
+               </view>
+               <view class="container-in">
+                      <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
+                           <image class="award-image" src="{{item.imageAward}}"></image>
+                      </view>
+               <view class="start-btn" bindtap="startGame">
+                      <text>START</text>
+               </view>
+          </view>
+      </view>
+     <text style='width100%;position:absolute;font-size:{{12/736*h}}px;color:white;left:120rpx;line-height:{{8/736*h}}px;bottom:{{18/736*h}}px;'>PS: \n\n1    IPHONE-X 概率较低    每月必出一台\n
+            运动相机概率较低        每周必出一台\n
+        \t 2    实物商品需去工作室自取（创意城）\n
+        \t 3    开发者共进午餐为工作简餐\n
+        \t 4    英雄皮肤为288点券皮肤\n
+        \t 5    所有实体产品均在 [我的船票] 中查询
+     </text>
+      <view class='beike' style=' top: {{70/736*h}}px;'>
+            <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:10rpx;top:36rpx;'></image>
+            <text class='w'>我的贝壳：79 </text>
+      <view style='position:absolute;width:300rpx;height:100rpx;right:0rpx;'bindtap='mx'>
+             <view class='b' >贝壳明细</view>
+      </view>
+  </view>
+
+</view>
+
+
+
+<view class='shuo' style='height:{{110/736*h}}px;top: {{70/736*h}}px;color:white;'>
+
+<!-- 底部排名  -->
+
+    <view class='contentBottom'>
+        <swiper class="tab-right"  vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='4'>
+            <view class="right-item">
+                <block wx:for-index="idx" wx:for='{{aa}}'>
+                    <swiper-item>
+                        <view class='content-item'>
+                            <text class='name'>{{item.nickName}}</text>
+                            <text class='wawa'>获得{{item.reward}}</text>
+                        </view>
+                    </swiper-item>
+                </block> 
+            </view>
+        </swiper>
+    </view>
+</view>
+</view>

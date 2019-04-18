@@ -1,0 +1,20 @@
+<view style='width:100%;height:100%; background:#A9E3F6;position:fixed'>
+    <view class='bstore' style='height: {{550/736*h}}px;top: {{70/736*h}}px;'>
+         <view  style='width:250rpx;height:50rpx;position:absolute;left:220rpx;background:white;border-radius:0 0 25px 25px;top:-20rpx;text-align:center;'>
+          <text style='position:relative;top:50rpx;color:white;'>贝壳明细</text>
+      </view>
+    </view>
+    <view class='beike' style=' top: {{120/736*h}}px;'>
+  <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:10rpx;top:36rpx;'></image>
+  <text class='w'>我的贝壳：79 </text>
+     <scroll-view scroll-y  style='height:{{450/736*h}}px;width:90%;position:absolute;top: {{50/736*h}}px;'>
+         <block wx:for="{{et}}" wx:key="et">
+         <view style='width:600rpx;height:40rpx;position:relative;'>
+         <text class='text' style='position:absolute;left:10rpx;top:0rpx;'>{{item.date}} </text>
+         <text class='text' style='position:absolute;left:200rpx;top:0rpx;'>{{item.object}}  </text>
+         <text class='text' style='position:absolute;left:500rpx;top:0rpx;'> +{{item.number}}\n</text>
+         </view>
+         </block>
+     </scroll-view>
+   </view> 
+</view>
