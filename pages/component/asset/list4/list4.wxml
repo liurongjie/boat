@@ -5,9 +5,10 @@
   <view class='list1'>-联系我们-</view>
   <view class='list2'>您的BOAT客服全天候待命噢</view>
   <image src='/static/pic/1.jpg' ></image>
-  <view class='connect'>
+
+   <button class='connect' open-type='contact' >
     <text style='font-weight:600;font-size:40rpx;'>欢迎来戳</text>
-  </view>
+  </button>
   <view class='list1'>-加入我们-</view>
   <view class='list3'>BOAT校园Email:boat@163.com</view>
   <view class='list1'>-紧急联系-</view>

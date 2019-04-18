@@ -179,6 +179,9 @@ Page({
         this.completeorder();
         break;
       case 4:
+        wx.navigateTo({
+          url: '/pages/remark/remark',
+        })
 
         break;
       case 5:

@@ -54,7 +54,6 @@ Component({
 
   ready:function(){
     this.setData({
-      index: app.index,
       production: common.homelist,
       screen_height: app.globalData.h,
     })

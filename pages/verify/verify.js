@@ -330,10 +330,8 @@ Page({
         'telephone': this.data.phone,
       },
       success:(res)=>{
-        wx.setStorage({
-          key: 'information',
-          data: res.data,
-        })
+       
+        wx.setStorageSync('information', res.data);
         app.getuserinformation();
       }
       

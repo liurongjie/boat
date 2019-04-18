@@ -1,5 +1,5 @@
 <view class='boat'>
-    <text style='font-weight:600;font-size:35rpx;'>高校合伙人</text>
+  <text style='font-weight:600;font-size:35rpx;'>高校合伙人</text>
 </view>
 <view class='box'>
   <view class='list1'>-高校合伙-</view>
@@ -12,9 +12,9 @@
   <view class='list2'>敬请期待</view>
   <view class='list2'>现为人工受理高校窗口</view>
 
-
-  <view class='connect'>
+  <button class='connect' open-type='contact' >
     <text style='font-weight:600;font-size:40rpx;'>欢迎来戳</text>
-  </view>
-  
+  </button>
+ 
+
 </view>

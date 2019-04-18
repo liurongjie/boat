@@ -1,3 +1,4 @@
+
 <view class='boat'>
   <text style='font-weight:600;font-size:40rpx;'>提交需求</text>
 </view>
@@ -11,7 +12,7 @@
       <view class='vertical'></view>
       <view class='horizontal'></view>
   </view>
-  <view class='demand'>
+  <view class='demand' bindtap='need'>
     <text style='font-weight:100;font-size:37rpx;'>提交需求</text>
   </view>
 </view>
