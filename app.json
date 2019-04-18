@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pan/page",
     "pages/home/home",
     "pages/teamcut/teamcut",
+    "pan/page",
     "mx/mx",
     "pages/remark/remark",
     "pages/setting/setting",
