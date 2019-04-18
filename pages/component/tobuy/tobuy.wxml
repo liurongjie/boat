@@ -1,4 +1,6 @@
 
+
+
 <!-- 商家轮播图 -->
 <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
     <block wx:for="{{picture_production}}" wx:for-item="item" wx:key="picture_production">  
@@ -8,21 +10,28 @@
     </block>  
 </swiper>
 
+<!-- <image src='/static/pic/small.png' style='width:100%;height:30rpx;'></image> -->
 <!-- swiper组件下的商品详细价格、参团人数等信息 -->
-<view class='flex-wrp'>  
+<view class='flex-wrp'> 
+
+  
   <text class='desc_price_symbol'>￥</text><text class=".desc_price_num">{{data_list.startprice-data_list.cutprice}}</text>
   <view class=" desc_oldprice_people_num">                    
-    <view class=".desc_startprice">初始价格为{{data_list.startprice}}</view>
+    <view class=".desc_startprice">￥{{data_list.startprice}}</view>
     <view class=".desc_cut_num">{{data_list.number}}人正在拼</view>
   </view>
   <view class="to_end_progress" >
     <view class='progress_text_view'>
-      <view class='progress_text'>
-        距本轮结束{{date_day}}:{{date_hour}}:{{date_minute}}:{{date_second}}
+      <view class='boat_view'>
+        <image class='boat'  style='margin-left:{{100}}rpx;' src='/static/pic/boat.png'></image>
       </view>
       <view class='progress_yes'>  
-        <progress percent='{{percent}}' show-info  stroke-width="11" activeColor='#FAF75A' backgroundColor='#EDC11C'/>
+        <progress percent='{{percent}}' border-radius='30'  stroke-width="5" activeColor='#ffffff' backgroundColor='#0C7AAF'/>
       </view>
+      <view class='progress_text'>
+        距本轮结束{{date_day}}天 {{date_hour}}:{{date_minute}}:{{date_second}}
+      </view>
+
     </view>
   </view>          
 </view>
@@ -34,7 +43,8 @@
 <view class='pro_disc'>
 
   <view class='pro_disc_index'>
-    <image src="/static/icon1.svg" class='pro_disc_index_photo'></image>
+    <image src="/static/icon1.png" class='pro_disc_index_photo'></image>
+    <view class='pro_paiming_text'>综合排名</view>
     <view class='pro_paiming'>{{1}}</view>
   </view>
 

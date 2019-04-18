@@ -1,37 +1,19 @@
-<view class="title">
-    <text>大珈</text>
+<navigationBar id="navigationBar" color="black" title="订单详情" back="true" background="white" fixed="fixed"></navigationBar>
+<view class='background'>
+  <image src='/static/pic/myteam.png' style='width:100%;height:100%' mode="aspectFill"></image>
 </view>
-<view class='middle'>
-  <view class='top'>
-  <image src='/static/back.svg' bindtap='backto_teamcut'></image>
-  <view class='rule'>活动规则</view>
-  </view>
-   
-   <image src='{{master.pic}}' class='master'></image>
-   <view class='box1'>
-      <view class='name'>{{master.name}}</view>
-       <view class='name2'>组长</view>
-       <view class='right'></view>
-   </view>
-   <view class='box2'>
-      <view wx:for="{{team}}" class='box3' wx:key="url">
-        <image src="{{item.pic}}" class='photo'></image>
-        <view class='name'>{{item.name}}</view>
+<view class='helplist'>
+  <view class='title'>—— 已有{{21}}位朋友帮忙砍价{{3579}}元 ——</view>
+  <!-- <scroll-view scroll-y class="scroll" bindscrolltolower='lower'>
+    <block wx:for="{{res}}" wx:key="*this">
+      <view style=' margin-bottom: 40rpx; height: 100rpx;width: 90%;margin-left:5%;' data-index="{{index}}" bindtap='selectindex'>
+        <view class='m'>
+          <image src='{{item.pic}}' class='img'></image>
+          <text class='tn'>{{item.name}}</text>
+          <text class='te'>{{item.cutprice}}</text>
+          <text class='te1'>元</text>
+        </view>
       </view>
-      <view class='member'>组员</view>
-      <view class='right'></view>
-  </view>
-  <progress percent="80" activeColor='yellow' stroke-width='10' border-radius='5'></progress>
-  <view class='lasttime'>还剩14：20：43.10本轮结束</view>
-        
+    </block>
+  </scroll-view> -->
 </view>
-<!-- <scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
-  <view wx:for="{{res}}" class='line' wx:key="id">
-    <image src='{{item.pic}}'></image>
-    <text class='text1'>{{item.tname}}</text>
-    <text class='text2'>{{item.cutprice}}</text>
-    <text class='text3'>元</text>
-  </view>
-
-</scroll-view>
-  -->
