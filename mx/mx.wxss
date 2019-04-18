@@ -1,0 +1,51 @@
+/* mx/mx.wxss */
+.bstore{
+  
+  position: relative;
+  width: 90%;
+  
+  left: 5%;
+  background: linear-gradient(to bottom right, #FE5E5E, #FE8557);
+  justify-content: center;
+  overflow: hidden;
+}
+
+.beike {
+  position: absolute;
+  width: 90%;
+  left: 10%;
+  height: 60rpx;
+ 
+  top: 200rpx;
+  
+}
+
+.w {
+  position: absolute;
+  left: 50rpx;
+  font-size: 24rpx;
+  color: white;
+  top: 40rpx;
+  font-weight: 700;
+}
+
+
+.b {
+  position: absolute;
+  right: 20rpx;
+  width: 100rpx;
+  height: 30rpx;
+  border-radius: 25rpx;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30rpx;
+  border: 2rpx solid white;
+  color: white;
+  top: 36rpx;
+  font-size: 20rpx;
+}
+.text{
+  color: white;
+  font-size: 28rpx;
+ 
+}

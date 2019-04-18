@@ -1,6 +1,10 @@
+var app=getApp()
 Page({
   data: {
-    t:2,//几等奖
+    h:'',//高度
+    t:4,//几等奖0是特等奖  1:运动相机 2：英雄皮肤  3：100贝壳 4：5贝壳
+    //5：和开发者吃饭 6：清养生茶  7：樱花茶杯  0：IPHONEX
+    award:'',//名字
     circleList: [],//圆点数组
     awardList: [],//奖品数组
     colorCircleFirst: '#FFDF2F',//圆点颜色1
@@ -10,17 +14,68 @@ Page({
     indexSelect: 0,//被选中的奖品index
     isRunning: false,//是否正在抽奖
     imageAward: [
-      '/static/1.svg',
-      '/static/2.svg', 
-      '/static/3.svg',
-      '/static/4.svg',
-      '/static/5.svg',
-      '/static/m.svg',
-      '/static/m.svg', 
-      '/static/m.svg',
+      '/static/c1.jpg',
+      '/static/c2.jpg', 
+      '/static/c3.jpg',
+      '/static/c5.jpg',
+      '/static/c8.jpg',
+      '/static/c7.jpg',
+      '/static/c6.jpg', 
+      '/static/c4.jpg',
     ],//奖品图片数组
-  },
 
+      aa: [//获奖名单
+        {
+
+          nickName: "刘**",
+
+          reward: "IPHONEX"
+
+        },
+
+        {
+
+          nickName: "李**",
+
+          reward: "IPHONEX"
+
+        },
+
+        {
+
+          nickName: "龙**",
+
+          reward: "IPHONEX"
+
+        },
+
+        {
+
+          nickName: "基**",
+
+          reward: "IPHONEX"
+
+        },
+
+        {
+
+          nickName: "于**",
+
+          reward: "5贝壳"
+
+        },
+
+  
+
+      ],
+
+  },
+  onReady:function(){
+     this.setData({
+       h:app.globalData.h
+     });
+     console.log(this.data.h)
+  },
   onLoad: function () {
     var _this = this;
     //圆点设置
@@ -105,6 +160,11 @@ Page({
       awardList: awardList
     })
   },
+  mx:function(){
+    wx.navigateTo({
+      url: '/mx/mx',
+    })
+  },
   //开始游戏
   startGame: function () {
     if (this.data.isRunning) return
@@ -127,10 +187,43 @@ Page({
       //去除循环
       clearInterval(timer)
       //获奖提示
-
+      if (_this.data.t==0){
+        _this.setData({
+          award:'iphoneX'
+        })
+      }
+      else if(_this.data.t==1){
+        _this.setData({
+          award: '运动相机'
+        })
+      } else if (_this.data.t == 2) {
+        _this.setData({
+          award: '英雄皮肤'
+        })
+      } else if (_this.data.t == 3) {
+        _this.setData({
+          award: '100贝壳'
+        })
+      } else if (_this.data.t == 4) {
+        _this.setData({
+          award: '5贝壳'
+        })
+      } else if (_this.data.t == 5) {
+        _this.setData({
+          award: '和开发者共进午餐'
+        })
+      } else if (_this.data.t == 6) {
+        _this.setData({
+          award: '清养生茶'
+        })
+      } else if (_this.data.t == 7) {
+        _this.setData({
+          award: '樱花茶杯'
+        })
+      }
       wx.showModal({
         title: '恭喜您',
-        content: '获得了第' + (_this.data.indexSelect + 1) + "个优惠券",
+        content: '获得了' + (_this.data.award) + "",
         showCancel: false,//去掉取消按钮
         success: function (res) {
           if (res.confirm) {
