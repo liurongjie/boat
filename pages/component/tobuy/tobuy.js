@@ -98,17 +98,15 @@ Component({
    */
   methods: {
     pro_map:function(){
-      var app =getApp();
-      app.buy_index=3;
-      console.log("[page2]跳转查看地图", app.buy_index)
-
-      
+   wx.navigateTo({
+     url: '../component/pro_map/mapview',
+   })
     },
 
     pro_evaluation:function(){
-      var app = getApp();
-      app.buy_index =4;
-      console.log("[page2]跳转查看评论", app.buy_index)
+      wx.navigateTo({
+        url: '../component/evaluation/evaluation',
+      })
     }
   }
 })
