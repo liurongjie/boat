@@ -1,7 +1,7 @@
 //app.js
 var common=require("/common/index.js")
 App({
-  list:3,
+  list:1,
   buy_index:1,
   onLaunch: function () {
     var that=this;
