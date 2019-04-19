@@ -23,7 +23,7 @@
   <view class="to_end_progress" >
     <view class='progress_text_view'>
       <view class='boat_view'>
-        <image class='boat'  style='margin-left:{{100}}rpx;' src='/static/pic/boat.png'></image>
+        <image class='boat'  style='margin-left:{{-80+percent*3}}rpx;' src='/static/pic/boat.png'></image>
       </view>
       <view class='progress_yes'>  
         <progress percent='{{percent}}' border-radius='30'  stroke-width="5" activeColor='#ffffff' backgroundColor='#0C7AAF'/>
@@ -43,7 +43,7 @@
 <view class='pro_disc'>
 
   <view class='pro_disc_index'>
-    <image src="/static/icon1.png" class='pro_disc_index_photo'></image>
+    <image src="/static/icon.png" class='pro_disc_index_photo'></image>
     <view class='pro_paiming_text'>综合排名</view>
     <view class='pro_paiming'>{{1}}</view>
   </view>
@@ -124,3 +124,6 @@
 <view class='pro_inform_content' >
     <image mode="widthFix" src='{{pic_producation}}'></image>
 </view>
+
+
+

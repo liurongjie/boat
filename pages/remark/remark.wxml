@@ -16,13 +16,18 @@
         <view class="item" wx:for="{{images}}" wx:key="">
           <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" bindlongpress="deleteImage" data-index="{{index}}" />
           <!-- 删除按钮 -->
-          <view class="delete" bindtap="delete" data-index="{{index}}">delete
-            <!-- <image src=''>
-            </image> -->
+          <view class="delete" bindtap="delete" data-index="{{index}}">
+            <image src='/static/pic/delete.png'>
+            </image>
           </view>
         </view>
         <view class="item" bindtap="chooseImage" wx:if="{{show_num<3}}">
-          <view class='addIcon'>添加照片(最多3张)</view>
+          <view class='icon_cam' >
+            <image  mode='aspectFill'  src='/static/pic/camera.png'></image>
+          </view>
+          <view class='addIcon'>
+            <view class='addIcon_text'>添加/拍摄</view>
+          </view>
         </view>
       </view>
     </view>
@@ -66,5 +71,23 @@
   </view>
 
   <button open-type="contact" style='margin-left: 0rpx; background-color:rgba(100,100,100,0.2);border-radius: 0rpx;'>申请维权</button>
-  <button style='margin-left: 0rpx;border-radius: 0rpx;color:white;background:linear-gradient(to bottom right, #5EE4FE ,#57ABFE  );'>提交评价</button>
+  <button style='margin-left: 0rpx;border-radius: 0rpx;color:white;background:linear-gradient(to bottom right, #5EE4FE ,#57ABFE  );' bindtap='remark'>提交评价</button>
 </view>
+
+
+
+
+
+<!-- <modal hidden="{{hiddenmodalput}}" class="bounceInDown">  
+    <image src='/static/model/remark.png' wx:if="{{show_model}}" ></image>
+</modal>   -->
+
+
+<view class='shade' hidden='{{popup}}' bindtap='backtopages'>
+  <image src='/static/model/remark.png' wx:if="{{show_model}}" bindtap='hidePopup' class="bounceInDown shade_box" hidden='{{popup}}'></image>
+</view>
+<!-- <view class='shade_box popup' > -->
+
+<!-- </view> -->
+ 
+

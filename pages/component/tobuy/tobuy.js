@@ -91,6 +91,7 @@ Component({
     // evaluationlist :[],
     data_list:{},
     pic_producation:"",
+   
   },
 
   /**
@@ -109,6 +110,11 @@ Component({
       var app = getApp();
       app.buy_index =4;
       console.log("[page2]跳转查看评论", app.buy_index)
-    }
+    },
+
+
+   
+
+
   }
 })

@@ -18,6 +18,7 @@ Component({
     pay:true,
     status:1,
     text:"我要上船",
+    popup: true,
    },
 
   /**
@@ -76,12 +77,7 @@ Component({
         }
 
       else
-      {
-
-       
-
-      
-
+      {//已认证的用户，跳出支付对话框，支付完成后弹出支付完成对话框。点击对话框或关闭后跳转自己的small_boat
         var that=this;
         switch (that.data.status) {
           case 4:
@@ -94,55 +90,62 @@ Component({
                 + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' +                      app.globalData.openid
             })
             break;
-          case 2:
-          //预付一元
+          // case 2:
+          // //预付一元
 
-            wx.showToast({
-              title: '正在购买',
-              duration: 2000,
-              icon: 'loading',
-            })
+          //   wx.showToast({
+          //     title: '正在购买',
+          //     duration: 2000,
+          //     icon: 'loading',
+          //   })
 
-            setTimeout(function () {
-              wx.showToast({
-                title: '购买完成',
-                duration: 1000,
-                icon: 'success',
-              })
-            }, 1000)
+          //   setTimeout(function () {
+          //     wx.showToast({
+          //       title: '购买完成',
+          //       duration: 1000,
+          //       icon: 'success',
+          //     })
+          //   }, 1000)
 
 
            
 
-            setTimeout(function () {
-                  if (common.data.steamid) {
-                    that.buytogether();
-                  }
-                  else {
-                    that.buyalone();
-                    that.setData({
-                      status: 3
-                    })    
-                  }
-            },2000)
+          //   setTimeout(function () {
+          //         if (common.data.steamid) {
+          //           that.buytogether();
+          //         }
+          //         else {
+          //           that.buyalone();
+          //           that.setData({
+          //             status: 3
+          //           })    
+          //         }
+          //   },2000)
             
       
-            break;
+          //   break;
           case 1:
           //我要上船
+          
             that.checkorder();
-            app.buy_index = 2;
+            console.log("ddd")
+            that.hidePopup(false);  
+            
+
+
+
+            
             break;
         }
       }
       
     },
     checkorder:function(){
-      this.setData({
-        status: 2
-      })
+      
       for(var  i=0;i<common.orderlist.length;i++){
-        if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status!=0){
+        if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status!=0)
+        {
+          
           common.currentorder=common.orderlist[i];
           this.setData({
             status: 3
@@ -172,6 +175,19 @@ Component({
       
       
     },
+
+    hidePopup(flag = true) {
+      this.setData({
+        "popup": flag
+      });
+
+      // wx.navigateTo({
+      //   url: '/pages/home/home'
+      // })
+    },
+
+
+
     buytogether: function () {
       console.log("运行buytogether")
       var that=this;

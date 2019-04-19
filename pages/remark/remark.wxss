@@ -209,14 +209,16 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 /*每张图片所占容器*/ 
 .item {    
   position: relative;    
-  margin-left: 20rpx;
   width: 150rpx;
   height: 150rpx;
+  justify-items:center;
+  margin-right: 30rpx;
 } 
 
 .item image{
   width: 100%;
   height: 100%;
+
 } 
 
 /*add按钮*/ 
@@ -226,11 +228,18 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   height:150rpx;
   text-align:center;
   line-height:80rpx;
-  font-size:30rpx;
+  font-size:27rpx;
   background: #f2f2f2;
   color: #555;
   opacity:0.3;
 } 
+
+.addIcon_text{
+  position: absolute;
+  top: 75rpx;
+  width:100%; 
+  justify-items:center;
+}
 
 /*删除按钮*/
 .delete {    
@@ -240,7 +249,138 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   /* background:#ccc; */
   opacity:1;
   height: 36rpx;
+  width: 36rpx;
   font-size:22rpx;
   font-weight:700;
-  padding:0 8rpx 0 10rpx;
+ 
 }
+
+
+.icon_cam{
+ height:45rpx;
+ width:56rpx;
+ position: absolute;
+ top: 30rpx;
+ left:47rpx;
+}
+
+
+
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+   position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0rpx;
+    top: 0%;
+ 
+}
+
+/* 遮罩 \背景色可以再调*/
+.shade {
+  position: fixed;
+  top: 0;
+	right: 0;
+	bottom: 0;
+  left: 0;
+  background-color: rgba(41, 84, 92, 0.418);
+  z-index: 10;
+}
+
+.shade_box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 11;
+  min-width: 200rpx;
+  min-height: 200rpx;
+  letter-spacing: 0;
+  word-wrap: break-word;
+	animation-name:bounceInDown;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:0;
+	animation-iteration-count:1;
+	animation-direction:normal;
+}
+ 

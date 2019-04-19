@@ -158,7 +158,7 @@
   position:absolute;
   left:28rpx;
   top:27rpx;
-  z-index:99;
+  z-index:1;
   font-size: 15rpx;
   font-weight: 500;
   color: white;
@@ -172,7 +172,7 @@
   position: absolute;
   left: 40rpx;
   top:35rpx;
-  z-index: 99;
+  z-index:1;
   color: rgb(255, 255, 255);
   font-size: 55rpx;
   font-weight: 850;
@@ -749,3 +749,5 @@ text-align:left;
   width:37rpx;
   height: 37rpx;
 }
+
+

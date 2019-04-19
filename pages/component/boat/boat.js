@@ -72,6 +72,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
+
+    
     gotoboat: function (e) {
 
       // var $data =e.currentTatget;

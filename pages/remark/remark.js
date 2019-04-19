@@ -7,7 +7,7 @@ Page({
    */
   data: {
 
-
+    popup: true,
     images: [],
     uploadedImages: [],
     show_num:0,
@@ -21,11 +21,11 @@ Page({
     // judge_boat:0,//boat
     // state:0,//
 
-    url: '/static/pic/1.jpg',
+    url: '/static/pic/new.png',
     name: '武汉大学BOAT推荐驾校普通班',
     desc: '一月试学 车接车送',
     remark: '',
-
+    show_model:true,
     ph: ' BOAT推荐满足你的期待吗？说说你的体验感受, 分享给想要参与组队的他们吧',
 
     stars: [{
@@ -67,6 +67,14 @@ Page({
   //     },
   //   })
   // },
+  hidePopup(flag = true) {
+    this.setData({
+      "popup": flag
+    });
+
+   
+  },
+ 
 
   chooseImage: function() {
     var that =this;
@@ -79,21 +87,10 @@ Page({
           show_num: that.data.show_num + res.tempFiles.length,
         });
         console.log(that.data.show_num,"__当前图片数量")
-        // if (that.data.show_num + res.tempFiles.length<=3)
-        // {
           that.setData({
             images: that.data.images.concat(tempFilePaths),
           });
-        // }else{
-        //   that.setData({
-        //     images: that.data.images.concat(tempFilePaths),
-        //   });
-        //   // wx.showToast({
-        //   //   title: '最多上传三张哟~',
-        //   //   icon: 'loading',
-        //   //   duration: 2000
-        //   // })
-        // }
+    
      
        
       }
@@ -198,6 +195,20 @@ Page({
       ph: 'BOAT推荐满足你的期待吗？说说你的体验感受, 分享给想要参与组队的他们吧'
     });
   },
+
+  backtopages:function(options){
+    console.log("用户提交评价后触碰页面", options)
+    wx.navigateTo({
+      url: '/pages/home/home'
+    })
+  },
+
+  remark:function(){
+    this.hidePopup(false);
+
+    //评论完成的操作
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
