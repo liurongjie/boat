@@ -6,9 +6,9 @@
 
 <prepay wx:if="{{buy_index==2}}" bindtap="changestatus"></prepay>
 
-<mymap wx:if="{{buy_index==3}}" bindtap="changestatus"> </mymap>
+<!-- <mymap wx:if="{{buy_index==3}}" bindtap="changestatus"> </mymap> -->
 
-<evaluation wx:if="{{buy_index==4}}" bindtap="changestatus"></evaluation>
+<!-- <evaluation wx:if="{{buy_index==4}}" bindtap="changestatus"></evaluation> -->
 
 
 <bottom  bindtap='changestatus'></bottom>

@@ -8,7 +8,7 @@
           <text style='position:relative;top:50rpx;color:white;'>贝壳明细</text>
       </view>
     </view>
-    <view class='beike' style=' top: {{120/736*h}}px;'>
+    <view class='beike' style=' top: {{50/736*h}}px;'>
   <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:10rpx;top:36rpx;'></image>
   <text class='w'>我的贝壳：79 </text>
      <scroll-view scroll-y  style='height:{{450/736*h}}px;width:90%;position:absolute;top: {{50/736*h}}px;'>

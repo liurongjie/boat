@@ -3,8 +3,8 @@
     "bottom": "../component/bottom/bottom",
     "title": "../component/title/title",
     "tobuy":"../component/tobuy/tobuy",
-    "prepay":"../component/prepay/prepay",
-    "mymap":"../component/pro_map/mapview",
-    "evaluation":"../component/evaluation/evaluation"
+    "prepay":"../component/prepay/prepay"
+    
+    
   }
 }

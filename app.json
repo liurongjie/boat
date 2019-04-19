@@ -1,12 +1,13 @@
 {
   "pages": [
-   
-    "pages/remark/remark",
     "pages/home/home",
-    "pages/toboat/toboat",
-    "pages/setting/setting",
+    "pan/page",
+    "mx/mx",
     "pages/myteam/myteam",
+    "pages/remark/remark",
+    "pages/setting/setting",
     "pages/webview/webview",
+    "pages/toboat/toboat",
     "pages/teamcut/teamcut",
     "pages/verify/verify",
     "pages/orderinfo/orderinfo"
@@ -16,6 +17,5 @@
     "navigationBarBackgroundColor": "#f00",
     "navigationBarTitleText": "大珈",
     "navigationStyle": "custom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
