@@ -1,4 +1,4 @@
 {
-  "component": false,
+  "component": true,
   "usingComponents": {}
 }
