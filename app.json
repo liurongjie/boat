@@ -15,5 +15,6 @@
     "navigationBarBackgroundColor": "#f00",
     "navigationBarTitleText": "大珈",
     "navigationStyle": "custom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
