@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/component/showModel/showModel",
     "pages/home/home",
     "pan/page",
     "mx/mx",
+    "pages/setting/setting",
     "pages/myteam/myteam",
     "pages/remark/remark",
-    "pages/setting/setting",
     "pages/webview/webview",
     "pages/toboat/toboat",
     "pages/teamcut/teamcut",

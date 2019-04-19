@@ -1,5 +1,5 @@
 <view class='boat'>
-    <text style='font-weight:600;font-size:40rpx;'>优惠特权</text>
+    <text style='font-weight:600;font-size:40rpx;'>我的船票</text>
 </view>
 <view class='youhui'style='background: linear-gradient(to bottom right,#FEB25E,#F3B467);'>
   <view class='l1'> 

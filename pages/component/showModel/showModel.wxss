@@ -1,0 +1,35 @@
+/* pages/component/showModel/showModel.wxss */
+.model{
+  position: relative;
+  top: 100rpx;
+  width: 80%;
+  left:10%;
+  height: 45%;
+  border-radius: 20rpx;
+  justify-content: center;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.modelTitle{
+  position: relative;
+  text-align: center;
+  margin-top: 10rpx;
+  border-bottom: solid 1px silver;
+}
+.modelBody{
+  width: 560rpx;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+  padding: 30rpx;
+  margin-left: 5rpx;
+  opacity: 0.3;
+}
+.agree{
+  border-top: solid 1px silver;
+  color: green;
+  font-size: 42rpx;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+  background: white;
+}
