@@ -1,22 +1,25 @@
 {
   "pages": [
-
+   
     "pages/home/home",
     "pan/page",
     "mx/mx",
-    "pages/setting/setting",
+    "pages/verify/verify",
     "pages/myteam/myteam",
     "pages/remark/remark",
+    "pages/setting/setting",
     "pages/webview/webview",
     "pages/toboat/toboat",
     "pages/teamcut/teamcut",
-    "pages/verify/verify",
-    "pages/orderinfo/orderinfo"
+    
+    "pages/orderinfo/orderinfo",
+    "pages/pro_map/pro_map",
+    "pages/evaluation/evaluation"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f00",
-    "navigationBarTitleText": "大珈",
+    "navigationBarTitleText": "BOAT",
     "navigationStyle": "custom"
   },
   "sitemapLocation": "sitemap.json"

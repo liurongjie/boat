@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    show_model: true,
     popup: true,
     images: [],
     uploadedImages: [],
@@ -25,7 +25,7 @@ Page({
     name: '武汉大学BOAT推荐驾校普通班',
     desc: '一月试学 车接车送',
     remark: '',
-    show_model:true,
+  
     ph: ' BOAT推荐满足你的期待吗？说说你的体验感受, 分享给想要参与组队的他们吧',
 
     stars: [{

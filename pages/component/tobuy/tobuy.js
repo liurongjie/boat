@@ -99,13 +99,13 @@ Component({
   methods: {
     pro_map:function(){
    wx.navigateTo({
-     url: '../component/pro_map/mapview',
+     url: '/pages/pro_map/pro_map',
    })
     },
 
     pro_evaluation:function(){
       wx.navigateTo({
-        url: '../component/evaluation/evaluation',
+        url: '/pages/evaluation/evaluation',
       })
     }
   }

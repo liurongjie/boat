@@ -48,3 +48,9 @@
   </view>
 </view>
 
+
+
+
+<view class='shade' hidden='{{popup}}' bindtap='backtopages'>
+  <image src='/static/model/check.png' wx:if="{{show_model}}" bindtap='hidePopup' class="bounceInDown shade_box" hidden='{{popup}}'></image>
+</view>

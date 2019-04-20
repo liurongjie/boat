@@ -9,6 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    show_model: true,
+    popup: true,
     selectPerson: true,
     firstPerson: '武汉大学',
     selectArea: false,
@@ -272,7 +274,7 @@ Page({
   },
   //保存
   save(e) {
-    var that=this;
+
     console.log('姓名: ' + this.data.name);
     console.log('学校: ' + this.data.school);
     console.log('院系: ' + this.data.yuanxi);
@@ -333,15 +335,36 @@ Page({
        
         wx.setStorageSync('information', res.data);
         app.getuserinformation();
+
+
+      
+
       }
       
     })
     
+    // this.setData({
+    //   text: "恭喜你 提交验证成功",
+    //   isShow: true
+    // })
+    this.hidePopup(false);
+  },
+
+  hidePopup(flag = true) {
     this.setData({
-      text: "恭喜你 提交验证成功",
-      isShow: true
+      "popup": flag
+    });
+  },
+
+
+  backtopages: function (options) {
+    console.log("用户提交审核后触碰页面", options)
+    wx.navigateTo({
+      url: '/pages/home/home'
     })
   },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

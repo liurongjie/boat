@@ -1,18 +1,54 @@
 <!--pages/toboat/toboat.wxml-->
 <scroll-view scroll-y style='position:absolute;width:100%;height:100%'>
-<title></title>
+  <title></title>
 
-<tobuy wx:if="{{buy_index==1}}" bindtap="changestatus" ></tobuy>
+  <tobuy wx:if="{{buy_index==1}}" bindtap="changestatus"></tobuy>
 
-<prepay wx:if="{{buy_index==2}}" bindtap="changestatus"></prepay>
+  <view class="bottom" bindtap='changestatus'>
+    <view class="bottom" style='height:7vh;background: white;'>
+      <view id='row-one' class="row-row" style='margin-left:40rpx;width:400rpx;margin-top: 0.625vh;margin-bottom: 0.625vh;background: transparent;padding-left:10rpx;'>
+
+
+        <button bindtap='goback' id='goback' class="row-column column-hcenter row-one_button" style='margin-left:3rpx;'>
+          <image style='width:56rpx;height:56rpx;' src='../../static/icon/goback.svg' mode='aspectFit'></image>
+          <view style='font-size:15rpx'>返回</view>
+        </button>
 
 
 
 
-<bottom  bindtap='changestatus'></bottom>
+        <button id='consult' class="row-column column-hcenter row-one_button" style='margin-left:3rpx;' open-type='contact'>
+          <image style='width:56rpx;height:56rpx;' src='../../static/icon/zixun.svg' mode='aspectFit'></image>
+          <view style='font-size:15rpx'>咨询</view>
+        </button>
+
+
+
+        <button id='share' class="row-column column-hcenter row-one_button" style='margin-left:3rpx;' open-type='share'>
+          <image style='width:56rpx;height:56rpx;' src='../../static/icon/share.svg' mode='aspectFit'></image>
+          <view style='font-size:15rpx'>分享</view>
+        </button>
+
+      </view>
+    </view>
+
+    <button id='row-two' bindtap="buy" class="bottom" style='height:5.8vh;width:320rpx;background: linear-gradient(to bottom right, #F7907E, #FDB38F);left:414.7rpx;bottom:2.25vh;display: flex;align-items: center;justify-content: center;border-radius: 46rpx;color:white;font-size: 44rpx;box-shadow:0rpx 20rpx 30rpx #BBB;'>
+      <view wx:if="{{status==1}}">
+        我要上船
+      </view>
+
+      <view wx:if="{{status==3}}">
+        看我的船
+      </view>
+
+    </button>
+
+
+  </view>
 
 </scroll-view>
 
 
-
-
+<view class='shade' hidden='{{popup}}' bindtap='backtopages'>
+  <image src='/static/model/bought.png' wx:if="{{show_model}}" bindtap='hidePopup' class="bounceInDown shade_box" hidden='{{popup}}'></image>
+</view>
