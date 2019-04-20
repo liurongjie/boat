@@ -32,7 +32,36 @@ App({
     });
     that.getuserinformation();
     that.getorderlist();
+    this.sign();
     
+  },
+  sign:function(){
+    var information=wx.getStorageSync('sign')
+    var date=new Date();
+    var day=date.getDate();
+    console.log(information)
+    console.log(day)
+    if(information){
+      if(information.day!=day){
+        this.globalData.sign=false;
+        if(day-information.date==1){
+          this.globalData.lastday=information.lastday;
+          
+        }
+        else{
+          this.globalData.lastday=0;
+        }
+
+      }
+      else{
+        this.globalData.sign=true;
+      }
+    }
+    else{
+      this.globalData.sign = false;
+      this.globalData.lastday = 0;
+    }
+
   },
   login:function(){
     var that=this;
@@ -107,6 +136,11 @@ App({
     userInfo: null,
     h:'',
     w:'',
+
+
+
+    sign:true,//是否签到
+    lastday:0,//连续签到天数
    
     
   }
