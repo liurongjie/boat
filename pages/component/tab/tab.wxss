@@ -1,38 +1,37 @@
-.bottom{
+.bottom {
   position: fixed;
   width: 100%;
-background: white;
+  background: white;
   bottom: 0rpx;
-z-index: 1000;
+  z-index: 888;
   display: flex;
   flex-direction: row;
 }
-.bottom .content1{
+
+.bottom .content1 {
   position: absolute;
-  
   margin-top: 20rpx;
   margin-left: 90rpx;
   display: flex;
   flex-direction: column;
-
 }
 
-.bottom .content2{
+.bottom .content2 {
   position: absolute;
   margin-top: 20rpx;
   margin-left: 335rpx;
   flex-direction: column;
 }
-.bottom .content3{
+
+.bottom .content3 {
   position: absolute;
- 
   margin-top: 20rpx;
   margin-left: 560rpx;
   display: flex;
   flex-direction: column;
-
 }
-.bottom .content4{
+
+.bottom .content4 {
   position: absolute;
   width: 130rpx;
   height: 130rpx;
@@ -41,32 +40,29 @@ z-index: 1000;
   display: flex;
   flex-direction: column;
 }
+
 @keyframes shake {
-	 from,
-  60%,
-  75%,
-  to {
+  from, 60%, 75%, to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
   from {
     opacity: 0;
     transform: translate3d(400rpx, 0, 0);
   }
+
   to {
     transform: translate3d(0, 0, 0);
   }
 }
+
 .shake1 {
-    position: absolute;
-    width: 800rpx;
-    height: 800rpx;
-    margin-left: 270rpx;
-    margin-top: -630rpx;
-    animation: shake 3s 0s ;
-    animation-timing-function: ease;
-    pointer-events: none;
-
-	}
-
-
-
+  position: absolute;
+  width: 800rpx;
+  height: 800rpx;
+  margin-left: 270rpx;
+  margin-top: -630rpx;
+  animation: shake 3s 0s;
+  animation-timing-function: ease;
+  pointer-events: none;
+}

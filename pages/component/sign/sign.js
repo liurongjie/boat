@@ -1,4 +1,5 @@
 // pages/component/sign/sign.js
+var app=getApp();
 Component({
   /**
    * 组件的属性列表
@@ -12,15 +13,46 @@ Component({
    */
   data: {
     sign:false,//是否完成签到
-    color:'gray',//button框颜色
-    text:'签到完成',//button框显示
-    date:1,//连续第几天
+    color:'#5EE1FE',//button框颜色
+    text:'今日签到',//button框显示
+    lastday:1,//连续第几天
   },
+  ready:function(){
+    this.setData({
+      lastday:app.globalData.lastday,
+    })
 
+  },
   /**
    * 组件的方法列表
    */
   methods: {
+    sign:function(){
+      if(this.data.sign){
+        return '';
+      }
+      else{
+
+        var lastday=this.data.lastday+1;
+        
+        this.setData({
+          sign:true,
+          color:'gray',
+          text:'签到完成',
+          lastday:lastday,
+        })
+        var date=new Date();
+        var day=date.getDate();
+        wx.setStorage({
+          key: 'sign',
+          data: {
+            'day':day,
+            'lastday':lastday,
+          },
+        })
+        app.globalData.sign = true;
+      }
+    }
 
   }
 })

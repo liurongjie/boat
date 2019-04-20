@@ -1,4 +1,4 @@
-<!-- <sign></sign> -->
+
 <view style='height:100%;width:100%;position:absolute' wx:if="{{ show_flag=='false'}}" animation="{{animationData}}">
  <image src='/static/login.jpg' mode='scaleToFill' class='guide_view'></image>
  <view class='z'>
@@ -12,6 +12,7 @@
   <boat wx:if="{{index==3&& show_flag=='true'}}"></boat>
   <setting id='setting' wx:if="{{index==2&& show_flag=='true'}}"></setting>
   <tab bindtap='changestatus' wx:if="{{show_flag=='true'}}"></tab>
+  <sign wx:if="{{!sign&& show_flag=='true'}}" bindtap="sign"></sign>
   
 
 
