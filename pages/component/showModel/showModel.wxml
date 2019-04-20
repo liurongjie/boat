@@ -1,0 +1,12 @@
+<!-- 自定义弹框开始 -->
+  <view wx:if="{{showModel}}" class="model">
+    <view class="modelTitle">
+      获取微信授权信息
+    </view>
+    <view class="modelBody">微信登录需要获取您的用户信息，请前往设置</view>
+    <view class="btns">
+      <button open-type="getUserInfo" class="agree" bindgetuserinfo="onGotUserInfo" lang="zh_CN">授权</button>
+    </view>
+  </view>
+  <view wx:if="{{showModel}}" class="mask"></view>
+  <!-- 自定义弹框结束 -->
