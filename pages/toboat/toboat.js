@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    url:'',//后台
     buy_index: "",
     latitude: 30.41,
     longitude: 114.29,
@@ -26,6 +27,7 @@ Page({
     console.log(common.currentData)
     this.setData({
       buy_index: app.buy_index,
+      url:app.url,
 
     })
     this.checkorder();
@@ -122,7 +124,7 @@ Page({
 
         case 1:
           //我要上船
-          that.buyalone();
+          that.buyalone(this.data.url +'/dajia/buyalone');
           that.checkorder();
           console.log("ddd")
           that.hidePopup(false);
@@ -151,13 +153,13 @@ Page({
 
 
   },
-  buyalone: function() {
+  buyalone: function(url) {
     var that = this;
     console.log(app.globalData.openid)
     wx.request({
-      url: 'https://xiaoyibang.top:8001/dajia/buyalone',
+      url: url,
       data: {
-        "openid": app.globalData.openid,
+        "userid": app.globalData.userid,
         "periodid": common.currentData.periodid,
       },
       success: (res) => {

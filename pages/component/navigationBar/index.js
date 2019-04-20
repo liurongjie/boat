@@ -108,20 +108,20 @@ Component({
       showHomeButton = true;
     }
     //导航栏自适应
-    let systemInfo = wx.getSystemInfoSync();
-    let reg = /ios/i;
-    let pt = 20;//导航状态栏上内边距
-    let h = 44;//导航状态栏高度
-    if(reg.test(systemInfo.system)){
-        pt = systemInfo.statusBarHeight;
-        h = 44;
-    }else{
-        pt = systemInfo.statusBarHeight;
-        h = 48;
-    }
+    // let systemInfo = wx.getSystemInfoSync();
+    // let reg = /ios/i;
+    // let pt = 20;//导航状态栏上内边距
+    // let h = 44;//导航状态栏高度
+    // if(reg.test(systemInfo.system)){
+    //     pt = systemInfo.statusBarHeight;
+    //     h = 44;
+    // }else{
+    //     pt = systemInfo.statusBarHeight;
+    //     h = 48;
+    // }
     this.setData({
-      height: h,
-      paddingTop: pt,
+      height: app.globalData.sh,
+      paddingTop: app.globalData.pt,
       showHomeButton: showHomeButton
     })
     console.log(this);
