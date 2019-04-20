@@ -33,13 +33,13 @@ Component({
       date_hour: date_hour,
       date_minute: date_min,
       date_second: date_sec,
-      pic_producation: 'https://xiaoyibang.top:8001/uploads/'+this.data.data_list.production__introductionpic,
+      pic_producation: 'https://xiaoyibang.top:8002/uploads/'+this.data.data_list.production__introductionpic,
     })
      
     
     var that = this
     wx.request({
-      url: 'https://xiaoyibang.top:8001/dajia/firstcomment',
+      url: 'https://xiaoyibang.top:8002/dajia/firstcomment',
       data: {
         'productionid': common.currentData.production,
         // this.pro_data.production_id
@@ -57,11 +57,11 @@ Component({
 
     var picture_production_url=[];
  
-    var url_temp1 ='https://xiaoyibang.top:8001/uploads/'+this.data.data_list.production__merchant__pic1
+    var url_temp1 ='https://xiaoyibang.top:8002/uploads/'+this.data.data_list.production__merchant__pic1
     picture_production_url.push(url_temp1)
-    var url_temp2 = 'https://xiaoyibang.top:8001/uploads/' + this.data.data_list.production__merchant__pic2
+    var url_temp2 = 'https://xiaoyibang.top:8002/uploads/' + this.data.data_list.production__merchant__pic2
     picture_production_url.push(url_temp2)
-    var url_temp3 = 'https://xiaoyibang.top:8001/uploads/' + this.data.data_list.production__merchant__pic3
+    var url_temp3 = 'https://xiaoyibang.top:8002/uploads/' + this.data.data_list.production__merchant__pic3
     picture_production_url.push(url_temp3)
 
     this.setData({

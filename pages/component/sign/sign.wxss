@@ -17,7 +17,7 @@
   position: absolute;
   width: 600rpx;
   height: 800rpx;
-  margin-top: 200rpx;
+  margin-top: 300rpx;
   margin-left: 75rpx;
 }
 .sign text{

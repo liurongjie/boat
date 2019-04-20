@@ -1,4 +1,3 @@
-<!--pages/toboat/toboat.wxml-->
 <scroll-view scroll-y style='position:absolute;width:100%;height:100%'>
   <title></title>
 
