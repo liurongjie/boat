@@ -1,13 +1,7 @@
 {
   "usingComponents": {
-    "bottom": "../component/bottom/bottom",
     "title": "../component/title/title",
-    "tobuy":"../component/tobuy/tobuy",
-    "prepay":"../component/prepay/prepay"
-    <mymap wx:if="{{buy_index==3}}" bindtap="changestatus"> </mymap>
+    "tobuy":"../component/tobuy/tobuy"
 
-<evaluation wx:if="{{buy_index==4}}" bindtap="changestatus"></evaluation>
-
-    
   }
 }

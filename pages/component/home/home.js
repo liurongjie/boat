@@ -13,9 +13,9 @@ Component({
    */
   data: {
     imgUrls: [
-      '/static/pic/1.jpg',
-      '/static/pic/2.jpg',
-      '/static/pic/3.jpg',
+      '/static/1.svg',
+      '/static/2.svg',
+      '/static/3.svg',
     ],
     currentSwiper: 0,
     indicatorDots: false,

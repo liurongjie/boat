@@ -1,6 +1,5 @@
-
 var common = require("../../../common/index.js")
-var evalu_number='14';
+var evalu_number = '14';
 Component({
   /**
    * 组件的属性列表
@@ -13,16 +12,16 @@ Component({
    * 组件的初始数据
    */
   data: {
-    data_list:{},
-    evaluation_list:{}
+    data_list: {},
+    evaluation_list: {}
   },
 
-  ready:function(){
+  ready: function() {
     this.setData({
       data_list: common.currentData,
       evaluation_list: common.currentEvaluation
     })
-    console.log("[page3]获取公共js数据",this.data)
+    console.log("[page3]获取公共js数据", this.data)
   },
 
   /**
@@ -32,34 +31,26 @@ Component({
 
 
 
-     lower: function () {
-
-      //  scancomment(request):
-      //  if request.method == 'GET':
-      //    number = request.GET.get('number', '')
-      //  periodid = request.GET.get('periodid', '')
-
-      
-    //   var result = this.data.res;
-      var result = common.currentEvaluation;//本地
+    lower: function() {
+      var result = common.currentEvaluation; //本地
       var result2 = [];
 
       //  scancomment
 
-       wx.request({
-         url: 'https://xiaoyibang.top:8001/dajia/scancomment',
-         data: {
-           'number': evalu_number,
-           'periodid': this.data.data_list.periodid,
-    
-         },
-         success: (res) => {
-          
-            console.log(res.data)
-         },
+      wx.request({
+        url: 'https://xiaoyibang.top:8001/dajia/scancomment',
+        data: {
+          'number': evalu_number,
+          'periodid': this.data.data_list.periodid,
+
+        },
+        success: (res) => {
+
+          console.log(res.data)
+        },
       })
 
-       var resArr = common.currentEvaluation;//云端
+      var resArr = common.currentEvaluation; //云端
       for (let i = result.length; i < result.length + 5; i++) {
         result2.push(resArr[i]);
       };

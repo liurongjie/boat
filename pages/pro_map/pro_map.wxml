@@ -1,0 +1,9 @@
+<navigationBar id="navigationBar" placeholderBg="" color="black" title="  {{data_list.production__name}}" back="{{true}}" background="white" fixed="{{fixed}}">
+</navigationBar>
+
+
+<map style="width: 100%; height: 1000rpx" latitude="{{data_list.production__merchant__latitude}}" longitude="{{data_list.production__merchant__longitude}}" markers="{{markers}}" show-location></map>
+
+<view class='pro_location'>
+  <image style='width:30rpx;height:30rpx' src='/static/icon/dingwei.svg'></image>
+  {{data_list.production__merchant__location}}</view>

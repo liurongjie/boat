@@ -185,9 +185,6 @@ Component({
       //   url: '/pages/home/home'
       // })
     },
-
-
-
     buytogether: function () {
       console.log("运行buytogether")
       var that=this;

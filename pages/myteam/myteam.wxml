@@ -1,6 +1,6 @@
 <navigationBar id="navigationBar" color="black" title="订单详情" back="true" background="white" fixed="fixed"></navigationBar>
 <view class='background'>
-  <image src='/static/pic/myteam.png' style='width:100%;height:100%' mode="aspectFill"></image>
+  <image src='/static/pic/myteam.jpg' style='width:100%;height:100%' mode="aspectFill"></image>
 </view>
 <view class='helplist'>
   <view class='title'>—— 已有{{21}}位朋友帮忙砍价{{3579}}元 ——</view>
