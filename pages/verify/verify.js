@@ -276,7 +276,7 @@ Page({
   },
   //保存
   save(e) {
-
+    var that=this;
     console.log('姓名: ' + this.data.name);
     console.log('学校: ' + this.data.school);
     console.log('院系: ' + this.data.yuanxi);
@@ -340,7 +340,7 @@ Page({
     wx.request({
       url: 'https://xiaoyibang.top:8002/dajia/verify',
       data:{
-        'openid': app.globalData.openid,
+        'userid': app.globalData.userid,
         'teamid':this.data.teamid,
         'name': this.data.name,
         'number': this.data.number,
@@ -348,8 +348,18 @@ Page({
         'telephone': this.data.phone,
       },
       success:(res)=>{
-        wx.setStorageSync('information', res.data);
-        app.getuserinformation();
+
+        var information = {
+          'userid': res.data.userid,
+          'teamname': res.data.team_name,
+          'name': res.data.name,
+          'number': res.data.number,
+          'status': res.data.status,
+          'nickname': app.globalData.nickname,
+          'avatarUrl': app.globalData.avatarUrl,
+        }
+        wx.setStorageSync('information', information)
+        that.getuserinformation(); 
       }
       
     })
