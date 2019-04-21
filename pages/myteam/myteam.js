@@ -7,16 +7,86 @@ Page({
    * 页面的初始数据
    */
   data: {
-    res:{
-      
-    }
+  index:1,
+  showmodel:false,
+   data:[
+     {
+       pic: '/static/cutboat.png',
+       name: '龙长飞',
+       desc:'2016级 遥感信息工程学院',
+       date:'2019/04/20',
+       c:'船长'
+     },
+     {
+       pic: '/static/cutboat.png',
+       name: '刘荣杰',
+       desc: '2016级 遥感信息工程学院',
+       date: '2019/04/20',
+       c: '大福'
+     },
+     {
+       pic: '/static/cutboat.png',
+       name: '李坤',
+       desc: '2016级 遥感信息工程学院',
+       date: '2019/04/20',
+       c: '水手'
+     },
+     {
+       pic: '/static/cutboat.png',
+       name: 'gengji',
+       desc: '2016级 遥感信息工程学院',
+       date: '2019/04/20',
+       c: '大福'
+     },
+     {
+       pic: '/static/cutboat.png',
+       name: '刘荣杰',
+       desc: '2016级 遥感信息工程学院',
+       date: '2019/04/20',
+       c: '大福'
+     },
+   ]
   },
-
-  
+se1:function(){
+  this.setData({
+    index:1,
+    showmodel: true
+  })
+},
+se2: function () {
+    this.setData({
+      index: 2,
+      showmodel: true
+    })
+  }, 
+se3: function () {
+    this.setData({
+      index: 3,
+      showmodel: true
+    })
+  }, 
+se4: function () {
+    this.setData({
+      index: 4,
+      showmodel: true
+    })
+  },
+se5: function () {
+    this.setData({
+      index: 5,
+      showmodel: true
+    })
+  },
+  bac:function(){
+    this.setData({
+      showmodel:false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
   },
 
   /**
