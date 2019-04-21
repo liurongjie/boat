@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: '', //后台
+    url:'',//后台
     buy_index: "",
     latitude: 30.41,
     longitude: 114.29,
@@ -18,32 +18,7 @@ Page({
     text: "我要上船",
     popup: true,
     show_model: true,
-    picture_production: [],
-    start_time: '',
-    end_time: '',
-    now: '',
-    date_day: "",
-    date_hour: "",
-    date_minute: "",
-    date_second: "",
-    evaluationlist :"",
-    data_list: {},
-    pic_producation: "",
   },
-
-
-  pro_map: function() {
-    wx.navigateTo({
-      url: '/pages/pro_map/pro_map',
-    })
-  },
-
-  pro_evaluation: function() {
-    wx.navigateTo({
-      url: '/pages/evaluation/evaluation',
-    })
-  },
-
 
   /**
    * 生命周期函数--监听页面加载
@@ -51,91 +26,25 @@ Page({
   onLoad: function(e) {
     console.log(common.currentData)
     this.setData({
-      Parentuser_index: app.buy_index,
-      url: app.url,
+      buy_index: app.buy_index,
+      url:app.url,
 
     })
     this.checkorder();
-
-    this.setData({
-      data_list: common.currentData,
-      start_time: common.currentData.starttime,
-      end_time: common.currentData.endtime,
-    })
-
-
-
-    var timestamp = Date.parse(new Date());
-    timestamp = timestamp / 1000;
-    var temp;
-    temp = Math.ceil((timestamp - this.data.start_time) / (this.data.end_time - this.data.start_time) * 100);
-    var date = this.data.end_time - timestamp;
-    var date_day = parseInt(date / 3600 / 24);
-    var date_hour = parseInt((date - date_day * 24 * 3600) / 3600);
-    var date_min = parseInt((date - date_hour * 3600 - date_day * 3600 * 24) / 60);
-    var date_sec = parseInt(date - date_hour * 3600 - date_day * 3600 * 24 - date_min * 60);
-    this.setData({
-      now: timestamp,
-      percent: temp,
-      date_day: date_day,
-      date_hour: date_hour,
-      date_minute: date_min,
-      date_second: date_sec,
-      pic_producation: 'https://xiaoyibang.top:8002/uploads/' + this.data.data_list.production__introductionpic,
-    })
-
-
-    var that = this
-    wx.request({
-      url: 'https://xiaoyibang.top:8002/dajia/firstcomment',
-      data: {
-        'productionid': common.currentData.production,
-        // this.pro_data.production_id
-      },
-      success: (res) => {
-        that.setData({
-          evaluationlist: res.data.data
-        })
-        common.currentEvaluation = this.data.evaluationlist
-
-      }
-    })
-
-
-
-
-    var picture_production_url = [];
-
-    var url_temp1 = 'https://xiaoyibang.top:8002/uploads/' + this.data.data_list.production__merchant__pic1
-    picture_production_url.push(url_temp1)
-    var url_temp2 = 'https://xiaoyibang.top:8002/uploads/' + this.data.data_list.production__merchant__pic2
-    picture_production_url.push(url_temp2)
-    var url_temp3 = 'https://xiaoyibang.top:8002/uploads/' + this.data.data_list.production__merchant__pic3
-    picture_production_url.push(url_temp3)
-
-    this.setData({
-      picture_production: picture_production_url
-    })
-
-    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    //首条评论的时间格式---
-    let evaluationlist = this.data.evaluationlist
-    var util = require("../../utils/util.js");
-    this.data.evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
-    this.setData({ evaluationlist })
-    console.log('本页评论',this.data.evaluationlist)
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    this.checkorder();
 
   },
 
@@ -173,12 +82,18 @@ Page({
   onShareAppMessage: function() {
 
   },
+  //检查是否购买
+  checkorder: function () {
+    for (var i = 0; i < common.orderlist.length; i++) {
+      if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status != 0) {
+        common.currentorder = common.orderlist[i];
+        this.setData({
+          status: 2
+        })
+        break;
+      }
+    }
 
-  changestatus: function() {
-    console.log("changed to ", app.buy_index)
-    this.setData({
-      buy_index: app.buy_index
-    })
 
   },
   goback: function() {
@@ -188,8 +103,8 @@ Page({
     })
 
   },
-  buy: function() {
-
+  buy: function () {
+    //是否实名认证
     if (app.globalData.status == 0) {
       wx.showToast({
         title: '未认证正在跳转',
@@ -197,7 +112,7 @@ Page({
         icon: 'loading',
       })
 
-      setTimeout(function() {
+      setTimeout(function () {
         wx.navigateTo({
           url: "/pages/verify/verify",
         }, 1000)
@@ -206,7 +121,12 @@ Page({
       var that = this;
       switch (that.data.status) {
 
-        case 3:
+        case 1:
+          //我要上船
+          that.buyalone(this.data.url + '/dajia/buyalone');
+          that.hidePopup(false);
+          break;
+        case 2:
           //看我的船
           wx.navigateTo({
             url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
@@ -214,40 +134,14 @@ Page({
           })
           break;
 
-        case 1:
-          //我要上船
-          that.buyalone(this.data.url + '/dajia/buyalone');
-          that.checkorder();
-          console.log("ddd")
-          that.hidePopup(false);
-
-
-
-
-
-          break;
       }
     }
 
   },
-  checkorder: function() {
-
-    for (var i = 0; i < common.orderlist.length; i++) {
-      if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status != 0) {
-
-        common.currentorder = common.orderlist[i];
-        this.setData({
-          status: 3
-        })
-        break;
-      }
-    }
-
-
-  },
+  
   buyalone: function(url) {
     var that = this;
-    console.log(url)
+    console.log(app.globalData.openid)
     wx.request({
       url: url,
       data: {
@@ -262,27 +156,9 @@ Page({
       }
     })
 
-    
-  },
-
-  hidePopup(flag = true) {
-    this.setData({
-      "popup": flag
-    });
-
 
   },
-
-  backtopages: function(options) {
-    console.log("用户提交评价后触碰页面", options)
-    wx.navigateTo({
-      url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
-    })
-  },
-
-
-  buytogether: function() {
+  buytogether: function (url) {
     console.log("运行buytogether")
     var that = this;
     wx.request({
@@ -318,7 +194,23 @@ Page({
     })
 
 
-  }
+  },
+  hidePopup(flag = true) {
+    this.setData({
+      "popup": flag
+    });
+  },
+
+  backtopages: function(options) {
+    console.log("用户提交评价后触碰页面", options)
+    wx.navigateTo({
+      url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
+        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
+    })
+  },
+
+
+  
 
 
 })
