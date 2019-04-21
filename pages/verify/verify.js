@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    could:true,
     show_model: true,
     popup: true,
     selectPerson: true,
@@ -63,7 +64,7 @@ Page({
     var x = e.detail.value;
     if(x=='WHU')
     this.setData({
-      school: 武汉大学,
+      school: '武汉大学',
       inputValue1:'武汉大学'
     })
   },
@@ -203,7 +204,7 @@ Page({
     })
   },
   getCode(e) {
-    this.setData({ btnDisabled: true})
+    this.setData({btnDisabled: true})
     clearInterval(this.data.setInter)
     console.log('获取验证码');
     var that = this;
@@ -224,10 +225,11 @@ Page({
     icon: 'none',
     duration: 2000
     })
-     }, this.data.phone, '您的验证码为:' + this.data.code,1,1000,5);
+     }, this.data.phone, '您的验证码为:' + this.data.code + '，有效时间为5分钟',1,1000,5);
   },
   timer1: function () {
     let promise = new Promise((resolve, reject) => {
+      
       this.data.setInter = setInterval(
         () => {
           var time = this.data.time + 1;
@@ -274,23 +276,37 @@ Page({
   },
   //保存
   save(e) {
-
+    var that=this;
     console.log('姓名: ' + this.data.name);
     console.log('学校: ' + this.data.school);
     console.log('院系: ' + this.data.yuanxi);
     console.log('学号: ' + this.data.number);
     console.log('手机号: ' + this.data.phone);
     console.log('验证码: ' + this.data.codee);
-    if (this.data.t1 == 'red' || this.data.t2 == 'red' || this.data.t3 == 'red' || this.data.t4 == 'red')
-      wx.showToast({
-        title: '信息有误',
-        icon: 'none'
-      })
     var m = this.data.yuanxi;
     console.log(m);
     if (this.data.adapterSource.indexOf(m) == -1){
-      this.setData({ t3: 'red' })}
+      this.setData({ t3: 'red' })
+      }
     else this.setData({ t3: 'white' })
+    if (this.data.name =='') {
+      this.setData({ t1: 'red' })
+    }
+    if (this.data.number == '') {
+      this.setData({ t4: 'red' })
+    }
+    if (this.data.t1 == 'red' || this.data.t2 == 'red' || this.data.t3 == 'red' || this.data.t4 == 'red'){
+      wx.showToast({
+        title: '信息有误',
+        icon: 'none',
+      });
+      this.setData({
+        could:false
+      })
+    }
+    else this.setData({
+      could: true
+    })
     var oldcode = this.data.codee;
     var result = 3;//通过
     if (typeof (oldcode) == "undefined" || oldcode == '') {
@@ -320,7 +336,7 @@ Page({
       return
     }
     console.log(result);
-    if(result==3)
+    if(result==3&&this.data.could){
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/verify',
       data:{
@@ -332,13 +348,18 @@ Page({
         'telephone': this.data.phone,
       },
       success:(res)=>{
-       
-        wx.setStorageSync('information', res.data);
-        app.getuserinformation();
-        app.globalData.status=1;
 
-      
-
+        var information = {
+          'userid': res.data.userid,
+          'teamname': res.data.team_name,
+          'name': res.data.name,
+          'number': res.data.number,
+          'status': res.data.status,
+          'nickname': app.globalData.nickname,
+          'avatarUrl': app.globalData.avatarUrl,
+        }
+        wx.setStorageSync('information', information)
+        that.getuserinformation(); 
       }
       
     })
@@ -348,6 +369,7 @@ Page({
     //   isShow: true
     // })
     this.hidePopup(false);
+    }
   },
 
   hidePopup(flag = true) {
@@ -359,7 +381,6 @@ Page({
 
   backtopages: function (options) {
     console.log("用户提交审核后触碰页面", options)
-    app.globalData.getInfo_flash=0;
     wx.navigateTo({
       url: '/pages/home/home'
     })

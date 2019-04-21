@@ -48,6 +48,7 @@
     <text style='position:absolute;left:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>日用百货 应有尽有</text>
     <image src='/static/icon/Icon1.png' style='position:absolute;width:150rpx;height:150rpx;left:420rpx;top:56rpx;'></image>
   </view>
+
   <view class='ta3'>
     <image src='/static/icon/Icon2.png' style='position:absolute;width:150rpx;height:150rpx;left:50rpx;top:56rpx;'></image>
     <text style='position:absolute;right:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>会员社群</text>
@@ -56,6 +57,16 @@
 感动人心的好产品吧</text>
     <text style='position:absolute;right:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>价格厚道 感动人心</text>
   </view>
+
+  <view class='ta3' style='opacity:0'>
+    <image src='/static/icon/Icon2.png' style='position:absolute;width:150rpx;height:150rpx;left:50rpx;top:56rpx;'></image>
+    <text style='position:absolute;right:50rpx;top:40rpx;color:white;font-size:45rpx;font-weight:300;'>会员社群</text>
+    <text style='position:absolute;right:50rpx;top:75rpx;color:white;font-size:30rpx;font-weight:300;'>
+跟着大珈一起去采购
+感动人心的好产品吧</text>
+    <text style='position:absolute;right:50rpx;top:210rpx;color:white;font-size:25rpx;font-weight:300; opacity: 0.4;'>价格厚道 感动人心</text>
+  </view>
+
 </scroll-view>
 
 </view>
