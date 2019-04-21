@@ -14,20 +14,25 @@
           <view class='introduction'>目前砍价已领先94%用户</view>
           <view class='introduction'>初始价格为{{period.period__startprice}}元</view>
           <view class='price'>
-          <text style='font-size:25rpx;margin-top:20%;'>¥</text>
-          <text>{{period.period__startprice-cutprice-period.period__cutprice}}</text>
+            <text style='font-size:25rpx;margin-top:20%;'>¥</text>
+            <text>{{period.period__startprice-cutprice-period.period__cutprice}}</text>
           </view>
         </view>
       </view>
-     
+
     </view>
     <view class='tab'>
-      <button class='fenxiang' open-type='{{status}}' bindtap='{{func}}'>{{btn_text_left[btn_index]}}</button>
+      <button class='fenxiang' wx:if="{{btn_index==0}}" open-type='getUserInfo' bindgetuserinfo="login">帮这好友砍一刀</button>
+
+       <button class='fenxiang' wx:if="{{btn_index==1}}"  bindtap='cutprice'>帮这好友砍一刀</button>
+       <button class='fenxiang' wx:if="{{btn_index==2}}"  open-type='share'>分享好友砍价</button>
+       <button class='fenxiang' wx:if="{{btn_index==3}}"  open-type='share'>帮Ta召唤好友</button>
+
       <button class='chakan' bindtap='rightbindtap'>{{btn_text_right[btn_index]}}</button>
     </view>
-     
-    
-    
+
+
+
   </view>
   <view class='bottom'>
     <progress percent="{{process}}" activeColor='#FEEE58' backgroundColor='#FF6342' stroke-width='10' border-radius='5'></progress>
@@ -57,7 +62,7 @@
           </view>
         </view>
       </view>
-  
+
       <!-- <block wx:for="{{res}}" wx:key="*this">
       <view class='hah'></view>
         <view class='m'>

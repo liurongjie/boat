@@ -14,6 +14,7 @@ App({
   
     //获取屏幕尺寸
     that.getsystem();
+    wx.clearStorage();
     that.gethomelist(this.url+'/dajia/home');
     that.getuserinformation();
     that.getorderlist(this.url + '/dajia/orderlist');
@@ -153,7 +154,7 @@ App({
   //全局变量
   globalData: {
     status:0,//是否实名认证
-    userid: '',
+    userid: 0,
     name:'',
     teamname:'',
     time:'',
