@@ -1,8 +1,5 @@
 {
   "usingComponents": {
-    "title": "../component/title/title",
-    "navigationBar": "/pages/component/navigationBar/index",
-    "tobuy": "/pages/component/tobuy/tobuy"
-
+    "navigationBar": "/pages/component/navigationBar/index"
   }
 }

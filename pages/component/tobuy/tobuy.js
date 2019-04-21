@@ -107,6 +107,6 @@ Component({
       wx.navigateTo({
         url: '/pages/evaluation/evaluation',
       })
-    }
+    },
   }
 })
