@@ -25,7 +25,7 @@
     <view class="to_end_progress">
       <view class='progress_text_view'>
         <view class='boat_view'>
-          <image class='boat' style='margin-left:{{-12+percent*0.32}}vh;' src='/static/pic/boat.png'></image>
+          <image class='boat' style='margin-left:{{-13.5+percent*0.36}}vh;' src='/static/pic/boat.png'></image>
         </view>
         <view class='progress_yes'>
           <progress percent='{{percent}}' border-radius='30' stroke-width="5" activeColor='#ffffff' backgroundColor='#0C7AAF' />
