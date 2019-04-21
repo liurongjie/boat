@@ -1,7 +1,7 @@
 //app.js
 var common=require("/common/index.js")
 App({
-  list:1,
+  list:3,
   url:'https://xiaoyibang.top:8002',//后台
   buy_index:1,
 

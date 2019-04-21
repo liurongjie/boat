@@ -1,6 +1,6 @@
 <navigationBar id="navigationBar" color="black" title="订单详情" back="true" background="white" fixed="fixed"></navigationBar>
 <view class='background'>
-  <image src='/static/pic/myteam.jpg' style='width:150%;height:150%;margin-left:-25%;margin-top:-25%' ></image>
+  <image src='/static/pic/myteam.png' style='width:100%;height:100%; '></image>
 </view>
 <view class='team'>
      <view style='width:50%;height:30%;margin-left:25%;'>
@@ -16,22 +16,25 @@
      </view>
 </view>
 
-<view wx-if='{{showmodel}}' class='showmodel'>
+
+<!-- 详情 -->
+<view wx-if='{{showmodel}}' bindtap='bac' class='showmodel'>
    <view class='bac' bindtap='bac'>
+   <image src='/static/icon/-.svg' style='width:60%;height:60%;margin-top:20rpx;margin-left:20rpx;'></image>
    </view>
-   <view style='position:absolute;top:0rpx;left:0rpx;width:100%;height:50%;border-radius:0 0 20rpx 20rpx;'>
-   <image src='/static/cutboat.png' style='width:100%;height:100%;'></image>
+   <view style='position:absolute;top:0rpx;left:0rpx;width:100%;height:46%;border-radius:0 0 20rpx 20rpx;'>
+   <image src='/static/2.png' style='width:100%;height:100%;'></image>
    </view>
-   <view style='width:180rpx;height:180rpx;margin-left:210rpx;top:-80rpx;border-radius:100%;position:absolute;border:solid 3rpx white;'>
+   <view style='width:180rpx;height:180rpx;margin-left:209rpx;top:-78rpx;border-radius:100%;position:absolute;border:solid 3rpx white;'>
      <image src='{{data[index-1].pic}}'style='width:100%;height:100%;border-radius:100%'></image>
    </view>
 
-   <view style='width:100%;position:absolute;top:50%;height:50%;display:flex;justify-content: center;'>
-   <text style='position:absolute;top:10%;'>{{data[index-1].desc}}</text>
-   <text style='position:absolute;margin-top:10%;top:10%;font-size:80rpx;color:blue'>{{data[index-1].name}}</text>
-   <text style='position:absolute;margin-top:30%;top:10%;'>-{{data[index-1].date}}-</text>
+   <view style='width:100%;position:absolute;top:46%;height:54%;display:flex;justify-content: center;'>
+   <text style='position:absolute;top:6%;color:grey'>{{data[index-1].desc}}</text>
+   <text style='position:absolute;margin-top:12%;top:0%;font-size:80rpx;color:#52ADB4;font-weight:200'>{{data[index-1].name}}</text>
+   <text style='position:absolute;margin-top:24%;top:15%;font-size:24rpx;color:grey'>──── {{data[index-1].date}} ────</text>
    <view class='cap'>
-   <text style='height:100%;display: flex;flex-direction:column;justify-content: center;font-size:50rpx;'>{{data[index-1].c}}</text>
+   <text style='height:100%;display: flex;flex-direction:column;justify-content: center;font-size:50rpx;color:white;font-family:Monospace'>{{data[index-1].c}}</text>
    </view>
    </view>
 </view>

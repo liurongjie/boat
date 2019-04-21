@@ -122,7 +122,7 @@
 
 
 <view class='pro_inform_content' >
-    <image mode="widthFix" src='{{pic_producation}}'></image>
+    <image mode="widthFix" src='{{pic_producation}}' class='pro_inform_content_img'></image>
 </view>
 
 
