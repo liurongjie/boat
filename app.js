@@ -54,8 +54,8 @@ App({
     var information=wx.getStorageSync('sign')
     var date=new Date();
     var day=date.getDate();
-    console.log(information)
-    console.log(day)
+    // console.log(information)
+    // console.log(day)
     if(information){
       if(information.day!=day){
         this.globalData.sign=false;

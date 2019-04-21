@@ -23,7 +23,7 @@ Component({
       lastday:app.globalData.lastday,
       status: app.globalData.status,
     })
-    console.log(app.globalData.status,"app.globalData.status")
+    // console.log(app.globalData.status,"app.globalData.status")
   },
   /**
    * 组件的方法列表

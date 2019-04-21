@@ -70,6 +70,9 @@ Page({
       pic_producation: 'https://xiaoyibang.top:8002/uploads/' + this.data.data_list.production__introductionpic,
     })
 
+    //测试
+    console.log(this.data.percent)
+
 
     var that = this
     wx.request({
