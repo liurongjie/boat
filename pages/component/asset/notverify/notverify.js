@@ -30,6 +30,12 @@ Component({
       wx.navigateTo({
         url: '/pages/verify/verify'
       })
+    },
+    wenti:function(){
+      wx.showModal({
+        title: '请先实名认证',
+        content: '',
+      })
     }
   }
 })

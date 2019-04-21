@@ -10,10 +10,12 @@
   position: absolute;
   width: auto;
   height: auto;
-  top: 110rpx;
-  left: 160rpx;
+  top: 24rpx;
+  right: 5rpx;
   background: white;
   z-index: 10;
+  opacity: 0.6;
+  box-shadow: 0px 5rpx 0rpx 6rpx grey;
 }
 .phone_personal{
   left: 100rpx;

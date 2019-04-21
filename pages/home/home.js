@@ -9,7 +9,7 @@ Page({
    */
   data: {
     teamid: '0000000',
-    sign: true, //今天是否完成签到
+    sign: false, //今天是否完成签到
     index: 1,
     show_flag: 'false',
     animationData: {},
@@ -100,7 +100,7 @@ Page({
   },
   onGotUserInfo: function(e) {
 
-    app.globalData.nickName = e.detail.userInfo.nickName
+    app.globalData.nickname = e.detail.userInfo.nickname
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
     app.login();
@@ -135,7 +135,7 @@ Page({
         show_flag: 'true'
       })
 
-    }, 500) //延迟时间 
+    }, 1000) //延迟时间 
 
 
 

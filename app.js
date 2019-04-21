@@ -4,7 +4,7 @@ App({
   list:1,
   url:'https://xiaoyibang.top:8002',//后台
   buy_index:1,
-
+  getInfo_flash:1,//1是需要上船动画，0是不需要
   onLaunch: function () {
     var that=this;
     //身份信息获取
@@ -55,8 +55,8 @@ App({
     var information=wx.getStorageSync('sign')
     var date=new Date();
     var day=date.getDate();
-    console.log(information)
-    console.log(day)
+    // console.log(information)
+    // console.log(day)
     if(information){
       if(information.day!=day){
         this.globalData.sign=false;

@@ -105,14 +105,14 @@
 .line {
   background-color: #ebeff2;
   width: 100%;
-  height: 10rpx;
+  height:0.4vh;
   position: relative;
 }
 
 .line_1 {
   background-color: #ebeff2;
   width: 100%;
-  height: 2rpx;
+  height: 0.3vh;
   position: relative;
 }
 
@@ -145,7 +145,7 @@
 .pro_disc {
   position: relative;
   width: 100%;
-  height: 120rpx;
+  height: 9vh;
   display: flex;
   flex-direction: row;
 }
@@ -272,7 +272,7 @@
   flex-direction: row;
   text-align: center;
   width: 100%;
-  height: 80rpx;
+  height:5vh;
   font-size: 24rpx;
   font-weight: 300;
   color: rgba(102, 105, 102, 0.596);
@@ -781,7 +781,7 @@
 }
 
 .scroll {
-  height: 1000rpx;
+  height: 74vh;
   width: 100%;
   position: relative;
 }

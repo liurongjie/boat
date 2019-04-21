@@ -11,35 +11,35 @@ Page({
   showmodel:false,
    data:[
      {
-       pic: '/static/cutboat.png',
+       pic: '/static/3.png',
        name: '龙长飞',
        desc:'2016级 遥感信息工程学院',
        date:'2019/04/20',
        c:'船长'
      },
      {
-       pic: '/static/cutboat.png',
+       pic: '/static/c1.jpg',
        name: '刘荣杰',
        desc: '2016级 遥感信息工程学院',
        date: '2019/04/20',
        c: '大福'
      },
      {
-       pic: '/static/cutboat.png',
+       pic: '/static/c2.jpg',
        name: '李坤',
        desc: '2016级 遥感信息工程学院',
        date: '2019/04/20',
        c: '水手'
      },
      {
-       pic: '/static/cutboat.png',
+       pic: '/static/c3.jpg',
        name: 'gengji',
        desc: '2016级 遥感信息工程学院',
        date: '2019/04/20',
        c: '大福'
      },
      {
-       pic: '/static/cutboat.png',
+       pic: '/static/c4.jpg',
        name: '刘荣杰',
        desc: '2016级 遥感信息工程学院',
        date: '2019/04/20',

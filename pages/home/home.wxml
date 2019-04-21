@@ -1,5 +1,5 @@
 
-<view style='height:100%;width:100%;position:absolute' wx:if="{{ show_flag=='false'}}" animation="{{animationData}}">
+<view style='height:100%;width:100%;position:fixed;z-index:1000;' wx:if="{{ show_flag=='false'}}" animation="{{animationData}}">
  <image src='/static/login.jpg' mode='scaleToFill' class='guide_view'></image>
  <view class='z'>
  <text style='position:absolute;top:20%;width:100%;text-align:center;font-family:"Sofia Pro";font-weight:100;opacity:0.5;font-size:36rpx'>本校同舟  共享实惠</text>
@@ -8,10 +8,11 @@
   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='btn_view'>我要上船</button>
 </view> 
   
-  <home wx:if="{{index==1&& show_flag=='true'}}"></home>
+
+  <home wx:if="{{index==1}}"></home>
   <boat wx:if="{{index==3&& show_flag=='true'}}"></boat>
   <setting id='setting' wx:if="{{index==2&& show_flag=='true'}}"></setting>
-  <tab bindtap='changestatus' wx:if="{{show_flag=='true'}}"></tab>
+  <tab bindtap='changestatus'></tab>
   <sign wx:if="{{!sign&& show_flag=='true'}}" bindtap="sign"></sign>
   
 

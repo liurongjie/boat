@@ -12,6 +12,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    status:'0',
     sign:false,//是否完成签到
     color:'#5EE1FE',//button框颜色
     text:'今日签到',//button框显示
@@ -19,9 +20,10 @@ Component({
   },
   ready:function(){
     this.setData({
+      status:app.globalData.status,
       lastday:app.globalData.lastday,
     })
-
+    console.log(this.data.status);
   },
   /**
    * 组件的方法列表
