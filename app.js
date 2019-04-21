@@ -88,7 +88,7 @@ App({
           wx.request({
             url: 'https://xiaoyibang.top:8002/dajia/login',
             data: {
-              'nickname': that.globalData.nickName,
+              'nickname': that.globalData.nickname,
               'gender': that.globalData.gender,
               'code': res.code,
               'pic': that.globalData.avatarUrl
@@ -101,7 +101,7 @@ App({
                 'name':res.data.name,
                 'number':res.data.number,
                 'status':res.data.status,
-                'nickname': that.globalData.nickName,
+                'nickname': that.globalData.nickname,
                 'avatarUrl':that.globalData.avatarUrl,
               }
               wx.setStorageSync('information', information)
@@ -159,7 +159,7 @@ App({
     time:'',
 
 
-    nickName: '',
+    nickname: '',
     avatarUrl: '',
     gender: 0,
     

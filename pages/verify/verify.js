@@ -16,7 +16,7 @@ Page({
     selectArea: false,
     btnValue: '发送验证码',
     btnDisabled: true,
-    teamid:'0000000',
+    teamid:1,
     name:'',
     yuanxi:'',
     number:'',
@@ -274,6 +274,7 @@ Page({
   },
   //保存
   save(e) {
+    var that=this;      
 
     console.log('姓名: ' + this.data.name);
     console.log('学校: ' + this.data.school);
@@ -322,9 +323,9 @@ Page({
     console.log(result);
     if(result==3)
     wx.request({
-      url: 'https://xiaoyibang.top:8001/dajia/verify',
+      url: 'https://xiaoyibang.top:8002/dajia/verify',
       data:{
-        'openid': app.globalData.openid,
+        'userid': app.globalData.userid,
         'teamid':this.data.teamid,
         'name': this.data.name,
         'number': this.data.number,
@@ -332,13 +333,17 @@ Page({
         'telephone': this.data.phone,
       },
       success:(res)=>{
-       
-        wx.setStorageSync('information', res.data);
+        var information = {
+          'userid': res.data.userid,
+          'teamname': res.data.team_name,
+          'name': res.data.name,
+          'number': res.data.number,
+          'status': res.data.status,
+          'nickname': app.globalData.nickname,
+          'avatarUrl': app.globalData.avatarUrl,
+        }
+        wx.setStorageSync('information', information);
         app.getuserinformation();
-
-
-      
-
       }
       
     })
@@ -360,7 +365,7 @@ Page({
   backtopages: function (options) {
     console.log("用户提交审核后触碰页面", options)
     wx.navigateTo({
-      url: '/pages/home/home'
+      url: '/pages/home/home?index=2'
     })
   },
 
