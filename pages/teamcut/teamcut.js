@@ -20,54 +20,8 @@ Page({
         name: '刘荣杰',
         cutprice: 75,
       },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
-
     ],
     res:[
-      {
-        pic:'/static/cutboat.png',
-        name:'刘荣杰',
-        cutprice:75,
-      },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
-      {
-        pic: '/static/cutboat.png',
-        name: '刘荣杰',
-        cutprice: 75,
-      },
       {
         pic: '/static/cutboat.png',
         name: '刘荣杰',
@@ -347,7 +301,7 @@ Page({
   },
   //右边按钮点击
   team_inview: function () {
-    if (!this.data.end) {
+    if (this.data.end) {
       return '';
     }
     common.onecut = this.data.onecut;

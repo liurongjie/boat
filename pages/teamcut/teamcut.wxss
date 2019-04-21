@@ -11,6 +11,7 @@
   left: 0rpx;
   width: 100%;
   height: 48%;
+ 
 }
 
 .content {
@@ -22,6 +23,7 @@
   background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
+   border-radius: 0 0 20rpx 20rpx;
 }
 
 .userpic {
@@ -31,6 +33,7 @@
   width: 100rpx;
   border-radius: 100%;
   margin-left: 290rpx;
+  border:solid 3rpx white;
 }
 .username {
   position: relative;
@@ -56,8 +59,9 @@
 }
 .middle image{
   position: relative;
-  width: 50%;
+  width: 40%;
   height: 100%;
+  margin-left: 5%;
 }
 .middle .information{
   position: relative;
@@ -97,27 +101,29 @@
 .fenxiang {
   position: relative;
   height: 75rpx;
-  width: 45%;
+  width: 38%;
   background: #FEEE58;
   border-radius: 50rpx;
   box-shadow: 0 4rpx 30rpx -3rpx grey;
-  font-size: 28rpx;
+  font-size: 26rpx;
   color: red;
   text-align: center;
   line-height: 70rpx;
+  font-weight:600;
 }
 
 .chakan {
   position: relative;
   height: 75rpx;
-  width: 45%;
-  background: red;
+  width: 38%;
+  background: #FF6342;
   border-radius: 50rpx;
   box-shadow: 0 4rpx 30rpx -3rpx grey;
-  font-size: 28rpx;
+  font-size: 26rpx;
   color: white;
   text-align: center;
   line-height: 70rpx;
+  font-weight:600;
 }
 .bottom{
   position: absolute;

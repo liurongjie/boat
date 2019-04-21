@@ -5,7 +5,7 @@
   border-radius: 40rpx;
   background:linear-gradient(to bottom,#FDB38F,#F7907E);
   margin-left: 225rpx;
-  margin-top: -240rpx;
+  margin-top: -50rpx;
   text-align:center;
   line-height: 70rpx;
   color:rgba(255,255,255,0.8);

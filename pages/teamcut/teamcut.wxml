@@ -1,9 +1,8 @@
 <navigationBar id="navigationBar" color="black" title="BOAT校园" back="true" background="white" fixed="fixed">
 </navigationBar>
 <view class='container'>
-
   <view class='top'>
-    <image src='/static/cutboat.png' style='position:absolute;width:100%;height:100%'></image>
+    <image src='/static/pic/myteam.jpg' style='position:absolute;width:100%;height:100%;' mode='top'></image>
     <view class='content'>
       <image src='/static/cutboat.png' class='userpic'></image>
       <view class='username'>珞珈山李坤</view>

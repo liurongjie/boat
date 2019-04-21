@@ -1,8 +1,8 @@
- <image src='/static/pic/new.png' style='position:reative;width:100%;height:550rpx;;'></image>
+ <image src='/static/pic/new.png' style='position:reative;width:100%;height:30vh;;'></image>
 <view class='boat'>
     <text style='font-weight:600;font-size:50rpx;font-style: italic;'>BOAT</text>
   </view>
-  <image src='/static/pic/1.jpg' class='cicle'></image>
+  <image src='{{pic}}' class='cicle'></image>
 <view class='judge'>未认证</view>
   <view class='list1' bindtap='goto'>
     <image src='/static/icon/setting/icon1.svg' ></image>

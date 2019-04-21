@@ -13,7 +13,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    index: 3,
+    index: 1,
     h:'',
     h1:'',
     h2:'',
