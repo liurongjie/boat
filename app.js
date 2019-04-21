@@ -19,11 +19,7 @@ App({
       success: function (res) {
         that.globalData.h=res.windowHeight;
         that.globalData.w = res.windowWidth;
-        //导航栏自适应
-        // let systemInfo = wx.getSystemInfoSync();
-        let reg = /ios/i;
-        // let pt = 20;//导航状态栏上内边距
-        // let h = 44;//导航状态栏高度
+        let reg = /ios/i;   
         if (reg.test(res.system)) {
           that.globalData.pt = res.statusBarHeight;
           that.globalData.sh = 44;
@@ -31,9 +27,6 @@ App({
           that.globalData.pt = res.statusBarHeight;
           that.globalData.sh = 48;
         }
-        
-        // let pt = 20;//导航状态栏上内边距
-        // let sh = 44;//导航状态栏高度
       },
     });
     that.gethomelist(this.url+'/dajia/home');

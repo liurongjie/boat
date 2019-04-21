@@ -1,7 +1,8 @@
 {
   "pages": [
-   "pages/myteam/myteam",
     "pages/home/home",
+   "pages/myteam/myteam",
+   
     "pan/page",
     "mx/mx",
     "pages/verify/verify",
