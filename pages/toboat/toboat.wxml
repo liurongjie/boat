@@ -1,5 +1,5 @@
 <scroll-view scroll-y style='position:absolute;width:100%;height:100%'>
-  <navigationBar id="navigationBar" color="black" title="BOAT校园" back="true" background="white" fixed="fixed">
+  <navigationBar id="navigationBar" color="black" title="商品详情" back="true" background="white" fixed="fixed">
 </navigationBar>
 
   <tobuy wx:if="{{buy_index==1}}" bindtap="changestatus"></tobuy>
