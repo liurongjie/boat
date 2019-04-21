@@ -362,6 +362,8 @@ width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left:10rpx;
+
 }
 
 
@@ -451,7 +453,7 @@ width: 80%;
   position: relative;
   width: 100%;
   height: auto;
-
+  
 
 
 }
@@ -751,3 +753,7 @@ text-align:left;
 }
 
 
+.pro_inform_content_img{
+  width: 100%;
+  
+}

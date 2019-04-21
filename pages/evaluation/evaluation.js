@@ -11,7 +11,9 @@ Page({
    */
   data: {
     data_list: {},
-    evaluation_list: {}
+    evaluation_list: {},
+    remark_pic:0,
+    remark_pic_array: [ { picUrl: '/static/c1.jpg' }, { picUrl: '/static/c1.jpg' }],
   },
 
   /**
@@ -20,7 +22,8 @@ Page({
   onLoad: function (options) {
     this.setData({
       data_list: common.currentData,
-      evaluation_list: common.currentEvaluation
+      evaluation_list: common.currentEvaluation,
+      remark_pic: common.currentEvaluation
     })
     console.log("[page3]获取公共js数据", this.data)
   },

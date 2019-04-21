@@ -18,8 +18,8 @@ Component({
     
     index: 1,
 
-    btn_1_text: "驾校",
-    btn_2_text: "健身",
+    btn_1_text: "健身",
+    btn_2_text: "驾校",
     btn_3_text: "外语",
     btn_4_text: "考研",
 
