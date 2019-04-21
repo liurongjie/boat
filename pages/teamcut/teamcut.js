@@ -103,9 +103,10 @@ Page({
       steamid: options.steamid,
       userid: options.userid,
     })
-    this.checkstatus();
-    this.getperiod(options.orderid);
     this.getorderdetail(options.steamid);
+    this.getperiod(options.orderid);
+    this.checkstatus();
+    
 
     
   },
@@ -125,8 +126,11 @@ Page({
   //判定团队成员
   checkmember: function() {
     //是否为组团成员
+    console.log('userid' + app.globalData.userid);
+    console.log(this.data.onecut.length)
     for (var i = 0; i < this.data.onecut.length; i++) {
-      if (app.globalData.userid == this.data.onecut[i].order__user__userid) {
+      
+      if (app.globalData.userid == this.data.onecut[i].member__userid) {
         this.setData({
           btn_index: 0,
           status: 'share',
@@ -183,6 +187,7 @@ Page({
           twocut: res.data.twocut,
         })
         that.merge();
+        that.checkmember();
 
       }
     })
@@ -227,12 +232,12 @@ Page({
   merge: function() {
     var data = [];
     var cutprice = 0;
-    // result.sort(onecut.time);
+    console.log("合并")
     for (var i = 0; i < this.data.onecut.length; i++) {
       var middle = {};
-      middle.pic = this.data.onecut[i].order__user__picture;
-      middle.name = this.data.onecut[i].order__user__name;
-      middle.cutprice = this.data.onecut[i].order__cutprice;
+      middle.pic = this.data.onecut[i].member__picture;
+      middle.name = this.data.onecut[i].member__name;
+      middle.cutprice = this.data.onecut[i].membership__cutprice;
       cutprice = cutprice + middle.cutprice;
       data.push(middle);
     }
@@ -305,15 +310,15 @@ Page({
   },
   //帮这好友砍一刀
   cutprice: function(steamid) {
-    if (!this.data.end) {
-      return '';
-    }
+    // if (!this.data.end) {
+    //   return '';
+    // }
     var that = this;
     wx.request({
       url: 'https://xiaoyibang.top:8002/dajia/cutprice',
       data: {
         'steamid': that.data.steamid,
-        'openid': app.globalData.openid,
+        'userid': app.globalData.userid,
         'periodid': that.data.periodid,
       },
       success: (res) => {

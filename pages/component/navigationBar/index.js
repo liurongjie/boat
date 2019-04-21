@@ -100,13 +100,21 @@ Component({
     showHomeButton: false,//是否显示返回首页
     show: true,//是否显示导航栏
   },
-  attached: function(option){
-    //检测首页是否在当前页面栈中
+  ready:function(){
     let pages = getCurrentPages();
     let showHomeButton = false;
-    if(pages.length < 2 && pages[0].route != __wxConfig.pages[0]){
+    if (pages.length < 2 && pages[0].route != __wxConfig.pages[0]) {
       showHomeButton = true;
     }
+    this.setData({
+      height: app.globalData.sh,
+      paddingTop: app.globalData.pt,
+      showHomeButton: showHomeButton
+    })
+  },
+  attached: function(option){
+    //检测首页是否在当前页面栈中
+    
     //导航栏自适应
     // let systemInfo = wx.getSystemInfoSync();
     // let reg = /ios/i;
@@ -119,11 +127,7 @@ Component({
     //     pt = systemInfo.statusBarHeight;
     //     h = 48;
     // }
-    this.setData({
-      height: app.globalData.sh,
-      paddingTop: app.globalData.pt,
-      showHomeButton: showHomeButton
-    })
+   
     console.log(this);
   },
   methods: {

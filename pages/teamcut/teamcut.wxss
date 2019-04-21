@@ -1,4 +1,3 @@
-
 .container {
   position: fixed;
   width: 100%;
@@ -22,6 +21,7 @@
   background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
+  border-radius: 0 0 20rpx 20rpx;
 }
 
 .userpic {
@@ -31,35 +31,40 @@
   width: 100rpx;
   border-radius: 100%;
   margin-left: 290rpx;
+  border: solid 3rpx white;
 }
+
 .username {
   position: relative;
   font-size: 24rpx;
   text-align: center;
   height: 50rpx;
-  
 }
-.sentence{
+
+.sentence {
   position: relative;
   font-size: 24rpx;
   text-align: center;
   height: 50rpx;
 }
-.middle{
+
+.middle {
   position: relative;
   width: 90%;
   height: 50%;
   left: 5%;
-  
-  display: flex; 
+  display: flex;
   flex-direction: row;
 }
-.middle image{
+
+.middle image {
   position: relative;
-  width: 50%;
+  width: 40%;
   height: 100%;
+  margin-left: 5%;
 }
-.middle .information{
+
+.middle .information {
   position: relative;
   width: 45%;
   margin-left: 5%;
@@ -67,23 +72,27 @@
   display: flex;
   flex-direction: column;
 }
-.information .productionname{
+
+.information .productionname {
   font-size: 25rpx;
   font-weight: 800;
 }
-.information .introduction{
+
+.information .introduction {
   font-size: 20rpx;
   font-weight: 300;
   margin-top: 20rpx;
   color: rgba(0, 0, 0, 0.8);
 }
-.information .price{
+
+.information .price {
   font-size: 80rpx;
   font-weight: 500;
   display: flex;
   flex-direction: row;
-  color: #2690DF;
+  color: #2690df;
 }
+
 .tab {
   position: relative;
   width: 90%;
@@ -97,43 +106,47 @@
 .fenxiang {
   position: relative;
   height: 75rpx;
-  width: 45%;
-  background: #FEEE58;
+  width: 38%;
+  background: #feee58;
   border-radius: 50rpx;
   box-shadow: 0 4rpx 30rpx -3rpx grey;
-  font-size: 28rpx;
+  font-size: 26rpx;
   color: red;
   text-align: center;
   line-height: 70rpx;
+  font-weight: 600;
 }
 
 .chakan {
   position: relative;
   height: 75rpx;
-  width: 45%;
-  background: red;
+  width: 38%;
+  background: #ff6342;
   border-radius: 50rpx;
   box-shadow: 0 4rpx 30rpx -3rpx grey;
-  font-size: 28rpx;
+  font-size: 26rpx;
   color: white;
   text-align: center;
   line-height: 70rpx;
+  font-weight: 600;
 }
-.bottom{
+
+.bottom {
   position: absolute;
   width: 100%;
   height: 52%;
   top: 48%;
 }
 
-progress{
+progress {
   position: relative;
   margin-top: 20rpx;
   width: 90%;
   left: 5%;
   background-color: yellow;
 }
-.time{
+
+.time {
   position: relative;
   width: 100%;
   height: 100rpx;
@@ -141,7 +154,8 @@ progress{
   flex-direction: row;
   line-height: 100rpx;
 }
-.time .box{
+
+.time .box {
   position: relative;
   margin-top: 10rpx;
   width: 80rpx;
@@ -151,29 +165,32 @@ progress{
   box-shadow: 5rpx 5rpx 10rpx 5rpx rgba(85, 85, 85, 0.10);
   font-size: 32rpx;
 }
-.time .box1{
+
+.time .box1 {
   position: relative;
   margin-top: 10rpx;
   width: 20rpx;
   height: 80rpx;
   line-height: 80rpx;
   text-align: center;
-
 }
+
 .scroll {
   position: relative;
   width: 100%;
   height: 60%;
 }
-.sumcutprice{
-  position:relative;
-  font-size:30rpx;
-  color:grey;
-  width:100%;
-  height:80rpx;
-  text-align:center;
-  line-height:80rpx;
+
+.sumcutprice {
+  position: relative;
+  font-size: 30rpx;
+  color: grey;
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
 }
+
 .list {
   position: relative;
   width: 100%;
@@ -183,6 +200,7 @@ progress{
   margin-bottom: 20rpx;
   line-height: 80rpx;
 }
+
 .list .img {
   position: relative;
   width: 80rpx;
@@ -190,12 +208,14 @@ progress{
   margin-left: 100rpx;
   border-radius: 100%;
 }
+
 .list .name {
   position: relative;
   margin-left: 50rpx;
   font-size: 28rpx;
 }
-.list .rank{
+
+.list .rank {
   position: relative;
   width: 80rpx;
   height: 30rpx;
@@ -203,12 +223,10 @@ progress{
   margin-left: 20rpx;
   line-height: 30rpx;
   text-align: center;
-  border: 1px solid #2690DF;
+  border: 1px solid #2690df;
   font-size: 28rpx;
-  color:#2690DF;
-  
+  color: #2690df;
 }
-
 
 .list .cutprice {
   position: relative;
@@ -216,4 +234,3 @@ progress{
   font-size: 28rpx;
   margin-left: 200rpx;
 }
-
