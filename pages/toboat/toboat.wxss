@@ -1020,7 +1020,7 @@ text-align:left;
 .desc_startprice{
   color:rgba(255, 255, 255, 0.808);
   font-size:10px;
-  margin-left: 20rpx;
+  margin-left: 26rpx;
   display: flex;
    align-items: center;
   justify-content: left;
@@ -1703,6 +1703,7 @@ text-align:left;
  }
 
 .boat_view{
+
   width: 100%;
   margin-bottom: -15rpx;
 }
