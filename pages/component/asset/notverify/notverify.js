@@ -1,4 +1,5 @@
 // pages/component/asset/notverify/notverify.js
+var app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -6,11 +7,18 @@ Component({
   properties: {
 
   },
+  ready:function(){
+    this.setData({
+      
+      pic: app.globalData.avatarUrl,
 
+    })
+  },
   /**
    * 组件的初始数据
    */
   data: {
+    pic: '',
 
   },
 

@@ -14,7 +14,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
     res: '',
     url: "https://xiaoyibang.top:8002/uploads/",
     end: false, //判定订单是否取消或者过期
