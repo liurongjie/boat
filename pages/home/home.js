@@ -9,7 +9,7 @@ Page({
    */
   data: {
     teamid: '0000000',
-    sign: true, //今天是否完成签到
+    sign: false, //今天是否完成签到
     index: 1,
     show_flag: 'false',
     animationData: {},

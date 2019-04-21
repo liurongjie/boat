@@ -338,7 +338,7 @@ Page({
     console.log(result);
     if(result==3&&this.data.could){
     wx.request({
-      url: 'https://xiaoyibang.top:8001/dajia/verify',
+      url: 'https://xiaoyibang.top:8002/dajia/verify',
       data:{
         'openid': app.globalData.openid,
         'teamid':this.data.teamid,

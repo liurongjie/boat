@@ -9,7 +9,7 @@
     <text>校园认证</text>
     <image src='/static/icon/setting/icon2.svg' style='margin-left:150rpx;' ></image>
   </view>
-  <view class='list2'>
+  <view class='list2' bindtap='wenti'>
     <text>问题反馈&联系我们</text>
     <image src='/static/icon/setting/icon3.svg'  ></image>
   </view>

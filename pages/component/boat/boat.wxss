@@ -733,7 +733,7 @@ background:linear-gradient(to bottom right, #BEBEBE, #949494);
 
 
 .text_2{
-  color:#ffffff86;
+  color:white;
   font-size:18rpx;
   font-weight: 600;
 }
