@@ -1,6 +1,6 @@
-// pages/evaluation/evaluation.js
+    // pages/evaluation/evaluation.js
 
-
+var util = require("../../utils/util.js");
 var common = require("../../common/index.js")
 var evalu_number = '14';
 
@@ -11,9 +11,8 @@ Page({
    */
   data: {
     data_list: {},
-    evaluation_list: {},
-    remark_pic:0,
-    remark_pic_array: [ { picUrl: '/static/c1.jpg' }, { picUrl: '/static/c1.jpg' }],
+    evaluation_list:[{}],
+
   },
 
   /**
@@ -23,9 +22,52 @@ Page({
     this.setData({
       data_list: common.currentData,
       evaluation_list: common.currentEvaluation,
-      remark_pic: common.currentEvaluation
+    
     })
-    console.log("[page3]获取公共js数据", this.data)
+
+    console.log("原始评论数据：",this.data.evaluation_list)
+    let evaluation_list = this.data.evaluation_list
+    
+
+    for (var i = 0; i < this.data.evaluation_list.length;i++)
+    {
+
+
+      //评论的图片处理
+      if (this.data.evaluation_list[i].pic1 === '[object Undefined]')
+      {
+        evaluation_list[i].remark_pic_array =null
+      }
+      else if (this.data.evaluation_list[i].pic2 === '[object Undefined]'){
+        evaluation_list[i].pic1 = 'https://xiaoyibang.top:8002/uploads/' + this.data.evaluation_list[i].pic1
+        evaluation_list[i].remark_pic_array = [evaluation_list[i].pic1]
+      }
+      else if (this.data.evaluation_list[i].pic3 === '[object Undefined]') {
+        evaluation_list[i].pic1 = 'https://xiaoyibang.top:8002/uploads/' + this.data.evaluation_list[i].pic1
+        evaluation_list[i].pic2 = 'https://xiaoyibang.top:8002/uploads/' + this.data.evaluation_list[i].pic2
+        evaluation_list[i].remark_pic_array = [evaluation_list[i].pic1, evaluation_list[i].pic2]
+      }
+      else{
+        evaluation_list[i].pic1 = 'https://xiaoyibang.top:8002/uploads/' + this.data.evaluation_list[i].pic1
+        evaluation_list[i].pic2 = 'https://xiaoyibang.top:8002/uploads/' + this.data.evaluation_list[i].pic2
+        evaluation_list[i].pic3 = 'https://xiaoyibang.top:8002/uploads/' + this.data.evaluation_list[i].pic3
+        evaluation_list[i].remark_pic_array = [evaluation_list[i].pic1, evaluation_list[i].pic2, evaluation_list[i].pic3]
+      }
+
+
+
+
+      //评论的时间处理
+      if(i!=0)
+        evaluation_list[i].time = util.js_date_time(this.data.evaluation_list[i].time)
+      
+
+
+      this.setData({ evaluation_list})
+    }
+
+    console.log("[page3]获取公共js数据", this.data.evaluation_list)
+
   },
 
   /**

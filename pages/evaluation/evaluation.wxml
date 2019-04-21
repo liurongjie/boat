@@ -52,6 +52,7 @@
         </view>
         <view class='user_department'>{{item.user__department}}</view>
         <view class='user_pickname'>{{item.user__name}}</view>
+        <view class='user_remark_time'>{{item.time}}</view>
 
       </view>
 
@@ -61,9 +62,8 @@
 
       <view class='show_remark_pic' >
 
-          <image  class='pic_1' wx:for="{{remark_pic_array}}"  wx:key="index" src='{{item.picUrl}}'  mode='widthFix'></image>
-          <!-- <image  class='pic_1' src='/static/c1.jpg'  mode='widthFix' ></image>
-          <image  class='pic_1' src='/static/c1.jpg'  mode='widthFix' ></image> -->
+          <image  class='pic_1' wx:for="{{item.remark_pic_array}}"  wx:for-item='pic_url' wx:if="{{pic_url!='https://xiaoyibang.top:8002/uploads/'}}"  src='{{pic_url}}'   mode='widthFix'></image>
+      
       </view>
     </view>
     <view class='line_1'></view>

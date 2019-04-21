@@ -1,8 +1,138 @@
 <scroll-view scroll-y style='position:absolute;width:100%;height:100%'>
   <navigationBar id="navigationBar" color="black" title="商品详情" back="true" background="white" fixed="fixed">
-</navigationBar>
+  </navigationBar>
 
-  <tobuy wx:if="{{buy_index==1}}" bindtap="changestatus"></tobuy>
+  <!-- <tobuy wx:if="{{buy_index==1}}" bindtap="changestatus"></tobuy> -->
+
+
+
+  <!-- 商家轮播图 -->
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{picture_production}}" wx:for-item="item" wx:key="picture_production">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- <image src='/static/pic/small.png' style='width:100%;height:30rpx;'></image> -->
+  <!-- swiper组件下的商品详细价格、参团人数等信息 -->
+  <view class='flex-wrp'>
+
+
+    <text class='desc_price_symbol'>￥</text>
+    <text class=".desc_price_num">{{data_list.startprice-data_list.cutprice}}</text>
+    <view class=" desc_oldprice_people_num">
+      <view class=".desc_startprice">￥{{data_list.startprice}}</view>
+      <view class=".desc_cut_num">{{data_list.number}}人正在拼</view>
+    </view>
+    <view class="to_end_progress">
+      <view class='progress_text_view'>
+        <view class='boat_view'>
+          <image class='boat' style='margin-left:{{-80+percent*3}}rpx;' src='/static/pic/boat.png'></image>
+        </view>
+        <view class='progress_yes'>
+          <progress percent='{{percent}}' border-radius='30' stroke-width="5" activeColor='#ffffff' backgroundColor='#0C7AAF' />
+        </view>
+        <view class='progress_text'>
+          距本轮结束{{date_day}}天 {{date_hour}}:{{date_minute}}:{{date_second}}
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class='line'></view>
+
+  <!-- 商品排名，参团人次等 -->
+  <view class='pro_disc'>
+
+    <view class='pro_disc_index'>
+      <image src="/static/icon.png" class='pro_disc_index_photo'></image>
+      <view class='pro_paiming_text'>综合排名</view>
+      <view class='pro_paiming'>{{1}}</view>
+    </view>
+
+    <view class='pro_disc_content'>
+      <view class='pro_disc_content1'>{{data_list.production__name}}</view>
+      <view class='pro_disc_content2'>
+        <view class='leijicantuan'>累计参团{{data_list.cutnumber}}人次</view>
+        <view class='haopinglv'>好评率{{data_list.production__reputation}}%</view>
+        <view class='zonghepaiming'>综合排名第{{1}}</view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 分割线 -->
+  <view class='line'></view>
+
+
+  <!-- 位置 -->
+  <view class='pro_location'>
+    <view class='pro_location_index'>位置</view>
+    <view class='pro_location_text'>{{data_list.production__merchant__location}}</view>
+    <view class='pro_location_map' bindtap='pro_map'>地图➤</view>
+  </view>
+
+
+  <!-- 分割线 -->
+  <view class='line'></view>
+
+  <!-- 评价-->
+  <view class='pro_evaluation'>
+    <view class='pro_evaluation_index'>评价</view>
+    <view class='pro_evaluation_text'>往期好评率（{{evaluationlist.length}}）{{data_list.production__reputation}}%</view>
+    <view class='pro_evaluation_all' bindtap='pro_evaluation'>全部➤</view>
+  </view>
+
+
+  <!-- 评价例子 -->
+  <view class='user_evaluation_first'>
+    <view class='user_inform'>
+      <view>
+        <!-- 用户头像 -->
+        <image class='userpic' src='{{evaluationlist[0].user__picture}}'></image>
+      </view>
+
+      <view class='user_department'>{{evaluationlist[0].user__department}}</view>
+
+      <view class='user_pickname'>{{evaluationlist[0].user__name}}</view>
+      <view class='user_remark_time'>{{evaluationlist[0].time}}</view>
+    </view>
+
+    <view class='user_evaluation_text'>
+      {{evaluationlist[0].context}}
+    </view>
+  </view>
+
+
+  <!-- 分割线 -->
+  <view class='line'></view>
+
+  <!-- 详情-->
+  <view class='pro_inform'>
+    <view class='pro_inform_display'>
+      <view class='pro_inform_index'>-大</view>
+      <view class='pro_inform_index_small'>/</view>
+      <view class='pro_inform_index'>件</view>
+      <view class='pro_inform_index_small'>/</view>
+      <view class='pro_inform_index'>详</view>
+      <view class='pro_inform_index_small'>/</view>
+      <view class='pro_inform_index'>情-</view>
+    </view>
+
+    <view class='line_dis'>COMMODITY INFORMATION</view>
+  </view>
+
+
+  <view class='pro_inform_content'>
+    <image mode="widthFix" src='{{pic_producation}}' class='pro_inform_content_img'></image>
+  </view>
+
+
+
 
   <view class="bottom" bindtap='changestatus'>
     <view class="bottom" style='height:7vh;background: white;'>

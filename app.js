@@ -100,7 +100,7 @@ App({
               'pic': that.globalData.avatarUrl
             },
             success: (res) => {
-              console.log(res.data)
+              console.log("用户信息",res.data)
               var information={
                 'userid':res.data.userid,
                 'teamname':res.data.team_name,
@@ -136,6 +136,7 @@ App({
       this.globalData.time = information.number;
       this.globalData.teamname = information.teamname;
     }
+    console.log("用户信息", this.globalData)
   },
   //获取用户订单信息
   getorderlist:function(url){
