@@ -6,7 +6,7 @@
 <text style='position:absolute;top:250rpx;left:50rpx;font-weight:200;font-size:25rpx;z-index:99;color:white'>{{title1}}</text>
 <view style='position: absolute;top:330rpx;width: 90%;left: 5%;height:{{height}};box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10);'>
 </view>
- <image src='{{order.production__merchant__logo}}' class='image'></image>
+ <image src='{{order.production__logo}}' class='image'></image>
 <text style='position:absolute;width: 350rpx;height: 150rpx;left:300rpx;top: 370rpx;font-size:30rpx;'>{{order.production__name
 }}</text>
 <text style='position:absolute;width: 350rpx;height: 150rpx;left:330rpx;top: 420rpx;font-size:30rpx;'>[一月试车+车接车送]</text>

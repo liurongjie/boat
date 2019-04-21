@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "navigationBar": "/pages//component/navigationBar/index"
+    "navigationBar": "/pages/component/navigationBar/index"
+
   }
 }

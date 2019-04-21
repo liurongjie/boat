@@ -11,15 +11,22 @@ App({
     
    
     //订单信息
-   
-
-
+  
     //获取屏幕尺寸
+    that.getsystem();
+    that.gethomelist(this.url+'/dajia/home');
+    that.getuserinformation();
+    that.getorderlist(this.url + '/dajia/orderlist');
+    this.sign();
+    
+  },
+  getsystem(){
+    var that=this;
     wx.getSystemInfo({
       success: function (res) {
-        that.globalData.h=res.windowHeight;
+        that.globalData.h = res.windowHeight;
         that.globalData.w = res.windowWidth;
-        let reg = /ios/i;   
+        let reg = /ios/i;
         if (reg.test(res.system)) {
           that.globalData.pt = res.statusBarHeight;
           that.globalData.sh = 44;
@@ -29,11 +36,7 @@ App({
         }
       },
     });
-    that.gethomelist(this.url+'/dajia/home');
-    that.getuserinformation();
-    that.getorderlist(this.url + '/dajia/orderlist');
-    this.sign();
-    
+
   },
   gethomelist: function (url) {
     //首页商品信息
@@ -44,8 +47,6 @@ App({
       },
       success: (res) => {
         common.homelist = res.data;
-        console.log(res.data)
-
       }
     })
   },

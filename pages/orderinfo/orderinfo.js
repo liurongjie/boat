@@ -18,7 +18,7 @@ Page({
     quxiao: '关于取消：组团过程中因个人意愿取消订单，定金将不予退还',
    
     
-    url: "https://xiaoyibang.top:8001/uploads/",
+    url: "https://xiaoyibang.top:8002/uploads/",
 
 
 
@@ -109,7 +109,7 @@ Page({
     console.log(common.currentorder)
     this.timeapproach(common.currentorder.period__endtime);
     this.getprocess(common.currentorder.period__starttime, common.currentorder.period__endtime);
-    order.production__merchant__logo = this.data.url + order.production__merchant__logo;
+    order.production__logo = this.data.url + order.production__logo;
     switch(state){
       case 1 :
         order.time1=this.timetransform(order.time1);
@@ -227,7 +227,7 @@ Page({
     console.log(this.data.order)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + this.data.order.steam_id + '&orderid=' + this.data.order.orderid
-        + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
+        + '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&userid=' + app.globalData.userid
     })
   },
     
