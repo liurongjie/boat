@@ -4,7 +4,7 @@ App({
   list:3,
   url:'https://xiaoyibang.top:8002',//后台
   buy_index:1,
-
+  getInfo_flash:1,//1是需要上船动画，0是不需要
   onLaunch: function () {
     var that=this;
     //身份信息获取

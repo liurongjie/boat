@@ -26,7 +26,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    
 
   },
 
@@ -34,6 +34,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    if (app.globalData.show_flag==0){
+      //说明已经获取信息，以后不再展示引导页
+      this.setData({
+        show_flag: 'false',
+      })
+      
+    }
     this.setData({
       sign: app.globalData.sign,
     })

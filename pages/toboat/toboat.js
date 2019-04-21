@@ -107,7 +107,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    var util = require("../../utils/util.js");
+    let evaluationlist = this.data.evaluationlist
+    evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
+    this.setData({ evaluationlist })
   },
 
   /**

@@ -335,7 +335,7 @@ Page({
        
         wx.setStorageSync('information', res.data);
         app.getuserinformation();
-
+        app.globalData.status=1;
 
       
 
@@ -359,6 +359,7 @@ Page({
 
   backtopages: function (options) {
     console.log("用户提交审核后触碰页面", options)
+    app.globalData.getInfo_flash=0;
     wx.navigateTo({
       url: '/pages/home/home'
     })
