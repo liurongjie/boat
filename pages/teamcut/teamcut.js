@@ -106,7 +106,6 @@ Page({
   },
   //判断是否登陆
   checkstatus: function() {
-
     if (!app.globalData.userid) {
       this.setData({
         btn_index:0,
@@ -171,18 +170,18 @@ Page({
   },
   //后台登陆
   backlogin: function (url) {
-    var that = this;
-    if (!that.globalData.userid ) {
+    var that=this;
+    if (!app.globalData.userid ) {
       wx.login({
         success: res => {
 
           wx.request({
             url: 'https://xiaoyibang.top:8002/dajia/login',
             data: {
-              'nickname': that.globalData.nickname,
-              'gender': that.globalData.gender,
+              'nickname': app.globalData.nickname,
+              'gender': app.globalData.gender,
               'code': res.code,
-              'pic': that.globalData.avatarUrl
+              'pic': app.globalData.avatarUrl
             },
             success: (res) => {
               console.log("用户信息", res.data)
@@ -192,8 +191,8 @@ Page({
                 'name': res.data.name,
                 'number': res.data.number,
                 'status': res.data.status,
-                'nickname': that.globalData.nickname,
-                'avatarUrl': that.globalData.avatarUrl,
+                'nickname': app.globalData.nickname,
+                'avatarUrl': app.globalData.avatarUrl,
               }
               wx.setStorageSync('information', information)
               that.getorderdetail(this.data.steamid);
