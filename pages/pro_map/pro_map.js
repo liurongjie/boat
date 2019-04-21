@@ -1,4 +1,6 @@
 // pages/pro_map/pro_map.js
+
+var app=getApp();
 var common = require("../../common/index.js");
 Page({
 
@@ -11,8 +13,8 @@ Page({
       id: 0,
       latitude: "",
       longitude: "",
-      width: 50,
-      height: 50,
+   
+      height: "",
     }],
     data_list: {}
   },
@@ -27,13 +29,14 @@ Page({
     console.log("地图页信息：", this.data.data_list)
 
     this.setData({
+      height: app.globalData.h,
       markers: [{
         latitude: this.data.data_list.production__merchant__latitude,
         longitude: this.data.data_list.production__merchant__longitude,
       }],
 
     })
-
+    console.log("map_height",this.data.height)
   },
 
   /**
