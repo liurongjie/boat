@@ -15,7 +15,7 @@ Component({
   data: {
     
     title:'',
-    url:"https://xiaoyibang.top:8001/uploads/",
+    url:"https://xiaoyibang.top:8002/uploads/",
     order:[],
     duration: 2000,
     indicatorDots: true,
@@ -79,6 +79,7 @@ Component({
     }
     this.setData({ title: common.data.ordertitle });
     this.setData({ lists: order });
+    
 
   },
   /**

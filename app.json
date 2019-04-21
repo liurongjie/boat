@@ -1,16 +1,16 @@
 {
   "pages": [
-"pages/teamcut/teamcut",
     "pages/home/home",
+    "pages/teamcut/teamcut",
+    
+    "pages/setting/setting",
     "pan/page",
     "mx/mx",
     "pages/verify/verify",
     "pages/myteam/myteam",
     "pages/remark/remark",
-    "pages/setting/setting",
     "pages/webview/webview",
     "pages/toboat/toboat",
-   
     
     "pages/orderinfo/orderinfo",
     "pages/pro_map/pro_map",

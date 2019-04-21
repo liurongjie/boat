@@ -1,7 +1,7 @@
 /* pages/component/showModel/showModel.wxss */
 .model{
-  position: relative;
-  top: 100rpx;
+  position: fixed;
+  top: 40%;
   width: 80%;
   left:10%;
   height: 45%;

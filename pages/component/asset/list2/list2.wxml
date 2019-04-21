@@ -9,7 +9,7 @@
   <block wx:for="{{lists}}" wx:key="*this">  
     <view style=' background: {{color}}; margin-bottom: 40rpx; height: 160rpx;width: 80%;margin-left:5%;margin-top:2%;border-radius:40rpx;box-shadow: grey 0rpx -2rpx 20rpx -6rpx ;' data-item="{{item}}" bindtap='selectindex'>
     <view class='m'>
-     <image src='{{url}}{{item.production__merchant__logo}}' class='img'></image>
+     <image src='{{url}}{{item.production__logo}}' class='img'></image>
      <text class='nm'>{{item.production__merchant__name}}</text>
      <text class='dist'>距离{{item.production__team__teamname}}{{item.production__distance
 }}km</text>
