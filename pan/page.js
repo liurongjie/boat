@@ -5,6 +5,7 @@ Page({
     t: 1,//几等奖0是特等奖  1:运动相机 2：英雄皮肤  3：100贝壳 4：5贝壳
     //5：和开发者吃饭 6：清养生茶  7：樱花茶杯  0：IPHONEX
     award: '',//名字
+    account:'',
     circleList: [],//圆点数组
     awardList: [],//奖品数组
     colorCircleFirst: '#FFDF2F',//圆点颜色1
@@ -74,7 +75,8 @@ Page({
   },
   onReady: function () {
     this.setData({
-      h: app.globalData.h
+      h: app.globalData.h,
+      account:app.globalData.account,
     });
     console.log(this.data.h)
   },
@@ -258,6 +260,14 @@ Page({
       success: (res) => {
         if (res.data.prize) {
           that.startGame(res.data.prize);
+          
+          setTimeout(function(){
+            that.setData({
+              account: res.data.account,
+            })
+
+          },7000)
+          app.globalData.account=res.data.account;
 
         }
 

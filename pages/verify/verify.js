@@ -17,7 +17,7 @@ Page({
     selectArea: false,
     btnValue: '发送验证码',
     btnDisabled: true,
-    teamid: '0000000',
+    teamid: 1,
     name: '',
     yuanxi: '',
     number: '',
@@ -366,9 +366,10 @@ Page({
             'status': res.data.status,
             'nickname': app.globalData.nickname,
             'avatarUrl': app.globalData.avatarUrl,
+            'account':res.data.account,
           }
           wx.setStorageSync('information', information)
-          that.getuserinformation();
+          app.getuserinformation();
         }
 
       })

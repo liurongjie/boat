@@ -7,8 +7,8 @@
 </view>
 <view class='beike' bindtap='b'>
   <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:100rpx;top:36rpx;'></image>
-  <text class='w'>我的贝壳：{{}} </text>
-  <text class='w1'>仅限校园大件可用>></text>
+  <text class='w'>我的贝壳：{{account}} </text>
+  <text class='w1'>用于贝壳商场抽奖>></text>
   <view class='b'>贝壳明细</view>
 </view>
 

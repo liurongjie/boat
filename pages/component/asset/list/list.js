@@ -15,6 +15,7 @@ Component({
   data: {
     name:'',
     pic:'',
+    account:'',
     teamname:'',
     time:'',
     list:1,
@@ -23,11 +24,13 @@ Component({
     h2:''
   },
 ready:function(){
+  console.log("beike"+app.globalData.account)
   this.setData({ 
     name: app.globalData.name,
     pic: app.globalData.avatarUrl, 
     teamname: app.globalData.teamname, 
-    time: app.globalData.time,  
+    time: app.globalData.time, 
+    account:app.globalData.account, 
     })
   var h = app.globalData.h;
   var h1 =h;
