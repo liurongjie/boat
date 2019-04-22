@@ -27,7 +27,7 @@ Page({
     res: [], //展示内容
     //数据缓存
     orderid: '',
-    nickName: '',
+    nickname: '',
     avatarUrl: '',
     steamid: '',
     openid: '',
@@ -97,7 +97,7 @@ Page({
     console.log("购买详情：", options)
     this.setData({
       orderid: options.orderid,
-      nickName: options.nickName,
+      nickname: options.nickname,
       avatarUrl: options.avatarUrl,
       steamid: options.steamid,
       userid: options.userid,

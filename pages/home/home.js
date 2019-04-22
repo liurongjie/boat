@@ -99,8 +99,8 @@ Page({
 
   },
   onGotUserInfo: function(e) {
-
-    app.globalData.nickname = e.detail.userInfo.nickname
+    
+    app.globalData.nickname = e.detail.userInfo.nickName//这个nickName1是信息获取，不能小写
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
     app.login();
