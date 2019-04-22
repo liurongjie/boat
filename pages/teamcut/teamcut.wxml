@@ -22,12 +22,9 @@
 
     </view>
     <view class='tab'>
-      <!-- <button class='fenxiang' wx:if="{{btn_index==0}}" open-type='getUserInfo' bindgetuserinfo="login">帮这好友砍一刀</button> -->
-
-
+      <button class='fenxiang' wx:if="{{btn_index==0}}" open-type='share'>分享好友砍价</button>
       <button class='fenxiang' wx:if="{{btn_index==1}}" bindtap='cutprice'>砍这好友一刀</button>
-      <button class='fenxiang' wx:if="{{btn_index==2}}" open-type='share'>分享好友砍价</button>
-      <button class='fenxiang' wx:if="{{btn_index==3}}" open-type='share'>帮Ta召唤好友</button>
+      <button class='fenxiang' wx:if="{{btn_index==2}}" open-type='share'>帮Ta召唤好友</button>
 
       <button class='chakan' bindtap='rightbindtap'>{{btn_text_right[btn_index]}}</button>
     </view>
@@ -72,7 +69,7 @@
 
 </view>
 <view wx:if="{{showModel}}" class='container1'>
-<view  class="model">
+  <view class="model">
     <view class="modelTitle">
       获取微信授权信息
     </view>
@@ -88,59 +85,3 @@
 
 
 
-<!-- <view class='hong'></view> -->
-<!-- <view class='title'>
-<view class='fh'  bindtap='back'></view>
-  <text class='text'>BOAT校园</text>
-</view> -->
-
-
-<!-- <view class='regulate'>活动规则</view>
-
-
-
-<view class='content'>
-<image src='{{avatarUrl}}' class='circle'></image>
-<text style='position:absolute;font-size:24rpx;top:60rpx;color:grey;'>{{nickName}}</text>
-<text style='position:absolute;font-size:28rpx;top:120rpx;'>快和我一起组团报名，享受同等价格吧</text>
-<view class='cont1'>
-<image src='{{period.production__merchant__logo}}'style='position:absolute;width:125rpx;height:125rpx;left:25rpx;top:25rpx;'></image>
-<text class='name'>{{period.production__name}}</text>
-<text style='position:absolute;font-size:18rpx;top:100rpx;color:grey;left:180rpx;'>累计参团{{period.period__number}}次</text>
-<text style='position:absolute;font-size:18rpx;top:130rpx;color:grey;left:180rpx;'>好评率91.5%</text>
-<text style='position:absolute;font-size:60rpx;top:15rpx;color:#CB2C29;left:450rpx;'>{{period.period__startprice-cutprice-period.period__cutprice}}</text>
-<text style='position:absolute;font-size:30rpx;top:60rpx;color:#CB2C29;left:420rpx;'>¥</text>
-<text style='position:absolute;font-size:16rpx;top:100rpx;color:grey;left:450rpx;'>初始价格为{{period.period__startprice}}元</text>
-<text style='position:absolute;font-size:16rpx;top:130rpx;color:grey;left:430rpx;'>目前砍价领先94%用户</text>
-</view>
-<view class='tab'>
-
-<button class='fenxiang' open-type='{{status}}'  bindtap='{{func}}' >{{btn_text_left[btn_index]}}</button>
-<button class='chakan' bindtap='team_inview'>{{btn_text_right[btn_index]}}</button>
-</view>
-</view>
-
-<view class='tiao'>
-<view class='da'></view>
-<view style='position: absolute;bottom: 100rpx;left: 5%;width: {{process}}%;height: 30rpx;background-color: #FEB25E;border-radius: 20rpx;'></view>
-<text wx:if="{{end}}" style='position:absolute;bottom:40rpx;left:150rpx;color:white;font-size:24rpx;'>还剩{{day}}天{{hour}}:{{minute}}:{{second}}本轮结束，快去抱团吧~</text>
-<text wx:if="{{!end}}" style='position:absolute;bottom:40rpx;left:150rpx;color:white;font-size:24rpx;'>{{sentence}}</text>
-
-</view>
-
-<text style='position:absolute;top:860rpx;left:0rpx;font-size:30rpx;color:grey;width:100%;background:white;height:80rpx;text-align:center;line-height:80rpx;'>-已有{{number}}位朋友帮忙砍价{{cutprice}}元-</text> -->
-
-
-<!-- <scroll-view scroll-y class="scroll" bindscrolltolower='lower' >
-  
- <block wx:for="{{res}}" wx:key="*this">  
-  <view style=' margin-bottom: 40rpx; height: 100rpx;width: 90%;margin-left:5%;' data-index="{{index}}" bindtap='selectindex'>
-     <view class='m'>
-     <image src='{{item.pic}}' class='img'></image>
-     <text class='tn'>{{item.name}}</text>
-    <text class='te'>{{item.cutprice}}</text>
-    <text class='te1'>元</text>
-     </view>
-    </view>  
-  </block>
-</scroll-view> -->

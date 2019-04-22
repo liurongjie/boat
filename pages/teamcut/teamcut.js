@@ -53,7 +53,7 @@ Page({
 
   },
   //下拉刷新
-  lower: function() {
+  lower: function () {
     // var result = this.data.res;
     // var resArr = jsonData.dataList;
     // for (let i = 0; i < 10; i++) {
@@ -92,7 +92,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   //打算传播steamid.periodid,pic name就行
-  onLoad: function(options) {
+  onLoad: function (options) {
     console.log("用户id" + app.globalData.userid)
     console.log("购买详情：", options)
     this.setData({
@@ -107,31 +107,31 @@ Page({
 
   },
   //判断是否登陆
-  checkstatus: function() {
+  checkstatus: function () {
     if (!app.globalData.userid) {
       this.setData({
-        showModel:true,
+        showModel: true,
       })
     } else {
       this.setData({
         showModel: false,
       })
-       this.getorderdetail(this.data.steamid);
+      this.getorderdetail(this.data.steamid);
 
 
     }
 
   },
   //判定团队成员
-  checkmember: function() {
+  checkmember: function () {
     //是否为组团成员
     console.log('userid' + app.globalData.userid);
     console.log(this.data.onecut.length)
-    
+
     for (var i = 0; i < this.data.onecut.length; i++) {
       if (app.globalData.userid == this.data.onecut[i].member__userid) {
         this.setData({
-          btn_index: 2,
+          btn_index: 0,
         })
         return '';
         break;
@@ -141,7 +141,7 @@ Page({
     for (var i = 0; i < this.data.twocut.length; i++) {
       if (app.globalData.userid == this.data.twocut[i].audience__userid) {
         this.setData({
-          btn_index: 3,
+          btn_index: 2,
         })
         return '';
         break;
@@ -169,7 +169,7 @@ Page({
   },
 
   //后台登陆
-  backlogin: function(url) {
+  backlogin: function (url) {
     var that = this;
     wx.login({
       success: res => {
@@ -195,7 +195,7 @@ Page({
             }
             wx.setStorageSync('information', information)
             this.setData({
-              showModel:false,
+              showModel: false,
             })
             that.getorderdetail(that.data.steamid);
             app.globalData.userid = res.data.userid;
@@ -210,7 +210,7 @@ Page({
 
 
   },
-  getorderdetail: function(steamid) {
+  getorderdetail: function (steamid) {
     var that = this;
     wx.request({
       url: 'https://xiaoyibang.top:8002/dajia/orderdetail',
@@ -226,11 +226,11 @@ Page({
         })
         that.checkmember();
         that.merge();
-        
+
       }
     })
   },
-  getperiod: function(orderid) {
+  getperiod: function (orderid) {
     var that = this;
     wx.request({
       url: 'https://xiaoyibang.top:8002/dajia/getperiod',
@@ -267,7 +267,7 @@ Page({
     })
   },
   //合并onecut和twocut生成res
-  merge: function() {
+  merge: function () {
     var data = [];
     var cutprice = 0;
     console.log("合并")
@@ -297,7 +297,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
     return {
       title: 'BOAT',
       path: 'pages/teamcut/teamcut?orderid=' +
@@ -317,12 +317,12 @@ Page({
 
   },
   //右边按钮点击
-  rightbindtap: function() {
+  rightbindtap: function () {
     if (!this.data.end) {
       return '';
     }
     common.onecut = this.data.onecut;
-    if (this.data.btn_index == 0) {
+    if (this.data.btn_index == 1) {
       wx.navigateTo({
         url: "/pages/myteam/myteam",
       })
@@ -342,7 +342,7 @@ Page({
 
   },
   //帮这好友砍一刀
-  cutprice: function(steamid) {
+  cutprice: function (steamid) {
     // if (!this.data.end) {
     //   return '';
     // }
@@ -363,7 +363,7 @@ Page({
     })
 
   },
-  timeapproach: function(endtime) {
+  timeapproach: function (endtime) {
     this.data.setInter = setInterval(
       () => {
         var nowtime = Math.floor(new Date().getTime() / 1000);
@@ -394,7 +394,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function(options) {
+  onReady: function (options) {
 
 
   },
@@ -402,7 +402,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
 
   },
@@ -410,28 +410,28 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
     clearInterval(this.data.setInter)
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 

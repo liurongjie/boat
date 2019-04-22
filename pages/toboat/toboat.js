@@ -199,7 +199,14 @@ Page({
 
         case 1:
           //我要上船
-          that.buyalone(this.data.url + '/dajia/buyalone');
+          if(common.data.steamid){
+            that.buytogether(this.data.url + '/dajia/buytogether')
+          }
+          else{
+            that.buyalone(this.data.url + '/dajia/buyalone');
+
+          }
+         
           that.hidePopup(false);
           break;
         case 2:
