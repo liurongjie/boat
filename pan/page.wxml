@@ -8,10 +8,10 @@
       <text style='position:relative;top:50rpx;color:white;'>贝壳商城</text>
     </view>
     <view class="container-out" style='top:{{80/736*h}}px;'>
-      <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};" wx:key="{{circleList}}">
+      <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};">
       </view>
       <view class="container-in">
-        <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};" wx:key="{{awardList.imageAward}}">
+        <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
           <image class="award-image" src="{{item.imageAward}}"></image>
         </view>
         <view class="start-btn" bindtap="getprize">
@@ -28,7 +28,7 @@
      </text>
     <view class='beike' style=' top: {{70/736*h}}px;'>
       <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:10rpx;top:36rpx;'></image>
-      <text class='w'>我的贝壳：{{account}} (每次抽奖消耗30贝壳)</text>
+      <text class='w'>我的贝壳：{{account}} </text>
       <view style='position:absolute;width:300rpx;height:100rpx;right:0rpx;' bindtap='mx'>
         <view class='b'>贝壳明细</view>
       </view>
@@ -45,7 +45,7 @@
     <view class='contentBottom'>
       <swiper class="tab-right" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='4'>
         <view class="right-item">
-          <block wx:for-index="idx" wx:key='{{idx.name}}'>
+          <block wx:for-index="idx" wx:for='{{aa}}'>
             <swiper-item>
               <view class='content-item'>
                 <text class='name'>{{item.nickName}}</text>

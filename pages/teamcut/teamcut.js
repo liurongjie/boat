@@ -158,7 +158,6 @@ Page({
 
   },
   onGotUserInfo(e) {
-
     console.log("正在运行login")
     app.globalData.nickname = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
@@ -302,7 +301,7 @@ Page({
       title: 'BOAT',
       path: 'pages/teamcut/teamcut?orderid=' +
         this.data.orderid +
-        '&' + 'nickName=' + this.data.nickName +
+        '&' + 'nickname=' + this.data.nickname +
         '&' + 'avatarUrl=' + this.data.avatarUrl +
         '&' + 'steamid=' + this.data.steamid +
         '&' + 'userid=' + this.data.userid,
