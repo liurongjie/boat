@@ -14,6 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModel: true,
     res: '',
     url: "https://xiaoyibang.top:8002/uploads/",
     end: false, //判定订单是否取消或者过期
@@ -32,7 +33,7 @@ Page({
     openid: '',
     periodid: '',
     //状态0自我，状态1帮我砍，状态2帮好友分享
-    btn_index: 0, //状态
+    btn_index: 1, //状态
     btn_text_left: ['分享好友砍价', '砍这好友一刀', '帮Ta召唤好友'],
     btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
     sentence: '', //展示句子
@@ -92,7 +93,7 @@ Page({
    */
   //打算传播steamid.periodid,pic name就行
   onLoad: function(options) {
-    console.log("用户id"+app.globalData.userid)
+    console.log("用户id" + app.globalData.userid)
     console.log("购买详情：", options)
     this.setData({
       orderid: options.orderid,
@@ -101,18 +102,22 @@ Page({
       steamid: options.steamid,
       userid: options.userid,
     })
-    this.getperiod(options.orderid);
     this.checkstatus();
+    this.getperiod(options.orderid);
+
   },
   //判断是否登陆
   checkstatus: function() {
     if (!app.globalData.userid) {
       this.setData({
-        btn_index:0,
+        showModel:true,
       })
-      console.log("没有用户信息")
     } else {
-      this.getorderdetail(this.data.steamid);
+      this.setData({
+        showModel: false,
+      })
+       this.getorderdetail(this.data.steamid);
+
 
     }
 
@@ -122,11 +127,11 @@ Page({
     //是否为组团成员
     console.log('userid' + app.globalData.userid);
     console.log(this.data.onecut.length)
+    
     for (var i = 0; i < this.data.onecut.length; i++) {
-      
       if (app.globalData.userid == this.data.onecut[i].member__userid) {
         this.setData({
-          btn_index:2,
+          btn_index: 2,
         })
         return '';
         break;
@@ -142,70 +147,67 @@ Page({
         break;
       }
     }
-    if (!app.globalData.userid) {
-      this.setData({
-        btn_index: 0,
-      })
-      this.getorderdetail(this.data.steamid);
 
-      console.log("没有用户信息")
-    } else {
-      this.setData({
-        btn_index: 1,
-      })
-    }
-    
+    this.setData({
+      btn_index: 1,
+    })
+
 
 
 
 
   },
+  onGotUserInfo(e) {
 
-  login: function(e) {
     console.log("正在运行login")
     app.globalData.nickname = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
     this.backlogin();
-  },
-  //后台登陆
-  backlogin: function (url) {
-    var that=this;
-    if (!app.globalData.userid ) {
-      wx.login({
-        success: res => {
 
-          wx.request({
-            url: 'https://xiaoyibang.top:8002/dajia/login',
-            data: {
+
+  },
+
+  //后台登陆
+  backlogin: function(url) {
+    var that = this;
+    wx.login({
+      success: res => {
+
+        wx.request({
+          url: 'https://xiaoyibang.top:8002/dajia/login',
+          data: {
+            'nickname': app.globalData.nickname,
+            'gender': app.globalData.gender,
+            'code': res.code,
+            'pic': app.globalData.avatarUrl
+          },
+          success: (res) => {
+            console.log("用户信息", res.data)
+            var information = {
+              'userid': res.data.userid,
+              'teamname': res.data.team_name,
+              'name': res.data.name,
+              'number': res.data.number,
+              'status': res.data.status,
               'nickname': app.globalData.nickname,
-              'gender': app.globalData.gender,
-              'code': res.code,
-              'pic': app.globalData.avatarUrl
-            },
-            success: (res) => {
-              console.log("用户信息", res.data)
-              var information = {
-                'userid': res.data.userid,
-                'teamname': res.data.team_name,
-                'name': res.data.name,
-                'number': res.data.number,
-                'status': res.data.status,
-                'nickname': app.globalData.nickname,
-                'avatarUrl': app.globalData.avatarUrl,
-              }
-              wx.setStorageSync('information', information)
-              that.getorderdetail(this.data.steamid);
-              app.globalData.userid=res.data.userid;
-              app.globalData.teamname = res.data.team_name;
-              app.globalData.name = res.data.name;
-              app.globalData.number=res.data.number;
-              app.globalData.status=res.data.status;
-            },
-          })
-        }
-      })
-    }
+              'avatarUrl': app.globalData.avatarUrl,
+            }
+            wx.setStorageSync('information', information)
+            this.setData({
+              showModel:false,
+            })
+            that.getorderdetail(that.data.steamid);
+            app.globalData.userid = res.data.userid;
+            app.globalData.teamname = res.data.team_name;
+            app.globalData.name = res.data.name;
+            app.globalData.number = res.data.number;
+            app.globalData.status = res.data.status;
+          },
+        })
+      }
+    })
+
 
   },
   getorderdetail: function(steamid) {
@@ -222,8 +224,9 @@ Page({
           onecut: res.data.onecut,
           twocut: res.data.twocut,
         })
-        that.merge();
         that.checkmember();
+        that.merge();
+        
       }
     })
   },
@@ -353,13 +356,12 @@ Page({
       },
       success: (res) => {
         that.getorderdetail(that.data.steamid);
+        that.setData({
+          btn_index: 1,
+        })
       }
     })
-    this.setData({
-      btn_index: 2,
-      status: 'share',
-      func: 'change_status',
-    })
+
   },
   timeapproach: function(endtime) {
     this.data.setInter = setInterval(

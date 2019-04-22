@@ -22,11 +22,12 @@
 
     </view>
     <view class='tab'>
-      <button class='fenxiang' wx:if="{{btn_index==0}}" open-type='getUserInfo' bindgetuserinfo="login">帮这好友砍一刀</button>
+      <!-- <button class='fenxiang' wx:if="{{btn_index==0}}" open-type='getUserInfo' bindgetuserinfo="login">帮这好友砍一刀</button> -->
 
-       <button class='fenxiang' wx:if="{{btn_index==1}}"  bindtap='cutprice'>帮这好友砍一刀</button>
-       <button class='fenxiang' wx:if="{{btn_index==2}}"  open-type='share'>分享好友砍价</button>
-       <button class='fenxiang' wx:if="{{btn_index==3}}"  open-type='share'>帮Ta召唤好友</button>
+
+      <button class='fenxiang' wx:if="{{btn_index==1}}" bindtap='cutprice'>砍这好友一刀</button>
+      <button class='fenxiang' wx:if="{{btn_index==2}}" open-type='share'>分享好友砍价</button>
+      <button class='fenxiang' wx:if="{{btn_index==3}}" open-type='share'>帮Ta召唤好友</button>
 
       <button class='chakan' bindtap='rightbindtap'>{{btn_text_right[btn_index]}}</button>
     </view>
@@ -63,22 +64,24 @@
         </view>
       </view>
 
-      <!-- <block wx:for="{{res}}" wx:key="*this">
-      <view class='hah'></view>
-        <view class='m'>
-          <image src='{{item.pic}}' class='img'></image>
-          <text class='tn'>可以</text>
-          <text class='te'>{{item.cutprice}}</text>
-          <text class='te1'>元</text>
-        </view>
-      </block> -->
+
     </scroll-view>
   </view>
 
 
 
 </view>
-
+<view wx:if="{{showModel}}" class='container1'>
+<view  class="model">
+    <view class="modelTitle">
+      获取微信授权信息
+    </view>
+    <view class="modelBody">微信登录需要获取您的用户信息，请前往设置</view>
+    <view class="btns">
+      <button open-type="getUserInfo" class="agree" bindgetuserinfo="onGotUserInfo" lang="zh_CN">授权</button>
+    </view>
+  </view>
+</view>
 
 
 
