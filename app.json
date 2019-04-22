@@ -1,10 +1,13 @@
 {
   "pages": [
+    "pan/page",
     "pages/home/home",
+   
+    
     "pages/teamcut/teamcut",
     
     "pages/setting/setting",
-    "pan/page",
+    
     "mx/mx",
     "pages/verify/verify",
     "pages/myteam/myteam",

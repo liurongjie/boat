@@ -84,7 +84,6 @@ App({
     if (!that.globalData.userid) {
       wx.login({
         success: res => {
-
           wx.request({
             url: 'https://xiaoyibang.top:8002/dajia/login',
             data: {

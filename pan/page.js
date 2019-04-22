@@ -1,10 +1,10 @@
-var app=getApp()
+var app = getApp()
 Page({
   data: {
-    h:'',//高度
-    t:4,//几等奖0是特等奖  1:运动相机 2：英雄皮肤  3：100贝壳 4：5贝壳
+    h: '',//高度
+    t: 1,//几等奖0是特等奖  1:运动相机 2：英雄皮肤  3：100贝壳 4：5贝壳
     //5：和开发者吃饭 6：清养生茶  7：樱花茶杯  0：IPHONEX
-    award:'',//名字
+    award: '',//名字
     circleList: [],//圆点数组
     awardList: [],//奖品数组
     colorCircleFirst: '#FFDF2F',//圆点颜色1
@@ -14,67 +14,69 @@ Page({
     indexSelect: 0,//被选中的奖品index
     isRunning: false,//是否正在抽奖
     imageAward: [
-      '/static/c1.jpg',
-      '/static/c2.jpg', 
-      '/static/c3.jpg',
-      '/static/c5.jpg',
-      '/static/c8.jpg',
-      '/static/c7.jpg',
-      '/static/c6.jpg', 
-      '/static/c4.jpg',
+      '/static/8.jpg',
+      '/static/1.jpg',
+      '/static/2.jpg',
+      '/static/3.jpg',
+      '/static/4.jpg',
+      '/static/5.jpg',
+      '/static/6.jpg',
+      '/static/7.jpg',
+
+
     ],//奖品图片数组
 
-      aa: [//获奖名单
-        {
+    aa: [//获奖名单
+      {
 
-          nickName: "刘**",
+        nickName: "刘**",
 
-          reward: "IPHONEX"
+        reward: "IPHONEX"
 
-        },
+      },
 
-        {
+      {
 
-          nickName: "李**",
+        nickName: "李**",
 
-          reward: "IPHONEX"
+        reward: "IPHONEX"
 
-        },
+      },
 
-        {
+      {
 
-          nickName: "龙**",
+        nickName: "龙**",
 
-          reward: "IPHONEX"
+        reward: "IPHONEX"
 
-        },
+      },
 
-        {
+      {
 
-          nickName: "基**",
+        nickName: "基**",
 
-          reward: "IPHONEX"
+        reward: "IPHONEX"
 
-        },
+      },
 
-        {
+      {
 
-          nickName: "于**",
+        nickName: "于**",
 
-          reward: "5贝壳"
+        reward: "5贝壳"
 
-        },
+      },
 
-  
 
-      ],
+
+    ],
 
   },
-  onReady:function(){
-     this.setData({
-       h:app.globalData.h
-     });
-     console.log(this.data.h)
+  onReady: function () {
+    this.setData({
+      h: app.globalData.h
+    });
+    console.log(this.data.h)
   },
   onLoad: function () {
     var _this = this;
@@ -160,84 +162,128 @@ Page({
       awardList: awardList
     })
   },
-  mx:function(){
+  mx: function () {
     wx.navigateTo({
       url: '/mx/mx',
     })
   },
   //开始游戏
-  startGame: function () {
+  startGame: function (prize) {
     if (this.data.isRunning) return
     this.setData({
       isRunning: true
     })
-    var t=this.data.t;
+    prize = Number(prize);
+    console.log(prize);
+    var t = prize;
     //奖项确定
     var _this = this;
     var indexSelect = 0
     var i = 0;
-    var timer = setInterval(fn,(i+100));
-    function fn(){
-    indexSelect++;
-    //这里我只是简单粗暴用y=30*x+200函数做的处理.可根据自己的需求改变转盘速度
-    i += 10;
-    clearInterval(timer);
-    timer=setInterval(fn,(i+100));
-    if (i > 300 && (indexSelect % 8) == t) {
-      //去除循环
-      clearInterval(timer)
-      //获奖提示
-      if (_this.data.t==0){
-        _this.setData({
-          award:'iphoneX'
-        })
-      }
-      else if(_this.data.t==1){
-        _this.setData({
-          award: '运动相机'
-        })
-      } else if (_this.data.t == 2) {
-        _this.setData({
-          award: '英雄皮肤'
-        })
-      } else if (_this.data.t == 3) {
-        _this.setData({
-          award: '100贝壳'
-        })
-      } else if (_this.data.t == 4) {
-        _this.setData({
-          award: '5贝壳'
-        })
-      } else if (_this.data.t == 5) {
-        _this.setData({
-          award: '和开发者共进午餐'
-        })
-      } else if (_this.data.t == 6) {
-        _this.setData({
-          award: '清养生茶'
-        })
-      } else if (_this.data.t == 7) {
-        _this.setData({
-          award: '樱花茶杯'
-        })
-      }
-      wx.showModal({
-        title: '恭喜您',
-        content: '获得了' + (_this.data.award) + "",
-        showCancel: false,//去掉取消按钮
-        success: function (res) {
-          if (res.confirm) {
+    var timer = setInterval(fn, (i + 100));
+    function fn() {
+      indexSelect++;
+      //这里我只是简单粗暴用y=30*x+200函数做的处理.可根据自己的需求改变转盘速度
+      i += 10;
+      clearInterval(timer);
+      timer = setInterval(fn, (i + 100));
+      if (i > 300 && (indexSelect % 8) == t) {
+        //去除循环
+        clearInterval(timer)
+        //获奖提示
+        switch (prize) {
+          case 1:
             _this.setData({
-              isRunning: false
+              award: '运动相机'
             })
-          }
+            break;
+
+          case 2:
+            _this.setData({
+              award: '英雄皮肤'
+            })
+            break;
+          case 3:
+            _this.setData({
+              award: '樱花茶杯'
+            })
+            break;
+          case 4:
+            _this.setData({
+              award: '100贝壳'
+            })
+            break;
+          case 5:
+            _this.setData({
+              award: '轻养身茶'
+            })
+            break;
+          case 6:
+            _this.setData({
+              award: '和开发者共进午餐'
+            })
+            break;
+          case 7:
+            _this.setData({
+              award: '5贝壳'
+            })
+            break;
         }
+        wx.showModal({
+          title: '恭喜您',
+          content: '获得了' + (_this.data.award) + "",
+          showCancel: false,//去掉取消按钮
+          success: function (res) {
+            if (res.confirm) {
+              _this.setData({
+                isRunning: false
+              })
+            }
+          }
+        })
+      }
+      indexSelect = indexSelect % 8;
+      _this.setData({
+        indexSelect: indexSelect
       })
     }
-    indexSelect = indexSelect % 8;
-    _this.setData({
-      indexSelect: indexSelect
+  },
+  getprize: function () {
+    var that = this;
+    wx.request({
+      url: app.url + "/dajia/getgift",
+      data: {
+        "userid": app.globalData.userid,
+      },
+      success: (res) => {
+        if (res.data.prize) {
+          that.startGame(res.data.prize);
+
+        }
+
+        else if (res.data.error) {
+          wx.showToast({
+            title: '您的贝壳不足',
+            icon: "loading",
+          })
+        }
+        else {
+          wx.showToast({
+            title: '网络错误',
+            icon: "loading",
+          });
+        }
+
+
+      },
+      fail: (res) => {
+        wx.showToast({
+          title: '网络错误',
+          icon: "success",
+        });
+      }
     })
-  }
-  }
+
+  },
+
 })

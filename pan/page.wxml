@@ -8,13 +8,13 @@
       <text style='position:relative;top:50rpx;color:white;'>贝壳商城</text>
     </view>
     <view class="container-out" style='top:{{80/736*h}}px;'>
-      <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};">
+      <view class="circle" wx:for="{{circleList}}" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};" wx:key="{{circleList}}">
       </view>
       <view class="container-in">
-        <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
+        <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};" wx:key="{{awardList.imageAward}}">
           <image class="award-image" src="{{item.imageAward}}"></image>
         </view>
-        <view class="start-btn" bindtap="startGame">
+        <view class="start-btn" bindtap="getprize">
           <text>START</text>
         </view>
       </view>
@@ -45,7 +45,7 @@
     <view class='contentBottom'>
       <swiper class="tab-right" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='4'>
         <view class="right-item">
-          <block wx:for-index="idx" wx:for='{{aa}}'>
+          <block wx:for-index="idx" wx:key='{{idx.name}}'>
             <swiper-item>
               <view class='content-item'>
                 <text class='name'>{{item.nickName}}</text>
