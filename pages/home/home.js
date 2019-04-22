@@ -26,10 +26,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    if(options.index==2){
+    if (options.index == 2) {
       this.setData({
-        show_flag:"true",
-        index:2,
+        show_flag: "true",
+        index: 2,
 
       })
     }
@@ -99,8 +99,8 @@ Page({
 
   },
   onGotUserInfo: function(e) {
-    
-    app.globalData.nickname = e.detail.userInfo.nickName//这个nickName1是信息获取，不能小写
+
+    app.globalData.nickname = e.detail.userInfo.nickName //这个nickName1是信息获取，不能小写
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
     app.login();

@@ -323,7 +323,7 @@ Page({
     }
     console.log(this.data.btn_index)
     common.onecut = this.data.onecut;
-    if (this.data.btn_index==0) {
+    if (this.data.btn_index == 0) {
       wx.navigateTo({
         url: "/pages/myteam/myteam",
       })

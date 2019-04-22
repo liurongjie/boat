@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url:'',//后台
+    url: '',//后台
     buy_index: "",
     latitude: 30.41,
     longitude: 114.29,
@@ -18,28 +18,28 @@ Page({
     text: "我要上船",
     popup: true,
     show_model: true,
-   picture_production: [],
+    picture_production: [],
     start_time: '',
     end_time: '',
-    now:'',
-    date_day:"",
+    now: '',
+    date_day: "",
     date_hour: "",
     date_minute: "",
     date_second: "",
     // evaluationlist :[],
-    data_list:{},
-    pic_producation:"",
+    data_list: {},
+    pic_producation: "",
 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(e) {
+  onLoad: function (e) {
     console.log(common.currentData)
     this.setData({
       buy_index: app.buy_index,
-      url:app.url,
+      url: app.url,
 
     })
     this.checkorder();
@@ -109,7 +109,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
     var util = require("../../utils/util.js");
     let evaluationlist = this.data.evaluationlist
     evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
@@ -119,7 +119,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
     this.checkorder();
 
   },
@@ -127,35 +127,35 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
   //检查是否购买
@@ -172,7 +172,7 @@ Page({
 
 
   },
-  goback: function() {
+  goback: function () {
 
     wx.navigateBack({
       delta: 1,
@@ -199,14 +199,14 @@ Page({
 
         case 1:
           //我要上船
-          if(common.data.steamid){
+          if (common.data.steamid) {
             that.buytogether(this.data.url + '/dajia/buytogether')
           }
-          else{
+          else {
             that.buyalone(this.data.url + '/dajia/buyalone');
 
           }
-         
+
           that.hidePopup(false);
           break;
         case 2:
@@ -221,8 +221,8 @@ Page({
     }
 
   },
-  
-  buyalone: function(url) {
+
+  buyalone: function (url) {
     var that = this;
     console.log(app.globalData.openid)
     wx.request({
@@ -284,7 +284,7 @@ Page({
     });
   },
 
-  backtopages: function(options) {
+  backtopages: function (options) {
     console.log("用户提交评价后触碰页面", options)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
@@ -303,7 +303,7 @@ Page({
       url: '/pages/evaluation/evaluation',
     })
   },
-  
+
 
 
 })
