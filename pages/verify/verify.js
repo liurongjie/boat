@@ -15,7 +15,7 @@ Page({
     selectPerson: true,
     firstPerson: '武汉大学',
     selectArea: false,
-    btnValue: '发送验证码',
+    btnValue: '发送验证码', 
     btnDisabled: true,
     teamid:'0000000',
     name:'',
