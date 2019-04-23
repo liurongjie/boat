@@ -242,7 +242,7 @@ Page({
           //看我的船
           wx.navigateTo({
             url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&userid=' + app.globalData.userid
+              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickname + '&userid=' + app.globalData.userid
           })
           break;
 
