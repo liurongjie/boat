@@ -13,9 +13,9 @@ Component({
    * 组件的初始数据
    */
   data: {
+    show: false,
     name: '',
     pic: '',
-    account: '',
     teamname: '',
     time: '',
     list: 1,
@@ -23,74 +23,76 @@ Component({
     h1: '',
     h2: ''
   },
-  
-  pageLifetimes: {
-    show() {
-      console.log("正在执行生命周期")
-      this.setData({
-
-        account: app.globalData.account,
-      })
-      // 页面被展示
-    },
-   
-  },
-  ready: function() {
-    console.log("beike" + app.globalData.account)
+  ready: function () {
     this.setData({
       name: app.globalData.name,
       pic: app.globalData.avatarUrl,
       teamname: app.globalData.teamname,
       time: app.globalData.time,
-      account: app.globalData.account,
     })
     var h = app.globalData.h;
     var h1 = h;
     h = (12 / 640) * h;
     h1 = (250 / 800) * h1;
     var h2 = h + 15;
-    this.setData({
-      h: h,
-      h1: h1,
-      h2: h2
-    });
+    this.setData({ h: h, h1: h1, h2: h2 });
+  },
+  onShareAppMessage: function () {
+    return {
+      title: 'BOAT',
+      path: 'pages/verify/verify',
+      success: (res) => {
+        console.log("转发成功", res);
+
+      },
+      fail: (res) => {
+        console.log("转发失败", res);
+      }
+    }
+
   },
   /**
    * 组件的方法列表
    */
   methods: {
-    b: function() {
+    show: function () {
+      this.setData({ show: !this.data.show })
+    },
+    false: function () {
+      this.setData({ show: false })
+    },
+    b: function () {
       wx.navigateTo({
         url: '../../pan/page',
       })
     },
-    chooseorderstatus: function(e) {
+    chooseorderstatus: function (e) {
       common.chooseorderstatus(e.currentTarget.dataset.status);
       app.list = 2;
       wx.navigateTo({
         url: "/pages/setting/setting"
       })
     },
-    changelist2: function() {
+    changelist2: function () {
 
       app.list = 1;
       wx.navigateTo({
         url: "/pages/setting/setting"
       })
     },
-    changelist4: function() {
+    changelist4: function () {
       app.list = 3;
       wx.navigateTo({
         url: "/pages/setting/setting"
       })
     },
-    changelist5: function() {
+    changelist5: function () {
       app.list = 4;
       wx.navigateTo({
         url: "/pages/setting/setting"
       })
     },
-    changelist6: function() {
+    changelist6: function () {
       app.list = 5;
       wx.navigateTo({
         url: "/pages/setting/setting"
