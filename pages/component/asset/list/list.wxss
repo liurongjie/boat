@@ -7,7 +7,14 @@
   line-height: 70rpx;
   color: #f5f5f5;
 }
-
+.show{
+  position: fixed;
+top: 0rpx;
+  width: 750rpx;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+}
 .cicle {
   position: relative;
   width: 100rpx;
