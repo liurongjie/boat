@@ -55,7 +55,7 @@
   width: 150rpx;
   height: 150rpx;
   margin-left: 225rpx;
-  border-radius: 75rpx;
+  border-radius: 15rpx;
   margin-top: 20rpx;
   margin-bottom: 10rpx;
 }

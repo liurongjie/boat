@@ -1,6 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="17.366" height="30.828" viewBox="0 0 17.366 30.828">
-  <g id="组_459" data-name="组 459" transform="translate(-9.086 -34.086)" opacity="0.8">
-    <line id="直线_41" data-name="直线 41" x1="14.539" y2="14" transform="translate(10.5 35.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-    <line id="直线_42" data-name="直线 42" x1="14.539" y1="14" transform="translate(10.5 49.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="20.195" height="33.656" viewBox="0 0 20.195 33.656">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.75;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="back" class="cls-1" transform="translate(-7.672 -32.672)">
+    <line id="直线_41" data-name="直线 41" class="cls-2" x1="14.539" y2="14" transform="translate(10.5 35.5)"/>
+    <line id="直线_42" data-name="直线 42" class="cls-2" x1="14.539" y1="14" transform="translate(10.5 49.5)"/>
   </g>
 </svg>

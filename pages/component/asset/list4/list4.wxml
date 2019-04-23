@@ -4,7 +4,7 @@
 <view class='box'>
   <view class='list1'>-联系我们-</view>
   <view class='list2'>您的BOAT客服全天候待命噢</view>
-  <image src='/static/pic/1.jpg' ></image>
+  <image src='/static/model/servicer.svg' ></image>
 
    <button class='connect' open-type='contact' >
     <text style='font-weight:600;font-size:40rpx;'>欢迎来戳</text>

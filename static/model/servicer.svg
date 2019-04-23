@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.193" height="18.207" viewBox="0 0 16.193 18.207">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(208,223,225,0.62);
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #92708d;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="组_594" data-name="组 594" transform="translate(-428.807 -10783)">
+    <g id="椭圆_27" data-name="椭圆 27" class="cls-1" transform="translate(432 10783)">
+      <circle class="cls-3" cx="6.5" cy="6.5" r="6.5"/>
+      <circle class="cls-4" cx="6.5" cy="6.5" r="6"/>
+    </g>
+    <line id="直线_66" data-name="直线 66" class="cls-2" x2="6" y2="4" transform="translate(429.5 10793.5)"/>
+    <line id="直线_67" data-name="直线 67" class="cls-2" y1="1" x2="2" transform="translate(441.5 10796.5)"/>
+    <line id="直线_68" data-name="直线 68" class="cls-2" x1="6" transform="translate(435.5 10797.5)"/>
+    <line id="直线_69" data-name="直线 69" class="cls-2" x1="3" y2="4" transform="translate(435.5 10796.5)"/>
+    <line id="直线_70" data-name="直线 70" class="cls-2" x1="4" y1="4" transform="translate(438.5 10796.5)"/>
+    <line id="直线_71" data-name="直线 71" class="cls-2" x2="2" y2="4" transform="translate(441.5 10792.5)"/>
+    <path id="路径_1673" data-name="路径 1673" class="cls-2" d="M437.042,10792.069h0l1.3,1.3s.572,1.556,1.408.623a1.566,1.566,0,0,0,0-2.324s-2.452-1.757-2.712,0" transform="translate(-0.502)"/>
+    <path id="路径_1674" data-name="路径 1674" class="cls-2" d="M437.135,10787.088s-1.336-.467-2.617,1.346,1.333-1.268,1.333-1.268" transform="translate(3173.308 344.098) rotate(17)"/>
+    <path id="路径_1675" data-name="路径 1675" class="cls-2" d="M442.832,10788.288c-1.06-.624-.8-.624-1.644-.924-1.907-.712-1.587.924-1.587.924"/>
+  </g>
+</svg>

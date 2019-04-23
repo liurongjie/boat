@@ -1,5 +1,5 @@
 // pages/myteam/myteam.js
-
+var app=getApp();
 var common=require('../../common/index.js');
 Page({
 
@@ -11,40 +11,12 @@ Page({
   showmodel:false,
    data:[
      {
-       pic: '/static/3.png',
-       name: '龙长飞',
-       desc:'2016级 遥感信息工程学院',
-       date:'2019/04/20',
-       c:'船长'
-     },
-     {
-       pic: '/static/c1.jpg',
-       name: '刘荣杰',
-       desc: '2016级 遥感信息工程学院',
-       date: '2019/04/20',
-       c: '大福'
-     },
-     {
-       pic: '/static/c2.jpg',
-       name: '李坤',
-       desc: '2016级 遥感信息工程学院',
-       date: '2019/04/20',
-       c: '水手'
-     },
-     {
-       pic: '/static/c3.jpg',
-       name: 'gengji',
-       desc: '2016级 遥感信息工程学院',
-       date: '2019/04/20',
-       c: '大福'
-     },
-     {
-       pic: '/static/c4.jpg',
-       name: '刘荣杰',
-       desc: '2016级 遥感信息工程学院',
-       date: '2019/04/20',
-       c: '大福'
-     },
+      //  pic: '/static/3.png',
+      //  name: '龙长飞',
+      //  desc:'2016级 遥感信息工程学院',
+      //  date:'2019/04/20',
+      //  c:'船长'
+     }
    ]
   },
 se1:function(){
@@ -86,7 +58,20 @@ se5: function () {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      // wx.request({
+      //   url: app.url +'/dajia/scancomment',
+      // })
 
+      wx.request({
+        url: app.url + '/dajia/getperiod',
+        data: {
+          'orderid': 34,
+        },
+        success: (res) => {
+          // common.homelist = res.data;
+          console.log(res.data)
+        }
+      })
   },
 
   /**
