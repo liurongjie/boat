@@ -14,6 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModel: true,
     res: '',
     url: "https://xiaoyibang.top:8002/uploads/",
     end: false, //判定订单是否取消或者过期
@@ -26,13 +27,13 @@ Page({
     res: [], //展示内容
     //数据缓存
     orderid: '',
-    nickName: '',
+    nickname: '',
     avatarUrl: '',
     steamid: '',
     openid: '',
     periodid: '',
     //状态0自我，状态1帮我砍，状态2帮好友分享
-    btn_index: 0, //状态
+    btn_index: 1, //状态
     btn_text_left: ['分享好友砍价', '砍这好友一刀', '帮Ta召唤好友'],
     btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
     sentence: '', //展示句子
@@ -44,8 +45,6 @@ Page({
     minute: '00',
     second: '00',
     //按钮类型
-    status: 'share',
-    func: 'login',
     list: [],
     hasMore: true, //列表是否有数据未加载
     page: 1,
@@ -54,7 +53,7 @@ Page({
 
   },
   //下拉刷新
-  lower: function() {
+  lower: function () {
     // var result = this.data.res;
     // var resArr = jsonData.dataList;
     // for (let i = 0; i < 10; i++) {
@@ -93,47 +92,46 @@ Page({
    * 生命周期函数--监听页面加载
    */
   //打算传播steamid.periodid,pic name就行
-  onLoad: function(options) {
+  onLoad: function (options) {
+    console.log("用户id" + app.globalData.userid)
     console.log("购买详情：", options)
     this.setData({
       orderid: options.orderid,
-      nickName: options.nickName,
+      nickname: options.nickName,
       avatarUrl: options.avatarUrl,
       steamid: options.steamid,
       userid: options.userid,
     })
-    this.getorderdetail(options.steamid);
-    this.getperiod(options.orderid);
     this.checkstatus();
-    
+    this.getperiod(options.orderid);
 
-    
   },
   //判断是否登陆
-  checkstatus: function() {
+  checkstatus: function () {
     if (!app.globalData.userid) {
       this.setData({
-        status: 'getUserInfo',
-        func: 'login',
+        showModel: true,
       })
     } else {
-      this.checkmember();
+      this.setData({
+        showModel: false,
+      })
+      this.getorderdetail(this.data.steamid);
+
 
     }
 
   },
   //判定团队成员
-  checkmember: function() {
+  checkmember: function () {
     //是否为组团成员
     console.log('userid' + app.globalData.userid);
     console.log(this.data.onecut.length)
+
     for (var i = 0; i < this.data.onecut.length; i++) {
-      
       if (app.globalData.userid == this.data.onecut[i].member__userid) {
         this.setData({
           btn_index: 0,
-          status: 'share',
-          func: 'leftbindtap',
         })
         return '';
         break;
@@ -144,34 +142,74 @@ Page({
       if (app.globalData.userid == this.data.twocut[i].audience__userid) {
         this.setData({
           btn_index: 2,
-          status: 'share',
-          func: 'leftbindtap',
         })
         return '';
         break;
       }
     }
 
-    //
     this.setData({
       btn_index: 1,
-      status: 'getUserInfo',
-      func: 'cutprice',
     })
 
 
 
 
-  },
 
-  login: function(e) {
-    app.globalData.nickName = e.detail.userInfo.nickName
+  },
+  onGotUserInfo(e) {
+    console.log("正在运行login")
+    app.globalData.nickname = e.detail.userInfo.nickName
     app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
     app.globalData.gender = e.detail.userInfo.gender
-    app.login();
-    this.checkmember();
+    this.backlogin();
+
+
   },
-  getorderdetail: function(steamid) {
+
+  //后台登陆
+  backlogin: function (url) {
+    var that = this;
+    wx.login({
+      success: res => {
+
+        wx.request({
+          url: 'https://xiaoyibang.top:8002/dajia/login',
+          data: {
+            'nickname': app.globalData.nickname,
+            'gender': app.globalData.gender,
+            'code': res.code,
+            'pic': app.globalData.avatarUrl
+          },
+          success: (res) => {
+            console.log("用户信息", res.data)
+            var information = {
+              'userid': res.data.userid,
+              'teamname': res.data.team_name,
+              'name': res.data.name,
+              'number': res.data.number,
+              'status': res.data.status,
+              'nickname': app.globalData.nickname,
+              'avatarUrl': app.globalData.avatarUrl,
+            }
+            wx.setStorageSync('information', information)
+            this.setData({
+              showModel: false,
+            })
+            that.getorderdetail(that.data.steamid);
+            app.globalData.userid = res.data.userid;
+            app.globalData.teamname = res.data.team_name;
+            app.globalData.name = res.data.name;
+            app.globalData.number = res.data.number;
+            app.globalData.status = res.data.status;
+          },
+        })
+      }
+    })
+
+
+  },
+  getorderdetail: function (steamid) {
     var that = this;
     wx.request({
       url: 'https://xiaoyibang.top:8002/dajia/orderdetail',
@@ -185,13 +223,13 @@ Page({
           onecut: res.data.onecut,
           twocut: res.data.twocut,
         })
-        that.merge();
         that.checkmember();
+        that.merge();
 
       }
     })
   },
-  getperiod: function(orderid) {
+  getperiod: function (orderid) {
     var that = this;
     wx.request({
       url: 'https://xiaoyibang.top:8002/dajia/getperiod',
@@ -228,7 +266,7 @@ Page({
     })
   },
   //合并onecut和twocut生成res
-  merge: function() {
+  merge: function () {
     var data = [];
     var cutprice = 0;
     console.log("合并")
@@ -258,12 +296,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
     return {
       title: 'BOAT',
       path: 'pages/teamcut/teamcut?orderid=' +
         this.data.orderid +
-        '&' + 'nickName=' + this.data.nickName +
+        '&' + 'nickname=' + this.data.nickname +
         '&' + 'avatarUrl=' + this.data.avatarUrl +
         '&' + 'steamid=' + this.data.steamid +
         '&' + 'userid=' + this.data.userid,
@@ -278,10 +316,11 @@ Page({
 
   },
   //右边按钮点击
-  rightbindtap: function() {
+  rightbindtap: function () {
     if (!this.data.end) {
       return '';
     }
+    console.log(this.data.btn_index)
     common.onecut = this.data.onecut;
     if (this.data.btn_index == 0) {
       wx.navigateTo({
@@ -302,13 +341,8 @@ Page({
 
 
   },
-  //左边按钮点击
-  leftbindtap: function() {
-    return '';
-
-  },
   //帮这好友砍一刀
-  cutprice: function(steamid) {
+  cutprice: function (steamid) {
     // if (!this.data.end) {
     //   return '';
     // }
@@ -322,15 +356,14 @@ Page({
       },
       success: (res) => {
         that.getorderdetail(that.data.steamid);
+        that.setData({
+          btn_index: 1,
+        })
       }
     })
-    this.setData({
-      btn_index: 2,
-      status: 'share',
-      func: 'change_status',
-    })
+
   },
-  timeapproach: function(endtime) {
+  timeapproach: function (endtime) {
     this.data.setInter = setInterval(
       () => {
         var nowtime = Math.floor(new Date().getTime() / 1000);
@@ -361,7 +394,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function(options) {
+  onReady: function (options) {
 
 
   },
@@ -369,7 +402,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
 
   },
@@ -377,28 +410,28 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
     clearInterval(this.data.setInter)
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 

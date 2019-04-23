@@ -79,6 +79,7 @@ Component({
     }
     this.setData({ title: common.data.ordertitle });
     this.setData({ lists: order });
+    console.log(order)
     
 
   },

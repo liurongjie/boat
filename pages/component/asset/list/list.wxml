@@ -7,8 +7,8 @@
 </view>
 <view class='beike' bindtap='b'>
   <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:100rpx;top:36rpx;'></image>
-  <text class='w'>我的贝壳：{{}} </text>
-  <text class='w1'>仅限校园大件可用>></text>
+  <text class='w'>我的贝壳：{{account}} </text>
+  <text class='w1'>用于贝壳商场抽奖>></text>
   <view class='b'>贝壳明细</view>
 </view>
 
@@ -64,7 +64,7 @@
     </view>
     <view class='l1' bindtap='changelist6'>
       <image src='/static/icon/setting/5.svg' style='  margin-left: 50rpx;margin-right: 50rpx;'></image>
-      <text> 加入我们&意见</text>
+      <text> 加入我们&意见反馈</text>
       <image src='/static/icon/setting/icon2.svg' style=' position:absolute;left:620rpx; width: 30rpx; height: 30rpx;margin-top: 20rpx;'></image>
     </view>
     <view style='position:relative;width:100%;height:70%;margin-top:40rpx;background:white;border-radius:25rpx;overflow:hidden;margin-top:{{h2}}px;z-index:500;'>

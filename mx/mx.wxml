@@ -10,7 +10,7 @@
     </view>
     <view class='beike' style=' top: {{50/736*h}}px;'>
   <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:10rpx;top:36rpx;'></image>
-  <text class='w'>我的贝壳：79 </text>
+  <text class='w'>我的贝壳：{{account}} </text>
      <scroll-view scroll-y  style='height:{{450/736*h}}px;width:90%;position:absolute;top: {{50/736*h}}px;'>
          <block wx:for="{{et}}" wx:key="et">
          <view style='width:600rpx;height:40rpx;position:relative;'>

@@ -1,14 +1,25 @@
 /* pages/component/showModel/showModel.wxss */
-.model{
+.container1{
   position: fixed;
-  top: 40%;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.5);
+  z-index:999;
+}
+.model{
+  position: absolute;
+  top: 30%;
   width: 80%;
   left:10%;
-  height: 45%;
+  height: 30%;
   border-radius: 20rpx;
   justify-content: center;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
+  border: solid 1px gray;
+  background: white;
 }
 .modelTitle{
   position: relative;
@@ -31,5 +42,5 @@
   color: green;
   font-size: 42rpx;
   border-radius: 0rpx 0rpx 20rpx 20rpx;
-  background: white;
+  
 }

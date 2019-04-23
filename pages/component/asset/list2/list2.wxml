@@ -20,7 +20,6 @@
      <text class='p1'>初始价格为¥{{item.period__startprice}}</text>
      <text class='p'>{{item.period__startprice-item.steam__cutprice
 -item.period__cutprice}}</text>
-     <text class='p1'>初始价格为{{item.period__startprice}}</text>
      <view class='button'>{{item.bindtap}}</view>
      </view>
     </view>  

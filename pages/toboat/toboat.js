@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url:'',//后台
+    url: '', //后台
     buy_index: "",
     latitude: 30.41,
     longitude: 114.29,
@@ -18,17 +18,17 @@ Page({
     text: "我要上船",
     popup: true,
     show_model: true,
-   picture_production: [],
+    picture_production: [],
     start_time: '',
     end_time: '',
-    now:'',
-    date_day:"",
+    now: '',
+    date_day: "",
     date_hour: "",
     date_minute: "",
     date_second: "",
     // evaluationlist :[],
-    data_list:{},
-    pic_producation:"",
+    data_list: {},
+    pic_producation: "",
 
   },
 
@@ -39,9 +39,10 @@ Page({
     console.log(common.currentData)
     this.setData({
       buy_index: app.buy_index,
-      url:app.url,
+      url: app.url,
 
     })
+
     this.checkorder();
     this.setData({
       data_list: common.currentData,
@@ -110,10 +111,39 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    this.checkorder();
     var util = require("../../utils/util.js");
-    let evaluationlist = this.data.evaluationlist
-    evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
-    this.setData({ evaluationlist })
+    console.log(this.data.evaluationlist, this.isBlank(this.data.evaluationlist))
+    // if (this.data.evaluationlist === '[object Undefined]') {
+    //   let evaluationlist = this.data.evaluationlist
+    //   evaluationlist[0].context = "暂无用户评论"
+    //   this.setData({
+    //     evaluationlist
+    //   })
+    //   console.log("无评论")
+    // } else {
+    //   let evaluationlist = this.data.evaluationlist
+    //   evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
+    //   this.setData({
+    //     evaluationlist
+    //   })
+    // }
+ 
+  },
+
+  isBlank: function(str) {
+    if (Object.prototype.toString.call(str) === '[object Undefined]') { //空
+      return true
+    } else if (
+      Object.prototype.toString.call(str) === '[object String]' ||
+      Object.prototype.toString.call(str) === '[object Array]') { //字条串或数组
+      return str.length == 0 ? true : false
+    } else if (Object.prototype.toString.call(str) === '[object Object]') {
+      return JSON.stringify(str) == '{}' ? true : false
+    } else {
+      return true
+    }
+
   },
 
   /**
@@ -142,7 +172,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    this.checkorder();
   },
 
   /**
@@ -159,7 +189,7 @@ Page({
 
   },
   //检查是否购买
-  checkorder: function () {
+  checkorder: function() {
     for (var i = 0; i < common.orderlist.length; i++) {
       if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status != 0) {
         common.currentorder = common.orderlist[i];
@@ -179,7 +209,7 @@ Page({
     })
 
   },
-  buy: function () {
+  buy: function() {
     //是否实名认证
     if (app.globalData.status == 0) {
       wx.showToast({
@@ -188,7 +218,7 @@ Page({
         icon: 'loading',
       })
 
-      setTimeout(function () {
+      setTimeout(function() {
         wx.navigateTo({
           url: "/pages/verify/verify",
         }, 1000)
@@ -199,14 +229,20 @@ Page({
 
         case 1:
           //我要上船
-          that.buyalone(this.data.url + '/dajia/buyalone');
+          if (common.data.steamid) {
+            that.buytogether(this.data.url + '/dajia/buytogether')
+          } else {
+            that.buyalone(this.data.url + '/dajia/buyalone');
+
+          }
+
           that.hidePopup(false);
           break;
         case 2:
           //看我的船
           wx.navigateTo({
             url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
+              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickname + '&userid=' + app.globalData.userid
           })
           break;
 
@@ -214,10 +250,10 @@ Page({
     }
 
   },
-  
+
   buyalone: function(url) {
     var that = this;
-    console.log(app.globalData.openid)
+    console.log(app.globalData.userid)
     wx.request({
       url: url,
       data: {
@@ -228,13 +264,15 @@ Page({
         common.currentorder.steam_id = res.data.steamid;
         common.currentorder.orderid = res.data.orderid;
         app.getorderlist();
-
+        that.setData({
+          status: 2
+        })
       }
     })
 
 
   },
-  buytogether: function (url) {
+  buytogether: function(url) {
     console.log("运行buytogether")
     var that = this;
     wx.request({
@@ -281,22 +319,22 @@ Page({
     console.log("用户提交评价后触碰页面", options)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
+        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickname + '&userid=' + app.globalData.userid
     })
   },
 
-  pro_map: function () {
+  pro_map: function() {
     wx.navigateTo({
       url: '/pages/pro_map/pro_map',
     })
   },
 
-  pro_evaluation: function () {
+  pro_evaluation: function() {
     wx.navigateTo({
       url: '/pages/evaluation/evaluation',
     })
   },
-  
+
 
 
 })

@@ -1,4 +1,3 @@
-
 <view class='boat'>
   <text style='font-weight:600;font-size:40rpx;'>提交需求</text>
 </view>
@@ -8,12 +7,30 @@
 </view>
 <view class='box'>
   <textarea placeholder='感谢您提出的宝贵需求 （若被采用有机会获激励金)' placeholder-class='wordstyle' bindblur='bind'></textarea>
-  <view class='upload' bindtap='choosepic'>
-      <view class='vertical'></view>
-      <view class='horizontal'></view>
-  </view>
-  <view class='demand' bindtap='need'>
-    <text style='font-weight:100;font-size:37rpx;'>提交需求</text>
-  </view>
-</view>
+  <view class='pic_upload'>
+      <view class="gallery">
+        <view class="item" wx:for="{{images}}" wx:key="">
+          <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" bindlongpress="deleteImage" data-index="{{index}}" />
+          <!-- 删除按钮 -->
+          <view class="delete" bindtap="delete" data-index="{{index}}">
+            <image src='/static/pic/delete.png'>
+            </image>
+          </view>
+        </view>
+        <view class="item" bindtap="choosepic" wx:if="{{show_num<3}}">
+          <view class='icon_cam' >
+            <image  mode='aspectFill'  src='/static/pic/camera.png'></image>
+          </view>
+          <view class='addIcon'>
+            <view class='addIcon_text'>添加/拍摄</view>
+          </view>
+        </view>
+      </view>
+    </view>
 
+
+
+<view class='demand' bindtap='need'>
+  <text style='font-weight:100;font-size:37rpx;'>提交需求</text>
+</view>
+</view>
