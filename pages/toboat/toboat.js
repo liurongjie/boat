@@ -242,7 +242,7 @@ Page({
           //看我的船
           wx.navigateTo({
             url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&userid=' + app.globalData.userid
+              '&avatarUrl=' + app.globalData.avatarUrl + '&nickname=' + app.globalData.nickname + '&userid=' + app.globalData.userid
           })
           break;
 
@@ -253,7 +253,6 @@ Page({
 
   buyalone: function(url) {
     var that = this;
-    console.log(app.globalData.openid)
     wx.request({
       url: url,
       data: {
@@ -263,7 +262,7 @@ Page({
       success: (res) => {
         common.currentorder.steam_id = res.data.steamid;
         common.currentorder.orderid = res.data.orderid;
-        app.getorderlist();
+        app.getorderlist(that.data.url + '/dajia/orderlist');
         that.setData({
           status: 2
         })
@@ -278,7 +277,7 @@ Page({
     wx.request({
       url: 'https://xiaoyibang.top:8001/dajia/buytogether',
       data: {
-        "openid": app.globalData.openid,
+        "userid": app.globalData.userid,
         "periodid": common.currentData.periodid,
         "steamid": common.data.steamid,
       },
@@ -319,7 +318,7 @@ Page({
     console.log("用户提交评价后触碰页面", options)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
+        '&avatarUrl=' + app.globalData.avatarUrl + '&nickname=' + app.globalData.nickname + '&userid=' + app.globalData.userid
     })
   },
 
