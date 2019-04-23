@@ -262,7 +262,7 @@ Page({
       success: (res) => {
         common.currentorder.steam_id = res.data.steamid;
         common.currentorder.orderid = res.data.orderid;
-        app.getorderlist(that.data.url + '/dajia/orderlist');
+        app.getorderlist();
         that.setData({
           status: 2
         })
