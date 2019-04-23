@@ -4,15 +4,15 @@
 </view>
 <view class='team'>
      <view style='width:50%;height:30%;margin-left:25%;'>
-         <image src='{{data[0].pic}}' style='width:180rpx;height:180rpx;margin-left:10%;margin-top:10%;border-radius:100%' bindtap='se1'></image>
+         <image src='{{data[0].member__picture}}' style='width:180rpx;height:180rpx;margin-left:10%;margin-top:10%;border-radius:100%' bindtap='se1'></image>
      </view>
      <view style='width:100%;height:30%;margin-top:5%;'>
-         <image src='{{data[1].pic}}' style='width:180rpx;height:180rpx;margin-left:5%;margin-top:10%;border-radius:100%'bindtap='se2'></image>
-         <image src='{{data[2].pic}}' style='width:180rpx;height:180rpx;margin-left:15%;margin-top:10%;border-radius:100%'bindtap='se3'></image>
+         <image src='{{data[1].member__picture}}' style='width:180rpx;height:180rpx;margin-left:5%;margin-top:10%;border-radius:100%'bindtap='se2'></image>
+         <image src='{{data[2].member__picture}}' style='width:180rpx;height:180rpx;margin-left:15%;margin-top:10%;border-radius:100%'bindtap='se3'></image>
      </view>
      <view style='width:100%;height:30%;margin-top:5%;'>
-         <image src='{{data[3].pic}}' style='width:180rpx;height:180rpx;margin-left:5%;margin-top:10%;border-radius:100%'bindtap='se4'></image>
-         <image src='{{data[4].pic}}' style='width:180rpx;height:180rpx;margin-left:15%;margin-top:10%;border-radius:100%'bindtap='se5'></image>
+         <image src='{{data[3].member__picture}}' style='width:180rpx;height:180rpx;margin-left:5%;margin-top:10%;border-radius:100%'bindtap='se4'></image>
+         <image src='{{data[4].member__picture}}' style='width:180rpx;height:180rpx;margin-left:15%;margin-top:10%;border-radius:100%'bindtap='se5'></image>
      </view>
 </view>
 
@@ -30,9 +30,9 @@
    </view>
 
    <view style='width:100%;position:absolute;top:46%;height:54%;display:flex;justify-content: center;'>
-   <text style='position:absolute;top:6%;color:grey'>{{data[index-1].desc}}</text>
-   <text style='position:absolute;margin-top:12%;top:0%;font-size:80rpx;color:#52ADB4;font-weight:200'>{{data[index-1].name}}</text>
-   <text style='position:absolute;margin-top:24%;top:15%;font-size:24rpx;color:grey'>──── {{data[index-1].date}} ────</text>
+   <text style='position:absolute;top:6%;color:grey'>{{data[index-1].member__userid}}号用户</text>
+   <text style='position:absolute;margin-top:12%;top:0%;font-size:80rpx;color:#52ADB4;font-weight:200'>{{data[index-1].member__name}}</text>
+   <text style='position:absolute;margin-top:24%;top:15%;font-size:24rpx;color:grey'>──── {{data[index-1].membership__time}} ────</text>
    <view class='cap'>
    <text style='height:100%;display: flex;flex-direction:column;justify-content: center;font-size:50rpx;color:white;font-family:Monospace'>{{data[index-1].c}}</text>
    </view>

@@ -17,7 +17,7 @@ Component({
  ready:function(){
    this.setData(
      {
-       status: app.gloableData.status,
+       status: app.globalData.status,
      }
    )
    

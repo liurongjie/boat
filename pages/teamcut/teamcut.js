@@ -324,7 +324,7 @@ Page({
     common.onecut = this.data.onecut;
     if (this.data.btn_index == 0) {
       wx.navigateTo({
-        url: "/pages/myteam/myteam",
+        url: "/pages/myteam/myteam?steamid="+this.data.steamid,
       })
     } else {
       for (var i = 0; i < common.homelist.length; i++) {

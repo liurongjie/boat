@@ -25,11 +25,11 @@
 <text class='input11'>院系</text>
 </view>
 <view style='position:absolute;width:99.5%;top:670rpx;height:100rpx;background-color:white;border:1px solid {{t4}};'>
-<input class="input1" name="number"  bindinput='number'></input>
+<input class="input1" name="number" type="digit" bindinput='number'></input>
 <text class='input11'>学号</text>
 </view>
 <view style='position:absolute;width:100%;top:780rpx;height:100rpx;background-color:white;'>
-<input placeholder='请输入手机号' placeholder-class="placeholderStyle" bindinput='bindPhoneInput' class='input'/> 
+<input placeholder='请输入手机号' placeholder-class="placeholderStyle" bindinput='bindPhoneInput' class='input' type="digit"/> 
 </view>
 
 <view style='position:absolute;width:100%;top:890rpx;height:100rpx;background-color:white;'>

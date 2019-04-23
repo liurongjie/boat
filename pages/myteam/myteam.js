@@ -1,4 +1,6 @@
 // pages/myteam/myteam.js
+
+var util = require("../../utils/util.js");
 var app=getApp();
 var common=require('../../common/index.js');
 Page({
@@ -11,12 +13,51 @@ Page({
   showmodel:false,
    data:[
      {
-      //  pic: '/static/3.png',
-      //  name: '龙长飞',
-      //  desc:'2016级 遥感信息工程学院',
-      //  date:'2019/04/20',
-      //  c:'船长'
+       pic: '',
+       name: '',
+       desc: '',
+       date: '',
+       c: '船长'
+     },
+     {
+       pic: '',
+       name: '',
+       desc: '',
+       date: '',
+       c: '大副'
      }
+     ,
+     {
+       pic: '',
+       name: '',
+       desc: '',
+       date: '',
+       c: '大副'
+     },
+     {
+       pic: '',
+       name: '',
+       desc: '',
+       date: '',
+       c: '大副'
+     }
+     ,
+     {
+       pic: '',
+       name: '',
+       desc: '',
+       date: '',
+       c: '大副'
+     }
+    //  ,
+    //  {
+    //    pic: '/static/c3.jpg',
+    //    name: 'gengji',
+    //    desc: '2016级 遥感信息工程学院',
+    //    date: '2019/04/20',
+    //    c: '大副'
+    //  },
+
    ]
   },
 se1:function(){
@@ -61,15 +102,19 @@ se5: function () {
       // wx.request({
       //   url: app.url +'/dajia/scancomment',
       // })
-
+      console.log(options)
       wx.request({
-        url: app.url + '/dajia/getperiod',
+        url: app.url + '/dajia/orderdetail',
         data: {
-          'orderid': 34,
+          'steamid': options.steamid,
         },
         success: (res) => {
           // common.homelist = res.data;
-          console.log(res.data)
+          console.log("团员",res.data)
+          this.setData({
+            data:res.data.onecut
+          })
+          console.log("团员", this.data.data[0])
         }
       })
   },
@@ -78,7 +123,17 @@ se5: function () {
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    //这个data不敢改了，tql
+    let data = this.data.data
+    for(var i=0;i<data.length;i++)
+    { 
+      if (i != 0)
+        data[i].membership__time = util.js_date_time1(this.data.data[i].membership__time)
+        
+        data[i].c = '船长'
+      this.setData({ data })
+    }
+   
   },
 
   /**
