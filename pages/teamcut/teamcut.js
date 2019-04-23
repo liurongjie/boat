@@ -97,7 +97,7 @@ Page({
     console.log("购买详情：", options)
     this.setData({
       orderid: options.orderid,
-      nickname: options.nickName,
+      nickname: options.nickname,
       avatarUrl: options.avatarUrl,
       steamid: options.steamid,
       userid: options.userid,
