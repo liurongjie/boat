@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: '',//后台
+    url: '', //后台
     buy_index: "",
     latitude: 30.41,
     longitude: 114.29,
@@ -35,14 +35,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (e) {
+  onLoad: function(e) {
     console.log(common.currentData)
     this.setData({
       buy_index: app.buy_index,
       url: app.url,
 
     })
-    
+
     this.checkorder();
     this.setData({
       data_list: common.currentData,
@@ -110,17 +110,46 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
+    this.checkorder();
     var util = require("../../utils/util.js");
-    let evaluationlist = this.data.evaluationlist
-    evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
-    this.setData({ evaluationlist })
+    console.log(this.data.evaluationlist, this.isBlank(this.data.evaluationlist))
+    // if (this.data.evaluationlist === '[object Undefined]') {
+    //   let evaluationlist = this.data.evaluationlist
+    //   evaluationlist[0].context = "暂无用户评论"
+    //   this.setData({
+    //     evaluationlist
+    //   })
+    //   console.log("无评论")
+    // } else {
+    //   let evaluationlist = this.data.evaluationlist
+    //   evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
+    //   this.setData({
+    //     evaluationlist
+    //   })
+    // }
+ 
+  },
+
+  isBlank: function(str) {
+    if (Object.prototype.toString.call(str) === '[object Undefined]') { //空
+      return true
+    } else if (
+      Object.prototype.toString.call(str) === '[object String]' ||
+      Object.prototype.toString.call(str) === '[object Array]') { //字条串或数组
+      return str.length == 0 ? true : false
+    } else if (Object.prototype.toString.call(str) === '[object Object]') {
+      return JSON.stringify(str) == '{}' ? true : false
+    } else {
+      return true
+    }
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     this.checkorder();
 
   },
@@ -128,39 +157,39 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh: function() {
+    this.checkorder();
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
   //检查是否购买
-  checkorder: function () {
+  checkorder: function() {
     for (var i = 0; i < common.orderlist.length; i++) {
       if (common.currentData.periodid == common.orderlist[i].period_id && common.orderlist[i].status != 0) {
         common.currentorder = common.orderlist[i];
@@ -173,14 +202,14 @@ Page({
 
 
   },
-  goback: function () {
+  goback: function() {
 
     wx.navigateBack({
       delta: 1,
     })
 
   },
-  buy: function () {
+  buy: function() {
     //是否实名认证
     if (app.globalData.status == 0) {
       wx.showToast({
@@ -189,7 +218,7 @@ Page({
         icon: 'loading',
       })
 
-      setTimeout(function () {
+      setTimeout(function() {
         wx.navigateTo({
           url: "/pages/verify/verify",
         }, 1000)
@@ -202,8 +231,7 @@ Page({
           //我要上船
           if (common.data.steamid) {
             that.buytogether(this.data.url + '/dajia/buytogether')
-          }
-          else {
+          } else {
             that.buyalone(this.data.url + '/dajia/buyalone');
 
           }
@@ -214,7 +242,7 @@ Page({
           //看我的船
           wx.navigateTo({
             url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
+              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&userid=' + app.globalData.userid
           })
           break;
 
@@ -223,7 +251,7 @@ Page({
 
   },
 
-  buyalone: function (url) {
+  buyalone: function(url) {
     var that = this;
     console.log(app.globalData.openid)
     wx.request({
@@ -244,7 +272,7 @@ Page({
 
 
   },
-  buytogether: function (url) {
+  buytogether: function(url) {
     console.log("运行buytogether")
     var that = this;
     wx.request({
@@ -287,7 +315,7 @@ Page({
     });
   },
 
-  backtopages: function (options) {
+  backtopages: function(options) {
     console.log("用户提交评价后触碰页面", options)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
@@ -295,13 +323,13 @@ Page({
     })
   },
 
-  pro_map: function () {
+  pro_map: function() {
     wx.navigateTo({
       url: '/pages/pro_map/pro_map',
     })
   },
 
-  pro_evaluation: function () {
+  pro_evaluation: function() {
     wx.navigateTo({
       url: '/pages/evaluation/evaluation',
     })
