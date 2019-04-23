@@ -1,5 +1,6 @@
 // pages/remark/remark.js
 var app = getApp();
+var common=require("../../common/index.js");
 Page({
 
   /**
@@ -58,7 +59,25 @@ Page({
   },
 
   upload: function () {
-    
+    var that=this;
+    for(var i=0;i<this.data.images.length;i++){
+      wx.uploadFile({
+        url: 'https://xiaoyibang.top:8002/dajia/comment', // 仅为示例，非真实的接口地址
+        filePath: that.data.images[i],
+        name: 'file',
+        formData: {
+          "orderid":common.currentorder.orderid,
+          "context":that.data.remark,
+          "judge1":that.data.judge,
+          
+        },
+        success(res) {
+          console.log(res.data)
+        }
+      })
+
+    }
+
     
   },
   hidePopup(flag = true) {
@@ -199,11 +218,12 @@ Page({
       })
       return '';
     }
+    this.upload();
 
     console.log(this.data.judge)
     console.log(this.data.images)
     console.log(this.data.remark)
-    // this.hidePopup(false);
+     this.hidePopup(false);
 
     //评论完成的操作
   },
