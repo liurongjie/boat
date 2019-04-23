@@ -16,7 +16,7 @@ App({
     that.getsystem();
     that.gethomelist(this.url + '/dajia/home');
     that.getuserinformation();
-    that.getorderlist(this.url + '/dajia/orderlist');
+    that.getorderlist();
     this.sign();
 
   },
@@ -131,7 +131,8 @@ App({
     console.log("用户信息", this.globalData)
   },
   //获取用户订单信息
-  getorderlist: function(url) {
+  getorderlist: function() {
+    var url = this.url + '/dajia/orderlist';
     var that = this;
     wx.request({
       url: url,
