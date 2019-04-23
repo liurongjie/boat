@@ -31,13 +31,9 @@
         </view>
       </view>
     </view>
+    
     <text class='p'>{{ph}}</text>
   </view>
-
-
-
-
-
 
 
   <view class='ni'>

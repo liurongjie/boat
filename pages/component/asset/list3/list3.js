@@ -15,39 +15,39 @@ Component({
   data: {
     ticket:[],
     pic: '/static/2.png',
-    data: [{
-        id: '1',
-        pic: '/static/2.png',
-        name: 'BOAT推荐驾校C1普通班 ',
-        price: '2029.5',
-        date: '2019/04/20',
-        erma: '/static/t14.png'
-      },
-      {
-        id: '2',
-        pic: '/static/3.png',
-        name: 'BOAT校园贝壳商城抽奖-实物奖品 ',
-        price: 'IPHONE-X',
-        date: '2019/04/20',
-        erma: '/static/t14.png'
-      },
-      {
-        id: '3',
-        pic: '/static/2.png',
-        name: 'BOAT推荐驾校C1普通班 ',
-        price: '2029.5',
-        date: '2019/04/20',
-        erma: '/static/t14.png'
-      },
-      {
-        id: '4',
-        pic: '/static/2.png',
-        name: 'BOAT推荐驾校C1普通班 ',
-        price: '2029.5',
-        date: '2019/04/20',
-        erma: '/static/t14.png'
-      },
-    ],
+    // data: [{
+    //     id: '1',
+    //     pic: '/static/2.png',
+    //     name: 'BOAT推荐驾校C1普通班 ',
+    //     price: '2029.5',
+    //     date: '2019/04/20',
+    //     erma: '/static/t14.png'
+    //   },
+    //   {
+    //     id: '2',
+    //     pic: '/static/3.png',
+    //     name: 'BOAT校园贝壳商城抽奖-实物奖品 ',
+    //     price: 'IPHONE-X',
+    //     date: '2019/04/20',
+    //     erma: '/static/t14.png'
+    //   },
+    //   {
+    //     id: '3',
+    //     pic: '/static/2.png',
+    //     name: 'BOAT推荐驾校C1普通班 ',
+    //     price: '2029.5',
+    //     date: '2019/04/20',
+    //     erma: '/static/t14.png'
+    //   },
+    //   {
+    //     id: '4',
+    //     pic: '/static/2.png',
+    //     name: 'BOAT推荐驾校C1普通班 ',
+    //     price: '2029.5',
+    //     date: '2019/04/20',
+    //     erma: '/static/t14.png'
+    //   },
+    // ],
   },
   ready: function() {
     console.log(common.orderlist)
