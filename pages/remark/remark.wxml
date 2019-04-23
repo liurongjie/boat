@@ -22,8 +22,8 @@
           </view>
         </view>
         <view class="item" bindtap="chooseImage" wx:if="{{show_num<3}}">
-          <view class='icon_cam' >
-            <image  mode='aspectFill'  src='/static/pic/camera.png'></image>
+          <view class='icon_cam'>
+            <image mode='aspectFill' src='/static/pic/camera.png'></image>
           </view>
           <view class='addIcon'>
             <view class='addIcon_text'>添加/拍摄</view>
@@ -41,7 +41,8 @@
 
 
   <view class='ni'>
-    <checkbox-group bindchange="checkboxChange">
+    <checkbox-group >
+    <!-- <checkbox-group bindchange="checkboxChange"> -->
       <checkbox data-index="{{index}}" id="2" value="{{item.name}}" checked="{{item.checks}}" />
     </checkbox-group>
     <text style='position:absolute;font-size:30rpx;margin-top:15rpx;margin-left:90rpx;color:rgba(0,0,0,0.5);'>匿名</text>
@@ -50,7 +51,7 @@
 
 
   <view class='xi'>
-    <text style='position:relative;font-size:35rpx;color:rgba(100,100,100,0.5);font-weight:100;margin-top: 150rpx;margin-left:100rpx;margin-right:30rpx;'>最终评分</text>
+    <text style='position:relative;font-size:35rpx;color:rgba(100,100,100,0.5);font-weight:100;margin-left:100rpx;margin-right:30rpx;'>最终评分</text>
     <view class='stars'>
       <view class='content'>
         <view>
@@ -60,6 +61,7 @@
       </view>
     </view>
   </view>
+  
 
 
 </view>
@@ -89,5 +91,3 @@
 <!-- <view class='shade_box popup' > -->
 
 <!-- </view> -->
- 
-

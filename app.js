@@ -47,6 +47,7 @@ App({
       },
       success: (res) => {
         common.homelist = res.data;
+        console.log(common.homelist)
       }
     })
   },

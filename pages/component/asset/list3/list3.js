@@ -13,9 +13,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    ticket:[{}
-     
-    ],
+    ticket:[],
     pic: '/static/2.png',
     data: [{
         id: '1',
@@ -57,7 +55,7 @@ Component({
     for (var i = 0; i < common.orderlist.length; i++) {
 
       if (common.orderlist[i].status == 2) {
-        var tran=[];
+        var tran={};
         //common.orderlist[i];
         tran.time = utils.js_date_time1(common.orderlist[i].time2);
         tran.name=common.orderlist[i].production__name;

@@ -8,8 +8,8 @@ Page({
   data: {
     show_model: true,
     popup: true,
-    images: [],
-    uploadedImages: [],
+    images: [],//图片地址
+    judge:5,//评分 1，2，3，4，5
     show_num:0,
     // image: "",
     // "imageHidden": true,
@@ -24,7 +24,7 @@ Page({
     url: '/static/pic/new.png',
     name: '武汉大学BOAT推荐驾校普通班',
     desc: '一月试学 车接车送',
-    remark: '',
+    remark: '',//文字评论
   
     ph: ' BOAT推荐满足你的期待吗？说说你的体验感受, 分享给想要参与组队的他们吧',
 
@@ -57,16 +57,10 @@ Page({
 
   },
 
-  // upload: function () {
-  //   var that = this;
-  //   wx.chooseImage({
-  //     count: 1,
-  //     success: function (res) {
-  //       that.setData({ image: res.tempFilePaths[0], "imageHidden": false });
-
-  //     },
-  //   })
-  // },
+  upload: function () {
+    
+    
+  },
   hidePopup(flag = true) {
     this.setData({
       "popup": flag
@@ -158,31 +152,16 @@ Page({
         [item]: 2
       })
     }
-  },
-
-
-
-
-  choosepic: function() {
-    var that = this;
-    wx.chooseImage({
-      count: 3,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success(res) {
-        // tempFilePath可以作为img标签的src属性显示图片
-        const tempFilePaths = res.tempFilePaths;
-
-        that.data.model_img[that.data.pic_index] = tempFilePaths
-        that.data.hiden[that.data.pic_index] = true
-
-        that.setData({
-          pic_index: that.data.pic_index + 1,
-        })
-      }
-
+    this.setData({
+      judge:index,
     })
   },
+ 
+
+
+
+
+
 
 
   remarkinput(e) {
@@ -204,7 +183,27 @@ Page({
   },
 
   remark:function(){
-    this.hidePopup(false);
+    if(!this.data.images){
+      wx.showToast({
+        title: '请添加图片评论',
+        icon: 'success',
+        duration: 2000
+      })
+      return '';
+    }
+    if (!this.data.remark) {
+      wx.showToast({
+        title: '请添加文字评论',
+        icon: 'success',
+        duration: 2000
+      })
+      return '';
+    }
+
+    console.log(this.data.judge)
+    console.log(this.data.images)
+    console.log(this.data.remark)
+    // this.hidePopup(false);
 
     //评论完成的操作
   },
