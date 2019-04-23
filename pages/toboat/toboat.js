@@ -253,7 +253,7 @@ Page({
 
   buyalone: function(url) {
     var that = this;
-    console.log(app.globalData.openid)
+    console.log(app.globalData.userid)
     wx.request({
       url: url,
       data: {
@@ -319,7 +319,7 @@ Page({
     console.log("用户提交评价后触碰页面", options)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickName + '&openid=' + app.globalData.openid
+        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickname + '&userid=' + app.globalData.userid
     })
   },
 
