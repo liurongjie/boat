@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    teamid: '0000000',
+    teamid: '1',
     sign: false, //今天是否完成签到
     index: 1,
     show_flag: 'false',

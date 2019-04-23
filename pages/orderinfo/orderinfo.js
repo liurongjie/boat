@@ -197,7 +197,7 @@ Page({
       success: function (res) {
         if (res.confirm) {
           wx.request({
-            url: 'https://xiaoyibang.top:8001/dajia/cancel',
+            url: 'https://xiaoyibang.top:8002/dajia/cancel',
             data: {
               'orderid': that.data.order.orderid,
             },
@@ -239,7 +239,7 @@ Page({
       success: function (res) {
         if (res.confirm) {
           wx.request({
-            url: 'https://xiaoyibang.top:8001/dajia/completeorder',
+            url: 'https://xiaoyibang.top:8002/dajia/completeorder',
             data: {
               'orderid': that.data.order.orderid,
             },
