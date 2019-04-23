@@ -162,3 +162,18 @@ top: 0rpx;
   margin-left: 100rpx;
   color: rgba(0, 0, 0, 0.7);
 }
+.share{
+  position:absolute;
+  width: 250rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #077ACC;
+  left:325rpx;
+  top:170rpx;
+  font-size:30rpx;
+  font-weight: 500;
+  border: solid 1px #077ACC;
+
+}

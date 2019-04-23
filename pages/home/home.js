@@ -22,6 +22,7 @@ Page({
     })
 
   },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -85,7 +86,18 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
+    return {
+      title: 'BOAT',
+      path: 'pages/verify/verify？userid='+app.globalData.userid,
+      success: (res) => {
+        console.log("转发成功", res);
+
+      },
+      fail: (res) => {
+        console.log("转发失败", res);
+      }
+    }
 
   },
   sign: function() {
