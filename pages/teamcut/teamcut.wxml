@@ -53,7 +53,7 @@
         <view class='list'>
           <image src='{{item.pic}}' class='img'></image>
           <view class='name'>{{item.name}}</view>
-          <view class='rank'>船长</view>
+          <view class='rank'>{{item.callPosition}}</view>
           <view class='cutprice'>
             <text style='color:#2690DF;'>{{item.cutprice}}</text>
             <text>元</text>

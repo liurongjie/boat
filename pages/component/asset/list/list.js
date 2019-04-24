@@ -21,7 +21,8 @@ Component({
     list: 1,
     h: '',
     h1: '',
-    h2: ''
+    h2: '',
+    account:''
   },
   ready: function () {
     this.setData({
@@ -29,6 +30,7 @@ Component({
       pic: app.globalData.avatarUrl,
       teamname: app.globalData.teamname,
       time: app.globalData.time,
+      account: app.globalData.account,
     })
     var h = app.globalData.h;
     var h1 = h;
