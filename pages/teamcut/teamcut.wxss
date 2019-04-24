@@ -213,11 +213,14 @@ progress {
   position: relative;
   margin-left: 50rpx;
   font-size: 28rpx;
+  overflow:hidden;
+  
+
 }
 
 .list .rank {
   position: relative;
-  width: 80rpx;
+  width:100rpx;
   height: 30rpx;
   margin-top: 25rpx;
   margin-left: auto;

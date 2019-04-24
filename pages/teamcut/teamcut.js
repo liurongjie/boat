@@ -22,7 +22,6 @@ Page({
     onecut: [], //团队成员
     twocut: [], //他人砍价
     cutprice: 0,
-    realPrice:0,
     number: 0, //多少位朋友砍价
     res: [], //展示内容
     title: [
@@ -58,7 +57,7 @@ Page({
     page: 1,
     size: 8, //每页8条数据
     flag_hhh: '',
-
+    realprice:0,  //实时的价格
   },
   //下拉刷新
   lower: function () {
@@ -113,10 +112,15 @@ Page({
     this.checkstatus();
     this.getperiod(options.orderid);
     console.log("订单详情", common.orderlist)
-    var price = (common.orderlist.period__startprice - common.orderlist.cutprice - common.orderlist.period__cutprice).toFixed(2)
-    this.setData({
-      realPrice:price
-    })
+    // var price = (common.orderlist.period__startprice - common.orderlist.cutprice - common.orderlist.period__cutprice).toFixed(2)
+    // var price = parseFloat(this.data.period.period__startprice) - parseFloat(this.data.cutprice) - parseFloat(this.data.period.period__cutprice)
+    // console.log(this.data, '现在的数据')
+    // console.log(price, 'real_price', this.data.period.period__startprice, this.data.cutprice ,this.data.period.period__cutprice)
+    // this.setData({
+    //   realPrice:price
+    // })
+
+    
   },
   //判断是否登陆
   checkstatus: function () {
@@ -211,6 +215,7 @@ Page({
 
 
   },
+
   getorderdetail: function (steamid) {
     var that = this;
     wx.request({
@@ -229,6 +234,8 @@ Page({
       }
     })
   },
+
+
   getperiod: function (orderid) {
     var that = this;
     wx.request({
@@ -239,11 +246,18 @@ Page({
       success: (res) => {
         res.data[0].production__logo = that.data.url + res.data[0].production__logo;
         console.log('期表id' + res.data[0])
+        
         that.setData({
           period: res.data[0],
           periodid: res.data[0].period_id,
         })
-        console.log('期表id' + that.data.periodid)
+          
+        // that.data.period.period__startprice = that.data.period.period__startprice.toFixed(2)
+
+        // period.period__startprice - cutprice
+
+
+        console.log('期表内容' + that.data)
         if (res.data[0].status == 1) {
           that.setData({
             end: true,
@@ -276,6 +290,7 @@ Page({
       middle.name = this.data.onecut[i].member__name;
       middle.cutprice = this.data.onecut[i].membership__cutprice;
       cutprice = cutprice + middle.cutprice;
+      
       middle.title = this.data.title[i];
       middle1.push(middle);
     }
@@ -288,10 +303,12 @@ Page({
       cutprice = cutprice + middle.cutprice;
       middle2.push(middle);
     }
+    cutprice = cutprice.toFixed(2)
     this.setData({
       onecut: middle1,
       twocut: middle2,
       cutprice: cutprice,
+      // realprice: (period.period__startprice - cutprice).toFixed(2),
       number: this.data.onecut.length + this.data.twocut.length,
     })
 
@@ -430,8 +447,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function (options) {
-
-
+    var price = this.data.period.period__startprice - this.data.cutprice - this.data.period.period__cutprice
+    price = price.toFixed(2)
+    this.setData({
+      realprice:price
+    })
+    console.log(this.data.realprice,"realprice---")
   },
 
   /**

@@ -52,3 +52,15 @@ module.exports = {
   js_date_time: js_date_time,
   js_date_time1:js_date_time1,
 }
+
+
+// var filters = {
+//   toFix: function (value) {
+//     return value.toFixed(2) // 此处2为保留两位小数，保留几位小数
+//   }
+// }
+
+// module.exports = {
+//   toFix: filters.toFix,
+//   toNumber: filters.toNumber,
+// }

@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    steamid:'',//判断是否拼团购买
+    steamid: '', //判断是否拼团购买
     url: '', //后台
     buy_index: "",
     latitude: 30.41,
@@ -37,9 +37,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    if(options.steamid){
+    if (options.steamid) {
       this.setData({
-        steamid:options.steamid,
+        steamid: options.steamid,
       })
     }
     console.log(common.currentData)
@@ -119,22 +119,16 @@ Page({
   onReady: function() {
     this.checkorder();
     var util = require("../../utils/util.js");
-    console.log(this.data.evaluationlist, this.isBlank(this.data.evaluationlist))
-    if (this.data.evaluationlist.length === 0) {
-      let evaluationlist = this.data.evaluationlist
-      evaluationlist.context.push("暂无用户评论") 
-      this.setData({
-        evaluationlist
-      })
-      console.log("无评论")
-    } else {
-      let evaluationlist = this.data.evaluationlist
+    // console.log(this.data.evaluationlist, this.isBlank(this.data.evaluationlist))
+
+    let evaluationlist = this.data.evaluationlist
+    if (evaluationlist.length!=0)
       evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
-      this.setData({
-        evaluationlist
-      })
-    }
- 
+    this.setData({
+      evaluationlist
+    })
+
+
   },
 
   isBlank: function(str) {
@@ -240,7 +234,7 @@ Page({
             that.buyalone(this.data.url + '/dajia/buyalone');
 
           }
-          
+
           break;
         case 2:
           //看我的船
@@ -297,13 +291,13 @@ Page({
             icon: 'success',
             duration: 1000
           });
-          setTimeout(function () {
+          setTimeout(function() {
             wx.navigateTo({
               url: "/pages/home/home"
 
             })
-          },850)
-         
+          }, 850)
+
         }
 
 

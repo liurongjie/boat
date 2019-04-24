@@ -13,9 +13,11 @@
           <view class='productionname'> {{period.production__name}}</view>
           <view class='introduction'>目前砍价已领先94%用户</view>
           <view class='introduction'>初始价格为{{period.period__startprice}}元</view>
-          <view class='price'>
+          <view class='price'  module="filters" src="../utils/filters.wxs" >
             <text style='font-size:25rpx;margin-top:20%;'>¥</text>
-            <text>{{period.period__startprice-cutprice}}</text>
+            <!-- <text>{{period.period__startprice - cutprice-period.period__cutprice}}</text> -->
+            <!-- <text>{{filters.toFix(realprice)}}</text>    -->
+            <text>{{realprice}}</text>
           </view>
         </view>
       </view>
