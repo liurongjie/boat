@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModel:'',
     puserid:'',//邀请人userid
     could: true,
     show_model: true,
@@ -404,11 +405,78 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     if(options.userid){
       this.setData({
         puserid:options.userid,
       })
     }
+    if (!app.globalData.userid) {
+      this.setData({
+        showModel: true,
+      })
+    } else {
+     
+      this.setData({
+        showModel: false,
+      })
+
+
+    }
+
+  },
+  onGotUserInfo(e) {
+    console.log("正在运行login")
+    app.globalData.nickname = e.detail.userInfo.nickName
+    app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
+    app.globalData.gender = e.detail.userInfo.gender
+    this.backlogin();
+
+
+  },
+
+  //后台登陆
+  backlogin: function (url) {
+    var that = this;
+    wx.login({
+      success: res => {
+
+        wx.request({
+          url: 'https://xiaoyibang.top:8002/dajia/login',
+          data: {
+            'nickname': app.globalData.nickname,
+            'gender': app.globalData.gender,
+            'code': res.code,
+            'pic': app.globalData.avatarUrl
+          },
+          success: (res) => {
+            console.log("用户信息", res.data)
+            var information = {
+              'userid': res.data.userid,
+              'teamname': res.data.team_name,
+              'name': res.data.name,
+              'number': res.data.number,
+              'status': res.data.status,
+              'nickname': app.globalData.nickname,
+              'avatarUrl': app.globalData.avatarUrl,
+            }
+            wx.setStorage({
+              key: 'information',
+              data: information,
+            });
+            this.setData({
+              showModel: false,
+            })
+            app.globalData.userid = res.data.userid;
+            app.globalData.teamname = res.data.team_name;
+            app.globalData.name = res.data.name;
+            app.globalData.number = res.data.number;
+            app.globalData.status = res.data.status;
+          },
+        })
+      }
+    })
+
 
   },
 

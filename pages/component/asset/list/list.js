@@ -38,7 +38,7 @@ Component({
   onShareAppMessage: function () {
     return {
       title: 'BOAT',
-      path: 'pages/verify/verify?userid' + app.globalData.userid,
+      path: 'pages/verify/verify?userid=' + app.globalData.userid,
       success: (res) => {
         console.log("转发成功", res);
 
