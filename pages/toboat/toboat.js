@@ -315,12 +315,15 @@ Page({
           wx.showToast({ //如果全部加载完成了也弹一个框
             title: res.data.reason,
             icon: 'success',
-            duration: 300
+            duration: 1000
           });
-          wx.navigateTo({
-            url: "/pages/home/home" 
-             
-          })
+          setTimeout(function () {
+            wx.navigateTo({
+              url: "/pages/home/home"
+
+            })
+          },850)
+         
         }
 
 

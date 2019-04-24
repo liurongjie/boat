@@ -315,6 +315,11 @@ Page({
   //右边按钮点击
   rightbindtap: function () {
     if (!this.data.end) {
+      wx.showToast({
+        title: '订单已超时',
+        icon:'loading',
+        duration: 2000,
+      })
       return '';
     }
     var that = this;

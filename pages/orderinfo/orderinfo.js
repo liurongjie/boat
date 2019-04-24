@@ -103,7 +103,7 @@ Page({
     if (state == 2) this.setData({ title: '拼单完成  待完成支付', color1: '#FF060D ', color2: '#FF64A7 ', title1: '预付费用1元', zuo: '取消订单', you: '进我的团', price: '最终价', price1: '最终交易价' });
     if (state == 3) this.setData({ title: '支付完成  待确认结束', color1: '#2EA0B6 ', color2: '#00ADCD ', title1: '预付费用1元 已退还', zuo: '联系我们', you: '我已完成', price: '已支付', price1: '最终支付价', quxiao: '' });
     if (state == 4) this.setData({ title: '订单完成  待评价完成', color1: '#5EE4FE ', color2: '#57ABFE ', title1: '预付费用1元 已退还', zuo: '申请维权', you: '我要评价', price: '最终价', price1: '最终交易价', quxiao: '' });
-    if (state == 5) this.setData({ title: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', title1: '预付费用1元 已退还', zuo: '申请维权', you: '查看评价', price: '最终价', price1: '订单实付价', quxiao: '' });
+    if (state == 5) this.setData({ title: '评价完成', color1: '#FEB25E', color2: '#FE8F57 ', title1: '预付费用1元 已退还', zuo: '申请维权', you: '敬请期待', price: '最终价', price1: '订单实付价', quxiao: '' });
 
     var order = common.currentorder;
     console.log(common.currentorder)
@@ -185,6 +185,7 @@ Page({
 
         break;
       case 5:
+        
 
         break;
     }
