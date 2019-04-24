@@ -15,7 +15,7 @@
           <view class='introduction'>初始价格为{{period.period__startprice}}元</view>
           <view class='price'>
             <text style='font-size:25rpx;margin-top:20%;'>¥</text>
-            <text>{{realPrice}}</text>
+            <text>{{period.period__startprice-cutprice}}</text>
           </view>
         </view>
       </view>

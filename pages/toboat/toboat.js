@@ -42,26 +42,6 @@ Page({
         steamid:options.steamid,
       })
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     console.log(common.currentData)
     this.setData({
       buy_index: app.buy_index,
@@ -140,20 +120,20 @@ Page({
     this.checkorder();
     var util = require("../../utils/util.js");
     console.log(this.data.evaluationlist, this.isBlank(this.data.evaluationlist))
-    // if (this.data.evaluationlist === '[object Undefined]') {
-    //   let evaluationlist = this.data.evaluationlist
-    //   evaluationlist[0].context = "暂无用户评论"
-    //   this.setData({
-    //     evaluationlist
-    //   })
-    //   console.log("无评论")
-    // } else {
-    //   let evaluationlist = this.data.evaluationlist
-    //   evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
-    //   this.setData({
-    //     evaluationlist
-    //   })
-    // }
+    if (this.data.evaluationlist.length === 0) {
+      let evaluationlist = this.data.evaluationlist
+      evaluationlist.context.push("暂无用户评论") 
+      this.setData({
+        evaluationlist
+      })
+      console.log("无评论")
+    } else {
+      let evaluationlist = this.data.evaluationlist
+      evaluationlist[0].time = util.js_date_time(this.data.evaluationlist[0].time)
+      this.setData({
+        evaluationlist
+      })
+    }
  
   },
 
