@@ -213,7 +213,7 @@ Page({
         'steamid': steamid,
       },
       success: (res) => {
-        common.onecut=res.data.onecut;
+        common.onecut = res.data.onecut;
         that.setData({
           onecut: res.data.onecut,
           twocut: res.data.twocut,
@@ -317,23 +317,45 @@ Page({
     if (!this.data.end) {
       return '';
     }
-    var that=this;
+    var that = this;
     console.log(this.data.btn_index)
     if (this.data.btn_index == 0) {
       wx.navigateTo({
-        url: "/pages/myteam/myteam?" ,
+        url: "/pages/myteam/myteam",
       })
-    } else {
-      for (var i = 0; i < common.homelist.length; i++) {
-        if (this.data.periodid == common.homelist[i].periodid) {
-          common.currentData = common.homelist[i];
-          break;
+    } 
+    else {
+      if (this.data.onecut[0].steamnumber <= 5) {
+        for (var i = 0; i < common.homelist.length; i++) {
+          if (this.data.periodid == common.homelist[i].periodid) {
+            common.currentData = common.homelist[i];
+            break;
+          }
         }
+        //common.data.steamid = this.data.steamid;
+        wx.navigateTo({
+          url: "/pages/toboat/toboat?steamid=" + that.data.steamid,
+        })
+
       }
-      //common.data.steamid = this.data.steamid;
-      wx.navigateTo({
-        url: "/pages/toboat/toboat?steamid="+that.data.steamid,
-      })
+      else {
+        wx.showModal({
+          title: '拼团人数已满，是否单独发船',
+          content: '',
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: "/pages/toboat/toboat",
+              });
+            } else {//这里是点击了取消以后
+              console.log('用户点击取消')
+            }
+          }
+        });
+        
+      }
+
+
     }
 
 

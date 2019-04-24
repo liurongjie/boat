@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    steamid:'',//判断是否拼团购买
     url: '', //后台
     buy_index: "",
     latitude: 30.41,
@@ -35,7 +36,32 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(e) {
+  onLoad: function(options) {
+    if(options.steamid){
+      this.setData({
+        steamid:options.steamid,
+      })
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     console.log(common.currentData)
     this.setData({
       buy_index: app.buy_index,
@@ -217,7 +243,6 @@ Page({
         duration: 1000,
         icon: 'loading',
       })
-
       setTimeout(function() {
         wx.navigateTo({
           url: "/pages/verify/verify",
@@ -229,20 +254,19 @@ Page({
 
         case 1:
           //我要上船
-          if (common.data.steamid) {
+          if (that.data.steamid) {
             that.buytogether(this.data.url + '/dajia/buytogether')
           } else {
             that.buyalone(this.data.url + '/dajia/buyalone');
 
           }
-
-          that.hidePopup(false);
+          
           break;
         case 2:
           //看我的船
           wx.navigateTo({
             url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-              '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickname + '&userid=' + app.globalData.userid
+              '&avatarUrl=' + app.globalData.avatarUrl + '&nickname=' + app.globalData.nickname + '&userid=' + app.globalData.userid
           })
           break;
 
@@ -253,7 +277,6 @@ Page({
 
   buyalone: function(url) {
     var that = this;
-    console.log(app.globalData.userid)
     wx.request({
       url: url,
       data: {
@@ -264,9 +287,7 @@ Page({
         common.currentorder.steam_id = res.data.steamid;
         common.currentorder.orderid = res.data.orderid;
         app.getorderlist();
-        that.setData({
-          status: 2
-        })
+        that.hidePopup(false);
       }
     })
 
@@ -287,9 +308,7 @@ Page({
         if (res.data.success) {
           common.currentorder.steam_id = res.data.steamid;
           common.currentorder.orderid = res.data.orderid;
-          that.setData({
-            status: 3
-          })
+          that.hidePopup(false);
           app.getorderlist();
 
         } else {
@@ -298,8 +317,9 @@ Page({
             icon: 'success',
             duration: 300
           });
-          that.setData({
-            status: 2
+          wx.navigateTo({
+            url: "/pages/home/home" 
+             
           })
         }
 
