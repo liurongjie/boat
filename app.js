@@ -11,7 +11,7 @@ App({
 
 
 
-    wx.clearStorageSync();
+    
     //获取屏幕尺寸
     that.getsystem();0
     that.gethomelist(this.url + '/dajia/home');
