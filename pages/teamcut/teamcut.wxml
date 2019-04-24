@@ -49,11 +49,22 @@
     <view class='sumcutprice'>-已有{{number}}位朋友帮忙砍价{{cutprice}}元-</view>
     <scroll-view scroll-y class="scroll">
 
-      <view wx:for="{{res}}" wx:key="name">
+      <view wx:for="{{onecut}}" wx:key="onecut.name">
         <view class='list'>
           <image src='{{item.pic}}' class='img'></image>
           <view class='name'>{{item.name}}</view>
-          <view class='rank'>{{item.callPosition}}</view>
+          <view class='rank'>{{item.title}}</view>
+          <view class='cutprice'>
+            <text style='color:#2690DF;'>{{item.cutprice}}</text>
+            <text>元</text>
+          </view>
+        </view>
+      </view>
+      <view wx:for="{{twocut}}" wx:key="twocut.name">
+        <view class='list'>
+          <image src='{{item.pic}}' class='img'></image>
+          <view class='name'>{{item.name}}</view>
+          <view class='rank'>水手</view>
           <view class='cutprice'>
             <text style='color:#2690DF;'>{{item.cutprice}}</text>
             <text>元</text>

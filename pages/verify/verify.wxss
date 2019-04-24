@@ -10,7 +10,7 @@
   position: absolute;
   width: auto;
   height: auto;
-  top: 24rpx;
+  top: 0rpx;
   right: 5rpx;
   background: white;
   z-index: 10;
@@ -81,7 +81,7 @@ top: 50rpx;
   position: absolute;
 height: 100%;
  left:160rpx;
- width: 500rpx;
+ width: auto;
   background-color: white;
 }
 .input{
@@ -132,6 +132,11 @@ line-height: 120rpx;
 font-size: 45rpx;
 font-weight: 100;
 color: white;
+}
+
+.itemview{
+    height: 100rpx;
+    line-height: 100rpx;
 }
 .showModule {
   /* 用样式控制隐藏  visibility: hidden;*//* flex 布局 */

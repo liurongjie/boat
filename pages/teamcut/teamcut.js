@@ -15,7 +15,6 @@ Page({
    */
   data: {
     showModel: true,
-    res: '',
     url: "https://xiaoyibang.top:8002/uploads/",
     end: false, //判定订单是否取消或者过期
     //云端获取
@@ -25,6 +24,13 @@ Page({
     cutprice: 0,
     number: 0, //多少位朋友砍价
     res: [], //展示内容
+    title: [
+      '船长',
+      '大副',
+      '二副',
+      '水手长',
+      '厨师',
+    ],
     //数据缓存
     orderid: '',
     nickname: '',
@@ -113,6 +119,7 @@ Page({
         showModel: true,
       })
     } else {
+      this.checkmember();
       this.setData({
         showModel: false,
       })
@@ -125,32 +132,17 @@ Page({
   //判定团队成员
   checkmember: function () {
     //是否为组团成员
-    console.log('userid' + app.globalData.userid);
-    console.log(this.data.onecut.length)
-
-    for (var i = 0; i < this.data.onecut.length; i++) {
-      if (app.globalData.userid == this.data.onecut[i].member__userid) {
-        this.setData({
-          btn_index: 0,
-        })
-        return '';
-        break;
-      }
-    }
-    //是否砍过价格
-    for (var i = 0; i < this.data.twocut.length; i++) {
-      if (app.globalData.userid == this.data.twocut[i].audience__userid) {
-        this.setData({
-          btn_index: 2,
-        })
-        return '';
-        break;
-      }
+    if (app.globalData.userid == this.data.userid) {
+      this.setData({
+        btn_index: 0,
+      })
+      return '';
+    } else {
+      this.setData({
+        btn_index: 1,
+      });
     }
 
-    this.setData({
-      btn_index: 1,
-    })
 
 
 
@@ -192,10 +184,14 @@ Page({
               'nickname': app.globalData.nickname,
               'avatarUrl': app.globalData.avatarUrl,
             }
-            wx.setStorageSync('information', information)
+            wx.setStorage({
+              key: 'information',
+              data: information,
+            });
             this.setData({
               showModel: false,
             })
+            that.checkmember();
             that.getorderdetail(that.data.steamid);
             app.globalData.userid = res.data.userid;
             app.globalData.teamname = res.data.team_name;
@@ -217,13 +213,11 @@ Page({
         'steamid': steamid,
       },
       success: (res) => {
-        console.log(res.data.onecut)
-
+        common.onecut=res.data.onecut;
         that.setData({
           onecut: res.data.onecut,
           twocut: res.data.twocut,
         })
-        that.checkmember();
         that.merge();
 
       }
@@ -265,31 +259,34 @@ Page({
       }
     })
   },
+
   //合并onecut和twocut生成res
   merge: function () {
-    var data = [];
+    var middle1 = [];
     var cutprice = 0;
-    console.log("合并")
     for (var i = 0; i < this.data.onecut.length; i++) {
       var middle = {};
       middle.pic = this.data.onecut[i].member__picture;
       middle.name = this.data.onecut[i].member__name;
       middle.cutprice = this.data.onecut[i].membership__cutprice;
       cutprice = cutprice + middle.cutprice;
-      data.push(middle);
+      middle.title = this.data.title[i];
+      middle1.push(middle);
     }
-    for (var i = 0; i < this.data.twocut.length; i++) {
+    var middle2 = [];
+    for (var i = this.data.twocut.length - 1; i >= 0; i--) {
       var middle = {};
       middle.pic = this.data.twocut[i].audience__picture;
       middle.name = this.data.twocut[i].audience__nickname;
       middle.cutprice = this.data.twocut[i].cutprice;
       cutprice = cutprice + middle.cutprice;
-      data.push(middle);
+      middle2.push(middle);
     }
     this.setData({
-      res: data,
+      onecut: middle1,
+      twocut: middle2,
       cutprice: cutprice,
-      number: data.length,
+      number: this.data.onecut.length + this.data.twocut.length,
     })
 
   },
@@ -321,10 +318,9 @@ Page({
       return '';
     }
     console.log(this.data.btn_index)
-    common.onecut = this.data.onecut;
     if (this.data.btn_index == 0) {
       wx.navigateTo({
-        url: "/pages/myteam/myteam?steamid="+this.data.steamid,
+        url: "/pages/myteam/myteam?" ,
       })
     } else {
       for (var i = 0; i < common.homelist.length; i++) {
@@ -355,10 +351,12 @@ Page({
         'periodid': that.data.periodid,
       },
       success: (res) => {
-        that.getorderdetail(that.data.steamid);
+        console.log("状态2")
         that.setData({
           btn_index: 2,
         })
+        that.getorderdetail(that.data.steamid);
+
       }
     })
 
