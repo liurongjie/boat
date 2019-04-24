@@ -35,6 +35,20 @@ Component({
     },
    
   },
+  onShareAppMessage: function () {
+    return {
+      title: 'BOAT',
+      path: 'pages/verify/verify?userid' + app.globalData.userid,
+      success: (res) => {
+        console.log("转发成功", res);
+
+      },
+      fail: (res) => {
+        console.log("转发失败", res);
+      }
+    }
+
+  },
   ready: function() {
     console.log("beike" + app.globalData.account)
     this.setData({

@@ -372,6 +372,7 @@ Page({
           }
           wx.setStorageSync('information', information)
           app.getuserinformation();
+          this.hidePopup(false);
         }
 
       })
@@ -380,7 +381,7 @@ Page({
       //   text: "恭喜你 提交验证成功",
       //   isShow: true
       // })
-      this.hidePopup(false);
+      
     }
   },
 

@@ -339,7 +339,7 @@ Page({
     console.log("用户提交评价后触碰页面", options)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + common.currentorder.steam_id + '&orderid=' + common.currentorder.orderid +
-        '&avatarUrl=' + app.globalData.avatarUrl + '&nickName=' + app.globalData.nickname + '&userid=' + app.globalData.userid
+        '&avatarUrl=' + app.globalData.avatarUrl + '&nickname=' + app.globalData.nickname + '&userid=' + app.globalData.userid
     })
   },
 
