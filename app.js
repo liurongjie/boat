@@ -10,9 +10,10 @@ App({
     //身份信息获取
 
 
-    //订单信息
+
    
     //获取屏幕尺寸
+    wx.clearStorageSync();
     that.getsystem();
     that.gethomelist(this.url + '/dajia/home');
     that.getuserinformation();
