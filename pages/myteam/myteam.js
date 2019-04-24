@@ -9,46 +9,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+  member_number:1,
   index:1,
   showmodel:false,
-   data:[
-     {
-       pic: '',
-       name: '',
-       desc: '',
-       date: '',
-       c: '船长'
-     },
-     {
-       pic: '',
-       name: '',
-       desc: '',
-       date: '',
-       c: '大副'
-     }
-     ,
-     {
-       pic: '',
-       name: '',
-       desc: '',
-       date: '',
-       c: '大副'
-     },
-     {
-       pic: '',
-       name: '',
-       desc: '',
-       date: '',
-       c: '大副'
-     }
-     ,
-     {
-       pic: '',
-       name: '',
-       desc: '',
-       date: '',
-       c: '大副'
-     }
+    data: [{}],
     //  ,
     //  {
     //    pic: '/static/c3.jpg',
@@ -58,7 +22,7 @@ Page({
     //    c: '大副'
     //  },
 
-   ]
+   
   },
 se1:function(){
   this.setData({
@@ -112,27 +76,40 @@ se5: function () {
           // common.homelist = res.data;
           console.log("团员",res.data)
           this.setData({
-            data:res.data.onecut
+            data:res.data.onecut,
+            member_number: res.data.onecut.length
           })
-          console.log("团员", this.data.data[0])
+          
         }
       })
+
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    //需要写在这个函数中
     //这个data不敢改了，tql
     let data = this.data.data
-    for(var i=0;i<data.length;i++)
-    { 
-      if (i != 0)
-        data[i].membership__time = util.js_date_time1(this.data.data[i].membership__time)
-        
+    for (var i = 0; i < data.length; i++) {
+      data[i].membership__time = util.js_date_time1(this.data.data[i].membership__time)
+
+      if (i == 0)
         data[i].c = '船长'
+      else if (i == 1)
+        data[i].c = '大副'
+      else if (i == 2)
+        data[i].c = '二副'
+      else if (i == 3)
+        data[i].c = '水手长'
+      else if (i == 4)
+        data[i].c = '轮机长'
+
       this.setData({ data })
     }
+    console.log("船员", this.data.data)
    
   },
 

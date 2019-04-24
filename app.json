@@ -1,12 +1,13 @@
 {
   "pages": [
+  "pages/verify/verify",
     "pages/home/home",
     "pages/remark/remark",
     "pan/page",
     "pages/teamcut/teamcut",
     "pages/setting/setting",
     "mx/mx",
-    "pages/verify/verify",
+    
     "pages/myteam/myteam",
     "pages/webview/webview",
     "pages/toboat/toboat",
