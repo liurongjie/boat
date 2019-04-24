@@ -1,17 +1,17 @@
 // pages/myteam/myteam.js
 
 var util = require("../../utils/util.js");
-var app=getApp();
-var common=require('../../common/index.js');
+var app = getApp();
+var common = require('../../common/index.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  member_number:1,
-  index:1,
-  showmodel:false,
+    member_number: 1,
+    index: 1,
+    showmodel: false,
     data: [{}],
     //  ,
     //  {
@@ -22,68 +22,72 @@ Page({
     //    c: '大副'
     //  },
 
-   
+
   },
-se1:function(){
-  this.setData({
-    index:1,
-    showmodel: true
-  })
-},
-se2: function () {
+  se1: function () {
+    this.setData({
+      index: 1,
+      showmodel: true
+    })
+  },
+  se2: function () {
     this.setData({
       index: 2,
       showmodel: true
     })
-  }, 
-se3: function () {
+  },
+  se3: function () {
     this.setData({
       index: 3,
       showmodel: true
     })
-  }, 
-se4: function () {
+  },
+  se4: function () {
     this.setData({
       index: 4,
       showmodel: true
     })
   },
-se5: function () {
+  se5: function () {
     this.setData({
       index: 5,
       showmodel: true
     })
   },
-  bac:function(){
+  bac: function () {
     this.setData({
-      showmodel:false
+      showmodel: false
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      // wx.request({
-      //   url: app.url +'/dajia/scancomment',
-      // })
-      console.log(options)
-      wx.request({
-        url: app.url + '/dajia/orderdetail',
-        data: {
-          'steamid': options.steamid,
-        },
-        success: (res) => {
-          // common.homelist = res.data;
-          console.log("团员",res.data)
-          this.setData({
-            data:res.data.onecut,
-            member_number: res.data.onecut.length
-          })
-          
-        }
-      })
+    // wx.request({
+    //   url: app.url +'/dajia/scancomment',
+    // })
+    // console.log(options)
+    // wx.request({
+    //   url: app.url + '/dajia/orderdetail',
+    //   data: {
+    //     'steamid': options.steamid,
+    //   },
+    //   success: (res) => {
+    //     // common.homelist = res.data;
+    //     console.log("团员",res.data)
+    //     this.setData({
+    //       data:res.data.onecut,
+    //       member_number: res.data.onecut.length
+    //     })
 
-    
+    //   }
+    // })
+    this.setData({
+      data: common.onecut,
+      member_number: common.onecut.length
+    })
+
+
   },
 
   /**
@@ -110,7 +114,7 @@ se5: function () {
       this.setData({ data })
     }
     console.log("船员", this.data.data)
-   
+
   },
 
   /**
@@ -156,7 +160,7 @@ se5: function () {
   },
 
 
-  backto_teamcut:function(){
+  backto_teamcut: function () {
     wx.navigateBack({
       delta: 1
     });

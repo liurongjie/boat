@@ -213,8 +213,7 @@ Page({
         'steamid': steamid,
       },
       success: (res) => {
-        console.log(res.data.onecut)
-
+        common.onecut=res.data.onecut;
         that.setData({
           onecut: res.data.onecut,
           twocut: res.data.twocut,
@@ -319,10 +318,9 @@ Page({
       return '';
     }
     console.log(this.data.btn_index)
-    common.onecut = this.data.onecut;
     if (this.data.btn_index == 0) {
       wx.navigateTo({
-        url: "/pages/myteam/myteam?steamid=" + this.data.steamid,
+        url: "/pages/myteam/myteam?" ,
       })
     } else {
       for (var i = 0; i < common.homelist.length; i++) {
