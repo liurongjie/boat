@@ -1,7 +1,7 @@
 <!--compoment/dingdan/dingdan.wxml-->
 <navigationBar id="navigationBar" placeholderBg="" color="black" title="订单详情" back="{{true}}" background="white" fixed="{{fixed}}"></navigationBar>
 <view style='position:absolute;top:150rpx;height:150rpx;width:100%;background:linear-gradient(to bottom right, {{color1}} ,{{color2}} );color:white'>
-  <text style='position:relative;top:20rpx;margin-left:50rpx;font-weight:200;'>{{title}}</text>
+  <text style='position:relative;top:40rpx;margin-left:50rpx;font-weight:200;'>{{title}}</text>
 </view>
 <text style='position:absolute;top:250rpx;left:50rpx;font-weight:200;font-size:25rpx;z-index:99;color:white'>{{title1}}</text>
 <view style='position: absolute;top:330rpx;width: 90%;left: 5%;height:{{height}};box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10);'>
