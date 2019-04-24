@@ -41,6 +41,31 @@ Page({
         object: '签到',
         number: '10'
       },
+      {
+        date: '-2019-4-17-',
+        object: '完成认证',
+        number: '50'
+      },
+      {
+        date: '-2019-4-17-',
+        object: '完成认证',
+        number: '50'
+      },
+      {
+        date: '-2019-4-17-',
+        object: '完成认证',
+        number: '50'
+      },
+      {
+        date: '-2019-4-17-',
+        object: '完成认证',
+        number: '50'
+      },
+      {
+        date: '-2019-4-17-',
+        object: '完成认证',
+        number: '50'
+      },
       ],
     h: '',//高度
   },
@@ -59,8 +84,24 @@ Page({
     this.setData({
       h: app.globalData.h
     });
+    this.getdetail();
   },
+  getdetail:function(){
+    wx.login({
+      success: res => {
+        wx.request({
+          url: 'https://xiaoyibang.top:8002/dajia/accountdetail',
+          data: {
+            'userid': app.globalData.userid,
+          },
+          success: (res) => {
+            console.log(res.data)
+          },
+        })
+      }
+    })
 
+  },
   /**
    * 生命周期函数--监听页面显示
    */

@@ -297,11 +297,11 @@ Page({
     console.log("运行buytogether")
     var that = this;
     wx.request({
-      url: 'https://xiaoyibang.top:8001/dajia/buytogether',
+      url: 'https://xiaoyibang.top:8002/dajia/buytogether',
       data: {
-        "openid": app.globalData.openid,
+        "userid": app.globalData.userid,
         "periodid": common.currentData.periodid,
-        "steamid": common.data.steamid,
+        "steamid": that.data.steamid,
       },
       success: (res) => {
 

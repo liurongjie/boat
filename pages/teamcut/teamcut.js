@@ -323,22 +323,16 @@ Page({
       wx.navigateTo({
         url: "/pages/myteam/myteam",
       })
-    } 
+    }
     else {
-      if (this.data.onecut[0].steamnumber <= 5) {
-        for (var i = 0; i < common.homelist.length; i++) {
-          if (this.data.periodid == common.homelist[i].periodid) {
-            common.currentData = common.homelist[i];
-            break;
-          }
-        }
-        //common.data.steamid = this.data.steamid;
-        wx.navigateTo({
-          url: "/pages/toboat/toboat?steamid=" + that.data.steamid,
-        })
 
+      for (var i = 0; i < common.homelist.length; i++) {
+        if (this.data.periodid == common.homelist[i].periodid) {
+          common.currentData = common.homelist[i];
+          break;
+        }
       }
-      else {
+      if (this.data.onecut[0].steamnumber > 5) {
         wx.showModal({
           title: '拼团人数已满，是否单独发船',
           content: '',
@@ -352,7 +346,16 @@ Page({
             }
           }
         });
-        
+        //common.data.steamid = this.data.steamid;
+
+
+      }
+      else {
+        wx.navigateTo({
+          url: "/pages/toboat/toboat?steamid=" + that.data.steamid,
+        })
+
+
       }
 
 
