@@ -41,7 +41,7 @@ Page({
     //状态0自我，状态1帮我砍，状态2帮好友分享
     btn_index: 1, //状态
     btn_text_left: ['分享好友砍价', '砍这好友一刀', '帮Ta召唤好友'],
-    btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
+    btn_text_right: ['查看拼团成员', '我要立即参团', '我要等价参团'],
     sentence: '', //展示句子
     //
     setInter: '', //定时器
@@ -317,6 +317,7 @@ Page({
     if (!this.data.end) {
       return '';
     }
+    var that=this;
     console.log(this.data.btn_index)
     if (this.data.btn_index == 0) {
       wx.navigateTo({
@@ -329,9 +330,9 @@ Page({
           break;
         }
       }
-      common.data.steamid = this.data.steamid;
+      //common.data.steamid = this.data.steamid;
       wx.navigateTo({
-        url: "/pages/toboat/toboat",
+        url: "/pages/toboat/toboat?steamid="+that.data.steamid,
       })
     }
 
