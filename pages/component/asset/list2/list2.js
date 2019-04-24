@@ -80,8 +80,10 @@ Component({
     this.setData({ title: common.data.ordertitle });
     this.setData({ lists: order });
     console.log(order)
-    
-
+    if (order.length === 0)
+    {
+      
+    }
   },
   /**
    * 组件的方法列表

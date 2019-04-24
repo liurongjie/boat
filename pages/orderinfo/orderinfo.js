@@ -193,7 +193,7 @@ Page({
   deleteorder: function () {
     var that = this;
     wx.showModal({
-      title: '删除此订单',
+      title: '呜呜呜~确定要删除此订单么？',
       content: '',
       success: function (res) {
         if (res.confirm) {
@@ -225,7 +225,7 @@ Page({
 
   },
   gotomyteam: function () {
-    console.log(this.data.order)
+    console.log('订单---',this.data.order)
     wx.navigateTo({
       url: "/pages/teamcut/teamcut?steamid=" + this.data.order.steam_id + '&orderid=' + this.data.order.orderid
         + '&avatarUrl=' + app.globalData.avatarUrl + '&nickname=' + app.globalData.nickname + '&userid=' + app.globalData.userid

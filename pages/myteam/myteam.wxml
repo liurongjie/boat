@@ -30,7 +30,7 @@
    </view>
 
    <view style='width:100%;position:absolute;top:46%;height:54%;display:flex;justify-content: center;'>
-   <text style='position:absolute;top:6%;color:grey'>{{data[index-1].member__userid}}号用户</text>
+   <text style='position:absolute;top:6%;color:grey'>{{data[index-1].member__department}}</text>
    <text style='position:absolute;margin-top:12%;top:0%;font-size:80rpx;color:#52ADB4;font-weight:200'>{{data[index-1].member__name}}</text>
    <text style='position:absolute;margin-top:24%;top:15%;font-size:24rpx;color:grey'>──── {{data[index-1].membership__time}} ────</text>
    <view class='cap'>

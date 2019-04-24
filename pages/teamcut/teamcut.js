@@ -22,6 +22,7 @@ Page({
     onecut: [], //团队成员
     twocut: [], //他人砍价
     cutprice: 0,
+    realPrice:0,
     number: 0, //多少位朋友砍价
     res: [], //展示内容
     title: [
@@ -29,8 +30,9 @@ Page({
       '大副',
       '二副',
       '水手长',
-      '厨师',
+      '轮机长',
     ],
+
     //数据缓存
     orderid: '',
     nickname: '',
@@ -110,7 +112,11 @@ Page({
     })
     this.checkstatus();
     this.getperiod(options.orderid);
-
+    console.log("订单详情", common.orderlist)
+    var price = (common.orderlist.period__startprice - common.orderlist.cutprice - common.orderlist.period__cutprice).toFixed(2)
+    this.setData({
+      realPrice:price
+    })
   },
   //判断是否登陆
   checkstatus: function () {
