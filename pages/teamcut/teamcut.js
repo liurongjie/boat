@@ -43,7 +43,7 @@ Page({
     //状态0自我，状态1帮我砍，状态2帮好友分享
     btn_index: 1, //状态
     btn_text_left: ['分享好友砍价', '砍这好友一刀', '帮Ta召唤好友'],
-    btn_text_right: ['查看拼团成员', '我要立即参团', '我要立即参团'],
+    btn_text_right: ['查看拼团成员', '我要立即参团', '我要等价参团'],
     sentence: '', //展示句子
     //
     setInter: '', //定时器
@@ -105,7 +105,7 @@ Page({
     console.log("购买详情：", options)
     this.setData({
       orderid: options.orderid,
-      nickname: options.nickName,
+      nickname: options.nickname,
       avatarUrl: options.avatarUrl,
       steamid: options.steamid,
       userid: options.userid,
@@ -219,7 +219,7 @@ Page({
         'steamid': steamid,
       },
       success: (res) => {
-        common.onecut=res.data.onecut;
+        common.onecut = res.data.onecut;
         that.setData({
           onecut: res.data.onecut,
           twocut: res.data.twocut,
@@ -321,24 +321,55 @@ Page({
   //右边按钮点击
   rightbindtap: function () {
     if (!this.data.end) {
+      wx.showToast({
+        title: '订单已超时',
+        icon:'loading',
+        duration: 2000,
+      })
       return '';
     }
+    var that = this;
     console.log(this.data.btn_index)
     if (this.data.btn_index == 0) {
       wx.navigateTo({
-        url: "/pages/myteam/myteam?" ,
+        url: "/pages/myteam/myteam",
       })
-    } else {
+    }
+    else {
+
       for (var i = 0; i < common.homelist.length; i++) {
         if (this.data.periodid == common.homelist[i].periodid) {
           common.currentData = common.homelist[i];
           break;
         }
       }
-      common.data.steamid = this.data.steamid;
-      wx.navigateTo({
-        url: "/pages/toboat/toboat",
-      })
+      if (this.data.onecut[0].steamnumber > 5) {
+        wx.showModal({
+          title: '拼团人数已满，是否单独发船',
+          content: '',
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: "/pages/toboat/toboat",
+              });
+            } else {//这里是点击了取消以后
+              console.log('用户点击取消')
+            }
+          }
+        });
+        //common.data.steamid = this.data.steamid;
+
+
+      }
+      else {
+        wx.navigateTo({
+          url: "/pages/toboat/toboat?steamid=" + that.data.steamid,
+        })
+
+
+      }
+
+
     }
 
 

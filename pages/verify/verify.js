@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    puserid:'',//邀请人userid
     could: true,
     show_model: true,
     popup: true,
@@ -349,12 +350,13 @@ Page({
       wx.request({
         url: 'https://xiaoyibang.top:8002/dajia/verify',
         data: {
+          'puserid':that.data.puserid,
           'userid': app.globalData.userid,
-          'teamid': this.data.teamid,
-          'name': this.data.name,
-          'number': this.data.number,
-          'department': this.data.yuanxi,
-          'telephone': this.data.phone,
+          'teamid': that.data.teamid,
+          'name': that.data.name,
+          'number': that.data.number,
+          'department': that.data.yuanxi,
+          'telephone': that.data.phone,
         },
         success: (res) => {
 
@@ -370,6 +372,7 @@ Page({
           }
           wx.setStorageSync('information', information)
           app.getuserinformation();
+          this.hidePopup(false);
         }
 
       })
@@ -378,7 +381,7 @@ Page({
       //   text: "恭喜你 提交验证成功",
       //   isShow: true
       // })
-      this.hidePopup(false);
+      
     }
   },
 
@@ -400,7 +403,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) { },
+  onLoad: function (options) {
+    if(options.userid){
+      this.setData({
+        puserid:options.userid,
+      })
+    }
+
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

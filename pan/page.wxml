@@ -29,9 +29,9 @@
     <view class='beike' style=' top: {{70/736*h}}px;'>
       <image src='/static/bk.svg' style='width:30rpx;height:30rpx;position:absolute;left:10rpx;top:36rpx;'></image>
       <text class='w'>我的贝壳：{{account}} </text>
-      <view style='position:absolute;width:300rpx;height:100rpx;right:0rpx;' bindtap='mx'>
+      <!-- <view style='position:absolute;width:300rpx;height:100rpx;right:0rpx;' bindtap='mx'>
         <view class='b'>贝壳明细</view>
-      </view>
+      </view> -->
     </view>
 
   </view>
