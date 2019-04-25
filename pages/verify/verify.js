@@ -412,9 +412,8 @@ Page({
         duration: 1000
       });
       setTimeout(function () {
-        wx.navigateTo({
+        wx.redirectTo({
           url: "/pages/home/home"
-
         })
       }, 850)
     }
@@ -492,9 +491,8 @@ Page({
                 duration: 1000
               });
               setTimeout(function () {
-                wx.navigateTo({
+                wx.redirectTo({
                   url: "/pages/home/home"
-
                 })
               }, 850);
             }

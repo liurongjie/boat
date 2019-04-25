@@ -21,7 +21,8 @@ Page({
     period: {},
     onecut: [], //团队成员
     twocut: [], //他人砍价
-    cutprice: 0,
+    cutprice: 0,//砍价金额
+    endprice:0,//最终价格
     number: 0, //多少位朋友砍价
     res: [], //展示内容
     title: [
@@ -112,13 +113,7 @@ Page({
     this.checkstatus();
     this.getperiod(options.orderid);
     console.log("订单详情", common.orderlist)
-    // var price = (common.orderlist.period__startprice - common.orderlist.cutprice - common.orderlist.period__cutprice).toFixed(2)
-    // var price = parseFloat(this.data.period.period__startprice) - parseFloat(this.data.cutprice) - parseFloat(this.data.period.period__cutprice)
-    // console.log(this.data, '现在的数据')
-    // console.log(price, 'real_price', this.data.period.period__startprice, this.data.cutprice ,this.data.period.period__cutprice)
-    // this.setData({
-    //   realPrice:price
-    // })
+  
 
     
   },
@@ -234,8 +229,25 @@ Page({
       }
     })
   },
+  toDecimal2:function(x){
+    var f = parseFloat(x);
+    if (isNaN(f)) {
+      return false;
+    }
+    var f = Math.round(x * 100) / 100;
+    var s = f.toString();
+    var rs = s.indexOf('.');
+    if (rs < 0) {
+      rs = s.length;
+      s += '.';
+    }
+    while (s.length <= rs + 2) {
+      s += '0';
+    }
+    return s; 
 
-
+  },
+  //强制保留2位小数，如：2，会在2后面补上00.即2.00 
   getperiod: function (orderid) {
     var that = this;
     wx.request({
@@ -303,12 +315,16 @@ Page({
       cutprice = cutprice + middle.cutprice;
       middle2.push(middle);
     }
-    cutprice = cutprice.toFixed(2)
+    cutprice=this.toDecimal2(cutprice);
+    var endprice = this.data.period.period__startprice - cutprice - this.data.period.period__cutprice
+    console.log(endprice)
+     endprice = this.toDecimal2(endprice)
+
     this.setData({
       onecut: middle1,
       twocut: middle2,
       cutprice: cutprice,
-      // realprice: (period.period__startprice - cutprice).toFixed(2),
+      endprice:endprice,
       number: this.data.onecut.length + this.data.twocut.length,
     })
 
