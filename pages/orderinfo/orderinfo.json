@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "navigationBar": "/pages//component/navigationBar/index"
-  }
+  },
+  "disableScroll": true
 }

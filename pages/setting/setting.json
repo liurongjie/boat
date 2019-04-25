@@ -6,5 +6,6 @@
     "list3": "../component/asset/list3/list3",
     "list4": "../component/asset/list4/list4",
     "list5": "../component/asset/list5/list5"
-  }
+  },
+  "disableScroll": true
 }

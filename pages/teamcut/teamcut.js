@@ -316,7 +316,9 @@ Page({
       middle2.push(middle);
     }
     cutprice=this.toDecimal2(cutprice);
-    var endprice = this.data.period.period__startprice - cutprice - this.data.period.period__cutprice
+    console.log(this.data.period.period__startprice)
+    console.log(this.data.period.period__cutprice)
+    var endprice = this.data.period.period__startprice - cutprice - this.data.period.period__cutprice;
     console.log(endprice)
      endprice = this.toDecimal2(endprice)
 

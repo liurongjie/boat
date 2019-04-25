@@ -6,5 +6,6 @@
     "boat": "../component/boat/boat",
     "setting": "../component/setting/setting",
     "sign":"../component/sign/sign"
-  }
+  },
+  "disableScroll": true
 }

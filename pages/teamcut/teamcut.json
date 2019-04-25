@@ -3,5 +3,8 @@
     "navigationBar": "/pages/component/navigationBar/index",
     "showModel":"/pages/component/showModel/showModel"
 
-  }
+  },
+  "disableScroll": true
+  
+  
 }
