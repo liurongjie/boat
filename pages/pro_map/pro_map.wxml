@@ -1,4 +1,4 @@
-<navigationBar id="navigationBar" placeholderBg="" color="black" title="  {{data_list.production__name}}" back="{{true}}" background="white" fixed="{{fixed}}">
+`<navigationBar id="navigationBar" placeholderBg="" color="black" title="  {{data_list.production__name}}" back="{{true}}" background="white" fixed="{{fixed}}">
 </navigationBar>
 
 

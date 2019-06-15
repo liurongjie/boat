@@ -2,8 +2,8 @@
 <view class='container'>
 
 
-  <notverify wx:if="{{status==0}}"></notverify>
-  <list wx:if="{{status==1}}"></list>
+  <!-- <notverify wx:if="{{status==0}}"></notverify> -->
+  <list wx:if="{{status==0}}"></list>
   <view class='point1'></view>
   <view class='point2'></view>
   <view class='point3'></view>
